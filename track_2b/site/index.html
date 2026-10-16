@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-mood="cream" data-accent="terracotta">
+<html lang="en" data-accent="amber">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +8,12 @@
 <meta property="og:title" content="Bon·Appétit">
 <meta property="og:description" content="Swiss supermarket receipts, read by Apertus on your own computer and placed on the Swiss food pyramid.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#FAF6EF">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/foundation.css?v=3">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/foundation.css?v=4">
+<link rel="stylesheet" href="assets/site.css?v=4">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -57,7 +56,7 @@
 <header class="nav">
   <nav class="nav__bar" aria-label="Main">
     <a class="nav__brand" href="#top" aria-label="Bon·Appétit, back to top">
-      <img class="app-icon" src="assets/icon.svg" alt="" width="28" height="28">
+      <img class="app-icon" src="assets/icon.svg?v=4" alt="" width="28" height="28">
       <span>Bon·Appétit</span>
     </a>
     <div class="nav__links">
@@ -68,7 +67,7 @@
     </div>
     <div class="nav__cta">
       <a class="nav__gh" href="https://github.com/kinnuworks/bon-appetit" aria-label="Source code on GitHub"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg></a>
-      <a class="btn btn-ink btn-sm" href="#try">Try it</a>
+      <a class="btn btn-candy btn-sm" href="#try">Try it</a>
     </div>
   </nav>
 </header>
@@ -79,10 +78,10 @@
   <div class="container">
     <div class="hero__copy">
       <span class="badge"><span class="badge__tag">Hack Apertus 2026</span>Track 2B</span>
-      <h1>Your <em class="t-serif">Bon</em> knows what you eat.</h1>
+      <h1>Your <span class="hl">Bon</span> knows what you eat.</h1>
       <p class="lead">A Bon is a Swiss till receipt. Bon·Appétit reads yours with Apertus, Switzerland's open language model, and shows what your household ate this week on the Swiss food pyramid. It all happens on your own computer.</p>
       <div class="cta-row">
-        <a class="btn btn-ink btn-lg" href="#try">Try it on this page<svg class="i" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+        <a class="btn btn-candy btn-lg" href="#try">Try it on this page<svg class="i" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
         <a class="btn btn-outline btn-lg" href="#run"><svg class="i" aria-hidden="true"><use href="#i-terminal"/></svg>Run it on your computer</a>
       </div>
       <div class="trust"><span>Runs on your computer</span><span>No account</span><span>Open source</span></div>
@@ -91,7 +90,7 @@
 
     <div class="hero-visual" id="heroVisual">
       <div class="stage stage--hero" role="img" aria-label="The Bon·Appétit window reading a sample Migros receipt line by line. Each line becomes a food from the Swiss food composition database, one line waits for you because no entry fits, and the shopping bag is set aside. A small pyramid sums up the week.">
-        <div class="window hero-app" id="heroApp" aria-hidden="true">
+        <div class="window window--dark hero-app" id="heroApp" aria-hidden="true">
           <div class="window__bar">
             <div class="lights"><i></i><i></i><i></i></div>
             <span class="window__title">Bon·Appétit</span>
@@ -174,7 +173,7 @@
 </section>
 
 <!-- ========== Problem → solution ========== -->
-<section class="section" id="how">
+<section class="section section--alt" id="how">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>The problem</div>
@@ -236,7 +235,7 @@
           </div>
         </div>
         <div class="stage stage--soft reveal" style="--i:1">
-          <div class="window" aria-hidden="true">
+          <div class="window window--dark" aria-hidden="true">
             <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">Line inspector</span></div>
             <div class="insp">
               <div class="insp__step"><div class="insp__label">Line</div><div><span class="raw-pill">AGNOLOTTI RICOTTA SPIN.</span></div></div>
@@ -272,7 +271,7 @@
           </div>
         </div>
         <div class="stage stage--soft reveal" style="--i:1">
-          <div class="window" aria-hidden="true">
+          <div class="window window--dark" aria-hidden="true">
             <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">Food checks</span></div>
             <div class="insp">
               <div class="insp__step"><div class="insp__label">Line</div><div><span class="raw-pill">M-BUDG VOLLMILCH UHT 1L</span> <span class="score">× 4</span></div></div>
@@ -337,7 +336,7 @@
 </section>
 
 <!-- ========== Tiles ========== -->
-<section class="section" id="more">
+<section class="section section--alt" id="more">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>Around the model</div>
@@ -383,7 +382,7 @@
             <label class="field__label" for="liveShop">Shop</label>
             <select class="select" id="liveShop"><option>Migros</option><option>Coop</option><option>Other</option></select>
           </div>
-          <button class="btn btn-ink" type="button" id="liveGo"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg><span>Read it with Apertus</span></button>
+          <button class="btn btn-candy" type="button" id="liveGo"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg><span>Read it with Apertus</span></button>
           <p class="field__hint">Apertus on a laptop takes about 10 seconds per line. The household slider below sets how many adults share the shopping.</p>
         </div>
         <div>
@@ -405,7 +404,7 @@
       </div>
       <div class="preview">
         <div class="stage stage--soft">
-          <div class="window" id="previewWin">
+          <div class="window window--dark" id="previewWin">
             <div class="window__bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span class="window__title">Bon·Appétit</span><span class="bar-end"><span class="pill" id="pvPill">Sample</span></span></div>
             <div id="preview" aria-live="polite">
               <div class="quiet"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><b>Results are being computed.</b><span>The sample week appears here once it has loaded.</span></div>
@@ -477,7 +476,7 @@
 </section>
 
 <!-- ========== Who ========== -->
-<section class="section who" id="who">
+<section class="section section--alt who" id="who">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>Who it is for</div>
@@ -531,7 +530,7 @@
 </section>
 
 <!-- ========== FAQ ========== -->
-<section class="section" id="faq">
+<section class="section section--alt" id="faq">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>Questions</div>
@@ -553,11 +552,11 @@
 <!-- ========== Final CTA ========== -->
 <section class="section final">
   <div class="container">
-    <img class="final__icon" src="assets/icon.svg" alt="Bon·Appétit app icon: a receipt with a leaf growing from its top edge" width="88" height="88">
+    <img class="final__icon" src="assets/icon.svg?v=4" alt="Bon·Appétit app icon: a receipt with a leaf growing from its top edge" width="88" height="88">
     <h2>Read last week's shopping. <span class="t-muted">On your own computer.</span></h2>
     <p class="lead">Open source, in four languages, with no account to make.</p>
     <div class="cta-row">
-      <a class="btn btn-ink btn-lg" href="#try">Try it on this page</a>
+      <a class="btn btn-candy btn-lg" href="#try">Try it on this page</a>
       <a class="btn btn-outline btn-lg" href="#run">Run it on your computer</a>
       <a class="btn btn-ghost btn-lg" href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md">Read the report</a>
     </div>
@@ -567,7 +566,7 @@
 
 <footer class="footer">
   <div class="container">
-    <span class="footer__brand"><img class="app-icon" src="assets/icon.svg" alt="" width="24" height="24">Bon·Appétit</span>
+    <span class="footer__brand"><img class="app-icon" src="assets/icon.svg?v=4" alt="" width="24" height="24">Bon·Appétit</span>
     <nav class="footer__links" aria-label="Footer">
       <a href="https://github.com/kinnuworks/bon-appetit">GitHub</a>
       <a href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md">Report</a>
@@ -577,6 +576,6 @@
   </div>
 </footer>
 
-<script src="assets/app.js?v=3" defer></script>
+<script src="assets/app.js?v=4" defer></script>
 </body>
 </html>

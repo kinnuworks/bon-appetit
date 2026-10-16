@@ -24,11 +24,35 @@ Apertus never writes a nutrient value.
 
 ## Results
 
-{{RESULTS}}
+160 real Swiss products from Open Food Facts, label hidden, receipt-style line in, compared with the printed label (Errors are per 100 g against printed Open Food Facts labels. Within-20% uses max(20% of label, 20 kcal).).
+
+| Method | kcal error per 100 g (95% CI) | Off by >100 kcal | Sugar error, g | Salt error, g | Food group right | Abstains |
+|---|---|---|---|---|---|---|
+| Fuzzy text match | 171 (151 to 195) | 54% | 13.6 | 0.85 | 27% | 0% |
+| Swiss embeddings only | 194 (171 to 219) | 62% | 17.9 | 0.85 | 27% | 0% |
+| Search only, no Apertus pick (ablation) | 153 (129 to 177) | 49% | 12.3 | 0.92 | 38% | 5% |
+| Apertus alone, guessing (no source) | 122 (104 to 144) | 44% | 10.3 | 0.69 | n/a | 6% |
+| Bon·Appétit hybrid | 123 (102 to 145) | 39% | 10.7 | 0.69 | 49% | 8% |
+| Label-informed ceiling (best FSVO food) | 12 (10 to 15) | 0% | 1.2 | 0.66 | 61% | 0% |
+
+| Method, on the products the hybrid answered | n | kcal error (95% CI) | Off by >100 kcal |
+|---|---|---|---|
+| Fuzzy text match | 148 | 172 (149 to 197) | 53% |
+| Swiss embeddings only | 148 | 196 (170 to 221) | 62% |
+| Search only, no Apertus pick (ablation) | 148 | 153 (129 to 176) | 50% |
+| Apertus alone, guessing (no source) | 140 | 116 (98 to 137) | 41% |
+| Bon·Appétit hybrid | 148 | 123 (102 to 145) | 39% |
+| Label-informed ceiling (best FSVO food) | 148 | 12 (10 to 15) | 0% |
+
+Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`.
+
+**Household view.** Over 200 simulated weekly baskets of 20 products, the food-pyramid shares the hybrid reports are off by 8.4 percentage points per group on average, against 8.5 for fuzzy matching and 8.9 for search alone. Errors on single products partly cancel out over a week, which is what a household sees.
+
+The oracle row is the best any link to a generic FSVO food can do; the gap between it and the hybrid is linking error, which is where the next work goes.
 
 ## Value and cost
 
-{{COST}}
+Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for both calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). A server GPU or a Swiss cloud endpoint serving the 8B model is many times faster; that is the path for a retailer-scale service.
 
 ## Who uses it, and how it gets adopted
 
@@ -98,7 +122,7 @@ TooSweet (Open Food Hackdays 2018) ranked Migros Cumulus purchases by sugar. ETH
 - The food glossary and the receipt-shortening rules were written before the evaluation set was built, from the first eight demo lines, not tuned on the test products.
 - The daily reference amounts are derived by hand from SGE portion advice (`docs/food_layer.md`) and are illustrative until a dietitian reviews them.
 - Lines without a pack size get a default amount per food group, flagged as estimated in the output (`pack_size_estimated`).
-- The model file is a community conversion, not an official swiss-ai release: `Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF`, SHA-256 {{GGUF_SHA}}.
+- The model file is a community conversion, not an official swiss-ai release: `Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF`, SHA-256 a037df8d87ff6caacee794ee85f55342f2152e0d359b7389033300c3bee5f299.
 
 ## Not medical advice
 

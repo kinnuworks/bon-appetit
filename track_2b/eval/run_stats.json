@@ -1,0 +1,7 @@
+{
+  "calls": 426,
+  "tokens_in": 92883,
+  "tokens_out": 17086,
+  "model_seconds": 11449.2,
+  "model": "hf.co/Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF"
+}

@@ -126,6 +126,41 @@ def main(check: bool = True) -> int:
         kc = [r["e"]["energy_kcal"] for r in sub]
         matched.append({"id": m, "label": LABELS[m], "n": len(sub), "kcal_mae": rnd(mean(kc), 1), "kcal_ci": boot_ci(kc),
                         "over100_kcal": rnd(mean([1.0 if k > 100 else 0.0 for k in kc]), 3)})
+    # Household view: 200 random baskets of 20 products. Compare the food-pyramid shares the method reports
+    # (grams by the linked food's group, 100 g per product) with the shares from the products' own Open Food Facts
+    # groups. This is the number a household actually sees.
+    rng = random.Random(11)
+    truth_group = {p["barcode"]: off_group(gold[p["barcode"]]["food_groups"]) for p in preds}
+    link_group = {m: {} for m in ["fuzzy", "embed", "retrieval", "hybrid"]}
+    for p in preds:
+        cands = p["hybrid"].get("candidates") or []
+        ids = {"fuzzy": p["fuzzy"], "embed": p["embed"], "retrieval": cands[0] if cands else None,
+               "hybrid": p["hybrid"]["fsvo_id"] if p["hybrid"]["fsvo_id"] else None}
+        for m, fid in ids.items():
+            link_group[m][p["barcode"]] = None if fid is None else group_for(cat.row(fid)["category"])
+    pool = [b for b, g in truth_group.items() if g]
+    pyr = ["vegetables_fruit", "grains_potatoes", "dairy", "protein", "fats_nuts", "sweets_snacks_drinks", "mixed"]
+    baskets = [rng.sample(pool, min(20, len(pool))) for _ in range(200)]
+    household = []
+    for m in link_group:
+        errs = []
+        for bk in baskets:
+            t = [truth_group[b] for b in bk]
+            e = [link_group[m][b] for b in bk if link_group[m][b]]
+            if not e:
+                continue
+            errs.append(mean([abs(t.count(g) / len(t) - e.count(g) / len(e)) * 100 for g in pyr]))
+        household.append({"id": m, "label": LABELS[m], "share_error_pp": rnd(mean(errs), 1), "baskets": len(errs)})
+
+    # Sensitivity: drop products whose own printed label fails the energy check.
+    def label_ok(lab):
+        comp = 4 * lab["proteins"] + 4 * lab["carbohydrates"] + 9 * lab["fat"]
+        return abs(lab["energy_kcal"] - comp) <= max(25, 0.25 * max(lab["energy_kcal"], comp))
+    clean = {p["barcode"] for p in preds if label_ok(gold[p["barcode"]]["label"])}
+    sensitivity = []
+    for m in ["fuzzy", "retrieval", "apertus_only", "hybrid", "oracle"]:
+        kc = [r["e"]["energy_kcal"] for r in rows[m] if not r["abstain"] and r.get("barcode") in clean and "energy_kcal" in r["e"]]
+        sensitivity.append({"id": m, "n": len(kc), "kcal_mae": rnd(mean(kc), 1)})
     by_lang = []
     for lang in ["de", "fr", "it"]:
         for m in ["fuzzy", "embed", "apertus_only", "hybrid"]:
@@ -139,7 +174,8 @@ def main(check: bool = True) -> int:
     # assumption), 20 food lines per weekly receipt, CHF 0.30 per kWh (Swiss household average, assumption).
     spl = mean(secs) if secs else None
     chf_1000 = None if spl is None else round(spl * 20 * 1000 * 30 / 3.6e6 * 0.30, 2)
-    res = {"status": "done", "n_products": len(preds), "n_planned": len(gold), "methods": methods, "matched": matched, "by_lang": by_lang,
+    res = {"status": "done", "n_products": len(preds), "n_planned": len(gold), "methods": methods, "matched": matched, "household": household, "sensitivity": sensitivity,
+           "labels_failing_energy_check": len(preds) - len(clean), "by_lang": by_lang,
            "cost": {"sec_per_line": rnd(spl, 1), "chf_per_1000_receipts": chf_1000,
                     "cost_assumptions": "laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests", "hardware": "Apple M5, 16 GB, Ollama, Q4_K_M",
                     "model": stats.get("model"), "tokens_in": stats.get("tokens_in"), "tokens_out": stats.get("tokens_out")},
@@ -150,6 +186,8 @@ def main(check: bool = True) -> int:
     (ROOT / "site/data/results.json").write_text(blob)
     digest = hashlib.sha256(blob.encode()).hexdigest()
     print(f"{'method':28s} {'n':>4s} {'kcal MAE':>9s} {'95% CI':>14s} {'sugar':>6s} {'salt':>6s} {'≤20%':>6s} {'group':>6s} {'abstain':>7s}")
+    print("household share error (pp):", [(x["id"], x["share_error_pp"]) for x in household])
+    print("sensitivity:", [(x["id"], x["n"], x["kcal_mae"]) for x in sensitivity])
     print("matched subset:", [(x["id"], x["n"], x["kcal_mae"], x["over100_kcal"]) for x in matched])
     for s in methods:
         print(f"{s['label']:28s} {s['n']:4d} {str(s['kcal_mae']):>9s} {str(s['kcal_ci']):>14s} {str(s['sugar_mae']):>6s} "

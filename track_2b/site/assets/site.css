@@ -1,12 +1,12 @@
 /* ==========================================================
    Bon·Appétit: page styles on top of foundation.css
-   Mood: cream · Accent: terracotta (details only, ink CTAs)
+   Mood: mist · Accent: amber (candy CTAs), dark product windows
    ========================================================== */
 :root{
   /* Food group colours: the product's own palette, used only inside product UI */
   --g-veg:#5E8F47; --g-grain:#BF8E2E; --g-dairy:#6489B8; --g-protein:#A9604B; --g-fat:#93804A; --g-sweet:#B9648F; --g-none:#9A9186;
   --paper:#FFFDF8; --paper-ink:#2B2721; --paper-ink-2:#6B6358;
-  --term-bg:#1C1915; --term-bar:#272320;
+  --term-bg:#1B1B1F; --term-bar:#26262B; --lime:#D4F53C;
 }
 .i{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
@@ -22,7 +22,6 @@
 .hero{padding-bottom:clamp(48px,7vw,96px)}
 .hero--split .container{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,4vw,56px)}
 .hero h1{font-size:clamp(42px,5.7vw,74px)}
-.hero h1 .t-serif{font-size:1.08em;letter-spacing:-.02em;padding-right:.04em}
 .hero .lead{max-width:520px}
 .hero__aside{margin-top:22px;font-size:13.5px;color:var(--ink-3)}
 .hero__aside a{text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
@@ -147,7 +146,6 @@
 /* ---------- Problem → solution ---------- */
 .versus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .versus .card{display:flex;flex-direction:column;gap:18px;padding:clamp(20px,3vw,32px)}
-.versus .card--flat{background:var(--bg-alt)}
 .versus__head{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .versus__head .t-title{display:flex;align-items:center;gap:10px}
 .versus .t-small{margin-top:auto}
@@ -200,7 +198,7 @@
 .term-window{background:var(--term-bg);color:#ECE6DB}
 .term-window .window__bar{background:var(--term-bar);border-color:rgba(255,255,255,.06);color:#A39C90}
 .term{margin:0;padding:16px 18px 56px;font:500 12.5px/1.8 var(--font-mono);white-space:pre;overflow-x:auto;color:#ECE6DB}
-.term .p{color:#E8895A}
+.term .p{color:#FFC45A}
 .term .d{color:#9C958A}
 .term .ok{color:#86C98A}
 .term .hl-line{display:inline-block;padding:0 6px;margin:0 -6px;border-radius:4px;background:rgba(134,201,138,.12)}
@@ -338,13 +336,13 @@
 .code-window .window__bar{background:var(--term-bar);border-color:rgba(255,255,255,.06);color:#A39C90}
 .code{margin:0;padding:18px 20px 20px;font:500 13.5px/1.85 var(--font-mono);white-space:pre;overflow-x:auto;color:#ECE6DB}
 .code .p{color:#9C958A;user-select:none;-webkit-user-select:none}
-.code .k{color:#E8B48A}
+.code .k{color:#FFC978}
 .code .c{color:#9C958A}
 .copy{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border:0;border-radius:99px;background:rgba(255,255,255,.08);color:#D9D2C6;font:600 11.5px/1 var(--font-body);cursor:pointer;transition:background-color var(--dur-hover),transform var(--dur-press) var(--ease-spring)}
 .copy:hover{background:rgba(255,255,255,.14)}
 .copy:active{transform:scale(.96)}
 .copy .i{width:13px;height:13px}
-.copy:focus-visible{outline-color:#E8895A}
+.copy:focus-visible{outline-color:#FFC45A}
 .run-copy{margin-top:14px;font-size:var(--fs-small);color:var(--ink-3)}
 .run-copy .t-mono{color:var(--ink-2)}
 .run-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:32px}
@@ -405,3 +403,63 @@ html{overflow-x:clip}
 #ctlReceipt button{flex:1 1 30%}
 .metric[hidden]{display:none}
 .wk__head .status{height:auto;min-height:22px;padding:4px 8px;white-space:normal;line-height:1.3}
+
+/* ==========================================================
+   Mist + amber restyle: dark product windows, more pop
+   ========================================================== */
+/* Dark windows re-theme everything inside them through tokens */
+.window--dark{
+  --surface:#1B1B1F; --surface-2:#232328; --bg-alt:#17171A; --sunk:#17171A;
+  --ink:#F2F0EB; --ink-2:#C9C7C2; --ink-3:#A4A4AE; --ink-4:#7C7C86;
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14); --tint:rgba(255,255,255,.07);
+  --ring:0 0 0 1px rgba(255,255,255,.08);
+  --accent-wash:color-mix(in oklab,#F7A028 16%,#1B1B1F); --accent-ink:#FFC45A; --success:#8BDB9B; --focus:#FFC45A;
+  --shadow-1:0 0 0 1px rgba(255,255,255,.06),0 6px 18px rgba(0,0,0,.35);
+  color:var(--ink);box-shadow:var(--shadow-3),0 0 0 1px rgba(255,255,255,.06)
+}
+.window--dark .window__bar{background:linear-gradient(#2A2A30,#232328);border-color:rgba(255,255,255,.06);color:#9A9AA2}
+.window--dark .gchip{background:color-mix(in oklab,var(--g) 24%,#1B1B1F);color:color-mix(in oklab,var(--g) 55%,#fff)}
+.window--dark .gchip--none{background:rgba(212,245,60,.12);color:var(--lime)}
+.window--dark .gchip--none::before{background:var(--lime)}
+.window--dark .gchip--review{background:transparent;color:#FFC45A;box-shadow:inset 0 0 0 1px rgba(247,160,40,.5)}
+.window--dark .status__dot{background:var(--accent)}
+.window--dark .tag-no{background:rgba(255,120,95,.14);color:#FF9C85}
+.window--dark .tag-ok{background:rgba(139,219,155,.14);color:#9BE3A8}
+.window--dark .check--no .i,.window--dark .verdict--no .i{color:#FF9C85}
+.window--dark .cand--rejected{background:rgba(255,120,95,.06);box-shadow:0 0 0 1px rgba(255,120,95,.22)}
+.window--dark .pill.pill--live{background:rgba(139,219,155,.14);color:#9BE3A8}
+.window--dark .pill.pill--live::before{background:#8BDB9B}
+.window--dark .app__side{background:linear-gradient(#202025,#17171A)}
+.window--dark .dec-row--nonfood{box-shadow:inset 0 0 0 1px rgba(212,245,60,.18)}
+.window--dark .metric__ref.is-over::after{background:var(--accent)}
+.window--dark ::selection{color:#17150F}
+.window--dark .wk__lines{scrollbar-color:rgba(255,255,255,.18) transparent}
+/* paper stays paper on the dark window */
+.window--dark .receipt-wrap{filter:drop-shadow(0 1px 1px rgba(0,0,0,.4)) drop-shadow(0 14px 24px rgba(0,0,0,.45))}
+
+/* Hero stage glow and depth */
+.hero-visual::before{content:"";position:absolute;inset:6% 4% -2%;z-index:-1;border-radius:40px;background:var(--wallpaper);filter:blur(48px) saturate(1.2);opacity:.55}
+.hero-visual{isolation:isolate}
+.hero .stage{box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 30px 80px -30px rgba(143,82,0,.35)}
+
+/* Springy, glossy CTAs */
+.btn-candy:hover{transform:translateY(-2px)}
+.btn-candy:active{transform:scale(.97)}
+.btn-candy{transition:transform .26s var(--ease-spring),box-shadow var(--dur-hover) var(--ease-out),filter var(--dur-hover) var(--ease-out)}
+.btn-candy:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(0,0,0,.14),0 0 0 1px color-mix(in oklab,var(--accent-ink) 40%,transparent),0 14px 28px -10px color-mix(in oklab,var(--accent-ink) 75%,transparent)}
+.live-form .btn-candy:disabled{filter:saturate(.6)}
+
+/* Marker highlight sits a touch lower and thicker on the big h1 */
+.hero h1 .hl::after{height:.2em;bottom:.04em}
+
+/* Evidence accents */
+.finding .eyebrow{color:var(--accent-ink)}
+.finding{box-shadow:var(--shadow-1)}
+.lessons{background:var(--bg-alt)}
+.lessons__list li::before{background:var(--accent-wash);color:var(--accent-ink)}
+.chart .b{fill:color-mix(in oklab,var(--ink) 30%,var(--surface))}
+.chart .b--best{fill:var(--accent);stroke:color-mix(in oklab,var(--accent-ink) 50%,transparent);stroke-width:1}
+.rt tr.is-best td{background:color-mix(in oklab,var(--accent) 10%,var(--surface))}
+
+/* Light cards on the gray bands */
+.section--alt .card--flat,.section--alt .versus .card--flat{background:var(--surface);box-shadow:var(--ring)}

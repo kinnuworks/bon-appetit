@@ -1,22 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bon·Appétit">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCF5EA"/><stop offset="1" stop-color="#EFD8BC"/></linearGradient>
-    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FAF3E6"/></linearGradient>
-    <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#C2542A"/><stop offset="1" stop-color="#E8895A"/></linearGradient>
-    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.6" flood-color="#5A2A12" flood-opacity=".22"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C2C31"/><stop offset="1" stop-color="#141416"/></linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3F1EC"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#F7A028"/><stop offset="1" stop-color="#FFC45A"/></linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.6" flood-color="#000" flood-opacity=".45"/></filter>
   </defs>
   <rect width="64" height="64" rx="14.4" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="63" height="63" rx="13.9" fill="none" stroke="#fff" stroke-opacity=".08"/>
   <g transform="rotate(-7 32 34)" filter="url(#sh)">
     <path d="M19 17.5h21.5c.8 0 1.5.7 1.5 1.5V48l-2.9 2.6-2.9-2.6-2.9 2.6-2.9-2.6-2.9 2.6-2.9-2.6-2.9 2.6-2.9-2.6V19c0-.8.7-1.5 1.5-1.5z" fill="url(#paper)"/>
-    <rect x="21.5" y="25" width="11" height="2.2" rx="1.1" fill="#3B342B" opacity=".72"/>
-    <rect x="35" y="25" width="4.5" height="2.2" rx="1.1" fill="#3B342B" opacity=".45"/>
-    <rect x="21.5" y="30.2" width="8.5" height="2.2" rx="1.1" fill="#3B342B" opacity=".72"/>
-    <rect x="35" y="30.2" width="4.5" height="2.2" rx="1.1" fill="#3B342B" opacity=".45"/>
-    <rect x="21.5" y="35.4" width="12" height="2.2" rx="1.1" fill="#3B342B" opacity=".72"/>
-    <rect x="35" y="35.4" width="4.5" height="2.2" rx="1.1" fill="#3B342B" opacity=".45"/>
-    <path d="M21.5 41.6h18" stroke="#3B342B" stroke-opacity=".35" stroke-width="1" stroke-dasharray="1.6 1.6"/>
+    <rect x="21.5" y="25" width="11" height="2.2" rx="1.1" fill="#1D1D1F" opacity=".78"/>
+    <rect x="35" y="25" width="4.5" height="2.2" rx="1.1" fill="#1D1D1F" opacity=".45"/>
+    <rect x="21.5" y="30.2" width="8.5" height="2.2" rx="1.1" fill="#1D1D1F" opacity=".78"/>
+    <rect x="35" y="30.2" width="4.5" height="2.2" rx="1.1" fill="#1D1D1F" opacity=".45"/>
+    <rect x="21.5" y="35.4" width="12" height="2.2" rx="1.1" fill="#1D1D1F" opacity=".78"/>
+    <rect x="35" y="35.4" width="4.5" height="2.2" rx="1.1" fill="#1D1D1F" opacity=".45"/>
+    <path d="M21.5 41.6h18" stroke="#1D1D1F" stroke-opacity=".35" stroke-width="1" stroke-dasharray="1.6 1.6"/>
   </g>
   <path d="M37.6 20.2c-.2-6.9 4.3-11.6 12.6-12.1.6 7.6-3.9 12.6-12.6 12.1z" fill="url(#leaf)"/>
-  <path d="M38.2 19.6c2.6-3.2 5.6-5.8 9.6-8.4" stroke="#FFF4E8" stroke-width="1.3" stroke-linecap="round" fill="none" opacity=".9"/>
-  <path d="M36.6 21.4c.2-1.4.6-2.7 1.1-3.6" stroke="#A1411F" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+  <path d="M38.2 19.6c2.6-3.2 5.6-5.8 9.6-8.4" stroke="#FFF3DE" stroke-width="1.3" stroke-linecap="round" fill="none" opacity=".9"/>
+  <path d="M36.6 21.4c.2-1.4.6-2.7 1.1-3.6" stroke="#8F5200" stroke-width="1.6" stroke-linecap="round" fill="none"/>
 </svg>

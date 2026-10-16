@@ -1,0 +1,325 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font: 9.6pt/1.42 "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif; color: #17150F; }
+h1 { font-size: 20pt; letter-spacing: -0.02em; margin: 0 0 6pt; }
+h2 { font-size: 12.5pt; margin: 13pt 0 4pt; color: #17150F; border-bottom: 1px solid #EBE3D7; padding-bottom: 2pt; }
+h3 { font-size: 10.5pt; margin: 9pt 0 3pt; }
+p, li { margin: 3pt 0; }
+ul { padding-left: 14pt; margin: 3pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 5pt 0 7pt; font-size: 8.6pt; }
+th, td { border-bottom: 1px solid #EBE3D7; padding: 3pt 5pt; text-align: left; vertical-align: top; }
+th { background: #F3ECE1; }
+code { font: 8.4pt "JetBrains Mono", Menlo, monospace; background: #F3ECE1; padding: 0 2pt; border-radius: 2pt; }
+pre { background: #FAF6EF; border: 1px solid #EBE3D7; padding: 5pt 7pt; border-radius: 4pt; white-space: pre-wrap; }
+pre code { background: none; padding: 0; }
+blockquote { margin: 4pt 0; padding-left: 8pt; border-left: 3px solid #D66B38; color: #423C33; }
+img { max-width: 100%; }
+</style></head><body><h1>Technical report: Bon·Appétit</h1>
+<p>Swiss supermarket receipts are unreadable to software: lines are truncated, multilingual and coded, and the Migros export has no barcodes. Bon·Appétit uses Apertus v1.5 8B, running on the household's own laptop, to read each line and link it to the federal Swiss Food Composition Database, with a symbolic food layer that checks every pick and code that does every number. On 160 real Swiss products it cuts the energy error of text matching by 28%, nearly doubles the share of products put in the right food group, and every number it reports traces to a federal food record.</p>
+<ul>
+<li><strong>Track:</strong> Track 2B: Bon·Appétit</li>
+<li><strong>Event:</strong> Online</li>
+<li><strong>Team:</strong> Dhiraj Kavuri (solo)</li>
+<li><strong>Demo:</strong> [video link] · live page https://kinnuworks.github.io/bon-appetit/</li>
+<li><strong>Code:</strong> https://github.com/kinnuworks/bon-appetit</li>
+</ul>
+<h2>1. Summary</h2>
+<p>Households, dietitians and prevention programmes already hold a detailed record of what people eat: their supermarket receipts. They cannot use it, because a line such as <code>QP GRUY.RAPE 200G</code> means nothing to a lookup table, and the purchase history is too sensitive to send to a foreign cloud model. Bon·Appétit reads receipts with Apertus on the household's own computer, links each line to the FSVO database, abstains when unsure, and turns a week of shopping into grams per adult per day for each group of the Swiss food pyramid. On 160 real Swiss products with printed nutrition labels, the hybrid's energy estimate is off by 123 kcal per 100 g on average, 28% less than fuzzy text matching (171), and it names the right food group for 49% of products against 27%. Apertus's pick is what does it: search alone, without the pick, is off by 153, so the pick cuts the error by 19%. Apertus guessing the numbers itself lands close (122) but gives no source that anyone could check or correct.</p>
+<h2>2. Architecture</h2>
+<pre><code>receipt (CSV, PDF, text, photo) ─► parser (rules) ─► Apertus: read line ─► search (lexical + Swiss embeddings)
+   ─► Apertus: pick or abstain ─► food layer (unit, energy, pack, Swiss words) ─► ledger (code) ─► Apertus: one nudge (slots)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>What it does</th>
+<th>Where it runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parser</td>
+<td>Prices, quantities, pack sizes, multipacks, non-food hints</td>
+<td>Python, rules</td>
+</tr>
+<tr>
+<td>Read</td>
+<td>One Apertus call: English description, language, food or not, generic German food name</td>
+<td>Apertus v1.5 8B</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Reciprocal-rank fusion of token-set matching and an Apertus-derived Swiss embedding model over 1,145 FSVO foods</td>
+<td>CPU or Apple GPU</td>
+</tr>
+<tr>
+<td>Pick</td>
+<td>One Apertus call: list number of the best candidate, or 0</td>
+<td>Apertus v1.5 8B</td>
+</tr>
+<tr>
+<td>Food layer</td>
+<td>Vetoes physically impossible links; Swiss food-word glossary; SGE food groups</td>
+<td>Python, rules</td>
+</tr>
+<tr>
+<td>Ledger</td>
+<td>Grams per adult per day, sugar, salt, saturated fat, against SGE-derived references</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>Nudge</td>
+<td>One sentence in DE/FR/IT/EN; numbers enter only as placeholders filled by code</td>
+<td>Apertus v1.5 8B</td>
+</tr>
+</tbody>
+</table>
+<h3>Target architecture</h3>
+<p><strong>b) Air-gapped</strong>, also <strong>a) on-premise</strong>. <code>make airgap</code> runs the app and a llama.cpp server on a Docker network marked <code>internal</code>, and the app runs an egress test before it starts (it tries four outside hosts and refuses to start if any answers). Build time needs the internet once: Docker images, the GGUF model file, the embedding model, the Open Food Facts dump for evaluation. Runtime needs none. A Swiss cloud endpoint works through <code>LLM_BASE_URL</code> (option c).</p>
+<h2>3. Use of Apertus</h2>
+<ul>
+<li><strong>Model:</strong> <code>swiss-ai/Apertus-v1.5-8B</code>, as the community text-only Q4_K_M GGUF <code>Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF</code>. The text-only conversion follows the FHNW conversion that organisers accepted on Discord for Track 2B.</li>
+<li><strong>How it is used:</strong> inference, two calls per receipt line plus one per nudge; thinking off; temperature 0; seed 0; JSON output.</li>
+<li><strong>Where it runs:</strong> local weights through Ollama 0.40 (Apple M5, 16 GB) for development and evaluation; llama.cpp server in Docker for <code>make local</code> and <code>make airgap</code>.</li>
+<li><strong>Other open models:</strong> <code>andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir</code> (Apache-2.0), an embedding model derived from Apertus, for candidate search. No closed model is used at runtime or in evaluation.</li>
+</ul>
+<p>Two choices came from measurement. A full JSON-schema grammar on llama.cpp made each call about four times slower and made the 8B model answer "no match" for almost every line, including easy ones such as bananas; plain JSON mode with the schema enforced in code fixed both. The model also reports "not sure" for nearly every pick, so that flag is recorded but does not decide anything; abstention comes from choosing 0, and review from the food layer.</p>
+<h2>4. Data</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Use</th>
+<th>Licence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FSVO Swiss Food Composition Database V6.5 (1,109 generic foods, 36 brand products)</td>
+<td>The food catalogue and every nutrient number</td>
+<td>Free reuse with attribution</td>
+</tr>
+<tr>
+<td>Open Food Facts product database (parquet dump, October 2026)</td>
+<td>Evaluation: Swiss products with printed nutrition values</td>
+<td>ODbL-1.0; barcodes and label values for the 160 evaluation products are kept under ODbL, the dump is not redistributed</td>
+</tr>
+<tr>
+<td>SGE Swiss food pyramid portions</td>
+<td>Daily reference amounts per food group</td>
+<td>Cited guidance</td>
+</tr>
+</tbody>
+</table>
+<p>No personal data is used. No real receipts were available under a licence, so receipt lines in the evaluation are produced from real product names by documented rules (<code>eval/build_set.py</code>): shop-brand shorthand (M-Budget becomes <code>M-BUDG</code>, Qualité &amp; Prix becomes <code>QP</code>), accent folding, upper case, long words cut to seven letters plus a dot, 24 characters, pack size appended.</p>
+<h2>5. Evaluation</h2>
+<p><strong>Task.</strong> For each product, hide the printed label, give the system only the receipt-style line, and compare its per-100 g estimate with the printed values. A method that links to an FSVO food is scored with that food's values.</p>
+<p><strong>Set.</strong> 160 products were sampled with seed 42 from the 74,192 Open Food Facts entries sold in Switzerland with complete nutrition tables (80 German, 50 French, 30 Italian names). The model runs at about 8 tokens per second on the laptop, so the run was stopped at the deadline after 160 products. Languages were interleaved in the run order, so the scored products keep the same language mix. The glossary and shortening rules were written before this set was built.</p>
+<p><strong>Methods.</strong>
+1. Fuzzy text match: the best token-set match among FSVO names, the approach of earlier receipt tools.
+2. Swiss embeddings only: nearest FSVO food by embedding.
+3. Search only (ablation): the top candidate of the hybrid's own search, with no Apertus pick. The difference to the hybrid is what the pick step adds.
+4. Apertus alone: the model estimates the nutrients directly from the line, with no database and no source.
+5. Bon·Appétit hybrid.
+6. Label-informed ceiling: the FSVO food closest to the printed label, chosen by looking at the label. No real system can do this; it shows how close any link to generic FSVO foods could get.</p>
+<p>The hybrid abstains on a few lines; the second table compares every method on exactly the products the hybrid answered.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>kcal error per 100 g (95% CI)</th>
+<th>Off by &gt;100 kcal</th>
+<th>Sugar error, g</th>
+<th>Salt error, g</th>
+<th>Food group right</th>
+<th>Abstains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuzzy text match</td>
+<td>171 (151 to 195)</td>
+<td>54%</td>
+<td>13.6</td>
+<td>0.85</td>
+<td>27%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Swiss embeddings only</td>
+<td>194 (171 to 219)</td>
+<td>62%</td>
+<td>17.9</td>
+<td>0.85</td>
+<td>27%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Search only, no Apertus pick (ablation)</td>
+<td>153 (129 to 177)</td>
+<td>49%</td>
+<td>12.3</td>
+<td>0.92</td>
+<td>38%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Apertus alone, guessing (no source)</td>
+<td>122 (104 to 144)</td>
+<td>44%</td>
+<td>10.3</td>
+<td>0.69</td>
+<td>n/a</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>Bon·Appétit hybrid</td>
+<td>123 (102 to 145)</td>
+<td>39%</td>
+<td>10.7</td>
+<td>0.69</td>
+<td>49%</td>
+<td>8%</td>
+</tr>
+<tr>
+<td>Label-informed ceiling (best FSVO food)</td>
+<td>12 (10 to 15)</td>
+<td>0%</td>
+<td>1.2</td>
+<td>0.66</td>
+<td>61%</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method, on the products the hybrid answered</th>
+<th>n</th>
+<th>kcal error (95% CI)</th>
+<th>Off by &gt;100 kcal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuzzy text match</td>
+<td>148</td>
+<td>172 (149 to 197)</td>
+<td>53%</td>
+</tr>
+<tr>
+<td>Swiss embeddings only</td>
+<td>148</td>
+<td>196 (170 to 221)</td>
+<td>62%</td>
+</tr>
+<tr>
+<td>Search only, no Apertus pick (ablation)</td>
+<td>148</td>
+<td>153 (129 to 176)</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Apertus alone, guessing (no source)</td>
+<td>140</td>
+<td>116 (98 to 137)</td>
+<td>41%</td>
+</tr>
+<tr>
+<td>Bon·Appétit hybrid</td>
+<td>148</td>
+<td>123 (102 to 145)</td>
+<td>39%</td>
+</tr>
+<tr>
+<td>Label-informed ceiling (best FSVO food)</td>
+<td>148</td>
+<td>12 (10 to 15)</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<p>Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in <code>eval/off_energy_flags.csv</code>.</p>
+<p><strong>Household view.</strong> Over 200 simulated weekly baskets of 20 products, the food-pyramid shares the hybrid reports are off by 8.4 percentage points per group on average, against 8.5 for fuzzy matching and 8.9 for search alone. Errors on single products partly cancel out over a week, which is what a household sees.</p>
+<p><strong>By language.</strong> The Italian sample is small, so its numbers carry wide uncertainty.</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>n</th>
+<th>Fuzzy kcal error</th>
+<th>Embeddings kcal error</th>
+<th>Apertus alone kcal error</th>
+<th>Hybrid kcal error</th>
+<th>Hybrid food group right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DE</td>
+<td>80</td>
+<td>164</td>
+<td>216</td>
+<td>123</td>
+<td>124</td>
+<td>56%</td>
+</tr>
+<tr>
+<td>FR</td>
+<td>50</td>
+<td>183</td>
+<td>179</td>
+<td>112</td>
+<td>106</td>
+<td>48%</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>30</td>
+<td>170</td>
+<td>161</td>
+<td>137</td>
+<td>157</td>
+<td>31%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reproduce.</strong> <code>make eval</code> re-scores the stored predictions without a model and checks the SHA-256 of the results against <code>eval/results.sha256</code>. <code>python -m eval.run</code> regenerates the predictions with any Apertus endpoint; every model answer is also stored in <code>data/llm_cache.jsonl</code>.</p>
+<h2>6. Value and cost</h2>
+<p>Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for both calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). A server GPU or a Swiss cloud endpoint serving the 8B model is many times faster; that is the path for a retailer-scale service.</p>
+<p>The users are households first, then dietitians, home-care services and prevention programmes working with a client's consent, and retailers who want a nutrition view inside a loyalty app without sending purchase data to a foreign model. A first pilot needs 20 consenting households, four weeks of receipts, a dietitian's review of the reference amounts, and one outcome read from the receipts themselves: the change in the vegetables-and-fruit share. The FoodCoach trial (NCT05597969) is the reference design. No effect is claimed yet.</p>
+<h2>7. Limitations</h2>
+<ul>
+<li>Purchases are not intake: waste, guests and meals out are invisible. The output is a household trend by food group, not a per-person diet record.</li>
+<li>The receipt lines are synthetic, built from real names by stated rules. Real tills cut and code differently; the review queue and a household alias list are meant to absorb this.</li>
+<li>FSVO has generic foods, so a branded product is scored against a generic value. The oracle row shows how much error that alone causes.</li>
+<li>One run, one seed, one quantisation. 70B was not evaluated because hackathon inference keys were exhausted.</li>
+<li>Photo receipts are not supported yet; Apertus image input was not used, because the community GGUF builds are text-only.</li>
+<li>Reference amounts per food group are derived by hand from SGE portions and are illustrative until a dietitian reviews them. Lines without a pack size get a default amount per group, counted as estimated.</li>
+<li>The evaluation ran before two small changes to the linker (non-food words now always win, and the energy check is applied to the chosen FSVO food). Neither applies to the evaluation products, which are all foods with consistent FSVO records.</li>
+</ul>
+<h2>8. Lessons on building with Apertus 1.5</h2>
+<ul>
+<li>The 8B model reads shop shorthand well (<code>M-BUDG VOLLMILCH UHT 1L</code> becomes "M-Budget whole milk, UHT, 1 litre") but misses Swiss food words: it read <code>RUEBLI</code> (carrot) as kale and as flatbread. A twenty-line glossary in the food layer fixed it; the words belong in localisation data for the next Apertus release.</li>
+<li>Asked for Swiss spelling, the 8B model still wrote "ß" in German suggestions ("Süßigkeiten"). Code now converts it, as Swiss orthography always uses "ss".</li>
+<li>Without the target language's food-group names in the prompt, it mixed English group names into German and French text, and once called a household "doing great with sweets" at five times the guide. Giving it the direction ("too little", "too much") and the names in the target language fixed both.</li>
+<li>Constrained decoding with a full schema hurt accuracy as well as speed on llama.cpp.</li>
+<li>The model is cautious when it chooses from a list and almost never says it is sure. Selection by list number plus external checks worked better than asking for confidence.</li>
+<li>Apertus alone produced plausible numbers for every product (122 kcal mean error) but cannot say where they came from. In the hybrid it never writes a number, so every value in the household report can be checked.</li>
+</ul>
+<h2>9. Next steps</h2>
+<p>Real receipts donated with consent (a consent template is in <code>docs/</code>); Coop Supercard export; a household alias memory shared across weeks; the 70B model for the read step on a Swiss cloud; reporting nutrient ranges instead of point values; a contribution back to Open Food Facts listing Swiss entries whose printed values fail the Atwater check.</p>
+<h2>License</h2>
+<p>Creative Commons Attribution 4.0 (CC-BY-4.0). All Hack Apertus projects are open-sourced. Code: Apache-2.0.</p>
+<h2>References</h2>
+<ul>
+<li>FSVO, Swiss Food Composition Database V6.5, naehrwertdaten.ch, 2023.</li>
+<li>Swiss Society for Nutrition (SGE), Swiss food pyramid, sge-ssn.ch.</li>
+<li>Open Food Facts, product database, ODbL.</li>
+<li>Apertus v1.5 model card, huggingface.co/swiss-ai/Apertus-v1.5-8B.</li>
+<li>A. Martin, apertus-v1.1-swiss-embed-0.4b-bidir, Hugging Face.</li>
+<li>FoodCoach trial, ClinicalTrials.gov NCT05597969; Receipt2Nutrition, ETH Zurich.</li>
+<li>TooSweet, Open Food Hackdays 2018, hack.opendata.ch/project/153.</li>
+</ul></body></html>

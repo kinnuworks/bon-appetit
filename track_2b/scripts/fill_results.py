@@ -35,10 +35,10 @@ cut = round(100 * (1 - h["kcal_mae"] / f["kcal_mae"]))
 pick_cut = round(100 * (1 - h["kcal_mae"] / rt["kcal_mae"]))
 summary = (f"the hybrid's energy estimate is off by {num(h['kcal_mae'])} kcal per 100 g on average, {cut}% less than fuzzy text "
            f"matching ({num(f['kcal_mae'])}), and it names the right food group for {pct(h['group_acc'])} of products against "
-           f"{pct(f['group_acc'])}. Apertus's pick is what does it: search alone, without the pick, is off by {num(rt['kcal_mae'])} "
-           f"({pick_cut}% worse). Apertus guessing the numbers itself lands close ({num(a['kcal_mae'])}) but gives no source "
+           f"{pct(f['group_acc'])}. Apertus's pick is what does it: search alone, without the pick, is off by {num(rt['kcal_mae'])}, "
+           f"so the pick cuts the error by {pick_cut}%. Apertus guessing the numbers itself lands close ({num(a['kcal_mae'])}) but gives no source "
            f"that anyone could check or correct.")
-headline = (f"On {r['n_products']} real Swiss products it cuts the energy error of text matching by {cut}%, doubles the share of "
+headline = (f"On {r['n_products']} real Swiss products it cuts the energy error of text matching by {cut}%, nearly doubles the share of "
             f"products put in the right food group, and every number it reports traces to a federal food record.")
 off_line = (f"Running the same energy check over all {off['checked']:,} Swiss products on Open Food Facts flagged "
             f"{off['flagged']:,} ({pct(off['share'])}) whose printed calories contradict their own macronutrients; "

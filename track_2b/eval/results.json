@@ -1,0 +1,334 @@
+{
+  "by_lang": [
+    {
+      "group_acc": 0.295,
+      "id": "fuzzy",
+      "kcal_mae": 164.5,
+      "lang": "de",
+      "n": 80
+    },
+    {
+      "group_acc": 0.341,
+      "id": "embed",
+      "kcal_mae": 216.2,
+      "lang": "de",
+      "n": 80
+    },
+    {
+      "group_acc": null,
+      "id": "apertus_only",
+      "kcal_mae": 122.9,
+      "lang": "de",
+      "n": 80
+    },
+    {
+      "group_acc": 0.564,
+      "id": "hybrid",
+      "kcal_mae": 123.6,
+      "lang": "de",
+      "n": 80
+    },
+    {
+      "group_acc": 0.261,
+      "id": "fuzzy",
+      "kcal_mae": 183.4,
+      "lang": "fr",
+      "n": 50
+    },
+    {
+      "group_acc": 0.261,
+      "id": "embed",
+      "kcal_mae": 179.0,
+      "lang": "fr",
+      "n": 50
+    },
+    {
+      "group_acc": null,
+      "id": "apertus_only",
+      "kcal_mae": 112.4,
+      "lang": "fr",
+      "n": 50
+    },
+    {
+      "group_acc": 0.478,
+      "id": "hybrid",
+      "kcal_mae": 105.7,
+      "lang": "fr",
+      "n": 50
+    },
+    {
+      "group_acc": 0.222,
+      "id": "fuzzy",
+      "kcal_mae": 169.9,
+      "lang": "it",
+      "n": 30
+    },
+    {
+      "group_acc": 0.111,
+      "id": "embed",
+      "kcal_mae": 161.4,
+      "lang": "it",
+      "n": 30
+    },
+    {
+      "group_acc": null,
+      "id": "apertus_only",
+      "kcal_mae": 136.8,
+      "lang": "it",
+      "n": 30
+    },
+    {
+      "group_acc": 0.312,
+      "id": "hybrid",
+      "kcal_mae": 157.0,
+      "lang": "it",
+      "n": 30
+    }
+  ],
+  "cost": {
+    "chf_per_1000_receipts": 2.36,
+    "cost_assumptions": "laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests",
+    "hardware": "Apple M5, 16 GB, Ollama, Q4_K_M",
+    "model": "hf.co/Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF",
+    "sec_per_line": 47.1,
+    "tokens_in": 92883,
+    "tokens_out": 17086
+  },
+  "household": [
+    {
+      "baskets": 200,
+      "id": "fuzzy",
+      "label": "Fuzzy text match",
+      "share_error_pp": 8.5
+    },
+    {
+      "baskets": 200,
+      "id": "embed",
+      "label": "Swiss embeddings only",
+      "share_error_pp": 9.1
+    },
+    {
+      "baskets": 200,
+      "id": "retrieval",
+      "label": "Search only, no Apertus pick (ablation)",
+      "share_error_pp": 8.9
+    },
+    {
+      "baskets": 200,
+      "id": "hybrid",
+      "label": "Bon·Appétit hybrid",
+      "share_error_pp": 8.4
+    }
+  ],
+  "labels_failing_energy_check": 3,
+  "matched": [
+    {
+      "id": "fuzzy",
+      "kcal_ci": [
+        148.7,
+        196.6
+      ],
+      "kcal_mae": 172.2,
+      "label": "Fuzzy text match",
+      "n": 148,
+      "over100_kcal": 0.534
+    },
+    {
+      "id": "embed",
+      "kcal_ci": [
+        170.2,
+        221.4
+      ],
+      "kcal_mae": 195.7,
+      "label": "Swiss embeddings only",
+      "n": 148,
+      "over100_kcal": 0.615
+    },
+    {
+      "id": "retrieval",
+      "kcal_ci": [
+        129.0,
+        176.1
+      ],
+      "kcal_mae": 153.4,
+      "label": "Search only, no Apertus pick (ablation)",
+      "n": 148,
+      "over100_kcal": 0.5
+    },
+    {
+      "id": "apertus_only",
+      "kcal_ci": [
+        97.9,
+        137.1
+      ],
+      "kcal_mae": 116.3,
+      "label": "Apertus alone, guessing (no source)",
+      "n": 140,
+      "over100_kcal": 0.414
+    },
+    {
+      "id": "hybrid",
+      "kcal_ci": [
+        102.5,
+        145.1
+      ],
+      "kcal_mae": 123.4,
+      "label": "Bon·Appétit hybrid",
+      "n": 148,
+      "over100_kcal": 0.392
+    },
+    {
+      "id": "oracle",
+      "kcal_ci": [
+        10.0,
+        14.9
+      ],
+      "kcal_mae": 12.3,
+      "label": "Label-informed ceiling (best FSVO food)",
+      "n": 148,
+      "over100_kcal": 0.0
+    }
+  ],
+  "methods": [
+    {
+      "abstain": 0.0,
+      "answered": 160,
+      "fat_mae": 12.43,
+      "group_acc": 0.271,
+      "id": "fuzzy",
+      "kcal_ci": [
+        150.7,
+        194.9
+      ],
+      "kcal_mae": 171.4,
+      "label": "Fuzzy text match",
+      "n": 160,
+      "over100_kcal": 0.537,
+      "salt_mae": 0.85,
+      "sugar_mae": 13.6,
+      "within20_kcal": 0.212
+    },
+    {
+      "abstain": 0.0,
+      "answered": 160,
+      "fat_mae": 14.24,
+      "group_acc": 0.271,
+      "id": "embed",
+      "kcal_ci": [
+        171.4,
+        218.9
+      ],
+      "kcal_mae": 194.3,
+      "label": "Swiss embeddings only",
+      "n": 160,
+      "over100_kcal": 0.619,
+      "salt_mae": 0.85,
+      "sugar_mae": 17.91,
+      "within20_kcal": 0.2
+    },
+    {
+      "abstain": 0.05,
+      "answered": 152,
+      "fat_mae": 11.99,
+      "group_acc": 0.375,
+      "id": "retrieval",
+      "kcal_ci": [
+        129.0,
+        177.4
+      ],
+      "kcal_mae": 153.2,
+      "label": "Search only, no Apertus pick (ablation)",
+      "n": 160,
+      "over100_kcal": 0.493,
+      "salt_mae": 0.92,
+      "sugar_mae": 12.35,
+      "within20_kcal": 0.25
+    },
+    {
+      "abstain": 0.056,
+      "answered": 151,
+      "fat_mae": 7.86,
+      "group_acc": null,
+      "id": "apertus_only",
+      "kcal_ci": [
+        103.5,
+        143.6
+      ],
+      "kcal_mae": 122.2,
+      "label": "Apertus alone, guessing (no source)",
+      "n": 160,
+      "over100_kcal": 0.437,
+      "salt_mae": 0.69,
+      "sugar_mae": 10.28,
+      "within20_kcal": 0.425
+    },
+    {
+      "abstain": 0.075,
+      "answered": 148,
+      "fat_mae": 9.8,
+      "group_acc": 0.487,
+      "id": "hybrid",
+      "kcal_ci": [
+        102.5,
+        145.1
+      ],
+      "kcal_mae": 123.4,
+      "label": "Bon·Appétit hybrid",
+      "n": 160,
+      "over100_kcal": 0.392,
+      "review_share": 0.0,
+      "salt_mae": 0.69,
+      "sugar_mae": 10.68,
+      "within20_kcal": 0.375
+    },
+    {
+      "abstain": 0.0,
+      "answered": 160,
+      "fat_mae": 1.23,
+      "group_acc": 0.612,
+      "id": "oracle",
+      "kcal_ci": [
+        10.1,
+        14.9
+      ],
+      "kcal_mae": 12.4,
+      "label": "Label-informed ceiling (best FSVO food)",
+      "n": 160,
+      "over100_kcal": 0.0,
+      "salt_mae": 0.66,
+      "sugar_mae": 1.16,
+      "within20_kcal": 0.988
+    }
+  ],
+  "n_planned": 160,
+  "n_products": 160,
+  "notes": "Errors are per 100 g against printed Open Food Facts labels. Within-20% uses max(20% of label, 20 kcal).",
+  "sensitivity": [
+    {
+      "id": "fuzzy",
+      "kcal_mae": 173.5,
+      "n": 157
+    },
+    {
+      "id": "retrieval",
+      "kcal_mae": 154.4,
+      "n": 150
+    },
+    {
+      "id": "apertus_only",
+      "kcal_mae": 121.7,
+      "n": 148
+    },
+    {
+      "id": "hybrid",
+      "kcal_mae": 124.3,
+      "n": 146
+    },
+    {
+      "id": "oracle",
+      "kcal_mae": 12.6,
+      "n": 157
+    }
+  ],
+  "status": "done"
+}
