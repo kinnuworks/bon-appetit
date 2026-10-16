@@ -1,0 +1,29 @@
+publiccodeYmlVersion: "0.4"
+name: Bon·Appétit
+url: "https://github.com/kinnuworks/bon-appetit"
+landingURL: "https://kinnuworks.github.io/bon-appetit/"
+releaseDate: "2026-10-16"
+platforms: [web, linux, mac]
+softwareType: standalone/web
+categories: [data-analytics]
+developmentStatus: beta
+legal:
+  license: Apache-2.0
+maintenance:
+  type: community
+  contacts:
+    - name: Dhiraj Kavuri
+localisation:
+  localisationReady: true
+  availableLanguages: [en, de, fr, it]
+description:
+  en:
+    shortDescription: Swiss supermarket receipts to a household food picture, on your own computer, with Apertus.
+    longDescription: >
+      Bon·Appétit reads Swiss supermarket receipts with Apertus v1.5 8B on the household's own computer, links each line
+      to the federal Swiss Food Composition Database, and shows the week against the Swiss food pyramid. Code does every
+      number. It runs air-gapped in Docker or against a Swiss cloud endpoint.
+    features:
+      - Reads Migros Cumulus CSV, Coop PDF text and pasted receipts
+      - Three Apertus steps per line with a federal food database for every number
+      - Air-gapped mode with an egress test

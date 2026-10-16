@@ -13,3 +13,4 @@
 The ODbL files are kept under ODbL, as share-alike requires. They are not relicensed under Apache-2.0 or CDLA-Permissive-2.0. CDLA-Permissive-2.0 is the licence offered for donated receipts in `docs/consent_template.md`; none have been collected yet.
 
 No personal data is used. The receipt parser keeps only article lines, quantities and prices, and the local app stores nothing.
+| `eval/off_corrections_kj_as_kcal.csv` | The 433 likely kilojoule-as-kilocalorie entries with product links | ODbL 1.0, as above |
