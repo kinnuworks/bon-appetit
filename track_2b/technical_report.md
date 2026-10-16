@@ -5,7 +5,7 @@ Swiss supermarket receipts are unreadable to software: lines are truncated, mult
 - **Track:** Track 2B: Bon·Appétit
 - **Event:** Online
 - **Team:** Dhiraj Kavuri (solo)
-- **Demo:** [video link] · live page https://kinnuworks.github.io/bon-appetit/
+- **Demo:** video linked in the submission form · live page https://kinnuworks.github.io/bon-appetit/
 - **Code:** https://github.com/kinnuworks/bon-appetit
 
 ## 1. Summary

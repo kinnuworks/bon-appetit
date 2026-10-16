@@ -6,7 +6,7 @@
 
 Bon·Appétit reads Swiss supermarket receipts and shows a household what it actually eats, measured against the Swiss food pyramid. It runs on the household's own computer. Apertus v1.5 reads the receipt shorthand, a federal food database supplies the numbers, and nothing leaves the machine.
 
-Website and live demo: https://kinnuworks.github.io/bon-appetit/ · Technical report: [technical_report.md](technical_report.md) ([PDF](DhirajKavuri_Report.pdf)) · Demo video: {{VIDEO}}
+Website and live demo: https://kinnuworks.github.io/bon-appetit/ · Technical report: [technical_report.md](technical_report.md) ([PDF](DhirajKavuri_Report.pdf)) · Demo video: linked in the submission form
 
 ## The problem
 
