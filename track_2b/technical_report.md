@@ -5,7 +5,7 @@ Swiss supermarket receipts are unreadable to software: lines are truncated, mult
 - **Track:** Track 2B: Bon·Appétit
 - **Event:** Online
 - **Team:** Dhiraj Kavuri (solo)
-- **Demo:** {{VIDEO}} · live page https://kinnuworks.github.io/bon-appetit/
+- **Demo:** [video link] · live page https://kinnuworks.github.io/bon-appetit/
 - **Code:** https://github.com/kinnuworks/bon-appetit
 
 ## 1. Summary
@@ -56,14 +56,17 @@ No personal data is used. No real receipts were available under a licence, so re
 
 **Task.** For each product, hide the printed label, give the system only the receipt-style line, and compare its per-100 g estimate with the printed values. A method that links to an FSVO food is scored with that food's values.
 
-**Set.** {{N}} products sampled with a fixed seed from Open Food Facts entries sold in Switzerland with complete nutrition tables: 80 German, 50 French and 30 Italian product names.
+**Set.** 160 products were sampled with seed 42 from the 74,192 Open Food Facts entries sold in Switzerland with complete nutrition tables (80 German, 50 French, 30 Italian names). The model runs at about 8 tokens per second on the laptop, so the run was stopped at the deadline after {{N}} products. Languages were interleaved in the run order, so the scored products keep the same language mix. The glossary and shortening rules were written before this set was built.
 
 **Methods.**
 1. Fuzzy text match: the best token-set match among FSVO names, the approach of earlier receipt tools.
 2. Swiss embeddings only: nearest FSVO food by embedding.
-3. Apertus alone: the model estimates the nutrients directly from the line.
-4. Bon·Appétit hybrid.
-5. Oracle: the FSVO food closest to the printed label, the best any FSVO link can do. Generic foods never match a branded label exactly, so this row sets the floor.
+3. Search only (ablation): the top candidate of the hybrid's own search, with no Apertus pick. The difference to the hybrid is what the pick step adds.
+4. Apertus alone: the model estimates the nutrients directly from the line, with no database and no source.
+5. Bon·Appétit hybrid.
+6. Label-informed ceiling: the FSVO food closest to the printed label, chosen by looking at the label. No real system can do this; it shows how close any link to generic FSVO foods could get.
+
+The hybrid abstains on a few lines; the second table compares every method on exactly the products the hybrid answered.
 
 {{RESULTS_TABLE}}
 
@@ -71,22 +74,32 @@ No personal data is used. No real receipts were available under a licence, so re
 
 **Reproduce.** `make eval` re-scores the stored predictions without a model and checks the SHA-256 of the results against `eval/results.sha256`. `python -m eval.run` regenerates the predictions with any Apertus endpoint; every model answer is also stored in `data/llm_cache.jsonl`.
 
-## 6. Limitations
+## 6. Value and cost
+
+{{COST}}
+
+The users are households first, then dietitians, home-care services and prevention programmes working with a client's consent, and retailers who want a nutrition view inside a loyalty app without sending purchase data to a foreign model. A first pilot needs 20 consenting households, four weeks of receipts, a dietitian's review of the reference amounts, and one outcome read from the receipts themselves: the change in the vegetables-and-fruit share. The FoodCoach trial (NCT05597969) is the reference design. No effect is claimed yet.
+
+## 7. Limitations
 
 - Purchases are not intake: waste, guests and meals out are invisible. The output is a household trend by food group, not a per-person diet record.
 - The receipt lines are synthetic, built from real names by stated rules. Real tills cut and code differently; the review queue and a household alias list are meant to absorb this.
 - FSVO has generic foods, so a branded product is scored against a generic value. The oracle row shows how much error that alone causes.
 - One run, one seed, one quantisation. 70B was not evaluated because hackathon inference keys were exhausted.
-- Photo receipts rely on local OCR; Apertus image input was not used, because the community GGUF builds are text-only.
+- Photo receipts are not supported yet; Apertus image input was not used, because the community GGUF builds are text-only.
+- Reference amounts per food group are derived by hand from SGE portions and are illustrative until a dietitian reviews them. Lines without a pack size get a default amount per group, counted as estimated.
+- The evaluation ran before two small changes to the linker (non-food words now always win, and the energy check is applied to the chosen FSVO food). Neither applies to the evaluation products, which are all foods with consistent FSVO records.
 
-## 7. Lessons on building with Apertus 1.5
+## 8. Lessons on building with Apertus 1.5
 
 - The 8B model reads shop shorthand well (`M-BUDG VOLLMILCH UHT 1L` becomes "M-Budget whole milk, UHT, 1 litre") but misses Swiss food words: it read `RUEBLI` (carrot) as kale and as flatbread. A twenty-line glossary in the food layer fixed it; the words belong in localisation data for the next Apertus release.
+- Asked for Swiss spelling, the 8B model still wrote "ß" in German suggestions ("Süßigkeiten"). Code now converts it, as Swiss orthography always uses "ss".
+- Without the target language's food-group names in the prompt, it mixed English group names into German and French text, and once called a household "doing great with sweets" at five times the guide. Giving it the direction ("too little", "too much") and the names in the target language fixed both.
 - Constrained decoding with a full schema hurt accuracy as well as speed on llama.cpp.
 - The model is cautious when it chooses from a list and almost never says it is sure. Selection by list number plus external checks worked better than asking for confidence.
 - {{LESSON_NUMBERS}}
 
-## 8. Next steps
+## 9. Next steps
 
 Real receipts donated with consent (a consent template is in `docs/`); Coop Supercard export; a household alias memory shared across weeks; the 70B model for the read step on a Swiss cloud; reporting nutrient ranges instead of point values; a contribution back to Open Food Facts listing Swiss entries whose printed values fail the Atwater check.
 

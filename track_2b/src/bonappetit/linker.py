@@ -11,7 +11,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 
 from .catalog import Catalog, Candidate
-from .foodlayer import check_pack, check_unit, helvetism_hints
+from .foodlayer import check_energy, check_pack, check_unit, helvetism_hints
 from .llm import Apertus
 from .receipt import Line
 
@@ -93,7 +93,8 @@ class Linker:
         out = Link(line=line.to_dict())
         read = self.read(line)
         out.read = read
-        if not read.get("is_food", True) or (line.nonfood_hint and not read.get("is_food")):
+        # bags, deposits and cleaning products are set aside by rule, whatever the model says
+        if line.nonfood_hint or not read.get("is_food", True):
             out.status = "nonfood"
             return out
         hints = helvetism_hints(line.text)
@@ -121,6 +122,12 @@ class Linker:
                         out.status = "linked"
                         break
                 break
+        energy = check_energy(self.catalog.nutrients(c.fsvo_id))
+        if not energy.ok:  # a food whose own record is inconsistent is never used silently
+            out.status = "review"
+            out.veto = {"rule": energy.rule, "detail": energy.detail, "candidate": c.name}
+        if out.veto and out.status == "linked":
+            out.veto["overruled"] = True  # the model's pick was replaced by one that passes the checks
         out.choice = asdict(c)
         # The 8B model almost never says it is sure, so "sure" is reported, not obeyed. A line goes
         # to review when it answered 0 above, or when the food layer had to overrule it.

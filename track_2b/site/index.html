@@ -13,8 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/foundation.css">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/foundation.css?v=3">
+<link rel="stylesheet" href="assets/site.css?v=3">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -90,7 +90,7 @@
     </div>
 
     <div class="hero-visual" id="heroVisual">
-      <div class="stage stage--hero" role="img" aria-label="The Bon·Appétit window reading a sample Migros receipt line by line. Each line becomes a food with a group and a confidence score, one line becomes a question, and the shopping bag is set aside. A small pyramid sums up the week.">
+      <div class="stage stage--hero" role="img" aria-label="The Bon·Appétit window reading a sample Migros receipt line by line. Each line becomes a food from the Swiss food composition database, one line waits for you because no entry fits, and the shopping bag is set aside. A small pyramid sums up the week.">
         <div class="window hero-app" id="heroApp" aria-hidden="true">
           <div class="window__bar">
             <div class="lights"><i></i><i></i><i></i></div>
@@ -128,14 +128,14 @@
                 <span class="status is-busy" id="heroStatus"><span class="status__dot"></span><span id="heroStatusText">reading 1 of 8</span></span>
               </div>
               <div class="dec">
-                <div class="dec-row"><div><div class="dec-row__raw">M-BUDG VOLLMILCH UHT 1L</div><div class="dec-row__name">Whole milk, UHT</div><div class="dec-row__meta"><span class="gchip g-dairy">Dairy</span><span class="t-mono">4.12 kg</span></div></div><div class="conf">0.93<i style="--c:.93"></i></div></div>
-                <div class="dec-row"><div><div class="dec-row__raw">BIO RUEBLI 1KG</div><div class="dec-row__name">Organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span class="t-mono">1 kg</span></div></div><div class="conf">0.96<i style="--c:.96"></i></div></div>
-                <div class="dec-row"><div><div class="dec-row__raw">AGNOLOTTI RICOTTA SPIN.</div><div class="dec-row__name">Agnolotti, ricotta and spinach</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span class="t-mono">500 g</span></div></div><div class="conf">0.81<i style="--c:.81"></i></div></div>
-                <div class="dec-row"><div><div class="dec-row__raw">HALBWEISSBROT 500G</div><div class="dec-row__name">Half-white bread</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span class="t-mono">500 g</span></div></div><div class="conf">0.95<i style="--c:.95"></i></div></div>
-                <div class="dec-row"><div><div class="dec-row__raw">BANANEN 1.214 KG</div><div class="dec-row__name">Bananas</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span class="t-mono">1.21 kg</span></div></div><div class="conf">0.98<i style="--c:.98"></i></div></div>
-                <div class="dec-row"><div><div class="dec-row__raw">M-BUDG EISTEE ZITR. 1.5L</div><div class="dec-row__name">Lemon iced tea, sweetened</div><div class="dec-row__meta"><span class="gchip g-sweets_snacks_drinks">Sweets and drinks</span><span class="t-mono">4.5 kg</span></div></div><div class="conf">0.90<i style="--c:.90"></i></div></div>
-                <div class="dec-row dec-row--review"><div><div class="dec-row__raw">FARMER CROC CHOCO</div><div class="dec-row__name">Cereal bar or crunchy muesli?</div><div class="dec-row__meta"><span class="gchip gchip--review">Asked you</span></div></div><span class="ask-ic"><svg class="i"><use href="#i-ask"/></svg></span></div>
-                <div class="dec-row dec-row--nonfood"><div><div class="dec-row__raw">TRAGTASCHE 35L</div><div class="dec-row__name">Shopping bag</div><div class="dec-row__meta"><span class="gchip gchip--none">Not food</span></div></div><div class="conf">0.99<i style="--c:.99"></i></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">M-BUDG VOLLMILCH UHT 1L</div><div class="dec-row__name">Whole milk, UHT</div><div class="dec-row__meta"><span class="gchip g-dairy">Dairy</span><span class="t-mono">4.12 kg</span></div></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">BIO RUEBLI 1KG</div><div class="dec-row__name">Organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span class="t-mono">1 kg</span></div></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">AGNOLOTTI RICOTTA SPIN.</div><div class="dec-row__name">Agnolotti, ricotta and spinach</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span class="t-mono">500 g</span></div></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">HALBWEISSBROT 500G</div><div class="dec-row__name">Half-white bread</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span class="t-mono">500 g</span></div></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">BANANEN 1.214 KG</div><div class="dec-row__name">Bananas</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span class="t-mono">1.21 kg</span></div></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">M-BUDG EISTEE ZITR. 1.5L</div><div class="dec-row__name">Lemon iced tea, sweetened</div><div class="dec-row__meta"><span class="gchip g-sweets_snacks_drinks">Sweets and drinks</span><span class="t-mono">4.5 kg</span></div></div></div>
+                <div class="dec-row dec-row--review"><div><div class="dec-row__raw">FARMER CROC CHOCO</div><div class="dec-row__name">No entry fits</div><div class="dec-row__meta"><span class="gchip gchip--review">Waits for you</span></div></div><span class="ask-ic"><svg class="i"><use href="#i-ask"/></svg></span></div>
+                <div class="dec-row dec-row--nonfood"><div><div class="dec-row__raw">TRAGTASCHE 35L</div><div class="dec-row__name">Shopping bag</div><div class="dec-row__meta"><span class="gchip gchip--none">Not food</span></div></div></div>
               </div>
               <div class="mini-week">
                 <div class="pyr">
@@ -158,16 +158,15 @@
       </div>
       <div class="float float--ask" aria-hidden="true">
         <div class="float__inner">
-          <div class="float__eyebrow"><svg class="i"><use href="#i-ask"/></svg>Apertus asked</div>
+          <div class="float__eyebrow"><svg class="i"><use href="#i-ask"/></svg>Apertus answered 0</div>
           <div class="float__raw">FARMER CROC CHOCO</div>
-          <div class="float__q">A chocolate cereal bar, or crunchy muesli?</div>
-          <div class="float__btns"><span>Cereal bar</span><span>Muesli</span></div>
+          <div class="float__q">No entry fits, so the line waits for you.</div>
         </div>
       </div>
       <div class="float float--bytes" aria-hidden="true">
         <div class="float__inner">
           <span class="ic"><svg class="i"><use href="#i-wifi-off"/></svg></span>
-          <span><b>0 bytes left this computer</b><small>network_mode: none</small></span>
+          <span><b>0 of 4 outside hosts reachable</b><small>egress test passed</small></span>
         </div>
       </div>
     </div>
@@ -201,13 +200,13 @@
       <div class="card card--chosen reveal" style="--i:1">
         <div class="versus__head"><h3 class="t-title">What Bon·Appétit reads</h3></div>
         <div class="dec dec--raw" aria-hidden="true">
-          <div class="dec-row"><div><div class="dec-row__raw">M-BUDG VOLLMILCH UHT 1L</div><div class="dec-row__name">M-Budget whole milk, UHT, 1 litre</div><div class="dec-row__meta"><span class="gchip g-dairy">Dairy</span><span>FSVO</span></div></div><div class="conf">0.93<i style="--c:.93"></i></div></div>
-          <div class="dec-row"><div><div class="dec-row__raw">AGNOLOTTI RICOTTA SPIN.</div><div class="dec-row__name">Agnolotti filled with ricotta and spinach</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div><div class="conf">0.81<i style="--c:.81"></i></div></div>
-          <div class="dec-row dec-row--review"><div><div class="dec-row__raw">QP GRUY.RAPE 200G</div><div class="dec-row__name">Grated Gruyère, or grated Parmesan?</div><div class="dec-row__meta"><span class="gchip gchip--review">Asked you</span></div></div><span class="ask-ic"><svg class="i"><use href="#i-ask"/></svg></span></div>
-          <div class="dec-row"><div><div class="dec-row__raw">NATURAPLAN BIO RUEBLI</div><div class="dec-row__name">Coop Naturaplan organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span>FSVO</span></div></div><div class="conf">0.96<i style="--c:.96"></i></div></div>
-          <div class="dec-row"><div><div class="dec-row__raw">PRIX GAR. SPAGHETTI 500G</div><div class="dec-row__name">Coop Prix Garantie spaghetti, 500 g</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div><div class="conf">0.95<i style="--c:.95"></i></div></div>
+          <div class="dec-row"><div><div class="dec-row__raw">M-BUDG VOLLMILCH UHT 1L</div><div class="dec-row__name">M-Budget whole milk, UHT, 1 litre</div><div class="dec-row__meta"><span class="gchip g-dairy">Dairy</span><span>FSVO</span></div></div></div>
+          <div class="dec-row"><div><div class="dec-row__raw">AGNOLOTTI RICOTTA SPIN.</div><div class="dec-row__name">Agnolotti filled with ricotta and spinach</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div></div>
+          <div class="dec-row dec-row--review"><div><div class="dec-row__raw">QP GRUY.RAPE 200G</div><div class="dec-row__name">Apertus answered 0: no entry fits</div><div class="dec-row__meta"><span class="gchip gchip--review">Waits for you</span></div></div><span class="ask-ic"><svg class="i"><use href="#i-ask"/></svg></span></div>
+          <div class="dec-row"><div><div class="dec-row__raw">NATURAPLAN BIO RUEBLI</div><div class="dec-row__name">Coop Naturaplan organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span>FSVO</span></div></div></div>
+          <div class="dec-row"><div><div class="dec-row__raw">PRIX GAR. SPAGHETTI 500G</div><div class="dec-row__name">Coop Prix Garantie spaghetti, 500 g</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div></div>
         </div>
-        <p class="t-small">Each line becomes a food from the federal Swiss Food Composition Database, with a confidence score. When two foods fit equally well, you get a question.</p>
+        <p class="t-small">Each line becomes a food from the federal Swiss Food Composition Database. When no entry fits, the line waits for you instead of being guessed.</p>
       </div>
     </div>
   </div>
@@ -219,7 +218,7 @@
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>How it works</div>
       <h2>Search finds candidates. <span class="t-muted">Apertus picks one.</span></h2>
-      <p class="lead">Search proposes foods from the FSVO database and Open Food Facts. Apertus chooses one or abstains and asks you, and a symbolic food layer checks the choice. Code does every number; Apertus never writes one.</p>
+      <p class="lead">Search proposes foods from the FSVO database. Apertus reads the line, then picks one candidate by its number or answers 0, and a symbolic food layer checks the pick. Code does every number; Apertus never writes one.</p>
     </div>
 
     <div class="stack">
@@ -228,13 +227,12 @@
         <div class="feature-copy reveal">
           <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Reading</div>
           <h3>Apertus reads the shorthand.</h3>
-          <p class="lead">Each line goes to Apertus 8B together with a short list of candidate foods. It expands the abbreviations and picks the candidate that fits. If two fit, it says so.</p>
-          <p class="t-small">The candidate list comes from lexical search plus Swiss multilingual embeddings derived from Apertus by Andreas Martin. A line Apertus abstains on goes to your review queue with one plain question.</p>
+          <p class="lead">Apertus 8B is called twice per line. First it writes the line out in plain English, names the language, says whether it is food and gives a generic name in the style of the German food table. Then it sees a short list of candidates and answers with the number of the one that fits, or 0.</p>
+          <p class="t-small">The candidates come from all 1,145 FSVO foods, found by lexical token matching plus Swiss multilingual embeddings derived from Apertus by Andreas Martin. A line that gets 0 waits for you.</p>
           <div class="chips">
             <span class="chip chip--soft">1,145 FSVO foods</span>
-            <span class="chip chip--soft">Open Food Facts</span>
             <span class="chip chip--soft">Lexical and embedding search</span>
-            <span class="chip chip--soft">Abstains when unsure</span>
+            <span class="chip chip--soft">Answers 0 when nothing fits</span>
           </div>
         </div>
         <div class="stage stage--soft reveal" style="--i:1">
@@ -242,18 +240,18 @@
             <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">Line inspector</span></div>
             <div class="insp">
               <div class="insp__step"><div class="insp__label">Line</div><div><span class="raw-pill">AGNOLOTTI RICOTTA SPIN.</span></div></div>
-              <div class="insp__step"><div class="insp__label">Expanded</div><div>Agnolotti, a filled pasta, with ricotta and spinach</div></div>
+              <div class="insp__step"><div class="insp__label">Read</div><div>Ricotta and spinach agnolotti<span class="cand__src">German · food · Teigwaren gefüllt</span></div></div>
               <div class="insp__step"><div class="insp__label">Candidates</div>
                 <div class="cands">
-                  <div class="cand is-picked"><span class="cand__dot"></span><span class="cand__name">Teigwaren gefüllt, mit Käse und Gemüse<span class="cand__src">FSVO</span></span><span class="score">0.82</span></div>
-                  <div class="cand"><span class="cand__dot"></span><span class="cand__name">Ravioli mit Fleischfüllung<span class="cand__src">FSVO</span></span><span class="score">0.71</span></div>
-                  <div class="cand"><span class="cand__dot"></span><span class="cand__name">Spinat, gekocht<span class="cand__src">FSVO</span></span><span class="score">0.58</span></div>
+                  <div class="cand is-picked"><span class="cand__dot"></span><span class="cand__name">Teigwaren, frisch, gefüllt mit Spinat und Ricotta, roh<span class="cand__src">FSVO</span></span><span class="score">1</span></div>
+                  <div class="cand"><span class="cand__dot"></span><span class="cand__name">Ravioli mit Fleischfüllung<span class="cand__src">FSVO</span></span><span class="score">2</span></div>
+                  <div class="cand"><span class="cand__dot"></span><span class="cand__name">Spinat, gekocht<span class="cand__src">FSVO</span></span><span class="score">3</span></div>
                 </div>
               </div>
-              <div class="insp__step"><div class="insp__label">Apertus</div><div class="verdict"><svg class="i"><use href="#i-check"/></svg><span><b>Picked 1.</b> The filling is cheese and spinach, so the meat ravioli does not fit.</span></div></div>
+              <div class="insp__step"><div class="insp__label">Apertus</div><div class="verdict"><svg class="i"><use href="#i-check"/></svg><span><b>Picked 1.</b></span></div></div>
               <div class="insp__sep"></div>
               <div class="insp__step"><div class="insp__label">Next line</div><div><span class="raw-pill">QP GRUY.RAPE 200G</span></div></div>
-              <div class="insp__step"><div class="insp__label">Apertus</div><div class="verdict verdict--ask"><svg class="i"><use href="#i-ask"/></svg><span><b>Abstained.</b> Two grated cheeses fit. Asked you: grated Gruyère, or grated Parmesan?</span></div></div>
+              <div class="insp__step"><div class="insp__label">Apertus</div><div class="verdict verdict--ask"><svg class="i"><use href="#i-ask"/></svg><span><b>Answered 0:</b> no entry fits, so the line waits for you.</span></div></div>
             </div>
           </div>
         </div>
@@ -264,11 +262,12 @@
         <div class="feature-copy reveal">
           <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-list-checks"/></svg>Checking</div>
           <h3>A food layer checks every pick.</h3>
-          <p class="lead">Before a link counts, a set of plain rules looks at it. The unit has to fit the food, so litres of cheese are rejected. Bags, detergent and bottle deposits are set aside.</p>
-          <p class="t-small">The energy on file has to agree with the Atwater sum: about 4 kcal per gram of protein and of carbohydrate, 9 per gram of fat. Quantities come from the line itself, converted by code.</p>
+          <p class="lead">Before a link counts, plain rules look at it. A line sold in litres cannot be a solid like cheese or chocolate, and the pack size has to make sense for the food. Bags and detergent are set aside as non-food.</p>
+          <p class="t-small">A Swiss glossary adds words like Rüebli, Nüsslisalat and Peperoni, plus common French and Italian food words, to the search and to the pick prompt. Quantities come from the line itself, converted by code.</p>
           <div class="chips">
             <span class="chip chip--soft">Unit against category</span>
-            <span class="chip chip--soft">Atwater energy check</span>
+            <span class="chip chip--soft">Pack-size check</span>
+            <span class="chip chip--soft">Swiss food glossary</span>
             <span class="chip chip--soft">Non-food filter</span>
           </div>
         </div>
@@ -287,8 +286,8 @@
                 <div class="cands">
                   <div class="cand is-picked"><span class="cand__dot"></span><span class="cand__name">Vollmilch, UHT<span class="cand__src">FSVO, whole milk</span></span><span class="tag-ok">Accepted</span></div>
                   <div class="check"><svg class="i"><use href="#i-check"/></svg><span>Litres fit a drink in the dairy group.</span></div>
-                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span><span class="t-mono">4×3.3 + 4×4.7 + 9×3.6 = 64.4 kcal</span>, close to the 65 kcal per 100 g on file.</span></div>
-                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span><span class="t-mono">4 × 1 L × 1.03 g/ml = 4,120 g</span></span></div>
+                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span>Pack size: a 1 litre carton is a normal size for milk.</span></div>
+                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span><span class="t-mono">4 × 1 L = 4,000 g</span></span></div>
                 </div>
               </div>
               <div class="insp__sep"></div>
@@ -304,8 +303,9 @@
           <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Privacy</div>
           <h3>Air-gapped by default.</h3>
           <p class="lead">A year of shopping says a lot about health, religion and money. Under the revised Swiss data protection act that is sensitive personal data, so it stays on your machine.</p>
-          <p class="t-small">Bon·Appétit runs in Docker with <span class="t-mono">network_mode: none</span>, and a test fails if a single packet leaves the container. There is no account and no telemetry. One button deletes everything. If you would rather use a Swiss cloud, point <span class="t-mono">LLM_BASE_URL</span> at it.</p>
+          <p class="t-small"><span class="t-mono">make airgap</span> puts the app and a llama.cpp model server on a Docker network marked internal, with no route out. Before it starts, the app tries four outside hosts and refuses to run if any of them answers. There is no account and no telemetry. If you would rather use a Swiss cloud, point <span class="t-mono">LLM_BASE_URL</span> at it.</p>
           <div class="chips">
+            <span class="chip chip--soft">Internal Docker network</span>
             <span class="chip chip--soft">Egress test</span>
             <span class="chip chip--soft">No telemetry</span>
             <span class="chip chip--soft">Swiss cloud optional</span>
@@ -315,22 +315,20 @@
           <div class="window term-window" aria-hidden="true">
             <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">bon-appetit</span></div>
 <pre class="term"><span class="p">$</span> make airgap
-<span class="d">  container    network_mode: none</span>
-<span class="d">  model        Apertus v1.5 8B, local</span>
-<span class="d">  data         FSVO, Open Food Facts snapshot</span>
-<span class="d">  egress test  tries to reach outside hosts</span>
-  <span class="hl-line"><span class="ok">PASSED</span> no packet left the container</span></pre>
+<span class="d">  network      internal, no route out</span>
+<span class="d">  model        Apertus v1.5 8B on llama.cpp</span>
+<span class="d">  egress test  trying 4 outside hosts</span>
+  <span class="hl-line"><span class="ok">egress test passed:</span> 0 of 4 outside hosts reachable</span></pre>
           </div>
           <div class="settings">
             <div class="settings__row"><span>Model</span><span class="t-mono">apertus-v1.5-8b, local</span></div>
-            <div class="settings__row"><span>Network</span><span class="t-mono">none</span></div>
+            <div class="settings__row"><span>Network</span><span class="t-mono">internal</span></div>
             <div class="settings__row"><span id="langLabel">Language</span>
               <div class="segmented" role="group" aria-labelledby="langLabel" id="settingsLang">
                 <button type="button" aria-pressed="true" data-l="de">DE</button><button type="button" aria-pressed="false" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="it">IT</button><button type="button" aria-pressed="false" data-l="en">EN</button>
               </div>
             </div>
-            <div class="settings__q" aria-live="polite"><small>Review question</small><span id="settingsQ" lang="de">Geriebener Gruyère oder geriebener Parmesan?</span></div>
-            <div class="settings__del" aria-hidden="true"><svg class="i"><use href="#i-trash"/></svg>Delete everything</div>
+            <div class="settings__q" aria-live="polite"><small>Suggestion of the week</small><span id="settingsQ" lang="de">Kaufen Sie statt Süssigkeiten und Süssgetränken frisches Gemüse und Früchte, um die Ernährungsempfehlungen besser zu erfüllen.</span></div>
           </div>
         </div>
       </div>
@@ -346,15 +344,15 @@
       <h2>The parts that make it usable.</h2>
     </div>
     <div class="grid grid-3">
-      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><h3 class="t-title">Migros CSV and Coop PDF</h3><p>Import the Cumulus CSV export or a Coop PDF receipt as the shop hands it to you.</p></div></div>
-      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg></span><div><h3 class="t-title">Paste it or photograph it</h3><p>Paste receipt text, or take a photo of a paper Bon. The OCR runs locally too.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-languages"/></svg></span><div><h3 class="t-title">Four languages</h3><p>Receipts in German, French and Italian. Questions and suggestions in those three and English.</p></div></div>
-      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-ask"/></svg></span><div><h3 class="t-title">A review queue that learns</h3><p>Answer a question once. Your household's names for things are remembered the next week.</p></div></div>
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><h3 class="t-title">Migros CSV and Coop PDF</h3><p>Import the Cumulus CSV export from Migros, or the text of a Coop PDF receipt.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg></span><div><h3 class="t-title">Pasted text</h3><p>Paste lines from any Swiss receipt and they go through the same reader.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-languages"/></svg></span><div><h3 class="t-title">Four languages</h3><p>Receipts in German, French and Italian. The weekly suggestion in those three and English.</p></div></div>
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-list-checks"/></svg></span><div><h3 class="t-title">A Swiss food glossary</h3><p>Rüebli, Nüsslisalat, Peperoni and common French and Italian food words, added to search and to the pick prompt.</p></div></div>
       <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-pyramid"/></svg></span><div><h3 class="t-title">The weekly pyramid</h3><p>Shares of the Swiss food pyramid per adult-equivalent, with sugar, salt, saturated fat and fruit and vegetable portions.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-swap"/></svg></span><div><h3 class="t-title">Swaps from the same shop</h3><p>Two or three suggestions a week, in your language, from what that shop sells. Code fills in the numbers.</p></div></div>
-      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-trash"/></svg></span><div><h3 class="t-title">Delete everything</h3><p>One button removes every receipt, answer and result from your computer.</p></div></div>
-      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg></span><div><h3 class="t-title">The <span class="t-mono">bonlink</span> package</h3><p>The receipt-line linker is its own package, so other projects can use it without the rest of the app.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></span><div><h3 class="t-title">Fixes for open data</h3><p>A list of Open Food Facts entries whose printed values fail the energy check, ready for volunteers to correct.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-swap"/></svg></span><div><h3 class="t-title">One suggestion a week</h3><p>Apertus writes the sentence and code fills in the numbers through placeholders. In German, code also turns ß into ss, the Swiss spelling.</p></div></div>
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-wifi-off"/></svg></span><div><h3 class="t-title">An air gap you can test</h3><p><span class="t-mono">make airgap</span> refuses to start if any of four outside hosts answers.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg></span><div><h3 class="t-title">A linker you can reuse</h3><p>The linker is one small Python module, <span class="t-mono">src/bonappetit/linker.py</span>, usable on its own.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></span><div><h3 class="t-title">Fixes for open data</h3><p>An Atwater check flags 3,035 of 86,517 Swiss products on Open Food Facts (3.5%) whose printed calories contradict their macronutrients; 433 look like kJ typed as kcal. The list is in <span class="t-mono">eval/off_energy_flags.csv</span>.</p></div></div>
     </div>
   </div>
 </section>
@@ -376,6 +374,18 @@
           </div>
           <p class="field__hint" id="receiptHint">Loading sample receipts.</p>
         </div>
+        <div class="live-form" id="liveForm" hidden>
+          <div>
+            <label class="field__label" for="liveText">Receipt lines</label>
+            <textarea class="textarea" id="liveText" rows="6" spellcheck="false" placeholder="M-BUDG VOLLMILCH UHT 1L 1.35&#10;BIO RUEBLI 1KG 2.95&#10;AGNOLOTTI RICOTTA SPIN. 3.50&#10;HALBWEISSBROT 500G 2.60"></textarea>
+          </div>
+          <div>
+            <label class="field__label" for="liveShop">Shop</label>
+            <select class="select" id="liveShop"><option>Migros</option><option>Coop</option><option>Other</option></select>
+          </div>
+          <button class="btn btn-ink" type="button" id="liveGo"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg><span>Read it with Apertus</span></button>
+          <p class="field__hint">Apertus on a laptop takes about 10 seconds per line. The household slider below sets how many adults share the shopping.</p>
+        </div>
         <div>
           <label class="field__label" for="ctlSize">People in the household <output id="sizeOut" for="ctlSize">4</output></label>
           <input class="range" type="range" id="ctlSize" min="1" max="6" step="1" value="4">
@@ -388,7 +398,7 @@
           </div>
         </div>
         <label class="switch-row" for="ctlReview">
-          <span>Show what Apertus abstained on<small>Lines it asks you about instead of guessing.</small></span>
+          <span>Show lines Apertus left for you<small>Lines where it answered 0 instead of guessing.</small></span>
           <input class="switch" type="checkbox" id="ctlReview" checked>
         </label>
         <p class="try__note" id="tryNote"></p>
@@ -446,6 +456,23 @@
       <div class="card card--flat reveal" style="--i:1"><h3>Limits.</h3><p>Purchases are not intake. Food gets shared, thrown away or eaten outside the house, and a receipt shows none of that.</p><p>The rules that turn product names into receipt-style truncations are synthetic, and the report documents them. FSVO values are generic, so a brand's recipe can differ.</p></div>
       <div class="card card--flat reveal" style="--i:2"><h3>Prior work.</h3><p>TooSweet, from the Open Food Hackdays in 2018, ranked Cumulus purchases by sugar. ETH Zurich's FoodCoach and Receipt2Nutrition research studied nutrition from shopping data before us.</p><p>Bon·Appétit adds a local model that can abstain, and a check layer behind it.</p></div>
     </div>
+    <div class="finding reveal">
+      <div class="finding__num"><span class="eyebrow"><span class="dot"></span>Open data finding</span><span class="finding__big">3,035</span></div>
+      <div class="finding__body">
+        <p class="finding__lead">of 86,517 Swiss products on Open Food Facts list calories that contradict their own fat, carbohydrate and protein values. 433 look like kilojoules typed as kilocalories.</p>
+        <p class="t-small">Energy check: 4 kcal per gram of protein and carbohydrate, 9 per gram of fat, 2 per gram of fibre; flagged when printed and computed energy differ by more than 25% and 25 kcal per 100 g. Alcoholic drinks skipped.</p>
+        <a class="btn btn-outline btn-sm" href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/eval/off_energy_flags.csv"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>The list, for Open Food Facts volunteers</a>
+      </div>
+    </div>
+    <div class="lessons reveal">
+      <h3 class="lessons__title">What Apertus taught us.</h3>
+      <ol class="lessons__list">
+        <li><h4>Swiss German needs help.</h4><p>The 8B model read RUEBLI, Swiss German for carrot, as kale and once as flatbread. A short glossary of Swiss food words now goes into the search and the prompt.</p></li>
+        <li><h4>Spelling instructions slip.</h4><p>Asked for Swiss spelling, it still wrote ß in German suggestions. Code converts it to ss.</p></li>
+        <li><h4>A strict grammar made it worse.</h4><p>A full JSON schema grammar made each call about four times slower and made the model answer "no match" for almost every line. Plain JSON mode, with the schema checked in code, fixed both.</p></li>
+        <li><h4>It rarely says it is sure.</h4><p>So the app does not ask it for a confidence score. It chooses a list number, or 0.</p></li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -462,7 +489,7 @@
       <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-umbrella"/></svg></span><div><h3 class="t-title">Insurer prevention programmes</h3><p>Offer members a weekly view that stays on their own computer, so the receipts never reach the insurer.</p></div></div>
       <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg></span><div><h3 class="t-title">Retailers' loyalty apps</h3><p>Run the linker next to the purchase data a loyalty programme already holds, with the Swiss pyramid as the reference.</p></div></div>
       <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-landmark"/></svg></span><div><h3 class="t-title">Cantonal health promotion</h3><p>Use the open code in nutrition programmes in German, French or Italian speaking cantons.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg></span><div><h3 class="t-title">Researchers</h3><p>Reuse <span class="t-mono">bonlink</span> and the label-based evaluation to study shopping data and diet.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg></span><div><h3 class="t-title">Researchers</h3><p>Reuse the linker module and the label-based evaluation to study shopping data and diet.</p></div></div>
     </div>
   </div>
 </section>
@@ -480,10 +507,10 @@
         <div class="window code-window">
           <div class="window__bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span class="window__title">Terminal</span><span class="bar-end"><button class="copy" type="button" data-copy="run"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></span></div>
 <pre class="code" id="code-run"><span class="p">$ </span>git clone https://github.com/kinnuworks/bon-appetit
-<span class="p">$ </span>cd bon-appetit/track_2b
+<span class="p">$ </span>cd bon-appetit
 <span class="p">$ </span>make run</pre>
         </div>
-        <p class="run-copy">Apertus 8B runs locally. To check the air gap yourself, run <span class="t-mono">make airgap</span>.</p>
+        <p class="run-copy"><span class="t-mono">make airgap</span> runs the app with no route out. <span class="t-mono">make eval</span> re-scores the stored predictions and checks their SHA-256.</p>
       </div>
       <div class="reveal" style="--i:1">
         <div class="window code-window">
@@ -512,13 +539,13 @@
     </div>
     <div class="faq">
       <details><summary>Is this medical advice?</summary><p>No. It describes what a household bought and compares that with the Swiss dietary recommendations. For a diagnosis or a diet plan, talk to a doctor or a registered dietitian.</p></details>
-      <details><summary>Does anything leave my computer?</summary><p>Not when you run it locally. The container has no network, and a test fails if a packet gets out. There is no account and no telemetry. If you set <span class="t-mono">LLM_BASE_URL</span>, the receipt lines go to that endpoint, so choose one you trust.</p></details>
+      <details><summary>Does anything leave my computer?</summary><p>Not with <span class="t-mono">make airgap</span>. The app and the model server sit on a Docker network marked internal, with no route out, and the app refuses to start if any of four outside hosts answers. There is no account and no telemetry. If you set <span class="t-mono">LLM_BASE_URL</span>, the receipt lines go to that endpoint, so choose one you trust.</p></details>
       <details><summary>Why not just use barcodes?</summary><p>The Migros Cumulus export has no barcodes, and a paper receipt does not print them. The shortened product name is all there is to work with.</p></details>
-      <details><summary>What about Coop?</summary><p>Coop PDF receipts import directly. Lines with Coop house brands such as Naturaplan, Qualité &amp; Prix and Prix Garantie go through the same reader as Migros lines.</p></details>
-      <details><summary>What if it gets an item wrong?</summary><p>Every line shows the food it was linked to and a confidence score, so a wrong link is easy to spot. When Apertus is unsure it asks instead of guessing, the food layer rejects picks that fail its checks, and your answers are remembered for the next week.</p></details>
-      <details><summary>Which model runs it?</summary><p>Apertus v1.5 8B, the open model from the Swiss AI Initiative, running on your machine. It reads lines and chooses between candidates. Every quantity and nutrient value is computed by code from the databases.</p></details>
-      <details><summary>Can I use it in French or Italian?</summary><p>Yes. It reads receipts in German, French and Italian, and asks its questions and gives its suggestions in German, French, Italian or English.</p></details>
-      <details><summary>How accurate is it?</summary><p>The evidence section above compares its estimates with the nutrition labels printed on Swiss products. Keep in mind that what a household buys is not exactly what it eats.</p></details>
+      <details><summary>What about Coop?</summary><p>Coop PDF receipts are read as text. Lines with Coop house brands such as Naturaplan, Qualité &amp; Prix and Prix Garantie go through the same reader as Migros lines.</p></details>
+      <details><summary>What if it gets an item wrong?</summary><p>Every line shows the FSVO food it was linked to, so a wrong link is easy to spot. The demo on this page keeps the real mistakes, such as iced tea linked to lemon juice. When no candidate fits, Apertus answers 0 and the line waits for you, and the food layer rejects links whose unit or pack size makes no sense.</p></details>
+      <details><summary>Which model runs it?</summary><p>Apertus v1.5 8B, running locally; the air-gapped setup serves it with llama.cpp. It is called twice per line, once to read the line and once to pick a candidate by its number. It never produces a nutrient value: code computes every quantity from the FSVO database.</p></details>
+      <details><summary>Can I use it in French or Italian?</summary><p>Yes. It reads receipts in German, French and Italian, and writes the weekly suggestion in German, French, Italian or English.</p></details>
+      <details><summary>How accurate is it?</summary><p>See the evidence section. Estimates are measured against the nutrition labels printed on Swiss products on Open Food Facts, next to simpler baselines and an oracle that shows the best any FSVO match could do. What a household buys is still not exactly what it eats.</p></details>
     </div>
   </div>
 </section>
@@ -550,6 +577,6 @@
   </div>
 </footer>
 
-<script src="assets/app.js" defer></script>
+<script src="assets/app.js?v=3" defer></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 data/raw
 data/off_ch.parquet
-data/fsvo_embeddings.npy
 models
 .venv
 **/__pycache__

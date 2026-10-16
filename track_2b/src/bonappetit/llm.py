@@ -69,8 +69,22 @@ class Apertus:
             "response_format": {"type": "json_object"},
         }
         t = time.time()
-        r = httpx.post(f"{self.base_url}/chat/completions", json=body,
-                       headers={"Authorization": f"Bearer {self.api_key}"}, timeout=180)
+        headers = {"Authorization": f"Bearer {self.api_key}"}
+        r = None
+        for attempt in range(3):
+            try:
+                r = httpx.post(f"{self.base_url}/chat/completions", json=body, headers=headers, timeout=180)
+            except httpx.TransportError:
+                if attempt == 2:
+                    raise
+                time.sleep(2 * (attempt + 1))
+                continue
+            if r.status_code == 400 and "response_format" in body:
+                # some hosted gateways reject response_format or seed; fall back to a plain request
+                body.pop("response_format", None)
+                body.pop("seed", None)
+                continue
+            break
         r.raise_for_status()
         data = r.json()
         dt = time.time() - t

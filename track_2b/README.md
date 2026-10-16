@@ -2,7 +2,7 @@
 
 Bon·Appétit reads Swiss supermarket receipts and shows a household what it actually eats, measured against the Swiss food pyramid. It runs on the household's own computer. Apertus v1.5 reads the receipt shorthand, a federal food database supplies the numbers, and nothing leaves the machine.
 
-**Hack Apertus 2026 · Track 2B (own project) · Online** · Website and live demo: https://kinnuworks.github.io/bon-appetit/ · Technical report: [technical_report.md](technical_report.md) ([PDF](DhirajKavuri_Report.pdf)) · Demo video: {{VIDEO}}
+**Hack Apertus 2026 · Track 2B (own project) · Online** · Website and live demo: https://kinnuworks.github.io/bon-appetit/ · Technical report: [technical_report.md](technical_report.md) ([PDF](DhirajKavuri_Report.pdf)) · Demo video: [video link]
 
 ## The problem
 
@@ -12,7 +12,7 @@ Purchase histories also reveal health conditions, religion and money. Under the 
 
 ## What it does
 
-1. **Reads the receipt.** Migros Cumulus CSV, Coop PDF, pasted text, or a photo through local OCR. Prices, quantities, pack sizes (`6X1.5L` becomes 9 litres) and non-food lines are handled by rules, not by the model.
+1. **Reads the receipt.** Migros Cumulus CSV, the text of a Coop PDF receipt, or pasted text. Prices, quantities, pack sizes (`6X1.5L` becomes 9 litres) and non-food lines are handled by rules, not by the model.
 2. **Writes out each line with Apertus.** One call per line returns a plain description, the language, whether it is food, and a generic German food-table name.
 3. **Finds candidates.** Lexical search plus Swiss multilingual embeddings derived from Apertus ([andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir](https://huggingface.co/andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir)) search the 1,145 foods of the [FSVO Swiss Food Composition Database](https://naehrwertdaten.ch). French and Italian lines reach German food names this way.
 4. **Picks or abstains with Apertus.** A second call chooses one candidate by its list number, or none. A line with no good match goes to a review queue with a question.
@@ -26,6 +26,20 @@ Apertus never writes a nutrient value.
 
 {{RESULTS}}
 
+## Value and cost
+
+{{COST}}
+
+## Who uses it, and how it gets adopted
+
+1. **A household, today.** Export the Cumulus receipts as CSV or paste a Coop receipt, run `make run`, and read the week. No account, nothing uploaded.
+2. **A retailer's loyalty app.** The container runs on the retailer's own servers next to the purchase data it already holds. The retailer has barcodes for its own sales; the model matters for the barcode-less exports and for receipts from other shops that customers bring in.
+3. **A dietitian, home-care service or insurer prevention programme.** With the client's consent, start a conversation from what was actually bought instead of a food diary written from memory. The purchase data never reaches the insurer.
+
+A first pilot needs 20 households who consent to share four weeks of receipts, a dietitian to review the reference amounts, and one outcome measured from the receipts themselves: the change in the vegetables-and-fruit share. FoodCoach (NCT05597969) is the reference design for such a trial; Bon·Appétit does not claim an effect yet.
+
+The code stays open (Apache-2.0). Paid work, if any, sits around it: running the service for a retailer or a prevention programme, and keeping the Swiss food glossary and the Open Food Facts corrections current.
+
 ## Run it
 
 From the repository root:
@@ -37,11 +51,13 @@ make run      # builds the app image, re-scores the stored evaluation, then serv
 `make run` reaches the model through the template variables, so a judge can point it at any Apertus server:
 
 ```bash
-export LLM_NAME=swiss-ai/apertus-v1.5-8b   # or the 70B, or the local GGUF name
-export LLM_BASE_URL=https://your-endpoint/v1
+export LLM_NAME=swiss-ai/Apertus-v1.5-8B          # the model name your server expects
+export LLM_BASE_URL=http://host.docker.internal:8000/v1   # a server on your host; not localhost inside Docker
 export LLM_API_KEY=...
 make run
 ```
+
+`LLM_NAME` must match the name your server serves (for vLLM, the `--served-model-name` or the Hugging Face id). The app checks the endpoint at startup and prints a warning with a hint if it cannot reach it. Without a model the site and the stored evaluation still work; only live reading needs one. Requests use JSON mode; if a gateway rejects `response_format`, the client retries without it.
 
 Other targets:
 
@@ -54,7 +70,7 @@ Other targets:
 
 ## Deployment target
 
-**b) Air-gapped**, and **a) on-premise**. The model, the food database and the app run on one machine. Build time needs the internet once (Docker images, the model file, the embedding model); runtime needs none. A Swiss cloud endpoint (c) works through `LLM_BASE_URL` for organisations that prefer it.
+**b) Air-gapped**, and **a) on-premise**. The model, the food database and the app run on one machine. Build time needs the internet once (Docker images, Python packages, the embedding model, which is baked into the image, and the GGUF file for `make local` and `make airgap`); runtime needs none. The Open Food Facts dump is needed only to rebuild the evaluation set (`scripts/fetch_off.py`). A Swiss cloud endpoint (c) works through `LLM_BASE_URL` for organisations that prefer it.
 
 ## Repository
 
@@ -71,11 +87,18 @@ Other targets:
 
 ## Data and licences
 
-Code: Apache-2.0. Documentation: CC-BY-4.0. FSVO Swiss Food Composition Database V6.5: free reuse with attribution (Federal Food Safety and Veterinary Office). Open Food Facts: ODbL-1.0; the evaluation set keeps barcodes and label values for 160 products under ODbL, and the full dump is downloaded at build time, never redistributed. No personal data is used anywhere.
+Code: Apache-2.0. Documentation: CC-BY-4.0. FSVO Swiss Food Composition Database V6.5: free reuse with attribution (Federal Food Safety and Veterinary Office). Open Food Facts: the evaluation set and the energy-check list contain information from Open Food Facts under ODbL 1.0 and stay under ODbL; the full dump is never redistributed. File by file: [DATA_LICENSES.md](DATA_LICENSES.md). No personal data is used anywhere.
 
 ## Prior work
 
 TooSweet (Open Food Hackdays 2018) ranked Migros Cumulus purchases by sugar. ETH Zurich's FoodCoach trial (NCT05597969) and Receipt2Nutrition studied nutrition from digital receipts. Bon·Appétit adds multilingual reading of raw receipt lines with an open Swiss model, abstention, a symbolic check, and an evaluation against printed labels that anyone can re-run.
+
+## What the evaluation does and does not show
+
+- The food glossary and the receipt-shortening rules were written before the evaluation set was built, from the first eight demo lines, not tuned on the test products.
+- The daily reference amounts are derived by hand from SGE portion advice (`docs/food_layer.md`) and are illustrative until a dietitian reviews them.
+- Lines without a pack size get a default amount per food group, flagged as estimated in the output (`pack_size_estimated`).
+- The model file is a community conversion, not an official swiss-ai release: `Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF`, SHA-256 {{GGUF_SHA}}.
 
 ## Not medical advice
 

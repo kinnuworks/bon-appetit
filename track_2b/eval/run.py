@@ -24,7 +24,17 @@ GUESS_SCHEMA = {
 
 
 def main(limit: int | None = None):
-    items = [json.loads(l) for l in open(GOLD)][:limit]
+    items = [json.loads(l) for l in open(GOLD)]
+    # interleave languages so that any prefix of the run covers German, French and Italian
+    by = {}
+    for it in items:
+        by.setdefault(it["lang"], []).append(it)
+    order = []
+    while any(by.values()):
+        for lang in ("de", "fr", "de", "it", "fr", "de"):
+            if by.get(lang):
+                order.append(by[lang].pop(0))
+    items = order[:limit]
     cat = Catalog(use_embeddings=True)
     llm = Apertus()
     linker = Linker(cat, llm)
@@ -50,6 +60,7 @@ def main(limit: int | None = None):
     with ThreadPoolExecutor(int(os.environ.get("BONAPPETIT_WORKERS", "4"))) as ex, open(OUT, "w") as f:
         for i, rec in enumerate(ex.map(one, items)):
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            f.flush()
             if i % 10 == 0:
                 print(i, flush=True)
     json.dump({"calls": llm.calls, "tokens_in": llm.tokens_in, "tokens_out": llm.tokens_out,

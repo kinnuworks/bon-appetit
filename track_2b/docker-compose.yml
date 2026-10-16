@@ -16,6 +16,10 @@ services:
     image: ghcr.io/ggml-org/llama.cpp:server
     command: ["-m", "/models/apertus-v1.5-8b-text-q4_k_m.gguf", "--host", "0.0.0.0", "--port", "8000", "-c", "4096", "--jinja"]
     volumes: ["./models:/models:ro"]
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8000/health"]
+      interval: 10s
+      retries: 30
     networks: [default, sealed]
 
   app-airgap:
@@ -26,7 +30,8 @@ services:
       LLM_BASE_URL: http://model:8000/v1
       LLM_API_KEY: local
     networks: [sealed]
-    depends_on: [model]
+    depends_on:
+      model: { condition: service_healthy }
     command: ["sh", "-c", "python -m bonappetit.egress && uvicorn bonappetit.server:app --host 0.0.0.0 --port 8080"]
 
 networks:

@@ -59,6 +59,18 @@ NUDGE_SCHEMA = {
 LANG_NAMES = {"de": "German (Swiss spelling, ss instead of ß)", "fr": "French", "it": "Italian", "en": "English"}
 
 
+GROUP_NAMES = {
+    "de": {"vegetables_fruit": "Gemüse und Früchte", "dairy": "Milchprodukte", "grains_potatoes": "Getreide und Kartoffeln",
+           "sweets_snacks_drinks": "Süsses, Snacks und Süssgetränke", "protein": "Fleisch, Fisch, Eier", "fats_nuts": "Öle, Fette und Nüsse"},
+    "fr": {"vegetables_fruit": "légumes et fruits", "dairy": "produits laitiers", "grains_potatoes": "céréales et pommes de terre",
+           "sweets_snacks_drinks": "sucreries, snacks et boissons sucrées", "protein": "viande, poisson, œufs", "fats_nuts": "huiles, graisses et noix"},
+    "it": {"vegetables_fruit": "verdura e frutta", "dairy": "latticini", "grains_potatoes": "cereali e patate",
+           "sweets_snacks_drinks": "dolci, snack e bibite zuccherate", "protein": "carne, pesce, uova", "fats_nuts": "oli, grassi e noci"},
+    "en": {"vegetables_fruit": "vegetables and fruit", "dairy": "dairy", "grains_potatoes": "grains and potatoes",
+           "sweets_snacks_drinks": "sweets, snacks and sweet drinks", "protein": "meat, fish and eggs", "fats_nuts": "oils, fats and nuts"},
+}
+
+
 def nudge(summary: dict, llm: Apertus, lang: str = "en") -> str:
     """One friendly suggestion. Numbers reach the text only through slots that code fills."""
     ratio = summary["ratio_to_reference"]
@@ -69,15 +81,24 @@ def nudge(summary: dict, llm: Apertus, lang: str = "en") -> str:
         "{HIGH_PCT}": f"{round(ratio[high] * 100)}%",
         "{SUGAR_G}": f"{summary['per_adult_day']['sugars']:.0f} g",
     }
+    names = GROUP_NAMES[lang]
+    if ratio[high] > 1:
+        facts = (f"they buy too little '{names[low]}' ({{LOW_PCT}} of the guide) and too much '{names[high]}' "
+                 f"({{HIGH_PCT}} of the guide). Suggest one concrete swap at the supermarket that moves from the second "
+                 "group to the first.")
+    else:
+        facts = (f"they buy too little '{names[low]}' ({{LOW_PCT}} of the guide). Suggest one concrete thing to add or "
+                 "swap at the supermarket.")
     msg = (
-        f"Write two short, warm sentences in {LANG_NAMES[lang]} for a household. Facts: they bought "
-        f"{{LOW_PCT}} of the recommended amount of '{GROUPS[low]}' and {{HIGH_PCT}} of the recommended amount of "
-        f"'{GROUPS[high]}'; sugar is about {{SUGAR_G}} per adult per day. Suggest one concrete swap at the "
-        "supermarket. Write the placeholders {LOW_PCT}, {HIGH_PCT} and {SUGAR_G} exactly as given and no other "
-        "numbers. No medical advice. Reply in JSON with one key, text."
+        f"Write two short, friendly sentences in {LANG_NAMES[lang]} for a household. Facts: {facts} Write the "
+        "placeholders exactly as given and no other numbers. No praise, no medical advice. "
+        "Reply in JSON with one key, text."
     )
     text = llm.json([{"role": "user", "content": msg}], NUDGE_SCHEMA, max_tokens=160).get("text", "")
     text = re.sub(r"\d+(?:[.,]\d+)?\s*(?:%|g\b)", "", text) if not any(s in text for s in slots) else text
     for k, v in slots.items():
         text = text.replace(k, v)
+    text = re.sub(r"\s+[–—]\s+", ", ", text)
+    if lang == "de":  # Swiss spelling: the 8B model writes ß even when asked not to
+        text = text.replace("ß", "ss")
     return text.strip()
