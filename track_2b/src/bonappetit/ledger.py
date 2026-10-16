@@ -74,7 +74,7 @@ def nudge(summary: dict, llm: Apertus, lang: str = "en") -> str:
         f"{{LOW_PCT}} of the recommended amount of '{GROUPS[low]}' and {{HIGH_PCT}} of the recommended amount of "
         f"'{GROUPS[high]}'; sugar is about {{SUGAR_G}} per adult per day. Suggest one concrete swap at the "
         "supermarket. Write the placeholders {LOW_PCT}, {HIGH_PCT} and {SUGAR_G} exactly as given and no other "
-        "numbers. No medical advice."
+        "numbers. No medical advice. Reply in JSON with one key, text."
     )
     text = llm.json([{"role": "user", "content": msg}], NUDGE_SCHEMA, max_tokens=160).get("text", "")
     text = re.sub(r"\d+(?:[.,]\d+)?\s*(?:%|g\b)", "", text) if not any(s in text for s in slots) else text

@@ -6,7 +6,8 @@ our own annotations are redistributed.
 import sys
 import duckdb
 
-URL = "https://huggingface.co/datasets/openfoodfacts/product-database/resolve/main/food.parquet"
+import os
+URL = os.environ.get("OFF_PARQUET", "https://huggingface.co/datasets/openfoodfacts/product-database/resolve/main/food.parquet")
 OUT = sys.argv[1] if len(sys.argv) > 1 else "data/off_ch.parquet"
 
 NUTRIENTS = ["energy-kcal", "fat", "saturated-fat", "carbohydrates", "sugars", "fiber", "proteins", "salt"]

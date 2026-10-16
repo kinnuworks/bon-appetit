@@ -36,7 +36,7 @@ for rc in sample["receipts"]:
             item["veto"] = l["veto"]
         if l["status"] == "review":
             item["question"] = l.get("question")
-            item["candidates"] = [x["name"] for x in l.get("candidates", [])[:3]]
+            item["candidates"] = [{"name": x["name"]} for x in l.get("candidates", [])[:3]]
         if l["status"] == "nonfood":
             item["reason"] = "Not a food or drink"
         view.append(item)

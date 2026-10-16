@@ -6,6 +6,7 @@ because no licensed corpus of real Swiss receipt lines exists.
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 import sys
@@ -52,7 +53,7 @@ def receipt_line(name: str, brand: str, qty: str) -> str:
 def name_in(names, lang):
     for n in names if names is not None else []:
         if n["lang"] == lang and n["text"]:
-            return n["text"].strip()
+            return html.unescape(n["text"]).strip()
     return None
 
 
@@ -69,9 +70,11 @@ def main():
         sub = sub[sub["lang"] == lang]
         sub = sub.drop_duplicates("name").sample(n=min(n, len(sub)), random_state=SEED)
         for r in sub.itertuples():
+            brand = html.unescape(r.brands) if isinstance(r.brands, str) else ""
+            qty = r.quantity if isinstance(r.quantity, str) else ""
             rows.append({
-                "barcode": r.code, "lang": lang, "name": r.name, "brand": r.brands or "",
-                "quantity": r.quantity or "", "receipt_line": receipt_line(r.name, r.brands or "", r.quantity or ""),
+                "barcode": r.code, "lang": lang, "name": r.name, "brand": brand,
+                "quantity": qty, "receipt_line": receipt_line(r.name, brand, qty),
                 "label": {k: float(getattr(r, k)) for k in need},
                 "food_groups": list(r.food_groups_tags) if r.food_groups_tags is not None else [],
                 "nova": None if pd.isna(r.nova_group) else int(r.nova_group),

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 import re
+import threading
 import unicodedata
 from dataclasses import dataclass
 from functools import lru_cache
@@ -55,6 +56,7 @@ class Catalog:
             use_embeddings = os.environ.get("BONAPPETIT_EMBED", "1") == "1"
         self._emb = None
         self._doc_vecs = None
+        self._emb_lock = threading.Lock()  # the torch MPS backend crashes on concurrent encodes
         if use_embeddings:
             self._load_embeddings()
 
@@ -100,7 +102,8 @@ class Catalog:
     def semantic(self, query: str, k: int = 8) -> list[Candidate]:
         if not self.has_embeddings:
             return []
-        q = self._emb.encode_query([query], truncate_dim=256, normalize_embeddings=True)[0]
+        with self._emb_lock:
+            q = self._emb.encode_query([query], truncate_dim=256, normalize_embeddings=True)[0]
         sims = self._doc_vecs @ q
         top = np.argsort(-sims)[:k]
         return [self._cand(int(i), float(sims[i])) for i in top]

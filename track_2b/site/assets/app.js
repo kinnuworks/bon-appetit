@@ -185,7 +185,7 @@
           ${metric('mSalt', 'salt, guide at most 5 g', 'has-ref')}
           ${metric('mSat', 'saturated fat')}
           ${metric('mFv', 'portions of fruit and veg, guide 5', 'has-ref')}
-          ${metric('mUpf', 'of the food bought is ultra-processed (NOVA 4)', 'metric--wide')}
+          ${metric('mUpf', 'of food lines linked to the federal food database', 'metric--wide')}
         </div></div>
       <div><div class="wk__block-title">Swaps from the same shop<span id="pvLang"></span></div><div class="nudges" id="pvNudges"></div></div>
       <p class="wk__fine" id="pvFine"></p>`;
@@ -224,7 +224,7 @@
     set('mSalt', isNum(s.salt_g_per_day) ? s.salt_g_per_day * f : null, 1, 'g');
     set('mSat', isNum(s.satfat_g_per_day) ? s.satfat_g_per_day * f : null, 0, 'g');
     set('mFv', isNum(s.fruit_veg_portions_per_day) ? s.fruit_veg_portions_per_day * f : null, 1, '');
-    set('mUpf', isNum(s.upf_share) ? s.upf_share * 100 : null, 0, '%');
+    set('mUpf', s.lines && s.lines.lines_total ? 100 * s.lines.lines_linked / Math.max(1, s.lines.lines_total - s.lines.lines_nonfood) : null, 0, '%');
     const ref = (id, v, guide, overIsBad) => {
       const el = $('#' + id + 'Ref'); if (!el || !isNum(v)) return;
       el.style.setProperty('--p', Math.min(100, (v / guide) * 100) + '%');
