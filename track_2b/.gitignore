@@ -25,3 +25,11 @@ build/
 .DS_Store
 .idea/
 .vscode/
+models/
+data/off_ch.parquet
+data/raw/
+data/fsvo_embeddings.npy
+.env
+__pycache__/
+*.egg-info/
+.venv/

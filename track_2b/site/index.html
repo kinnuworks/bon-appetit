@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" data-mood="cream" data-accent="terracotta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bon·Appétit · Swiss receipts, read on your own computer</title>
+<meta name="description" content="Bon·Appétit turns Swiss supermarket receipts into a picture of what a household eats. Apertus reads the lines on your own computer and code does the nutrition arithmetic. Open source, built for Hack Apertus 2026.">
+<meta property="og:title" content="Bon·Appétit">
+<meta property="og:description" content="Swiss supermarket receipts, read by Apertus on your own computer and placed on the Swiss food pyramid.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FAF6EF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/foundation.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<!-- Icon sprite (Lucide-style, 24px grid, 1.75 stroke) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+  <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></symbol>
+  <symbol id="i-list-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol>
+  <symbol id="i-sheet" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h2"/><path d="M14 13h2"/><path d="M8 17h2"/><path d="M14 17h2"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-pyramid" viewBox="0 0 24 24"><path d="M10.27 4a2 2 0 0 1 3.46 0l8 14A2 2 0 0 1 20 21H4a2 2 0 0 1-1.73-3Z"/><path d="M5.2 16h13.6"/><path d="M7.8 11.5h8.4"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><path d="M10 11v6"/><path d="M14 11v6"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-ask" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="M19 12.86a10 10 0 0 0-2-1.52"/><path d="M2 8.82a15 15 0 0 1 4.18-2.64"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="m2 2 20 20"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M2 14h4"/><path d="M10 8h4"/><path d="M18 16h4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <nav class="nav__bar" aria-label="Main">
+    <a class="nav__brand" href="#top" aria-label="Bon·Appétit, back to top">
+      <img class="app-icon" src="assets/icon.svg" alt="" width="28" height="28">
+      <span>Bon·Appétit</span>
+    </a>
+    <div class="nav__links">
+      <a href="#how">How it works</a>
+      <a href="#try">Try it</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#run">Run it</a>
+    </div>
+    <div class="nav__cta">
+      <a class="nav__gh" href="https://github.com/kinnuworks/bon-appetit" aria-label="Source code on GitHub"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg></a>
+      <a class="btn btn-ink btn-sm" href="#try">Try it</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ========== Hero ========== -->
+<section class="hero hero--split" id="top">
+  <div class="container">
+    <div class="hero__copy">
+      <span class="badge"><span class="badge__tag">Hack Apertus 2026</span>Track 2B</span>
+      <h1>Your <em class="t-serif">Bon</em> knows what you eat.</h1>
+      <p class="lead">A Bon is a Swiss till receipt. Bon·Appétit reads yours with Apertus, Switzerland's open language model, and shows what your household ate this week on the Swiss food pyramid. It all happens on your own computer.</p>
+      <div class="cta-row">
+        <a class="btn btn-ink btn-lg" href="#try">Try it on this page<svg class="i" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+        <a class="btn btn-outline btn-lg" href="#run"><svg class="i" aria-hidden="true"><use href="#i-terminal"/></svg>Run it on your computer</a>
+      </div>
+      <div class="trust"><span>Runs on your computer</span><span>No account</span><span>Open source</span></div>
+      <p class="hero__aside">Apache-2.0 on <a href="https://github.com/kinnuworks/bon-appetit">GitHub</a>. The method and results are in <a href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md">the report</a>.</p>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+      <div class="stage stage--hero" role="img" aria-label="The Bon·Appétit window reading a sample Migros receipt line by line. Each line becomes a food with a group and a confidence score, one line becomes a question, and the shopping bag is set aside. A small pyramid sums up the week.">
+        <div class="window hero-app" id="heroApp" aria-hidden="true">
+          <div class="window__bar">
+            <div class="lights"><i></i><i></i><i></i></div>
+            <span class="window__title">Bon·Appétit</span>
+            <span class="bar-end"><span class="pill">Sample week</span></span>
+          </div>
+          <div class="app">
+            <div class="app__side">
+              <div class="app__label">Receipt</div>
+              <div class="receipt-wrap">
+                <div class="receipt">
+                  <div class="receipt__shop">MIGROS</div>
+                  <div class="receipt__meta">Cumulus export</div>
+                  <div class="receipt__rule"></div>
+                  <div class="rc" data-i="0"><span>M-BUDG VOLLMILCH UHT 1L</span><span><small>4x</small> 5.40</span></div>
+                  <div class="rc" data-i="1"><span>BIO RUEBLI 1KG</span><span>2.95</span></div>
+                  <div class="rc" data-i="2"><span>AGNOLOTTI RICOTTA SPIN.</span><span><small>2x</small> 7.00</span></div>
+                  <div class="rc" data-i="3"><span>HALBWEISSBROT 500G</span><span>2.60</span></div>
+                  <div class="rc" data-i="4"><span>BANANEN 1.214 KG</span><span>2.85</span></div>
+                  <div class="rc" data-i="5"><span>M-BUDG EISTEE ZITR. 1.5L</span><span><small>3x</small> 2.85</span></div>
+                  <div class="rc" data-i="6"><span>FARMER CROC CHOCO</span><span>4.50</span></div>
+                  <div class="rc" data-i="7"><span>TRAGTASCHE 35L</span><span>0.50</span></div>
+                  <div class="receipt__rule"></div>
+                  <div class="rc rc--total"><span>TOTAL CHF</span><span>28.65</span></div>
+                  <div class="receipt__foot">8 ARTIKEL</div>
+                </div>
+              </div>
+            </div>
+            <div class="app__main">
+              <div class="app__head">
+                <div>
+                  <div class="app__title">Migros, family of four</div>
+                  <div class="app__sub">Apertus 8B, on this computer</div>
+                </div>
+                <span class="status is-busy" id="heroStatus"><span class="status__dot"></span><span id="heroStatusText">reading 1 of 8</span></span>
+              </div>
+              <div class="dec">
+                <div class="dec-row"><div><div class="dec-row__raw">M-BUDG VOLLMILCH UHT 1L</div><div class="dec-row__name">Whole milk, UHT</div><div class="dec-row__meta"><span class="gchip g-dairy">Dairy</span><span class="t-mono">4.12 kg</span></div></div><div class="conf">0.93<i style="--c:.93"></i></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">BIO RUEBLI 1KG</div><div class="dec-row__name">Organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span class="t-mono">1 kg</span></div></div><div class="conf">0.96<i style="--c:.96"></i></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">AGNOLOTTI RICOTTA SPIN.</div><div class="dec-row__name">Agnolotti, ricotta and spinach</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span class="t-mono">500 g</span></div></div><div class="conf">0.81<i style="--c:.81"></i></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">HALBWEISSBROT 500G</div><div class="dec-row__name">Half-white bread</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span class="t-mono">500 g</span></div></div><div class="conf">0.95<i style="--c:.95"></i></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">BANANEN 1.214 KG</div><div class="dec-row__name">Bananas</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span class="t-mono">1.21 kg</span></div></div><div class="conf">0.98<i style="--c:.98"></i></div></div>
+                <div class="dec-row"><div><div class="dec-row__raw">M-BUDG EISTEE ZITR. 1.5L</div><div class="dec-row__name">Lemon iced tea, sweetened</div><div class="dec-row__meta"><span class="gchip g-sweets_snacks_drinks">Sweets and drinks</span><span class="t-mono">4.5 kg</span></div></div><div class="conf">0.90<i style="--c:.90"></i></div></div>
+                <div class="dec-row dec-row--review"><div><div class="dec-row__raw">FARMER CROC CHOCO</div><div class="dec-row__name">Cereal bar or crunchy muesli?</div><div class="dec-row__meta"><span class="gchip gchip--review">Asked you</span></div></div><span class="ask-ic"><svg class="i"><use href="#i-ask"/></svg></span></div>
+                <div class="dec-row dec-row--nonfood"><div><div class="dec-row__raw">TRAGTASCHE 35L</div><div class="dec-row__name">Shopping bag</div><div class="dec-row__meta"><span class="gchip gchip--none">Not food</span></div></div><div class="conf">0.99<i style="--c:.99"></i></div></div>
+              </div>
+              <div class="mini-week">
+                <div class="pyr">
+                  <div><span class="g-sweets_snacks_drinks is-over"></span></div>
+                  <div><span class="g-fats_nuts"></span></div>
+                  <div><span class="g-dairy"></span><span class="g-protein"></span></div>
+                  <div><span class="g-grains_potatoes"></span></div>
+                  <div><span class="g-vegetables_fruit"></span></div>
+                </div>
+                <div class="mini-stats">
+                  <div class="mini-stats__title">This week, per person and day</div>
+                  <div class="mini-stat"><span>Fruit and veg</span><b>2.6 of 5</b></div>
+                  <div class="mini-stat"><span>Sugar</span><b>68 g</b></div>
+                  <div class="mini-stat"><span>Ultra-processed</span><b>31%</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="float float--ask" aria-hidden="true">
+        <div class="float__inner">
+          <div class="float__eyebrow"><svg class="i"><use href="#i-ask"/></svg>Apertus asked</div>
+          <div class="float__raw">FARMER CROC CHOCO</div>
+          <div class="float__q">A chocolate cereal bar, or crunchy muesli?</div>
+          <div class="float__btns"><span>Cereal bar</span><span>Muesli</span></div>
+        </div>
+      </div>
+      <div class="float float--bytes" aria-hidden="true">
+        <div class="float__inner">
+          <span class="ic"><svg class="i"><use href="#i-wifi-off"/></svg></span>
+          <span><b>0 bytes left this computer</b><small>network_mode: none</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Problem → solution ========== -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>The problem</div>
+      <h2>Receipts are written for the till.</h2>
+      <p class="lead">Shops cut product names to fit a narrow paper roll, in the shop's language, with house-brand codes in front. The Migros Cumulus export uses the same names and has no barcodes, so there is nothing to look up.</p>
+    </div>
+    <div class="versus">
+      <div class="card card--flat reveal">
+        <div class="versus__head"><h3 class="t-title">What a receipt says</h3></div>
+        <div class="receipt-wrap" aria-hidden="true">
+          <div class="receipt">
+            <div class="receipt__group">MIGROS</div>
+            <div class="rc"><span>M-BUDG VOLLMILCH UHT 1L</span><span>5.40</span></div>
+            <div class="rc"><span>AGNOLOTTI RICOTTA SPIN.</span><span>7.00</span></div>
+            <div class="receipt__group">COOP</div>
+            <div class="rc"><span>QP GRUY.RAPE 200G</span><span>3.95</span></div>
+            <div class="rc"><span>NATURAPLAN BIO RUEBLI</span><span>2.95</span></div>
+            <div class="rc"><span>PRIX GAR. SPAGHETTI 500G</span><span>1.90</span></div>
+          </div>
+        </div>
+        <p class="t-small">Five lines from two shops, exactly as printed: M-BUDG, QP and PRIX GAR. are house brands, and RUEBLI is Swiss German for carrots.</p>
+      </div>
+      <div class="card card--chosen reveal" style="--i:1">
+        <div class="versus__head"><h3 class="t-title">What Bon·Appétit reads</h3></div>
+        <div class="dec dec--raw" aria-hidden="true">
+          <div class="dec-row"><div><div class="dec-row__raw">M-BUDG VOLLMILCH UHT 1L</div><div class="dec-row__name">M-Budget whole milk, UHT, 1 litre</div><div class="dec-row__meta"><span class="gchip g-dairy">Dairy</span><span>FSVO</span></div></div><div class="conf">0.93<i style="--c:.93"></i></div></div>
+          <div class="dec-row"><div><div class="dec-row__raw">AGNOLOTTI RICOTTA SPIN.</div><div class="dec-row__name">Agnolotti filled with ricotta and spinach</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div><div class="conf">0.81<i style="--c:.81"></i></div></div>
+          <div class="dec-row dec-row--review"><div><div class="dec-row__raw">QP GRUY.RAPE 200G</div><div class="dec-row__name">Grated Gruyère, or grated Parmesan?</div><div class="dec-row__meta"><span class="gchip gchip--review">Asked you</span></div></div><span class="ask-ic"><svg class="i"><use href="#i-ask"/></svg></span></div>
+          <div class="dec-row"><div><div class="dec-row__raw">NATURAPLAN BIO RUEBLI</div><div class="dec-row__name">Coop Naturaplan organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span>FSVO</span></div></div><div class="conf">0.96<i style="--c:.96"></i></div></div>
+          <div class="dec-row"><div><div class="dec-row__raw">PRIX GAR. SPAGHETTI 500G</div><div class="dec-row__name">Coop Prix Garantie spaghetti, 500 g</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div><div class="conf">0.95<i style="--c:.95"></i></div></div>
+        </div>
+        <p class="t-small">Each line becomes a food from the federal Swiss Food Composition Database, with a confidence score. When two foods fit equally well, you get a question.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Feature deep-dives ========== -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>How it works</div>
+      <h2>Search finds candidates. <span class="t-muted">Apertus picks one.</span></h2>
+      <p class="lead">Search proposes foods from the FSVO database and Open Food Facts. Apertus chooses one or abstains and asks you, and a symbolic food layer checks the choice. Code does every number; Apertus never writes one.</p>
+    </div>
+
+    <div class="stack">
+      <!-- (a) Reading -->
+      <div class="split">
+        <div class="feature-copy reveal">
+          <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Reading</div>
+          <h3>Apertus reads the shorthand.</h3>
+          <p class="lead">Each line goes to Apertus 8B together with a short list of candidate foods. It expands the abbreviations and picks the candidate that fits. If two fit, it says so.</p>
+          <p class="t-small">The candidate list comes from lexical search plus Swiss multilingual embeddings derived from Apertus by Andreas Martin. A line Apertus abstains on goes to your review queue with one plain question.</p>
+          <div class="chips">
+            <span class="chip chip--soft">1,145 FSVO foods</span>
+            <span class="chip chip--soft">Open Food Facts</span>
+            <span class="chip chip--soft">Lexical and embedding search</span>
+            <span class="chip chip--soft">Abstains when unsure</span>
+          </div>
+        </div>
+        <div class="stage stage--soft reveal" style="--i:1">
+          <div class="window" aria-hidden="true">
+            <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">Line inspector</span></div>
+            <div class="insp">
+              <div class="insp__step"><div class="insp__label">Line</div><div><span class="raw-pill">AGNOLOTTI RICOTTA SPIN.</span></div></div>
+              <div class="insp__step"><div class="insp__label">Expanded</div><div>Agnolotti, a filled pasta, with ricotta and spinach</div></div>
+              <div class="insp__step"><div class="insp__label">Candidates</div>
+                <div class="cands">
+                  <div class="cand is-picked"><span class="cand__dot"></span><span class="cand__name">Teigwaren gefüllt, mit Käse und Gemüse<span class="cand__src">FSVO</span></span><span class="score">0.82</span></div>
+                  <div class="cand"><span class="cand__dot"></span><span class="cand__name">Ravioli mit Fleischfüllung<span class="cand__src">FSVO</span></span><span class="score">0.71</span></div>
+                  <div class="cand"><span class="cand__dot"></span><span class="cand__name">Spinat, gekocht<span class="cand__src">FSVO</span></span><span class="score">0.58</span></div>
+                </div>
+              </div>
+              <div class="insp__step"><div class="insp__label">Apertus</div><div class="verdict"><svg class="i"><use href="#i-check"/></svg><span><b>Picked 1.</b> The filling is cheese and spinach, so the meat ravioli does not fit.</span></div></div>
+              <div class="insp__sep"></div>
+              <div class="insp__step"><div class="insp__label">Next line</div><div><span class="raw-pill">QP GRUY.RAPE 200G</span></div></div>
+              <div class="insp__step"><div class="insp__label">Apertus</div><div class="verdict verdict--ask"><svg class="i"><use href="#i-ask"/></svg><span><b>Abstained.</b> Two grated cheeses fit. Asked you: grated Gruyère, or grated Parmesan?</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- (b) Checking -->
+      <div class="split split--flip">
+        <div class="feature-copy reveal">
+          <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-list-checks"/></svg>Checking</div>
+          <h3>A food layer checks every pick.</h3>
+          <p class="lead">Before a link counts, a set of plain rules looks at it. The unit has to fit the food, so litres of cheese are rejected. Bags, detergent and bottle deposits are set aside.</p>
+          <p class="t-small">The energy on file has to agree with the Atwater sum: about 4 kcal per gram of protein and of carbohydrate, 9 per gram of fat. Quantities come from the line itself, converted by code.</p>
+          <div class="chips">
+            <span class="chip chip--soft">Unit against category</span>
+            <span class="chip chip--soft">Atwater energy check</span>
+            <span class="chip chip--soft">Non-food filter</span>
+          </div>
+        </div>
+        <div class="stage stage--soft reveal" style="--i:1">
+          <div class="window" aria-hidden="true">
+            <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">Food checks</span></div>
+            <div class="insp">
+              <div class="insp__step"><div class="insp__label">Line</div><div><span class="raw-pill">M-BUDG VOLLMILCH UHT 1L</span> <span class="score">× 4</span></div></div>
+              <div class="insp__step"><div class="insp__label">Candidate</div>
+                <div class="cands">
+                  <div class="cand cand--rejected"><span class="cand__dot"></span><span class="cand__name">Vollmilchschokolade<span class="cand__src">FSVO, milk chocolate</span></span><span class="tag-no">Rejected</span></div>
+                  <div class="check check--no"><svg class="i"><use href="#i-x"/></svg><span>Sold in litres, but chocolate is a solid. The unit does not fit the category.</span></div>
+                </div>
+              </div>
+              <div class="insp__step"><div class="insp__label">Candidate</div>
+                <div class="cands">
+                  <div class="cand is-picked"><span class="cand__dot"></span><span class="cand__name">Vollmilch, UHT<span class="cand__src">FSVO, whole milk</span></span><span class="tag-ok">Accepted</span></div>
+                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span>Litres fit a drink in the dairy group.</span></div>
+                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span><span class="t-mono">4×3.3 + 4×4.7 + 9×3.6 = 64.4 kcal</span>, close to the 65 kcal per 100 g on file.</span></div>
+                  <div class="check"><svg class="i"><use href="#i-check"/></svg><span><span class="t-mono">4 × 1 L × 1.03 g/ml = 4,120 g</span></span></div>
+                </div>
+              </div>
+              <div class="insp__sep"></div>
+              <div class="insp__step"><div class="insp__label">Line</div><div class="cands"><div><span class="raw-pill">TRAGTASCHE 35L</span></div><div class="check"><svg class="i"><use href="#i-check"/></svg><span>Set aside as non-food: a shopping bag.</span></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- (c) Privacy -->
+      <div class="split">
+        <div class="feature-copy reveal">
+          <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Privacy</div>
+          <h3>Air-gapped by default.</h3>
+          <p class="lead">A year of shopping says a lot about health, religion and money. Under the revised Swiss data protection act that is sensitive personal data, so it stays on your machine.</p>
+          <p class="t-small">Bon·Appétit runs in Docker with <span class="t-mono">network_mode: none</span>, and a test fails if a single packet leaves the container. There is no account and no telemetry. One button deletes everything. If you would rather use a Swiss cloud, point <span class="t-mono">LLM_BASE_URL</span> at it.</p>
+          <div class="chips">
+            <span class="chip chip--soft">Egress test</span>
+            <span class="chip chip--soft">No telemetry</span>
+            <span class="chip chip--soft">Swiss cloud optional</span>
+          </div>
+        </div>
+        <div class="stage stage--soft reveal" style="--i:1">
+          <div class="window term-window" aria-hidden="true">
+            <div class="window__bar"><div class="lights"><i></i><i></i><i></i></div><span class="window__title">bon-appetit</span></div>
+<pre class="term"><span class="p">$</span> make airgap
+<span class="d">  container    network_mode: none</span>
+<span class="d">  model        Apertus v1.5 8B, local</span>
+<span class="d">  data         FSVO, Open Food Facts snapshot</span>
+<span class="d">  egress test  tries to reach outside hosts</span>
+  <span class="hl-line"><span class="ok">PASSED</span> no packet left the container</span></pre>
+          </div>
+          <div class="settings">
+            <div class="settings__row"><span>Model</span><span class="t-mono">apertus-v1.5-8b, local</span></div>
+            <div class="settings__row"><span>Network</span><span class="t-mono">none</span></div>
+            <div class="settings__row"><span id="langLabel">Language</span>
+              <div class="segmented" role="group" aria-labelledby="langLabel" id="settingsLang">
+                <button type="button" aria-pressed="true" data-l="de">DE</button><button type="button" aria-pressed="false" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="it">IT</button><button type="button" aria-pressed="false" data-l="en">EN</button>
+              </div>
+            </div>
+            <div class="settings__q" aria-live="polite"><small>Review question</small><span id="settingsQ" lang="de">Geriebener Gruyère oder geriebener Parmesan?</span></div>
+            <div class="settings__del" aria-hidden="true"><svg class="i"><use href="#i-trash"/></svg>Delete everything</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Tiles ========== -->
+<section class="section" id="more">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>Around the model</div>
+      <h2>The parts that make it usable.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><h3 class="t-title">Migros CSV and Coop PDF</h3><p>Import the Cumulus CSV export or a Coop PDF receipt as the shop hands it to you.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg></span><div><h3 class="t-title">Paste it or photograph it</h3><p>Paste receipt text, or take a photo of a paper Bon. The OCR runs locally too.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-languages"/></svg></span><div><h3 class="t-title">Four languages</h3><p>Receipts in German, French and Italian. Questions and suggestions in those three and English.</p></div></div>
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-ask"/></svg></span><div><h3 class="t-title">A review queue that learns</h3><p>Answer a question once. Your household's names for things are remembered the next week.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-pyramid"/></svg></span><div><h3 class="t-title">The weekly pyramid</h3><p>Shares of the Swiss food pyramid per adult-equivalent, with sugar, salt, saturated fat, fruit and vegetable portions and the ultra-processed share.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-swap"/></svg></span><div><h3 class="t-title">Swaps from the same shop</h3><p>Two or three suggestions a week, in your language, from what that shop sells. Code fills in the numbers.</p></div></div>
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-trash"/></svg></span><div><h3 class="t-title">Delete everything</h3><p>One button removes every receipt, answer and result from your computer.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg></span><div><h3 class="t-title">The <span class="t-mono">bonlink</span> package</h3><p>The receipt-line linker is its own package, so other projects can use it without the rest of the app.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></span><div><h3 class="t-title">Fixes for open data</h3><p>A list of Open Food Facts entries whose printed values fail the energy check, ready for volunteers to correct.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Try it ========== -->
+<section class="section" id="try">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>Try it</div>
+      <h2>Try it on this page.</h2>
+      <p class="lead">Pick a sample receipt, set how many people share the shopping and choose a language for the suggestions. Everything below recalculates in your browser.</p>
+    </div>
+    <div class="try">
+      <div class="card" id="controls">
+        <div>
+          <div class="field__label" id="lblReceipt">Receipt</div>
+          <div class="segmented segmented--full" role="group" aria-labelledby="lblReceipt" id="ctlReceipt">
+            <button type="button" aria-pressed="true" disabled>Migros</button><button type="button" aria-pressed="false" disabled>Coop</button><button type="button" aria-pressed="false" disabled>Ticino</button>
+          </div>
+          <p class="field__hint" id="receiptHint">Loading sample receipts.</p>
+        </div>
+        <div>
+          <label class="field__label" for="ctlSize">People in the household <output id="sizeOut" for="ctlSize">4</output></label>
+          <input class="range" type="range" id="ctlSize" min="1" max="6" step="1" value="4">
+          <div class="range-scale" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+        </div>
+        <div>
+          <div class="field__label" id="lblLang">Suggestions in</div>
+          <div class="segmented segmented--full" role="group" aria-labelledby="lblLang" id="ctlLang">
+            <button type="button" aria-pressed="true" data-l="de" lang="de">Deutsch</button><button type="button" aria-pressed="false" data-l="fr" lang="fr">Français</button><button type="button" aria-pressed="false" data-l="it" lang="it">Italiano</button><button type="button" aria-pressed="false" data-l="en">English</button>
+          </div>
+        </div>
+        <label class="switch-row" for="ctlReview">
+          <span>Show what Apertus abstained on<small>Lines it asks you about instead of guessing.</small></span>
+          <input class="switch" type="checkbox" id="ctlReview" checked>
+        </label>
+        <p class="try__note" id="tryNote"></p>
+      </div>
+      <div class="preview">
+        <div class="stage stage--soft">
+          <div class="window" id="previewWin">
+            <div class="window__bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span class="window__title">Bon·Appétit</span><span class="bar-end"><span class="pill" id="pvPill">Sample</span></span></div>
+            <div id="preview" aria-live="polite">
+              <div class="quiet"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><b>Results are being computed.</b><span>The sample week appears here once it has loaded.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Evidence ========== -->
+<section class="section" id="evidence">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>Evidence</div>
+      <h2>Tested against printed labels.</h2>
+      <p class="lead">Thousands of Swiss products on Open Food Facts carry the nutrition values printed on their packs. We hide the label, link the product from its name or from a receipt-style truncation of it, and compare the estimate with what the pack says.</p>
+    </div>
+    <div class="evidence-grid">
+      <div class="table-card reveal">
+        <div class="table-card__head"><h3 class="t-title">Error against the printed label</h3><span class="t-micro" id="nProducts">Results are being computed</span></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Results table, scrolls sideways">
+          <table class="rt" id="resultsTable">
+            <caption class="sr-only">Mean absolute error per method for energy, sugar and salt, share of products within 20 percent on energy, food group accuracy, abstention rate and number of products.</caption>
+            <thead><tr><th scope="col">Method</th><th scope="col">kcal MAE</th><th scope="col">Sugar MAE</th><th scope="col">Salt MAE</th><th scope="col">kcal ±20%</th><th scope="col">Group</th><th scope="col">Abstains</th><th scope="col">n</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="evidence-row">
+      <div class="chart-card reveal">
+        <div class="chart-card__head"><h3 class="t-title">Energy error by method</h3><span class="t-micro">Lower is better</span></div>
+        <div class="chart-card__body">
+          <div class="chart" id="chart"></div>
+          <p class="chart__cap" id="chartCap">Mean absolute error in kcal per 100 g. The hatched bar is the oracle: the closest any FSVO food could get.</p>
+        </div>
+      </div>
+      <div class="cost">
+        <div class="card"><span class="cost__v" id="costSec"><span class="computing">computing</span></span><span class="cost__k">seconds per receipt line</span></div>
+        <div class="card"><span class="cost__v" id="costChf"><span class="computing">computing</span></span><span class="cost__k">CHF per 1,000 receipts</span></div>
+      </div>
+    </div>
+    <div class="bylang" id="byLang" hidden></div>
+    <div class="notes">
+      <div class="card card--flat reveal"><h3>Baselines.</h3><p>Fuzzy string matching, the way a 2018 hackathon app did it. Embeddings alone. Apertus alone, asked to guess the nutrients with no database. Then the full hybrid.</p><p>The oracle row is the best score any FSVO match could reach. FSVO holds generic foods and the packs are specific brands, so even a perfect link has some error.</p></div>
+      <div class="card card--flat reveal" style="--i:1"><h3>Limits.</h3><p>Purchases are not intake. Food gets shared, thrown away or eaten outside the house, and a receipt shows none of that.</p><p>The rules that turn product names into receipt-style truncations are synthetic, and the report documents them. FSVO values are generic, so a brand's recipe can differ.</p></div>
+      <div class="card card--flat reveal" style="--i:2"><h3>Prior work.</h3><p>TooSweet, from the Open Food Hackdays in 2018, ranked Cumulus purchases by sugar. ETH Zurich's FoodCoach and Receipt2Nutrition research studied nutrition from shopping data before us.</p><p>Bon·Appétit adds a local model that can abstain, and a check layer behind it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Who ========== -->
+<section class="section who" id="who">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>Who it is for</div>
+      <h2>Households first, then the people who help them.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><div><h3 class="t-title">Households</h3><p>See what a week of shopping adds up to, privately, with swaps you can make in the same shop.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-stethoscope"/></svg></span><div><h3 class="t-title">Dietitians and home care</h3><p>Start from what a client actually bought, with their consent, instead of a food diary written from memory.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-umbrella"/></svg></span><div><h3 class="t-title">Insurer prevention programmes</h3><p>Offer members a weekly view that stays on their own computer, so the receipts never reach the insurer.</p></div></div>
+      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg></span><div><h3 class="t-title">Retailers' loyalty apps</h3><p>Run the linker next to the purchase data a loyalty programme already holds, with the Swiss pyramid as the reference.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-landmark"/></svg></span><div><h3 class="t-title">Cantonal health promotion</h3><p>Use the open code in nutrition programmes in German, French or Italian speaking cantons.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg></span><div><h3 class="t-title">Researchers</h3><p>Reuse <span class="t-mono">bonlink</span> and the label-based evaluation to study shopping data and diet.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Run it ========== -->
+<section class="section" id="run">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>Run it</div>
+      <h2>Three commands on your own computer.</h2>
+      <p class="lead">You need git and Docker. Everything runs in a container on your machine.</p>
+    </div>
+    <div class="run-grid">
+      <div class="reveal">
+        <div class="window code-window">
+          <div class="window__bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span class="window__title">Terminal</span><span class="bar-end"><button class="copy" type="button" data-copy="run"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></span></div>
+<pre class="code" id="code-run"><span class="p">$ </span>git clone https://github.com/kinnuworks/bon-appetit
+<span class="p">$ </span>cd bon-appetit/track_2b
+<span class="p">$ </span>make run</pre>
+        </div>
+        <p class="run-copy">Apertus 8B runs locally. To check the air gap yourself, run <span class="t-mono">make airgap</span>.</p>
+      </div>
+      <div class="reveal" style="--i:1">
+        <div class="window code-window">
+          <div class="window__bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span class="window__title">Swiss cloud instead</span><span class="bar-end"><button class="copy" type="button" data-copy="env"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></span></div>
+<pre class="code" id="code-env"><span class="p">$ </span><span class="k">export</span> LLM_NAME=swiss-ai/Apertus-v1.5-8B
+<span class="p">$ </span><span class="k">export</span> LLM_BASE_URL=https://your-swiss-endpoint/v1
+<span class="p">$ </span><span class="k">export</span> LLM_API_KEY=your-key
+<span class="p">$ </span>make run</pre>
+        </div>
+        <p class="run-copy">With these set, receipt lines go to that endpoint instead of the local model. Pick a provider that runs in Switzerland under Swiss law.</p>
+      </div>
+    </div>
+    <div class="run-cta">
+      <a class="btn btn-ink" href="https://github.com/kinnuworks/bon-appetit"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>Source on GitHub</a>
+      <a class="btn btn-outline" href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Read the report</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span>Questions</div>
+      <h2>Honest answers.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Is this medical advice?</summary><p>No. It describes what a household bought and compares that with the Swiss dietary recommendations. For a diagnosis or a diet plan, talk to a doctor or a registered dietitian.</p></details>
+      <details><summary>Does anything leave my computer?</summary><p>Not when you run it locally. The container has no network, and a test fails if a packet gets out. There is no account and no telemetry. If you set <span class="t-mono">LLM_BASE_URL</span>, the receipt lines go to that endpoint, so choose one you trust.</p></details>
+      <details><summary>Why not just use barcodes?</summary><p>The Migros Cumulus export has no barcodes, and a paper receipt does not print them. The shortened product name is all there is to work with.</p></details>
+      <details><summary>What about Coop?</summary><p>Coop PDF receipts import directly. Lines with Coop house brands such as Naturaplan, Qualité &amp; Prix and Prix Garantie go through the same reader as Migros lines.</p></details>
+      <details><summary>What if it gets an item wrong?</summary><p>Every line shows the food it was linked to and a confidence score, so a wrong link is easy to spot. When Apertus is unsure it asks instead of guessing, the food layer rejects picks that fail its checks, and your answers are remembered for the next week.</p></details>
+      <details><summary>Which model runs it?</summary><p>Apertus v1.5 8B, the open model from the Swiss AI Initiative, running on your machine. It reads lines and chooses between candidates. Every quantity and nutrient value is computed by code from the databases.</p></details>
+      <details><summary>Can I use it in French or Italian?</summary><p>Yes. It reads receipts in German, French and Italian, and asks its questions and gives its suggestions in German, French, Italian or English.</p></details>
+      <details><summary>How accurate is it?</summary><p>The evidence section above compares its estimates with the nutrition labels printed on Swiss products. Keep in mind that what a household buys is not exactly what it eats.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Final CTA ========== -->
+<section class="section final">
+  <div class="container">
+    <img class="final__icon" src="assets/icon.svg" alt="Bon·Appétit app icon: a receipt with a leaf growing from its top edge" width="88" height="88">
+    <h2>Read last week's shopping. <span class="t-muted">On your own computer.</span></h2>
+    <p class="lead">Open source, in four languages, with no account to make.</p>
+    <div class="cta-row">
+      <a class="btn btn-ink btn-lg" href="#try">Try it on this page</a>
+      <a class="btn btn-outline btn-lg" href="#run">Run it on your computer</a>
+      <a class="btn btn-ghost btn-lg" href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md">Read the report</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span class="footer__brand"><img class="app-icon" src="assets/icon.svg" alt="" width="24" height="24">Bon·Appétit</span>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="https://github.com/kinnuworks/bon-appetit">GitHub</a>
+      <a href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md">Report</a>
+      <a href="https://github.com/kinnuworks/bon-appetit/blob/main/LICENSE">Licence: Apache-2.0 code, CC BY 4.0 docs</a>
+    </nav>
+    <p class="footer__credit">Built for Hack Apertus 2026 with Apertus v1.5. Data: FSVO Swiss Food Composition Database; Open Food Facts (ODbL). Not medical advice.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# make run      app + checks against LLM_BASE_URL (defaults to a model server on the host, e.g. Ollama)
+# make local    app + a bundled llama.cpp server running Apertus v1.5 8B (GGUF, CPU)
+# make airgap   the same two containers on a network with no route outside, then an egress test
+services:
+  app:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      LLM_NAME: ${LLM_NAME:-hf.co/Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF}
+      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-local}
+    extra_hosts: ["host.docker.internal:host-gateway"]
+
+  model:
+    profiles: ["local", "airgap"]
+    image: ghcr.io/ggml-org/llama.cpp:server
+    command: ["-m", "/models/apertus-v1.5-8b-text-q4_k_m.gguf", "--host", "0.0.0.0", "--port", "8000", "-c", "4096", "--jinja"]
+    volumes: ["./models:/models:ro"]
+    networks: [default, sealed]
+
+  app-airgap:
+    profiles: ["airgap"]
+    build: .
+    environment:
+      LLM_NAME: apertus-v1.5-8b
+      LLM_BASE_URL: http://model:8000/v1
+      LLM_API_KEY: local
+    networks: [sealed]
+    depends_on: [model]
+    command: ["sh", "-c", "python -m bonappetit.egress && uvicorn bonappetit.server:app --host 0.0.0.0 --port 8080"]
+
+networks:
+  sealed:
+    internal: true

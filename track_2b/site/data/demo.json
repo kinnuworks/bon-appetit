@@ -1,0 +1,137 @@
+{
+  "note": "sample, replaced by pipeline output",
+  "receipts": [
+    {
+      "id": "migros-family",
+      "label": "Migros, family of four",
+      "lang": "de",
+      "shop": "Migros",
+      "household_size": 4,
+      "days": 7,
+      "lines": [
+        {"raw": "M-BUDG VOLLMILCH UHT 1L", "qty": 4, "price": 5.40, "decoded": "M-Budget whole milk, UHT, 1 litre", "match": {"source": "fsvo", "id": 10001, "name": "Vollmilch, UHT", "group": "dairy"}, "grams": 4120, "confidence": 0.93, "status": "linked"},
+        {"raw": "BIO RUEBLI 1KG", "qty": 1, "price": 2.95, "decoded": "Organic carrots, 1 kg", "match": {"source": "fsvo", "id": 10002, "name": "Karotte, roh", "group": "vegetables_fruit"}, "grams": 1000, "confidence": 0.96, "status": "linked"},
+        {"raw": "AGNOLOTTI RICOTTA SPIN.", "qty": 2, "price": 7.00, "decoded": "Agnolotti filled with ricotta and spinach", "match": {"source": "fsvo", "id": 10003, "name": "Teigwaren gefüllt, mit Käse und Gemüse", "group": "grains_potatoes"}, "grams": 500, "confidence": 0.81, "status": "linked"},
+        {"raw": "HALBWEISSBROT 500G", "qty": 1, "price": 2.60, "decoded": "Half-white bread, 500 g", "match": {"source": "fsvo", "id": 10004, "name": "Halbweissbrot", "group": "grains_potatoes"}, "grams": 500, "confidence": 0.95, "status": "linked"},
+        {"raw": "KARTOFFELN FESTK. 2.5KG", "qty": 1, "price": 4.20, "decoded": "Firm-cooking potatoes, 2.5 kg", "match": {"source": "fsvo", "id": 10005, "name": "Kartoffel, roh", "group": "grains_potatoes"}, "grams": 2500, "confidence": 0.97, "status": "linked"},
+        {"raw": "BANANEN 1.214 KG", "qty": 1, "price": 2.85, "decoded": "Bananas, 1.214 kg", "match": {"source": "fsvo", "id": 10006, "name": "Banane, roh", "group": "vegetables_fruit"}, "grams": 1214, "confidence": 0.98, "status": "linked"},
+        {"raw": "AEPFEL GALA 1.5KG", "qty": 1, "price": 4.50, "decoded": "Gala apples, 1.5 kg", "match": {"source": "fsvo", "id": 10007, "name": "Apfel, roh", "group": "vegetables_fruit"}, "grams": 1500, "confidence": 0.95, "status": "linked"},
+        {"raw": "M-CLASSIC POULETBRUST", "qty": 1, "price": 12.40, "decoded": "M-Classic chicken breast fillets", "match": {"source": "off", "id": "sample-off-001", "name": "Poulet Brustfilet", "group": "protein"}, "grams": 450, "confidence": 0.88, "status": "linked"},
+        {"raw": "M-CL. JOGH. NATURE 500G", "qty": 1, "price": 1.60, "decoded": "M-Classic plain yoghurt, 500 g", "match": {"source": "fsvo", "id": 10008, "name": "Joghurt nature, aus Vollmilch", "group": "dairy"}, "grams": 500, "confidence": 0.91, "status": "linked"},
+        {"raw": "VORZUGSBUTTER 250G", "qty": 1, "price": 3.95, "decoded": "Premium butter, 250 g", "match": {"source": "fsvo", "id": 10009, "name": "Butter", "group": "fats_nuts"}, "grams": 250, "confidence": 0.94, "status": "linked"},
+        {"raw": "M-BUDG EISTEE ZITR. 1.5L", "qty": 3, "price": 2.85, "decoded": "M-Budget lemon iced tea, 1.5 litres", "match": {"source": "fsvo", "id": 10010, "name": "Eistee, gesüsst", "group": "sweets_snacks_drinks"}, "grams": 4500, "confidence": 0.90, "status": "linked"},
+        {"raw": "CHIPS PAPRIKA 280G", "qty": 1, "price": 3.80, "decoded": "Paprika crisps, 280 g", "match": {"source": "fsvo", "id": 10011, "name": "Kartoffelchips", "group": "sweets_snacks_drinks"}, "grams": 280, "confidence": 0.92, "status": "linked"},
+        {"raw": "FARMER CROC CHOCO", "qty": 1, "price": 4.50, "decoded": "Farmer, chocolate, crunchy", "match": null, "grams": null, "confidence": 0.48, "status": "review", "question": "A chocolate cereal bar, or a chocolate crunchy muesli?", "candidates": [{"source": "fsvo", "name": "Getreideriegel mit Schokolade", "group": "sweets_snacks_drinks"}, {"source": "fsvo", "name": "Knuspermüesli mit Schokolade", "group": "grains_potatoes"}]},
+        {"raw": "ANNAS B. GEMUESE-MIX", "qty": 1, "price": 5.90, "decoded": "Anna's Best vegetable mix", "match": null, "grams": null, "confidence": 0.52, "status": "review", "question": "Raw vegetables for cooking, or a ready salad with dressing?", "candidates": [{"source": "fsvo", "name": "Gemüsemischung, roh", "group": "vegetables_fruit"}, {"source": "fsvo", "name": "Gemüsesalat mit Sauce", "group": "vegetables_fruit"}]},
+        {"raw": "TRAGTASCHE 35L", "qty": 1, "price": 0.50, "decoded": "Shopping bag", "match": null, "grams": null, "confidence": 0.99, "status": "nonfood", "reason": "Shopping bag"},
+        {"raw": "HANDY SPUELMITTEL 750ML", "qty": 1, "price": 2.40, "decoded": "Washing-up liquid", "match": null, "grams": null, "confidence": 0.98, "status": "nonfood", "reason": "Detergent"}
+      ]
+    },
+    {
+      "id": "coop-couple",
+      "label": "Coop, a couple, in French",
+      "lang": "fr",
+      "shop": "Coop",
+      "household_size": 2,
+      "days": 7,
+      "lines": [
+        {"raw": "PRIX GAR. SPAGHETTI 500G", "qty": 2, "price": 1.90, "decoded": "Coop Prix Garantie spaghetti, 500 g", "match": {"source": "fsvo", "id": 20001, "name": "Pâtes alimentaires, crues", "group": "grains_potatoes"}, "grams": 1000, "confidence": 0.95, "status": "linked"},
+        {"raw": "QP GRUY.RAPE 200G", "qty": 1, "price": 3.95, "decoded": "Coop Qualité & Prix grated cheese, 200 g", "match": null, "grams": null, "confidence": 0.55, "status": "review", "question": "Grated Gruyère, or grated Parmesan?", "candidates": [{"source": "fsvo", "name": "Gruyère, râpé", "group": "dairy"}, {"source": "fsvo", "name": "Parmesan, râpé", "group": "dairy"}]},
+        {"raw": "NATURAPLAN CAROTTES 1KG", "qty": 1, "price": 2.95, "decoded": "Coop Naturaplan organic carrots, 1 kg", "match": {"source": "fsvo", "id": 20002, "name": "Carotte, crue", "group": "vegetables_fruit"}, "grams": 1000, "confidence": 0.96, "status": "linked"},
+        {"raw": "LAIT PAST. ENTIER 1L", "qty": 2, "price": 3.70, "decoded": "Whole milk, pasteurised, 1 litre", "match": {"source": "fsvo", "id": 20003, "name": "Lait entier, pasteurisé", "group": "dairy"}, "grams": 2060, "confidence": 0.94, "status": "linked"},
+        {"raw": "YOGOURT FRAISE 4X125G", "qty": 1, "price": 2.40, "decoded": "Strawberry yoghurt, 4 pots of 125 g", "match": {"source": "fsvo", "id": 20004, "name": "Yogourt aux fruits", "group": "dairy"}, "grams": 500, "confidence": 0.89, "status": "linked"},
+        {"raw": "PAIN MI-BLANC 500G", "qty": 1, "price": 2.80, "decoded": "Half-white bread, 500 g", "match": {"source": "fsvo", "id": 20005, "name": "Pain mi-blanc", "group": "grains_potatoes"}, "grams": 500, "confidence": 0.93, "status": "linked"},
+        {"raw": "OEUFS SUISSES 6P", "qty": 1, "price": 4.60, "decoded": "Swiss eggs, pack of 6", "match": {"source": "fsvo", "id": 20006, "name": "Œuf de poule, entier, cru", "group": "protein"}, "grams": 330, "confidence": 0.90, "status": "linked"},
+        {"raw": "TOMATES CERISES 250G", "qty": 1, "price": 3.50, "decoded": "Cherry tomatoes, 250 g", "match": {"source": "fsvo", "id": 20007, "name": "Tomate, crue", "group": "vegetables_fruit"}, "grams": 250, "confidence": 0.94, "status": "linked"},
+        {"raw": "POMMES DE TERRE 2.5KG", "qty": 1, "price": 4.50, "decoded": "Potatoes, 2.5 kg", "match": {"source": "fsvo", "id": 20008, "name": "Pomme de terre, crue", "group": "grains_potatoes"}, "grams": 2500, "confidence": 0.97, "status": "linked"},
+        {"raw": "PRIX GAR. COLA 1.5L", "qty": 2, "price": 2.20, "decoded": "Coop Prix Garantie cola, 1.5 litres", "match": {"source": "fsvo", "id": 20009, "name": "Boisson au cola, sucrée", "group": "sweets_snacks_drinks"}, "grams": 3000, "confidence": 0.91, "status": "linked"},
+        {"raw": "CHOCOLAT LAIT 100G", "qty": 2, "price": 3.00, "decoded": "Milk chocolate, 100 g", "match": {"source": "fsvo", "id": 20010, "name": "Chocolat au lait", "group": "sweets_snacks_drinks"}, "grams": 200, "confidence": 0.95, "status": "linked"},
+        {"raw": "HUILE TOURNESOL 1L", "qty": 1, "price": 4.95, "decoded": "Sunflower oil, 1 litre", "match": {"source": "fsvo", "id": 20011, "name": "Huile de tournesol", "group": "fats_nuts"}, "grams": 920, "confidence": 0.93, "status": "linked"},
+        {"raw": "BETTY B. TARTE FLAMBEE", "qty": 1, "price": 6.50, "decoded": "Betty Bossi tarte flambée", "match": null, "grams": null, "confidence": 0.50, "status": "review", "question": "A chilled tarte flambée ready to bake, or the dough only?", "candidates": [{"source": "fsvo", "name": "Tarte flambée, prête à cuire", "group": "grains_potatoes"}, {"source": "fsvo", "name": "Pâte à tarte, crue", "group": "grains_potatoes"}]},
+        {"raw": "SAC COOP 35L", "qty": 1, "price": 0.50, "decoded": "Shopping bag", "match": null, "grams": null, "confidence": 0.99, "status": "nonfood", "reason": "Shopping bag"},
+        {"raw": "PAPIER MENAGE 4R", "qty": 1, "price": 3.95, "decoded": "Kitchen roll, 4 rolls", "match": null, "grams": null, "confidence": 0.97, "status": "nonfood", "reason": "Household paper"}
+      ]
+    },
+    {
+      "id": "ticino-single",
+      "label": "Ticino, one person, in Italian",
+      "lang": "it",
+      "shop": "Migros",
+      "household_size": 1,
+      "days": 7,
+      "lines": [
+        {"raw": "LATTE INTERO UHT 1L", "qty": 2, "price": 2.70, "decoded": "Whole milk, UHT, 1 litre", "match": {"source": "fsvo", "id": 30001, "name": "Latte intero, UHT", "group": "dairy"}, "grams": 2060, "confidence": 0.94, "status": "linked"},
+        {"raw": "PANE TICINESE 400G", "qty": 1, "price": 2.90, "decoded": "Pane ticinese, white bread, 400 g", "match": {"source": "fsvo", "id": 30002, "name": "Pane bianco", "group": "grains_potatoes"}, "grams": 400, "confidence": 0.90, "status": "linked"},
+        {"raw": "MELE GOLDEN 1KG", "qty": 1, "price": 3.40, "decoded": "Golden Delicious apples, 1 kg", "match": {"source": "fsvo", "id": 30003, "name": "Mela, cruda", "group": "vegetables_fruit"}, "grams": 1000, "confidence": 0.96, "status": "linked"},
+        {"raw": "ZUCCHINE 0.640 KG", "qty": 1, "price": 2.55, "decoded": "Courgettes, 0.64 kg", "match": {"source": "fsvo", "id": 30004, "name": "Zucchina, cruda", "group": "vegetables_fruit"}, "grams": 640, "confidence": 0.97, "status": "linked"},
+        {"raw": "POMODORI PELATI 400G", "qty": 2, "price": 2.20, "decoded": "Peeled tomatoes, tinned, 400 g", "match": {"source": "fsvo", "id": 30005, "name": "Pomodori pelati, in scatola", "group": "vegetables_fruit"}, "grams": 800, "confidence": 0.93, "status": "linked"},
+        {"raw": "RICOTTA 250G", "qty": 1, "price": 2.60, "decoded": "Ricotta, 250 g", "match": {"source": "fsvo", "id": 30006, "name": "Ricotta", "group": "dairy"}, "grams": 250, "confidence": 0.95, "status": "linked"},
+        {"raw": "PROSCIUTTO CRUDO 100G", "qty": 1, "price": 4.90, "decoded": "Cured ham, 100 g", "match": {"source": "fsvo", "id": 30007, "name": "Prosciutto crudo", "group": "protein"}, "grams": 100, "confidence": 0.92, "status": "linked"},
+        {"raw": "PASTA INTEGRALE 500G", "qty": 1, "price": 2.30, "decoded": "Wholemeal pasta, 500 g", "match": {"source": "fsvo", "id": 30008, "name": "Pasta integrale, cruda", "group": "grains_potatoes"}, "grams": 500, "confidence": 0.94, "status": "linked"},
+        {"raw": "OLIO OLIVA EXTRA 0.5L", "qty": 1, "price": 7.90, "decoded": "Extra virgin olive oil, 0.5 litres", "match": {"source": "fsvo", "id": 30009, "name": "Olio d'oliva", "group": "fats_nuts"}, "grams": 460, "confidence": 0.95, "status": "linked"},
+        {"raw": "AMARETTI 200G", "qty": 1, "price": 3.20, "decoded": "Amaretti biscuits, 200 g", "match": {"source": "fsvo", "id": 30010, "name": "Amaretti", "group": "sweets_snacks_drinks"}, "grams": 200, "confidence": 0.90, "status": "linked"},
+        {"raw": "FORMAGGINI 4P", "qty": 1, "price": 3.80, "decoded": "Formaggini, pack of 4", "match": null, "grams": null, "confidence": 0.46, "status": "review", "question": "Small fresh goat cheeses, or processed cheese portions?", "candidates": [{"source": "fsvo", "name": "Formaggino di capra, fresco", "group": "dairy"}, {"source": "fsvo", "name": "Formaggio fuso, porzioni", "group": "dairy"}]},
+        {"raw": "BORSA RIUTILIZZ.", "qty": 1, "price": 0.50, "decoded": "Reusable bag", "match": null, "grams": null, "confidence": 0.99, "status": "nonfood", "reason": "Shopping bag"}
+      ]
+    }
+  ],
+  "summary": {
+    "migros-family": {
+      "pyramid": {"vegetables_fruit": 0.27, "grains_potatoes": 0.26, "dairy": 0.20, "protein": 0.07, "fats_nuts": 0.03, "sweets_snacks_drinks": 0.17},
+      "recommended": {"vegetables_fruit": 0.38, "grains_potatoes": 0.24, "dairy": 0.17, "protein": 0.10, "fats_nuts": 0.05, "sweets_snacks_drinks": 0.06},
+      "sugar_g_per_day": 68,
+      "salt_g_per_day": 8.4,
+      "satfat_g_per_day": 24,
+      "fruit_veg_portions_per_day": 2.6,
+      "upf_share": 0.31,
+      "nudges": [
+        {"lang": "de", "text": "Eine der drei Flaschen Eistee durch Mineralwasser ersetzen: pro Person rund 26 g weniger Zucker pro Woche."},
+        {"lang": "de", "text": "Zwei Beutel tiefgekühltes Gemüse dazu, und der Haushalt kommt von 2,6 auf etwa 3 Portionen Gemüse und Früchte pro Tag."},
+        {"lang": "fr", "text": "Remplacer une des trois bouteilles de thé froid par de l'eau minérale : environ 26 g de sucre en moins par personne et par semaine."},
+        {"lang": "fr", "text": "Avec deux sachets de légumes surgelés en plus, le ménage passe de 2,6 à environ 3 portions de fruits et légumes par jour."},
+        {"lang": "it", "text": "Sostituire una delle tre bottiglie di tè freddo con acqua minerale: circa 26 g di zucchero in meno a persona alla settimana."},
+        {"lang": "it", "text": "Con due sacchetti di verdure surgelate in più, la famiglia passa da 2,6 a circa 3 porzioni di frutta e verdura al giorno."},
+        {"lang": "en", "text": "Swap one of the three bottles of iced tea for mineral water: about 26 g less sugar per person per week."},
+        {"lang": "en", "text": "Add two bags of frozen vegetables and the household goes from 2.6 to about 3 portions of fruit and vegetables a day."}
+      ]
+    },
+    "coop-couple": {
+      "pyramid": {"vegetables_fruit": 0.30, "grains_potatoes": 0.25, "dairy": 0.21, "protein": 0.08, "fats_nuts": 0.06, "sweets_snacks_drinks": 0.10},
+      "recommended": {"vegetables_fruit": 0.38, "grains_potatoes": 0.24, "dairy": 0.17, "protein": 0.10, "fats_nuts": 0.05, "sweets_snacks_drinks": 0.06},
+      "sugar_g_per_day": 59,
+      "salt_g_per_day": 7.6,
+      "satfat_g_per_day": 22,
+      "fruit_veg_portions_per_day": 3.1,
+      "upf_share": 0.24,
+      "nudges": [
+        {"lang": "fr", "text": "Remplacer une des deux bouteilles de cola par de l'eau gazeuse : environ 80 g de sucre en moins par personne et par semaine."},
+        {"lang": "fr", "text": "Un yogourt nature avec des fraises fraîches à la place du yogourt aux fraises : environ 19 g de sucre en moins par personne et par semaine."},
+        {"lang": "de", "text": "Eine der zwei Flaschen Cola durch Mineralwasser mit Kohlensäure ersetzen: pro Person rund 80 g weniger Zucker pro Woche."},
+        {"lang": "de", "text": "Naturjoghurt mit frischen Erdbeeren statt Erdbeerjoghurt: pro Person rund 19 g weniger Zucker pro Woche."},
+        {"lang": "it", "text": "Sostituire una delle due bottiglie di cola con acqua gasata: circa 80 g di zucchero in meno a persona alla settimana."},
+        {"lang": "it", "text": "Yogurt bianco con fragole fresche al posto dello yogurt alla fragola: circa 19 g di zucchero in meno a persona alla settimana."},
+        {"lang": "en", "text": "Swap one of the two bottles of cola for sparkling water: about 80 g less sugar per person per week."},
+        {"lang": "en", "text": "Plain yoghurt with fresh strawberries instead of strawberry yoghurt: about 19 g less sugar per person per week."}
+      ]
+    },
+    "ticino-single": {
+      "pyramid": {"vegetables_fruit": 0.36, "grains_potatoes": 0.24, "dairy": 0.16, "protein": 0.07, "fats_nuts": 0.08, "sweets_snacks_drinks": 0.09},
+      "recommended": {"vegetables_fruit": 0.38, "grains_potatoes": 0.24, "dairy": 0.17, "protein": 0.10, "fats_nuts": 0.05, "sweets_snacks_drinks": 0.06},
+      "sugar_g_per_day": 41,
+      "salt_g_per_day": 6.9,
+      "satfat_g_per_day": 19,
+      "fruit_veg_portions_per_day": 3.8,
+      "upf_share": 0.18,
+      "nudges": [
+        {"lang": "it", "text": "Al posto degli amaretti, un sacchetto di noci non salate: circa 80 g di zucchero in meno alla settimana."},
+        {"lang": "it", "text": "Prosciutto cotto invece di crudo: circa 3 g di sale in meno alla settimana."},
+        {"lang": "de", "text": "Ungesalzene Nüsse statt Amaretti: rund 80 g weniger Zucker pro Woche."},
+        {"lang": "de", "text": "Gekochter Schinken statt Rohschinken: rund 3 g weniger Salz pro Woche."},
+        {"lang": "fr", "text": "Des noix non salées à la place des amaretti : environ 80 g de sucre en moins par semaine."},
+        {"lang": "fr", "text": "Du jambon cuit à la place du jambon cru : environ 3 g de sel en moins par semaine."},
+        {"lang": "en", "text": "Unsalted nuts instead of the amaretti: about 80 g less sugar a week."},
+        {"lang": "en", "text": "Cooked ham instead of cured ham: about 3 g less salt a week."}
+      ]
+    }
+  }
+}

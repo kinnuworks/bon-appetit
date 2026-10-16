@@ -1,0 +1,1146 @@
+fsvo_id,name,synonyms,category,density,basis,energy_kcal,fat,saturated_fat,carbohydrates,sugars,fiber,proteins,salt,kind,liquid,category_top
+10533,Agar Agar,,Verschiedenes/Gelier- und Bindemittel,,pro 100g essbarer Anteil,160,0.2,,0.0,,74.1,2.4,0.3,generic,False,Verschiedenes
+10536,Agavensirup,Agavendicksaft,Süssigkeiten/Zucker und Süssstoffe,,pro 100g essbarer Anteil,293,0.0,0.0,73.1,,0.0,0.2,0.0,generic,False,Süssigkeiten
+14093,Ahornsirup,,Süssigkeiten/Zucker und Süssstoffe,1.32,pro 100 ml,358,0.3,0.0,88.7,77.3,0.0,0.0,0.0,generic,True,Süssigkeiten
+13466,"Alge, Nori, getrocknet","Algen, getrocknet",Gemüse/Gemüse getrocknet,,pro 100g essbarer Anteil,255,1.6,0.2,10.5,0.5,36.3,31.5,5.0,generic,False,Gemüse
+1478,"Älplermagronen, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,180,9.0,5.3,17.8,1.3,1.7,6.0,1.1,generic,False,Gerichte
+13398,"Amaranth, Samen, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,119,2.1,0.4,18.1,0.5,3.5,5.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13397,"Amaranth, Samen, roh",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,376,7.0,1.5,56.8,1.7,11.0,15.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+868,Amaretti (Mandelgebäck),,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,464,13.0,1.0,76.7,76.4,2.6,8.8,0.1,generic,False,Süssigkeiten
+14094,"Ananas, in Ananassaft, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,60,0.1,,13.6,12.8,1.4,0.5,0.0,generic,False,Früchte
+14095,"Ananas, in Ananassaft, Konserve, nicht abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,59,0.1,,13.6,12.6,0.9,0.4,0.0,generic,False,Früchte
+617,"Ananas, in Sirup, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,70,0.1,,15.9,15.9,1.6,0.5,0.0,generic,False,Früchte
+14096,"Ananas, mit Süssungsmittel, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,42,0.1,0.0,9.4,8.4,1.0,0.5,0.0,generic,False,Früchte
+377,"Ananas, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,52,0.1,,11.7,10.5,1.2,0.5,0.0,generic,False,Früchte
+13880,Ananassaft,,Früchte/Fruchtsäfte,1.05,pro 100g essbarer Anteil,51,0.1,0.0,12.1,12.1,0.2,0.4,0.0,generic,False,Früchte
+1049,"Apfel, gedünstet, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,56,0.3,0.1,12.2,12.1,1.5,0.3,0.0,generic,False,Früchte
+435,"Apfel, geschält, getrocknet",Dörrapfel,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,264,1.6,0.7,55.4,50.0,11.2,1.4,0.0,generic,False,Früchte
+378,"Apfel, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,52,0.3,0.1,11.6,11.5,1.4,0.3,0.0,generic,False,Früchte
+1479,"Apfelkuchen, hausgemacht, gebacken (mit Blätterteig)",Apfelwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,145,6.8,3.0,17.8,9.4,1.3,2.4,0.3,generic,False,Süssigkeiten
+1480,"Apfelkuchen, hausgemacht, gebacken (mit Kuchenteig)",Apfelwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,147,6.6,3.0,18.5,9.4,1.3,2.6,0.2,generic,False,Süssigkeiten
+627,"Apfelmus, gezuckert (Konserve)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,89,0.3,0.1,20.5,20.4,1.9,0.3,0.0,generic,False,Früchte
+628,"Apfelmus, ungezuckert (Konserve)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,55,0.3,0.1,11.7,11.6,2.1,0.3,0.0,generic,False,Früchte
+568,Apfelsaft,Süssmost,Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.04,pro 100 ml,50,0.1,0.0,11.9,11.3,0.2,0.2,0.0,generic,True,Früchte
+512,"Apfelwein, 4 vol%",Apfelmost;Saurer Most;Cider,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,32,0.0,0.0,2.5,2.5,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+513,"Apfelwein, 6.2 vol%",Apfelmost;Saurer Most;Cider,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,64,0.0,0.0,7.3,7.3,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+554,"Appenzeller, viertelfett",,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,235,11.4,6.8,0.0,0.0,0.0,33.1,2.0,generic,False,Milch und Milchprodukte
+553,"Appenzeller, vollfett",,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,384,31.7,19.0,0.0,0.0,0.0,24.3,1.6,generic,False,Milch und Milchprodukte
+1051,"Aprikose, gedünstet, abgetropft (ohne Zugabe von Zucker)",Marille,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,45,0.2,0.0,9.0,6.7,1.7,1.0,0.0,generic,False,Früchte
+469,"Aprikose, getrocknet",Dörraprikose;Marille,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,239,0.5,0.2,59.1,34.3,8.3,2.9,0.0,generic,False,Früchte
+621,"Aprikose, in Sirup, Konserve, abgetropft",Marille,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,62,0.1,0.0,13.7,13.3,1.4,0.9,0.0,generic,False,Früchte
+14097,"Aprikose, mit Süssungsmittel, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,40,0.1,0.0,8.2,6.1,1.4,0.9,0.0,generic,False,Früchte
+379,"Aprikose, roh",Marille,Früchte/Früchte frisch,,pro 100g essbarer Anteil,44,0.1,0.0,9.0,6.7,1.7,0.8,0.0,generic,False,Früchte
+1481,"Aprikosenkuchen, hausgemacht, gebacken (mit Blätterteig)",Marille;Aprikosenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,139,6.7,3.0,16.1,6.2,1.5,2.8,0.3,generic,False,Süssigkeiten
+1482,"Aprikosenkuchen, hausgemacht, gebacken (mit Kuchenteig)",Aprikosenwähe;Marille,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,141,6.5,2.9,16.8,6.2,1.5,3.0,0.2,generic,False,Süssigkeiten
+13449,"Artischocken, Herz, abgetropft (Konserve)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,27,0.5,,2.3,1.2,3.2,1.8,0.8,generic,False,Gemüse
+1653,"Aubergine, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,21,0.1,0.0,2.4,2.4,2.7,1.1,0.0,generic,False,Gemüse
+1003,"Aubergine, gedünstet (ohne Zugabe von Fett und Salz)",Eierfrucht,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,24,0.2,0.0,2.8,2.8,3.2,1.3,0.0,generic,False,Gemüse
+349,"Aubergine, roh",Eierfrucht,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,21,0.1,0.0,2.4,2.4,2.7,1.1,0.0,generic,False,Gemüse
+1659,"Auberginen-Piccata, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,138,8.3,2.3,8.9,2.3,2.7,5.6,0.2,generic,False,Gerichte
+1658,"Auberginenscheiben, paniert, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,136,5.8,0.7,14.6,2.7,3.1,4.7,0.2,generic,False,Gerichte
+10353,Aufschnitt (Durchschnitt),,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,276,24.2,9.1,0.7,0.7,0.0,13.9,2.0,generic,False,Fleisch- und Wurstwaren
+380,"Avocado, roh",,"Gemüse/Gemüse frisch;Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,158,15.1,2.8,1.2,1.1,5.5,1.6,0.0,generic,False,Gemüse
+763,"Bäckerhefe, gepresst",Bierhefe,Verschiedenes/Hefe;Verschiedenes/Backzutaten,,pro 100g essbarer Anteil,96,1.2,0.2,1.1,0.0,6.9,16.7,0.1,generic,False,Verschiedenes
+13455,Balsamicoessig,Balsamessig;Aceto Balsamico,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,128,0.6,0.0,25.8,19.1,0.5,0.7,0.1,generic,False,Verschiedenes
+1577,"Bami Goreng, zubereitet",,Gerichte/Asiatische Gerichte,,pro 100g essbarer Anteil,130,2.4,0.3,13.1,1.3,0.9,13.5,1.0,generic,False,Gerichte
+740,"Banane, gedörrt",Bananenchips,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,370,1.8,0.7,80.7,65.3,7.6,3.9,0.0,generic,False,Früchte
+741,"Banane, getrocknet",,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,273,1.0,0.4,60.2,43.7,5.5,3.0,0.0,generic,False,Früchte
+381,"Banane, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,89,0.1,,19.7,15.6,2.7,1.1,0.0,generic,False,Früchte
+464,"Basilikum, roh",,Gemüse/Kräuter,,pro 100g essbarer Anteil,46,0.8,0.1,5.1,5.0,3.1,3.1,0.0,generic,False,Gemüse
+1248,Basler Leckerli,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,412,7.9,0.7,75.0,52.0,2.8,7.5,0.0,generic,False,Süssigkeiten
+1268,Bauernbrot,Burebrot,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,241,2.0,0.7,44.3,2.4,4.4,9.2,1.8,generic,False,"Brote, Flocken und Frühstückscerealien"
+787,Bauernschüblig,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,524,48.5,18.8,0.3,0.3,0.0,21.3,4.0,generic,False,Fleisch- und Wurstwaren
+271,Baumnuss,Walnuss,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,709,67.3,6.5,6.9,3.0,6.7,15.7,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+831,Baumnussbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,332,17.9,3.9,30.8,2.0,5.8,9.2,1.2,generic,False,"Brote, Flocken und Frühstückscerealien"
+13402,Baumnussöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,9.0,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+12981,"Béchamelsauce, hausgemacht",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,147,9.9,6.0,10.1,4.8,0.2,4.2,0.7,generic,False,Verschiedenes
+1122,"Beeren (Durchschnitt), gekocht (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,35,0.6,0.0,5.3,5.0,3.2,0.7,0.0,generic,False,Früchte
+1119,"Beeren (Durchschnitt), roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,40,0.5,0.0,6.3,5.9,3.7,0.7,0.0,generic,False,Früchte
+851,Berliner,Pfannkuchen,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,336,12.8,6.8,45.8,17.1,2.2,8.4,0.6,generic,False,Süssigkeiten
+1211,Berner Alpkäse,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,453,38.3,,0.0,,0.0,27.1,1.6,generic,False,Milch und Milchprodukte
+1212,Berner Hobelkäse,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,491,41.2,,0.0,,0.0,30.0,1.7,generic,False,Milch und Milchprodukte
+790,Berner Zungenwurst,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,333,29.4,10.8,0.0,0.0,0.0,17.3,1.5,generic,False,Fleisch- und Wurstwaren
+859,Biber,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,355,5.6,0.7,65.6,36.9,3.0,7.8,0.0,generic,False,Süssigkeiten
+1183,Bier Panache (Durchschnitt),,Alkoholhaltige Getränke/Bier,1.0,pro 100 ml,39,0.0,0.0,7.4,7.1,0.0,0.2,0.0,generic,True,Alkoholhaltige Getränke
+13420,"Bier, alkoholfrei",,Alkoholhaltige Getränke/Bier,1.0,pro 100 ml,23,0.0,0.0,4.9,2.6,0.0,0.4,0.0,generic,True,Alkoholhaltige Getränke
+816,"Bier, Lager",,Alkoholhaltige Getränke/Bier,1.0,pro 100 ml,42,0.0,0.0,3.1,2.2,0.0,0.5,0.0,generic,True,Alkoholhaltige Getränke
+839,"Bierhefe, getrocknet",Bäckerhefe;Trockenhefe;Hefepulver,Speziallebensmittel/Supplemente;Verschiedenes/Hefe,,pro 100g essbarer Anteil,354,4.2,0.6,26.5,3.2,9.5,47.9,0.2,generic,False,Speziallebensmittel
+789,Bierwurst,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,291,25.4,9.4,0.0,0.0,0.0,15.6,1.4,generic,False,Fleisch- und Wurstwaren
+1198,"Birchermüesli, zubereitet (ungezuckert)",,Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,86,3.1,1.1,11.1,8.2,1.5,2.6,0.0,generic,False,Gerichte
+1050,"Birne, gedünstet, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,57,0.4,0.1,11.3,9.4,3.0,0.6,0.0,generic,False,Früchte
+433,"Birne, getrocknet",Dörrbirne;Trockenbirne,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,288,1.4,0.2,59.7,49.6,13.5,2.3,0.0,generic,False,Früchte
+620,"Birne, in Sirup, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,71,0.4,0.1,15.2,14.4,2.6,0.4,0.0,generic,False,Früchte
+14098,"Birne, mit Süssungsmittel, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,50,0.3,0.1,9.9,8.2,2.6,0.5,0.0,generic,False,Früchte
+382,"Birne, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,54,0.3,0.1,10.9,9.0,2.9,0.5,0.0,generic,False,Früchte
+1483,"Birnenkuchen, hausgemacht, gebacken (mit Blätterteig)",Birnenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,146,6.8,3.0,17.4,7.8,2.3,2.6,0.3,generic,False,Süssigkeiten
+1484,"Birnenkuchen, hausgemacht, gebacken (mit Kuchenteig)",Birnenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,148,6.6,3.0,18.1,7.8,2.3,2.8,0.2,generic,False,Süssigkeiten
+562,Birnensaft,,Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.04,pro 100 ml,52,0.3,0.0,12.1,10.0,0.0,0.5,0.0,generic,True,Früchte
+862,Birnenweggen,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,363,10.4,5.9,57.2,33.5,6.9,4.9,0.8,generic,False,Süssigkeiten
+604,"Blanc battu mit Früchten, mit Süsstoffen",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,67,0.2,0.1,8.3,5.2,0.3,8.0,0.1,generic,False,Milch und Milchprodukte
+13395,"Blanc battu, nature, mager",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,47,0.0,0.0,3.9,3.9,,7.8,0.1,generic,False,Milch und Milchprodukte
+13445,"Blätterteig (mit pflanzichem Fett), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,385,24.3,10.9,35.1,0.1,1.6,5.7,1.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+904,"Blätterteig, hausgemacht (Butter), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,364,24.7,14.6,29.4,0.3,1.3,5.2,0.8,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+905,"Blätterteig, hausgemacht (mit pflanzlichem Fett), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,349,23.2,7.1,29.3,0.2,1.3,5.2,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+928,Blätterteigstängel,Flûtes,Salzige Snacks/Blätterteiggebäcke,,pro 100g essbarer Anteil,490,32.9,15.0,40.4,0.3,1.8,7.1,2.6,generic,False,Salzige Snacks
+1165,"Blattgemüse (Durchschnitt exkl. Salate), gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,24,0.3,0.1,2.8,2.4,1.9,1.5,0.0,generic,False,Gemüse
+1166,"Blattgemüse (Durchschnitt exkl. Salate), gedünstet (ohne Zugabe von Salz und Fett)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,25,0.3,0.1,2.9,2.4,2.0,1.6,0.0,generic,False,Gemüse
+1164,"Blattgemüse (Durchschnitt exkl. Salate), gekocht (ohne Zugabe von Salz und Fett)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,23,0.3,0.1,2.7,2.3,1.9,1.5,0.0,generic,False,Gemüse
+1127,"Blattsalat (Durchschnitt), roh ",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,19,0.3,0.0,1.6,1.5,1.7,1.6,0.0,generic,False,Gemüse
+1191,Blauschimmelkäse (Durchschnitt),,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,360,31.5,18.9,0.2,0.1,0.0,19.1,3.8,generic,False,Milch und Milchprodukte
+1004,"Blumenkohl, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,26,0.7,0.2,2.1,1.7,2.0,1.8,0.0,generic,False,Gemüse
+350,"Blumenkohl, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,26,0.7,0.2,2.1,1.7,2.0,1.8,0.0,generic,False,Gemüse
+778,Blutwurst,,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,149,10.9,4.6,2.5,2.4,0.1,10.2,2.0,generic,False,Fleisch- und Wurstwaren
+13388,"Bohne (alle Arten), gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,111,0.6,0.1,14.5,0.4,8.5,7.7,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13387,"Bohne (alle Arten), getrocknet",Weisse Bohne;Rote Bohne;Borlotti Bohne,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,305,1.5,0.3,40.7,1.2,22.6,20.9,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1009,"Bohne, grün, gedämpft (ohne Zugabe von Salz)",Gartenbohne,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,34,0.2,0.1,4.4,3.4,3.2,2.0,0.0,generic,False,Gemüse
+473,"Bohne, grün, getrocknet",Dörrbohne,Gemüse/Gemüse getrocknet,,pro 100g essbarer Anteil,318,2.0,0.4,42.1,22.2,25.3,20.2,0.1,generic,False,Gemüse
+353,"Bohne, grün, roh",Gartenbohne,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,32,0.2,0.1,4.1,3.3,3.0,1.9,0.0,generic,False,Gemüse
+653,Bolognaisesauce,Tomaten-Hackfleischsauce,Verschiedenes/Saucen,,pro 100g essbarer Anteil,96,4.0,1.4,8.3,2.6,0.6,6.3,0.6,generic,False,Verschiedenes
+668,"Bouillon, Fleisch, zubereitet",Klare Brühe,Gerichte/Eintöpfe und Suppen,1.0,pro 100g essbarer Anteil,5,0.3,0.2,0.2,0.0,,0.3,1.1,generic,False,Gerichte
+665,"Bouillon, Geflügel, zubereitet",Klare Brühe,Gerichte/Eintöpfe und Suppen,1.0,pro 100g essbarer Anteil,5,0.3,0.1,0.3,0.1,,0.3,1.0,generic,False,Gerichte
+664,"Bouillon, Gemüse, zubereitet",Klare Brühe,Gerichte/Eintöpfe und Suppen,1.0,pro 100g essbarer Anteil,6,0.4,0.1,0.4,0.1,,0.3,0.9,generic,False,Gerichte
+642,Branchli (Milchschokolade mit Haselnusscrèmefüllung),Schokoladenstängeli,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,558,35.7,16.7,49.1,47.3,3.7,8.3,0.2,generic,False,Süssigkeiten
+518,"Branntwein aus Getreide, 40 vol% (z.B. Whisky)",Getreideschnaps,Alkoholhaltige Getränke/Spirituosen,0.95,pro 100 ml,234,0.0,0.0,0.1,0.1,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+519,"Branntwein aus Wein (z.B.Cognac, Brandy)",,Alkoholhaltige Getränke/Spirituosen,0.95,pro 100 ml,228,0.0,0.0,1.9,1.9,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+520,Branntwein aus Zuckerrohr (z.B. Rum),Zuckerrohrschnaps,Alkoholhaltige Getränke/Spirituosen,0.95,pro 100 ml,222,0.0,0.0,0.0,0.0,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+50,Bratbutter,,Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter,0.9,pro 100g essbarer Anteil,885,98.3,58.9,0.0,0.0,0.0,0.1,0.0,generic,False,Fette und Öle
+650,"Bratensauce, gebunden",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,53,3.0,0.7,4.6,0.8,0.5,1.6,1.4,generic,False,Verschiedenes
+651,"Bratensauce, klar",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,44,2.5,0.5,3.5,1.5,0.5,1.5,2.3,generic,False,Verschiedenes
+705,Bresaola,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,167,3.9,1.6,0.4,,0.0,32.4,6.8,generic,False,Fleisch- und Wurstwaren
+616,"Brie, Rahm",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,342,30.0,18.0,0.0,0.0,0.0,17.7,1.4,generic,False,Milch und Milchprodukte
+613,"Brie, vollfett",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,298,23.5,14.1,0.0,0.0,0.0,21.4,1.3,generic,False,Milch und Milchprodukte
+1005,"Broccoli, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,35,0.5,0.1,2.9,1.7,2.8,3.3,0.0,generic,False,Gemüse
+351,"Broccoli, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,39,0.6,0.2,3.2,1.9,3.2,3.6,0.0,generic,False,Gemüse
+383,"Brombeere, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,47,0.7,0.1,6.5,6.1,5.2,1.1,0.0,generic,False,Früchte
+1485,"Brombeerkuchen, hausgemacht (mit süssem Mürbeteig)",,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,215,11.7,5.7,22.3,10.2,3.6,3.2,0.1,generic,False,Süssigkeiten
+1594,"Brombeerkuchen, hausgemacht, gebacken (mit Blätterteig)",Brombeerwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,141,7.1,3.0,14.5,5.8,3.8,3.0,0.3,generic,False,Süssigkeiten
+1596,"Brombeerkuchen, hausgemacht, gebacken (mit Kuchenteig)",Brombeerwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,144,6.9,3.0,15.2,5.8,3.9,3.2,0.2,generic,False,Süssigkeiten
+10446,Brot (Durchschnitt),,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,264,4.6,2.3,44.6,1.3,3.7,9.2,1.6,generic,False,"Brote, Flocken und Frühstückscerealien"
+1112,Brühwürste geräuchert (Durchschnitt),,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,249,21.2,8.2,0.5,0.5,0.0,14.0,2.2,generic,False,Fleisch- und Wurstwaren
+1113,Brühwürste ungeräuchert (Durchschnitt),,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,251,21.6,8.1,0.8,0.8,0.0,13.4,2.0,generic,False,Fleisch- und Wurstwaren
+371,"Brunnenkresse, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,17,0.2,0.1,0.3,0.3,2.6,2.2,0.1,generic,False,Gemüse
+864,Brunsli,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,515,29.9,5.7,43.3,39.4,6.8,14.9,0.1,generic,False,Süssigkeiten
+421,"Buchweizen, Korn geschält",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,346,1.7,0.4,71.0,0.4,3.7,9.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+420,Buchweizenmehl,,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,348,2.2,0.3,68.4,0.0,4.2,11.5,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+669,Bündner Gerstensuppe,,Gerichte/Eintöpfe und Suppen,1.1,pro 100g essbarer Anteil,42,0.9,0.5,6.7,1.3,0.5,1.4,0.9,generic,False,Gerichte
+13461,Burger mit Fisch,,Gerichte/Fast Food,,pro 100g essbarer Anteil,262,11.5,4.9,26.7,3.9,1.5,12.2,1.1,generic,False,Gerichte
+13460,Burger mit Poulet,,Gerichte/Fast Food,,pro 100g essbarer Anteil,247,11.0,1.9,23.8,2.9,1.2,12.7,1.2,generic,False,Gerichte
+842,Bürli (halbweiss),,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,215,1.0,0.2,41.5,0.4,2.9,8.6,1.9,generic,False,"Brote, Flocken und Frühstückscerealien"
+836,"Buttergipfeli, hell",,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,432,24.2,14.2,43.5,3.3,2.6,8.7,1.2,generic,False,"Brote, Flocken und Frühstückscerealien"
+834,"Buttergipfeli, Vollkorn",Rusticogipfeli,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,368,19.7,11.5,38.7,2.2,4.2,6.8,1.1,generic,False,"Brote, Flocken und Frühstückscerealien"
+529,Buttermilch,,Milch und Milchprodukte/Milch- und Joghurtgetränke,1.0,pro 100 ml,34,0.5,0.3,4.0,4.0,0.0,3.4,0.1,generic,True,Milch und Milchprodukte
+822,Butterweggli,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,309,8.7,4.9,47.3,3.4,2.2,9.4,1.6,generic,False,"Brote, Flocken und Frühstückscerealien"
+820,Butterzopf,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,325,11.4,6.5,45.7,2.9,2.1,9.0,1.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+1460,"Butterzopf, Vollkorn",,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,272,6.4,3.2,40.4,0.9,7.3,9.5,1.2,generic,False,"Brote, Flocken und Frühstückscerealien"
+1188,"Café crème, ungezuckert",,Alkoholfreie Getränke/Kaffee,1.0,pro 100 ml,13,1.1,0.7,0.5,0.3,0.1,0.3,0.0,generic,True,Alkoholfreie Getränke
+877,Cake Financier,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,440,26.1,8.0,38.5,29.9,3.3,11.1,0.1,generic,False,Süssigkeiten
+10486,Calimocho (Rotwein mit Cola),,Alkoholfreie Getränke/Süssgetränke;Alkoholhaltige Getränke/Sonstige alkoholische Getränke,1.0,pro 100 ml,55,0.0,0.0,5.2,5.1,0.0,0.1,0.0,generic,True,Alkoholfreie Getränke
+622,"Camembert, halbfett",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,188,10.0,6.0,0.0,0.0,0.0,24.4,1.5,generic,False,Milch und Milchprodukte
+619,"Camembert, Rahm",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,355,31.7,19.0,0.0,0.0,0.0,17.1,1.2,generic,False,Milch und Milchprodukte
+614,"Camembert, vollfett",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,297,23.7,14.2,0.0,0.0,0.0,20.8,2.2,generic,False,Milch und Milchprodukte
+1644,"Cannelloni mit Fleischfüllung, zubereitet",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,177,9.0,4.8,13.8,2.1,1.6,9.5,0.7,generic,False,Gerichte
+1646,"Cannelloni mit Spinat-Ricotta-Füllung, zubereitet",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,221,14.3,8.2,14.6,1.5,1.5,7.8,0.9,generic,False,Gerichte
+1121,"Cappuccino (ohne Schokoladenpulver), ungezuckert",,Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee,0.88,pro 100 ml,37,2.2,1.3,2.6,2.5,0.0,1.7,0.1,generic,True,Milch und Milchprodukte
+1692,"Capuns, zubereitet",Mangoldwickel,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,165,10.2,5.1,9.7,0.9,0.8,8.0,1.0,generic,False,Gerichte
+275,Cashewnuss,Cashewkern,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,619,48.1,8.2,23.2,3.1,3.6,21.5,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+1081,Cervelat,Chlöpfer;Stumpen;Bockwurst,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,249,21.5,8.2,0.5,0.5,0.0,13.4,2.1,generic,False,Fleisch- und Wurstwaren
+629,Champignon (Konserve),,Gemüse/Pilze,,pro 100g essbarer Anteil,19,0.3,0.0,0.5,,2.5,2.2,0.9,generic,False,Gemüse
+1037,"Champignon, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Pilze,,pro 100g essbarer Anteil,29,0.3,0.1,1.2,0.3,2.3,4.2,0.0,generic,False,Gemüse
+375,"Champignon, roh",,Gemüse/Pilze,,pro 100g essbarer Anteil,25,0.3,0.0,1.1,0.3,1.9,3.7,0.0,generic,False,Gemüse
+14024,Cheeseburger,,Gerichte/Fast Food,,pro 100g essbarer Anteil,281,14.2,7.5,24.3,3.3,1.6,13.2,1.6,generic,False,Gerichte
+13457,Chia-Samen,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,482,34.1,3.1,1.8,1.8,40.9,21.4,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+1006,"Chicorée, gedämpft (ohne Zugabe von Salz)",Brüsseler Endivie,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,20,0.2,0.0,2.8,2.4,1.2,1.1,0.0,generic,False,Gemüse
+447,"Chicorée, roh",Brüsseler Endivie,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,20,0.2,0.0,2.8,2.4,1.2,1.1,0.0,generic,False,Gemüse
+1648,"Chili con carne, zubereitet",,Gerichte/Eintöpfe und Suppen,,pro 100g essbarer Anteil,115,3.6,1.0,8.7,2.1,3.1,10.4,0.4,generic,False,Gerichte
+1007,"Chinakohl, gedünstet (ohne Zugabe von Fett und Salz)",Pekingkohl;Selleriekohl;Japankohl,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,14,0.2,0.0,1.2,1.1,1.0,1.3,0.0,generic,False,Gemüse
+437,"Chinakohl, roh",Pekingkohl;Selleriekohl;Japankohl,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,14,0.2,0.0,1.2,1.2,1.1,1.4,0.0,generic,False,Gemüse
+867,Chräbeli (Anisgebäck),,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,366,2.9,0.7,75.3,40.5,2.0,8.6,0.2,generic,False,Süssigkeiten
+458,"Cicorino rot, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,19,0.1,0.0,1.6,1.6,3.0,1.4,0.0,generic,False,Gemüse
+1683,"Cocktailsauce, mit Rapsöl-Mayonnaise, hausgemacht",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,696,74.5,6.0,3.8,3.7,0.2,2.4,0.7,generic,False,Verschiedenes
+498,"Colagetränk, gezuckert",,Alkoholfreie Getränke/Süssgetränke,1.0,pro 100 ml,40,0.0,0.0,10.0,10.0,0.0,0.0,0.0,generic,True,Alkoholfreie Getränke
+499,"Colagetränk, mit Süssstoffen",,Alkoholfreie Getränke/Süssgetränke energievermindert,1.0,pro 100 ml,0,,,0.0,0.0,0.0,0.0,0.0,generic,True,Alkoholfreie Getränke
+1573,"Coleslaw Salat, zubereitet",,Gerichte/Salate,,pro 100g essbarer Anteil,124,10.6,1.9,4.5,4.0,2.4,1.6,0.2,generic,False,Gerichte
+715,Coppa,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,319,22.5,8.5,0.3,0.3,0.0,28.8,3.8,generic,False,Fleisch- und Wurstwaren
+1649,"Cordon Bleu aus Kalbsplätzli, gebraten",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,233,11.0,3.1,10.3,0.6,0.6,22.9,0.9,generic,False,Fleisch und Innereien
+1650,"Cordon Bleu aus Schweinsplätzli, gebraten",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,241,11.7,3.2,10.3,0.6,0.6,23.2,0.9,generic,False,Fleisch und Innereien
+940,Cornflakes,,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,363,0.6,0.1,79.7,7.2,4.0,7.7,1.7,generic,False,"Brote, Flocken und Frühstückscerealien"
+758,Cotechino,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,450,42.3,14.0,0.0,0.0,0.0,17.2,4.4,generic,False,Fleisch- und Wurstwaren
+1093,Cotto (Fleischerzeugnis),,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,93,3.1,1.2,0.6,0.6,0.0,15.7,2.3,generic,False,Fleisch- und Wurstwaren
+950,"Cracker, Salzgebäck, Apérogebäck",,Salzige Snacks/Salzsticks und Bretzel,,pro 100g essbarer Anteil,449,15.9,6.0,66.3,0.0,2.1,9.2,1.5,generic,False,Salzige Snacks
+924,Crèmeschnitte,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,301,18.8,11.2,28.8,21.3,0.3,4.1,0.3,generic,False,Süssigkeiten
+1489,"Crêpes mit Camembert, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,247,15.5,8.2,14.9,2.3,0.6,11.9,0.8,generic,False,Gerichte
+1491,"Crêpes mit Champignonfüllung, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,139,9.0,4.8,7.9,1.7,1.6,5.9,0.4,generic,False,Gerichte
+1493,"Crêpes mit Gemüsefüllung, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,165,9.3,4.0,13.7,4.0,1.6,6.0,0.2,generic,False,Gerichte
+1494,"Crêpes mit Nutella, zubereitet",,Gerichte/Sonstige süsse Gerichte,,pro 100g essbarer Anteil,378,22.2,9.3,35.8,26.4,1.7,7.9,0.3,generic,False,Gerichte
+1495,"Crêpes mit Schinken, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,193,9.7,4.7,13.2,2.2,0.5,12.9,1.0,generic,False,Gerichte
+1496,"Crêpes mit Speck, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,253,16.3,7.4,15.0,2.4,0.6,11.3,0.9,generic,False,Gerichte
+1488,"Crêpes mit Zimt und Zucker, zubereitet",,Gerichte/Sonstige süsse Gerichte,,pro 100g essbarer Anteil,254,11.5,5.7,29.0,14.9,0.7,8.3,0.3,generic,False,Gerichte
+1487,"Crêpes nature, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,234,13.2,6.6,19.0,2.9,0.7,9.4,0.4,generic,False,Gerichte
+1498,"Crevettencocktail, zubereitet",,Gerichte/Salate,,pro 100g essbarer Anteil,167,13.3,7.8,4.0,3.3,0.3,4.4,0.4,generic,False,Gerichte
+14056,Croque Monsieur ,Toast mit Schinken und Käse,Gerichte/Sandwiches,,pro 100g essbarer Anteil,260,9.4,4.4,26.6,2.6,1.8,16.4,2.3,generic,False,Gerichte
+384,"Dattel, getrocknet",,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,289,0.6,0.3,64.7,64.7,7.5,2.4,0.0,generic,False,Früchte
+1041,"Dinkelmehl, Ruch, Typ 1100",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,348,2.2,0.3,65.0,1.4,5.7,14.3,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1042,"Dinkelmehl, Vollkorn, Typ 1900",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,346,2.7,0.4,60.0,1.2,9.4,15.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1043,"Dinkelmehl, weiss, Typ 550",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,348,1.5,0.3,69.0,0.9,2.8,13.3,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+589,Distelöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,9.2,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+798,"Doppelrahm, pasteurisiert",,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,0.9,pro 100g essbarer Anteil,468,50.0,30.0,2.7,2.7,0.0,1.9,0.1,generic,False,Fette und Öle
+14068,"Dörrbohne, eingeweicht, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,79,0.5,0.1,10.5,5.6,6.3,5.1,0.0,generic,False,Gemüse
+13350,"Dorsch, Filet, gedämpft (ohne Zusatz von Fett und Salz)",,Fisch/Meeresfische,,pro 100g essbarer Anteil,72,0.5,0.1,0.0,0.0,0.0,17.0,0.1,generic,False,Fisch
+285,"Dorsch, roh",Kabeljau,Fisch/Meeresfische,,pro 100g essbarer Anteil,76,0.4,0.1,0.0,0.0,0.0,18.1,0.1,generic,False,Fisch
+10535,Dulce de Leche,Milchkonfitüre,Süssigkeiten/Konfitüren und süsse Brotaufstriche,,pro 100g essbarer Anteil,299,7.3,4.4,52.6,52.6,0.0,5.7,0.2,generic,False,Süssigkeiten
+272,"Edelkastanie, roh",Marroni,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,210,1.9,0.3,41.2,14.0,8.4,2.9,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+765,"Egli, roh",Flussbarsch,Fisch/Süsswasserfische,,pro 100g essbarer Anteil,79,0.7,0.1,0.0,0.0,0.0,18.0,0.2,generic,False,Fisch
+517,"Eierlikör, 16.5 vol%",,Alkoholhaltige Getränke/Sonstige alkoholische Getränke,1.1,pro 100 ml,313,7.7,2.2,30.8,30.8,0.0,4.4,0.0,generic,True,Alkoholhaltige Getränke
+1502,"Eieromeletten mit Käse, zubereitet",Französische Omeletten,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,192,14.5,6.4,1.2,1.2,0.1,14.0,1.0,generic,False,Gerichte
+1501,"Eieromeletten mit Schinken, zubereitet",Französische Omeletten,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,143,9.6,3.3,1.3,1.3,0.1,12.8,1.0,generic,False,Gerichte
+1503,"Eieromeletten mit Speck, zubereitet",Französische Omeletten,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,175,13.4,4.8,1.3,1.3,0.1,12.5,0.7,generic,False,Gerichte
+1500,"Eieromeletten, zubereitet",Französische Omeletten,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,151,11.1,3.8,1.4,1.4,0.0,11.4,0.8,generic,False,Gerichte
+1038,"Eierschwamm, gedünstet (ohne Zugabe von Fett und Salz)",Pfifferling,Gemüse/Pilze,,pro 100g essbarer Anteil,28,0.6,0.1,0.2,0.2,5.7,2.6,0.0,generic,False,Gemüse
+376,"Eierschwamm, roh",Pfifferling,Gemüse/Pilze,,pro 100g essbarer Anteil,24,0.5,0.1,0.2,0.2,4.7,2.3,0.0,generic,False,Gemüse
+459,"Eisbergsalat, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,16,0.2,0.0,1.6,1.6,1.8,1.0,0.0,generic,False,Gemüse
+804,"Eistee, gezuckert",,Alkoholfreie Getränke/Süssgetränke;Alkoholfreie Getränke/Tee,1.0,pro 100g essbarer Anteil,30,0.0,0.0,7.5,7.5,0.0,0.0,0.0,generic,False,Alkoholfreie Getränke
+555,"Emmentaler, vollfett",,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,408,32.6,20.3,0.0,0.0,0.0,28.4,0.4,generic,False,Milch und Milchprodukte
+467,"Endivie, roh",Frisée Salat,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,16,0.2,0.1,1.2,1.2,1.2,1.8,0.1,generic,False,Gemüse
+13465,"Energy Drink, gezuckert",,Alkoholfreie Getränke/Süssgetränke,1.0,pro 100 ml,44,0.0,0.0,10.9,10.8,0.0,0.0,0.2,generic,True,Alkoholfreie Getränke
+902,Engadiner Nusstorte,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,481,27.7,10.2,49.9,30.9,2.0,7.0,0.0,generic,False,Süssigkeiten
+630,Erbse (Konserve) ,,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,87,0.8,0.1,12.8,,5.0,4.8,0.7,generic,False,Gemüse
+1011,"Erbse (Konserve), aufgewärmt (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,89,0.8,0.1,13.1,0.0,5.1,4.9,0.6,generic,False,Gemüse
+1010,"Erbse, grün, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,100,0.8,0.1,13.2,6.1,6.6,6.6,0.0,generic,False,Gemüse
+369,"Erbse, grün, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,90,0.7,0.1,12.0,5.5,6.0,6.0,0.0,generic,False,Gemüse
+13389,"Erbse, reif, getrocknet","Erbse, geschält, getrocknet","Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,331,1.7,0.3,51.9,2.8,11.6,21.3,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13390,"Erbse, reif, getrocknet, gekocht (ohne Zusatz von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,137,0.7,0.1,21.2,1.1,5.0,9.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+815,Erbsen und Karotten (Konserve),Rüebli,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,69,0.6,0.1,10.0,5.6,4.5,3.7,1.0,generic,False,Gemüse
+1034,"Erbsen und Karotten (Konserve), aufgewärmt (ohne Zugabe von Salz)",Rüebli,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,70,0.6,0.1,10.2,5.7,4.6,3.8,0.9,generic,False,Gemüse
+385,"Erdbeere, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,39,0.5,,6.0,5.6,3.8,0.6,0.0,generic,False,Früchte
+282,Erdnuss,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,623,49.1,8.4,14.8,5.9,8.6,26.1,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+681,Erdnuss-Flips,,Salzige Snacks/Sonstige salzige Snacks,,pro 100g essbarer Anteil,507,24.2,4.4,56.5,,4.9,13.2,1.9,generic,False,Salzige Snacks
+14092,"Erdnuss, geröstet, gesalzen",,"Salzige Snacks/Gesalzene Nüsse, Samen, Kerne",,pro 100g essbarer Anteil,631,50.0,8.6,15.0,4.2,8.0,26.2,1.3,generic,False,Salzige Snacks
+751,Erdnussbutter,,Süssigkeiten/Konfitüren und süsse Brotaufstriche,,pro 100g essbarer Anteil,636,51.8,12.8,12.5,6.4,7.6,26.1,0.9,generic,False,Süssigkeiten
+596,Erdnussöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,15.6,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+1190,"Espresso crème, ungezuckert",,Alkoholfreie Getränke/Kaffee,,pro 100g essbarer Anteil,28,2.5,1.5,0.8,0.7,0.1,0.5,0.0,generic,False,Alkoholfreie Getränke
+1693,Essig,,"Verschiedenes/Salz, Gewürze und Aromen",1.0056,pro 100 ml,22,0.0,0.0,0.7,0.3,0.0,0.1,0.0,generic,True,Verschiedenes
+1199,"Essig-Öl-Salatsauce, hausgemacht (mit Rapsöl)",,Fette und Öle/Salatsaucen,1.1,pro 100 ml,315,33.2,2.3,2.7,2.0,1.0,0.8,0.7,generic,True,Fette und Öle
+14066,"Falafel, frittiert (in HOLL Rapsöl frittiert)",,Gerichte/Orientalische Gerichte,,pro 100g essbarer Anteil,222,7.9,0.7,26.2,1.9,6.4,8.3,0.7,generic,False,Gerichte
+14060,Fasnachtschüechli,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,553,32.9,16.1,51.7,1.9,2.3,11.5,0.1,generic,False,Süssigkeiten
+13401,"Federkohl, gedünstet (ohne Zugabe von Salz und Fett)",Grünkohl,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,47,1.0,0.1,2.7,2.7,4.5,4.6,0.3,generic,False,Gemüse
+13400,"Federkohl, roh",Grünkohl,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,44,0.9,0.1,2.5,2.5,4.2,4.3,0.3,generic,False,Gemüse
+387,"Feige, getrocknet",Dörrfeige,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,267,1.2,0.1,55.9,55.9,10.0,3.1,0.3,generic,False,Früchte
+386,"Feige, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,71,0.5,0.1,13.5,12.2,4.1,1.2,0.0,generic,False,Früchte
+211,"Felche, roh",,Fisch/Süsswasserfische,,pro 100g essbarer Anteil,101,2.7,0.6,0.0,0.0,0.0,19.2,0.1,generic,False,Fisch
+1008,"Fenchel, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,22,0.3,0.0,2.2,0.1,3.1,1.0,0.0,generic,False,Gemüse
+352,"Fenchel, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,23,0.3,,2.3,0.1,3.3,1.1,0.0,generic,False,Gemüse
+1269,Fermentierter Teig,,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,199,0.9,0.1,38.3,0.3,3.0,7.8,1.2,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13345,"Fisch (Durchschnitt), Filet, gedämpft (ohne Zusatz von Fett und Salz)",,Fisch,,pro 100g essbarer Anteil,146,7.5,1.5,0.0,0.0,0.0,19.6,0.2,generic,False,Fisch
+1098,"Fisch (Durchschnitt), roh ",,Fisch/Süsswasserfische;Fisch/Meeresfische,,pro 100g essbarer Anteil,146,6.9,1.4,0.0,0.0,0.0,20.9,0.2,generic,False,Fisch
+1168,"Fischstäbchen (paniert und vorfritiert), gebraten in HOLL-Rapsöl",,Fisch/Meeresfische,,pro 100g essbarer Anteil,300,18.6,1.4,16.6,0.1,0.9,16.0,0.6,generic,False,Fisch
+1169,"Fischstäbchen (paniert und vorfritiert), im Ofen gebacken (ohne Zugabe von Fett)",,Fisch/Meeresfische,,pro 100g essbarer Anteil,248,12.2,0.9,17.4,0.1,1.0,16.8,0.6,generic,False,Fisch
+773,"Fischstäbchen, paniert und vorfritiert",,Fisch/Meeresfische,,pro 100g essbarer Anteil,230,11.7,0.9,15.3,0.1,0.8,15.5,0.6,generic,False,Fisch
+1504,"Flammenkuchen, gebacken",Flammkuchen,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,254,13.9,6.8,22.7,1.8,1.4,8.9,1.0,generic,False,Gerichte
+13419,"Flammenkuchenteig, ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",1.0,pro 100g essbarer Anteil,221,2.9,1.4,39.9,0.6,2.7,7.5,1.3,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1111,"Fleisch (Durchschnitt exkl. Innereien), roh ",,"Fleisch und Innereien/Kalb;Fleisch und Innereien/Geflügel;Fleisch und Innereien/Lamm, Schaf;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein;Fleisch und Innereien/Wild",,pro 100g essbarer Anteil,146,6.7,2.4,0.0,0.0,0.0,21.4,0.1,generic,False,Fleisch und Innereien
+1084,Fleischkäse,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,256,22.3,8.8,1.4,1.4,0.0,12.5,2.3,generic,False,Fleisch- und Wurstwaren
+1664,"Fleischlasagne, zubereitet",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,141,6.0,3.0,12.3,2.3,1.5,8.8,0.9,generic,False,Gerichte
+13351,"Flunder, Filet, gedämpft (ohne Zusatz von Fett und Salz)",,Fisch/Meeresfische,,pro 100g essbarer Anteil,69,0.8,0.2,0.0,0.0,0.0,15.5,0.4,generic,False,Fisch
+481,"Flunder, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,72,0.7,0.1,0.0,0.0,0.0,16.5,0.4,generic,False,Fisch
+1476,"Fondue alkoholfrei, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,283,21.5,13.4,1.6,1.0,0.0,18.7,0.3,generic,False,Gerichte
+797,"Fondue klassisch, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,315,22.4,13.9,1.0,0.1,0.0,19.6,0.3,generic,False,Gerichte
+1475,"Fondue moitié-moitié, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,291,20.8,12.5,1.0,0.0,0.0,16.7,1.0,generic,False,Gerichte
+13349,"Forelle, ganz, gekocht (ohne Zusatz von Fett und Salz)",,Fisch/Süsswasserfische,,pro 100g essbarer Anteil,116,6.2,1.5,0.0,0.0,0.0,15.0,0.1,generic,False,Fisch
+289,"Forelle, roh",Bachforelle,Fisch/Süsswasserfische,,pro 100g essbarer Anteil,127,7.0,1.7,0.0,0.0,0.0,16.0,0.1,generic,False,Fisch
+1515,Fotzelschnitte ungezuckert,,Gerichte/Sonstige süsse Gerichte,,pro 100g essbarer Anteil,222,9.9,5.1,24.5,1.7,1.2,8.0,0.9,generic,False,Gerichte
+536,Freiburger Vacherin,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,370,30.4,18.2,0.0,0.0,0.0,23.5,1.5,generic,False,Milch und Milchprodukte
+567,"Frischkäse, Doppelrahm",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,351,32.1,19.2,4.5,2.3,0.0,11.1,1.3,generic,False,Milch und Milchprodukte
+775,"Fruchtcocktail, in Sirup, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,77,0.2,0.0,17.3,16.2,1.8,0.6,0.0,generic,False,Früchte
+777,"Fruchtcocktail, mit Süssungsmittel, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,47,0.2,0.0,9.5,8.4,2.0,0.7,0.0,generic,False,Früchte
+1124,"Früchte (Durchschnitt), gekocht (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,50,0.4,0.1,9.9,9.3,2.2,0.6,0.0,generic,False,Früchte
+1120,"Früchte (Durchschnitt), getrocknet","Dörrfrüchte (Durchschnitt);Früchte, gedörrt (Durchschnitt)",Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,278,1.1,0.3,60.5,51.8,8.2,2.5,0.1,generic,False,Früchte
+1123,"Früchte (Durchschnitt), roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,54,0.2,0.0,11.3,10.2,2.1,0.6,0.0,generic,False,Früchte
+1131,"Fruchtsaft-Schorle (Durchschnitt, 60% Saft - 40% Wasser), ungezuckert",,Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.0,pro 100 ml,31,0.1,0.0,7.4,6.9,0.1,0.2,0.0,generic,True,Alkoholfreie Getränke
+1130,"Fruchtsaft (Durchschnitt), ungezuckert",,Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.0,pro 100 ml,52,0.1,0.0,12.3,11.6,0.2,0.4,0.0,generic,True,Früchte
+10456,Fruchtwähe/-kuchen (Durchschnitt),,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,166,8.4,3.9,18.3,8.0,2.6,3.0,0.2,generic,False,Süssigkeiten
+10453,Fruchtwähe/-kuchen mit Blätterteig (Durchschnitt),,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,141,6.9,3.0,15.9,6.9,2.1,2.8,0.3,generic,False,Süssigkeiten
+10454,Fruchtwähe/-kuchen mit Kuchenteig (Durchschnitt),,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,143,6.7,3.0,16.6,6.9,2.2,3.0,0.2,generic,False,Süssigkeiten
+10455,Fruchtwähe/-kuchen mit süssem Mürbeteig (Durchschnitt),,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,215,11.7,5.8,22.5,10.4,3.4,3.3,0.1,generic,False,Süssigkeiten
+14061,"Frühlingsrolle, frittiert",,Gerichte/Asiatische Gerichte,,pro 100g essbarer Anteil,224,11.2,2.9,23.1,3.0,2.5,6.5,1.5,generic,False,Gerichte
+817,Fünfkornbier,,Alkoholhaltige Getränke/Bier,1.0,pro 100 ml,40,0.0,0.0,2.0,2.0,0.2,0.6,0.0,generic,True,Alkoholhaltige Getränke
+1497,"Garnele, gekocht",Shrimp;Scampi;Crevette,"Fisch/Meeresfrüchte, Krusten- und Schalentiere",,pro 100g essbarer Anteil,46,0.5,0.1,1.3,0.0,0.0,9.0,0.4,generic,False,Fisch
+766,"Garnele, roh",Shrimp;Scampi;Crevette,"Fisch/Meeresfrüchte, Krusten- und Schalentiere",,pro 100g essbarer Anteil,56,0.6,0.1,1.2,,0.0,11.4,0.5,generic,False,Fisch
+1100,"Geflügelfleisch (Durchschnitt exkl. Innereien), roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,134,5.3,1.6,0.1,0.0,0.0,21.6,0.1,generic,False,Fleisch und Innereien
+1109,"Geflügelfleisch mit Haut (Durchschnitt), roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,161,9.0,2.7,0.0,0.0,0.0,20.0,0.1,generic,False,Fleisch und Innereien
+1108,"Geflügelfleisch ohne Haut (Durchschnitt exkl. Innereien), roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,114,2.4,0.7,0.1,0.0,0.0,22.9,0.2,generic,False,Fleisch und Innereien
+1092,Geflügellyoner,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,205,16.4,5.1,0.9,0.9,0.0,13.5,2.3,generic,False,Fleisch- und Wurstwaren
+13317,"Gehacktes (Durchschnitt aus Rind, Kalb, Schwein, Poulet), gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien,,pro 100g essbarer Anteil,164,6.6,2.5,0.0,0.0,0.0,26.3,0.1,generic,False,Fleisch und Innereien
+1105,"Gehacktes (Durchschnitt aus Rind, Kalb, Schwein, Poulet), roh",,Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein;Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,143,6.2,2.4,0.0,0.0,0.0,21.6,0.1,generic,False,Fleisch und Innereien
+1152,"Gemüse (Durchschnitt), roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,28,0.3,0.1,4.0,3.3,2.0,1.2,0.0,generic,False,Gemüse
+1580,"Gemüsegratin, gebacken",,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,58,3.9,2.3,2.3,1.5,1.8,2.6,0.3,generic,False,Gerichte
+1666,"Gemüselasagne, zubereitet",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,133,7.6,4.4,11.2,2.4,1.1,4.4,1.2,generic,False,Gerichte
+739,Gerstenflocken,,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,333,1.5,0.3,66.1,2.2,10.3,8.5,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+1587,"Gerstotto, gekocht",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,135,2.2,0.3,24.6,1.3,1.7,3.5,0.8,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13318,"Geschnetzeltes (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien,,pro 100g essbarer Anteil,150,3.8,1.2,0.1,0.0,0.0,28.9,0.2,generic,False,Fleisch und Innereien
+1104,"Geschnetzeltes (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), roh",,Fleisch und Innereien/Kalb;Fleisch und Innereien/Schwein;Fleisch und Innereien/Rind;Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,118,3.3,1.0,0.1,0.0,0.0,22.0,0.1,generic,False,Fleisch und Innereien
+1696,Getreideflocken (Durchschnitt),,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,348,3.2,0.6,64.0,1.5,9.7,10.8,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+13448,Getreideriegel mit Schokoladeüberzug,,Süssigkeiten/Riegel,,pro 100g essbarer Anteil,459,20.2,10.9,58.0,37.1,5.7,8.5,0.4,generic,False,Süssigkeiten
+13488,"Getreideriegel, ohne Ueberzug und Füllung",,Süssigkeiten/Riegel,,pro 100g essbarer Anteil,416,12.8,5.4,64.2,32.1,6.0,7.9,0.4,generic,False,Süssigkeiten
+10406,Gipfeli (Durchschnitt),,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,400,22.0,12.8,41.1,2.7,3.4,7.8,1.2,generic,False,"Brote, Flocken und Frühstückscerealien"
+507,Glarner Schabziger,Glarner Kräuterkäse,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,132,0.5,0.3,,,0.0,31.6,4.3,generic,False,Milch und Milchprodukte
+483,Gorgonzola,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,357,31.2,18.7,0.1,0.1,0.0,19.0,3.6,generic,False,Milch und Milchprodukte
+13882,"Granatapfel, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,81,1.2,0.1,14.3,13.3,2.3,1.4,0.0,generic,False,Früchte
+388,"Grapefruit (weiss oder rot), roh",Pampelmuse,Früchte/Früchte frisch,,pro 100g essbarer Anteil,42,0.5,,8.0,6.6,0.9,0.9,0.0,generic,False,Früchte
+530,"Greyerzer, vollfett",Gruyère,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,396,32.0,19.2,0.0,0.0,0.0,26.4,1.5,generic,False,Milch und Milchprodukte
+1509,"Griessbrei, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)",,Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,93,3.0,1.7,11.8,4.8,0.3,4.6,0.2,generic,False,Süssigkeiten
+1510,"Griessbrei, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)",,Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,93,3.0,1.7,11.8,4.8,0.3,4.6,0.2,generic,False,Süssigkeiten
+1507,"Griessschnitte, zubereitet (mit teilentrahmter Milch)",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,143,6.4,3.3,15.0,4.0,0.5,6.1,0.3,generic,False,Gerichte
+1508,"Griessschnitte, zubereitet (mit Vollmilch)",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,152,7.5,4.0,15.0,4.0,0.5,6.0,0.3,generic,False,Gerichte
+1272,Grittibänz,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,329,11.1,6.4,46.9,2.8,2.2,9.2,1.4,generic,False,Süssigkeiten
+1465,Gugelhopf Grossmutter Art,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,462,32.0,13.2,33.3,26.9,3.1,8.8,0.4,generic,False,Süssigkeiten
+684,Gulaschsuppe,,Gerichte/Eintöpfe und Suppen,1.1,pro 100g essbarer Anteil,67,2.4,1.0,6.3,1.4,0.4,4.8,0.6,generic,False,Gerichte
+951,Gummibonbon mit Fruchtessenz,,"Süssigkeiten/Bonbons, Frucht- und Kaugummi",,pro 100g essbarer Anteil,341,0.0,0.0,78.6,74.7,0.0,6.6,0.2,generic,False,Süssigkeiten
+491,"Gurke, in Essig eingelegt",Essiggurke;Cornichon,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,14,0.1,,2.1,1.9,1.0,0.7,1.8,generic,False,Gemüse
+354,"Gurke, roh",Salatgurke,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,14,0.1,,2.0,1.9,0.8,0.7,0.0,generic,False,Gemüse
+1582,"Hackbraten, im Ofen gebacken",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,166,7.7,2.1,8.1,0.7,0.6,15.7,2.2,generic,False,Gerichte
+1583,"Hackplätzli (Rind), gebraten in Rapsöl HOLL",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,187,9.1,2.5,6.4,1.2,0.7,19.5,0.7,generic,False,Fleisch und Innereien
+1512,"Haferbrei, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)",,Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,133,4.6,2.2,15.8,5.7,1.8,6.3,0.2,generic,False,Süssigkeiten
+1511,"Haferbrei, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)",,Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,147,6.2,3.2,15.8,5.7,1.8,6.2,0.2,generic,False,Süssigkeiten
+198,Haferflocken,,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,381,7.5,1.0,59.5,1.0,10.5,13.5,0.1,generic,False,"Brote, Flocken und Frühstückscerealien"
+14114,"Hafergetränk, nature",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,47,1.5,0.2,7.8,3.6,0.2,0.5,0.1,generic,True,Milch und Milchprodukte
+14130,"Hafergetränk, nature, mit Calcium und Vitaminen angereichert",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,48,1.5,0.2,7.8,3.6,0.9,0.5,0.1,generic,True,Milch und Milchprodukte
+769,Haferkleie,,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,371,7.0,1.3,50.8,1.5,15.4,18.5,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+13399,"Halbentrahmte Milch 1.5% Fett, UHT",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,46,1.5,0.9,4.8,4.8,0.0,3.2,0.1,generic,True,Milch und Milchprodukte
+191,Halbfettbutter,,Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter,0.9,pro 100g essbarer Anteil,391,39.8,24.1,3.5,3.5,0.0,4.8,0.3,generic,False,Fette und Öle
+67,"Halbrahm, pasteurisiert",,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,274,27.9,16.7,3.3,3.3,0.0,2.3,0.1,generic,False,Fette und Öle
+68,"Halbrahm, UHT",,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,251,25.1,15.1,3.7,3.7,0.0,2.5,0.1,generic,False,Fette und Öle
+833,Halbweissbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,240,1.1,0.1,46.4,0.4,3.7,9.4,1.7,generic,False,"Brote, Flocken und Frühstückscerealien"
+14078,Halbweissbrot (mit jodiertem Kochsalz),,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,240,1.1,0.1,46.4,0.4,3.7,9.4,1.7,generic,False,"Brote, Flocken und Frühstückscerealien"
+14025,"Hamburger, doppelt",,Gerichte/Fast Food,,pro 100g essbarer Anteil,258,12.1,6.3,24.7,3.3,1.7,11.9,1.4,generic,False,Gerichte
+14091,Hanföl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,8.9,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+1193,"Hart- und Halbhartkäse, vollfett (Durchschnitt)",,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,397,32.1,19.5,0.0,0.0,0.0,26.6,1.2,generic,False,Milch und Milchprodukte
+952,"Hartkaramellen, Hartbonbons",,"Süssigkeiten/Bonbons, Frucht- und Kaugummi",,pro 100g essbarer Anteil,385,0.3,0.2,95.0,95.0,0.0,0.5,0.1,generic,False,Süssigkeiten
+423,"Hartweizengriess, trocken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,353,1.4,0.2,71.4,1.0,3.4,12.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+486,"Hase (Durchschnitt), roh",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,115,3.0,1.0,0.0,0.0,0.0,22.0,0.1,generic,False,Fleisch und Innereien
+270,Haselnuss,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,661,59.5,4.2,10.1,3.0,9.7,16.4,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+703,Haselnuss-Schokolade-Brotaufstrich,,Süssigkeiten/Konfitüren und süsse Brotaufstriche,1.3,pro 100g essbarer Anteil,551,33.0,12.7,55.9,54.5,2.9,6.0,0.1,generic,False,Süssigkeiten
+903,Haselnusskekse,Haselnussguetzli,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,473,27.7,8.0,47.4,23.3,3.5,6.7,0.1,generic,False,Süssigkeiten
+869,Haselnussmakrone,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,544,37.0,2.6,37.5,33.0,6.0,12.2,0.2,generic,False,Süssigkeiten
+14108,Haselnussöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,7.5,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+871,Haselnussstängeli,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,567,36.6,12.5,47.0,22.6,3.7,10.5,0.1,generic,False,Süssigkeiten
+416,"Hecht, roh",,Fisch/Süsswasserfische,,pro 100g essbarer Anteil,81,0.9,0.2,0.0,0.0,0.0,18.4,0.2,generic,False,Fisch
+910,"Hefeteig (mit Butter), süss, ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,311,11.1,6.1,43.2,6.4,1.9,8.7,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1177,"Hefeteig (mit pflanzlichem Fett), süss, ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,300,11.1,3.6,39.9,1.1,2.1,9.2,1.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+14101,"Heidelbeere, gefriergetrocknet",,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,338,4.4,0.3,56.4,46.4,24.4,6.1,0.0,generic,False,Früchte
+389,"Heidelbeere, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,52,0.3,0.0,10.6,10.0,1.5,0.9,0.0,generic,False,Früchte
+753,"Heilbutt, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,118,3.9,0.5,0.0,0.0,0.0,20.6,0.2,generic,False,Fisch
+390,"Himbeere, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,44,0.8,0.1,5.8,5.4,4.3,1.2,0.0,generic,False,Früchte
+691,Hinterschinken,,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,104,2.3,0.9,0.7,0.7,0.0,20.2,2.4,generic,False,Fleisch- und Wurstwaren
+487,"Hirsch (Durchschnitt), roh",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,112,3.3,1.5,0.0,0.0,0.0,20.6,0.2,generic,False,Fleisch und Innereien
+12,"Hirsch, Entrecôte, roh",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,111,2.1,1.2,0.0,0.0,0.0,23.1,0.1,generic,False,Fleisch und Innereien
+422,"Hirse, Korn geschält",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,360,3.9,1.0,68.8,1.5,3.8,10.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+938,"Hirseflocken, Vollkorn",,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,360,3.9,0.9,68.8,1.6,3.9,10.6,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+1586,"Hirsotto, gekocht",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,144,3.0,0.5,24.7,1.1,1.5,3.7,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+666,Hollandaisesauce,,Verschiedenes/Saucen,,pro 100g essbarer Anteil,212,18.0,9.0,9.3,6.2,0.1,3.0,1.0,generic,False,Verschiedenes
+436,"Holunderbeere, schwarz, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,63,1.7,0.1,7.4,7.4,4.0,2.5,0.0,generic,False,Früchte
+472,Honig (Blütenhonig),,Süssigkeiten/Konfitüren und süsse Brotaufstriche,1.4,pro 100g essbarer Anteil,306,0.0,0.0,76.0,76.0,0.0,0.4,0.0,generic,False,Süssigkeiten
+1590,Hot Dog in Weissbrot mit Ketchup und Senf,,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,216,6.3,2.2,29.6,2.5,1.9,9.1,2.0,generic,False,Gerichte
+1070,"Hühnerei, ganz, festgekocht",,Eier,,pro 100g essbarer Anteil,156,10.9,2.9,0.3,0.3,0.0,14.0,0.4,generic,False,Eier
+290,"Hühnerei, ganz, roh",,Eier,,pro 100g essbarer Anteil,140,9.8,2.6,0.3,0.3,0.0,12.6,0.4,generic,False,Eier
+410,"Hühnereigelb, roh (Eidotter)",,Eier,,pro 100g essbarer Anteil,349,31.3,8.8,0.3,0.2,0.0,16.4,0.1,generic,False,Eier
+411,"Hühnereiweiss, roh (Eiklar)",,Eier,,pro 100g essbarer Anteil,45,0.0,0.0,0.4,0.4,0.0,10.8,0.5,generic,False,Eier
+1134,"Hülsenfrüchte (Durchschnitt), gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,127,1.9,0.3,14.7,1.0,6.5,9.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1133,"Hülsenfrüchte (Durchschnitt), getrocknet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,336,4.9,0.7,39.7,2.7,16.5,25.1,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+14055,Hummus,,Verschiedenes/Saucen,,pro 100g essbarer Anteil,204,14.0,1.8,9.4,0.9,5.1,7.3,1.1,generic,False,Verschiedenes
+505,"Hüttenkäse, nature",Cottage cheese,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,100,4.5,2.7,2.4,2.2,0.0,12.4,0.8,generic,False,Milch und Milchprodukte
+866,"Instant-Kartoffelstock, zubereitet (mit Wasser und Butter)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,80,2.8,1.6,11.5,1.8,0.8,2.0,0.6,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+652,Jägersauce,,Verschiedenes/Saucen,,pro 100g essbarer Anteil,58,1.8,0.5,8.0,2.5,0.5,2.2,1.5,generic,False,Verschiedenes
+1612,Joghurt-Salatsauce (ohne Öl),,Fette und Öle/Salatsaucen,1.1,pro 100 ml,64,3.3,2.0,5.0,5.0,0.1,3.6,0.5,generic,True,Fette und Öle
+58,"Joghurt Bifidus, nature",,Milch und Milchprodukte/Joghurt und Sauermilch,,pro 100g essbarer Anteil,66,3.6,2.2,4.5,4.5,0.0,4.0,0.1,generic,False,Milch und Milchprodukte
+1192,Joghurt gezuckert (Durchschnitt),,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,105,3.4,2.0,14.7,13.8,0.4,3.7,0.1,generic,False,Milch und Milchprodukte
+590,"Joghurt mit Aroma, mager, mit Süssstoffen",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,47,0.1,0.1,7.0,7.0,0.0,4.4,0.1,generic,False,Milch und Milchprodukte
+588,"Joghurt mit Früchten, mager, mit Süssstoffen",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,49,0.1,0.1,7.0,7.0,0.9,4.5,0.1,generic,False,Milch und Milchprodukte
+53,"Joghurt, Erdbeer",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,101,2.7,1.6,15.2,14.3,0.9,3.4,0.1,generic,False,Milch und Milchprodukte
+55,"Joghurt, Haselnuss",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,119,4.6,2.5,15.0,14.0,0.9,3.8,0.1,generic,False,Milch und Milchprodukte
+57,"Joghurt, Mokka",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,99,3.1,1.9,14.1,13.2,0.0,3.7,0.1,generic,False,Milch und Milchprodukte
+99,"Joghurt, Mokka, Bio",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,95,3.3,,13.1,12.4,0.0,3.4,0.1,generic,False,Milch und Milchprodukte
+52,"Joghurt, nature",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,66,3.6,2.2,4.5,4.5,0.0,3.9,0.1,generic,False,Milch und Milchprodukte
+587,"Joghurt, nature, mager",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,42,0.1,0.1,5.5,5.5,0.0,4.7,0.2,generic,False,Milch und Milchprodukte
+54,"Joghurt, Schokolade",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,120,3.9,2.4,16.9,15.5,0.8,3.9,0.1,generic,False,Milch und Milchprodukte
+56,"Joghurt, Vanille",,Milch und Milchprodukte/Joghurt und Sauermilch,1.1,pro 100g essbarer Anteil,98,3.0,1.8,14.0,13.1,0.0,3.7,0.1,generic,False,Milch und Milchprodukte
+13453,"Joghurtalternative aus Soja, mit Früchten oder Aroma",,Milch und Milchprodukte/Milchersatzprodukte,,pro 100g essbarer Anteil,82,1.8,0.3,12.2,10.9,1.4,3.4,0.1,generic,False,Milch und Milchprodukte
+13454,"Joghurtalternative aus Soja, mit Früchten oder Aroma, mit Calcium angereichert",,Milch und Milchprodukte/Milchersatzprodukte,,pro 100g essbarer Anteil,82,1.8,0.3,12.2,10.9,1.4,3.4,0.1,generic,False,Milch und Milchprodukte
+13451,"Joghurtalternative aus Soja, nature",,Milch und Milchprodukte/Milchersatzprodukte,,pro 100g essbarer Anteil,45,2.2,0.4,1.5,0.6,1.5,4.0,0.1,generic,False,Milch und Milchprodukte
+13452,"Joghurtalternative aus Soja, nature, mit Calcium angereichert",,Milch und Milchprodukte/Milchersatzprodukte,,pro 100g essbarer Anteil,45,2.2,0.4,1.5,0.6,1.5,4.0,0.1,generic,False,Milch und Milchprodukte
+391,"Johannisbeere, rot, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,50,0.7,0.2,7.1,6.6,4.6,1.6,0.0,generic,False,Früchte
+392,"Johannisbeere, schwarz, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,71,0.9,0.1,9.7,9.7,5.8,1.3,0.0,generic,False,Früchte
+1592,"Johannisbeerkuchen, hausgemacht (mit süssem Mürbeteig)",,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,216,11.7,5.8,22.6,10.6,3.2,3.5,0.1,generic,False,Süssigkeiten
+1595,"Johannisbeerkuchen, hausgemacht, gebacken (mit Kuchenteig)",,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,145,6.9,3.1,15.5,6.2,3.5,3.5,0.2,generic,False,Süssigkeiten
+1593,"Johannisbeerkuchen, hausgmacht, gebacken (mit Blätterteig)",Johannisbeerwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,143,7.1,3.1,14.8,6.2,3.4,3.3,0.3,generic,False,Süssigkeiten
+983,"Kaffee löslich, Pulver",Instant-Kaffee,Alkoholfreie Getränke/Kaffee,,pro 100g essbarer Anteil,253,,,42.6,3.6,19.1,11.2,0.1,generic,False,Alkoholfreie Getränke
+994,"Kaffee, schwarz, ungezuckert",,Alkoholfreie Getränke/Kaffee,1.0,pro 100 ml,2,0.0,0.0,0.3,0.0,0.1,0.1,0.0,generic,True,Alkoholfreie Getränke
+69,Kaffeerahm,,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,161,15.0,9.0,3.8,3.8,0.0,2.6,0.2,generic,False,Fette und Öle
+583,Kakaobutter,,Fette und Öle/Fette,0.9,pro 100g essbarer Anteil,900,100.0,59.7,0.0,0.0,0.0,0.0,0.0,generic,False,Fette und Öle
+581,Kakaopulver,,Süssigkeiten/Schokolade und Kakaoerzeugnisse;Alkoholfreie Getränke/Kakaogetränke,,pro 100g essbarer Anteil,419,24.5,14.4,10.8,2.2,32.7,22.5,0.0,generic,False,Süssigkeiten
+393,"Kaki, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,70,0.3,0.0,14.3,13.9,3.4,0.9,0.0,generic,False,Früchte
+1071,"Kalb, Brust, gekocht (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,234,15.5,6.6,0.0,0.0,0.0,23.5,0.1,generic,False,Fleisch und Innereien
+1,"Kalb, Brust, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,204,14.5,6.2,0.0,0.0,0.0,18.3,0.2,generic,False,Fleisch und Innereien
+662,"Kalb, Eckstück, roh",Plätzli,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,103,1.6,0.5,0.0,0.0,0.0,22.2,0.2,generic,False,Fleisch und Innereien
+660,"Kalb, Filet, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,119,3.8,1.3,0.0,0.0,0.0,21.2,0.2,generic,False,Fleisch und Innereien
+11,"Kalb, Gehacktes, roh",Hackfleisch,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,104,2.4,1.2,0.0,0.0,0.0,20.5,0.1,generic,False,Fleisch und Innereien
+13325,"Kalb, Geschnetzeltes, gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,123,1.1,0.5,0.0,0.0,0.0,28.2,0.1,generic,False,Fleisch und Innereien
+13,"Kalb, Geschnetzeltes, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,98,1.1,0.5,0.0,0.0,0.0,22.0,0.1,generic,False,Fleisch und Innereien
+13377,"Kalb, Haxe, geschmort (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,165,5.1,1.6,0.0,0.0,0.0,29.7,0.1,generic,False,Fleisch und Innereien
+661,"Kalb, Haxe, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,122,4.4,1.4,0.0,0.0,0.0,20.7,0.2,generic,False,Fleisch und Innereien
+2,"Kalb, Kotelett, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,161,8.7,3.6,0.0,0.0,0.0,20.7,0.1,generic,False,Fleisch und Innereien
+10,"Kalb, Leber, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,135,4.3,1.3,4.6,0.0,0.0,19.6,0.2,generic,False,Fleisch und Innereien
+672,"Kalb, Milken, roh",Bries,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,99,3.4,1.3,0.0,0.0,0.0,17.2,0.2,generic,False,Fleisch und Innereien
+673,"Kalb, Niere, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,112,5.0,2.2,1.0,,0.0,15.8,0.4,generic,False,Fleisch und Innereien
+13324,"Kalb, Nierstück, Steak, gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,144,3.9,1.3,0.0,0.0,0.0,27.3,0.3,generic,False,Fleisch und Innereien
+3,"Kalb, Nierstück, Steak, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,113,2.4,1.1,0.0,0.0,0.0,22.8,0.1,generic,False,Fleisch und Innereien
+14,"Kalb, Runder Mocken, roh",Saftplätzli,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,104,1.8,0.8,0.0,0.0,0.0,21.9,0.1,generic,False,Fleisch und Innereien
+1073,"Kalb, Schulter, Braten, im Ofen gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,163,5.4,1.6,0.0,0.0,0.0,28.6,0.3,generic,False,Fleisch und Innereien
+658,"Kalb, Schulter, Braten, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,124,4.8,1.4,0.0,0.0,0.0,20.2,0.2,generic,False,Fleisch und Innereien
+15,"Kalb, Voressen, roh",Ragout,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,102,2.4,1.1,0.0,0.0,0.0,20.0,0.1,generic,False,Fleisch und Innereien
+674,"Kalb, Zunge, roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,181,11.6,4.2,1.9,,0.0,17.2,0.2,generic,False,Fleisch und Innereien
+1106,"Kalbfleisch (Durchschnitt exkl. Innereien, Kotelett), roh",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,128,4.8,1.9,0.0,0.0,0.0,21.1,0.2,generic,False,Fleisch und Innereien
+1080,Kalbsbratwurst,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,228,19.2,7.9,1.2,1.2,0.0,12.5,1.9,generic,False,Fleisch- und Wurstwaren
+1667,"Kalbspiccata, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,217,11.6,3.0,5.5,0.1,0.3,22.5,0.9,generic,False,Gerichte
+13316,"Kalbsplätzli, gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,128,1.6,0.5,0.0,0.0,0.0,28.4,0.2,generic,False,Fleisch und Innereien
+1681,"Kalbsplätzli, gebraten in HOLL-Rapsöl",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,185,8.6,0.9,0.0,0.0,0.0,26.8,1.0,generic,False,Fleisch und Innereien
+1669,"Kalbsragout mit Sauce, zubereitet",Voressen,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,85,3.2,0.6,2.9,1.2,0.6,10.7,0.7,generic,False,Gerichte
+764,"Kalmar, roh",Seppia;Polpo;Calamare;Tintenfisch,"Fisch/Meeresfrüchte, Krusten- und Schalentiere",,pro 100g essbarer Anteil,83,1.1,0.2,2.3,,0.0,16.0,0.4,generic,False,Fisch
+13329,"Kaninchen (Durchschnitt), gekocht (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,205,10.3,3.5,0.0,0.0,0.0,28.0,0.2,generic,False,Fleisch und Innereien
+686,"Kaninchen (Durchschnitt), roh",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,150,7.5,2.5,0.0,0.0,0.0,20.5,0.1,generic,False,Fleisch und Innereien
+16,"Kaninchen, Filet, roh",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,111,1.5,0.5,0.0,0.0,0.0,24.3,0.1,generic,False,Fleisch und Innereien
+1002,"Karotte, gedämpft (ohne Zugabe von Salz)",Rüebli,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,44,0.4,0.1,8.0,6.3,2.8,0.7,0.1,generic,False,Gemüse
+355,"Karotte, roh",Rüebli;Möhre,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,42,0.4,0.1,7.6,6.0,2.7,0.6,0.1,generic,False,Gemüse
+566,Karottensaft,Rüeblisaft,Alkoholfreie Getränke/Frucht- und Gemüsesäfte;Gemüse/Gemüsesäfte,1.1,pro 100 ml,33,0.1,,6.8,4.8,0.9,0.7,0.1,generic,True,Alkoholfreie Getränke
+1057,"Kartoffel, geschält, gedämpft (ohne Zugabe von Salz)",Gschwellti,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,75,0.1,0.0,15.6,0.7,2.1,2.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+813,"Kartoffel, geschält, roh",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,76,0.1,0.0,15.6,0.7,2.1,2.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+860,"Kartoffelflocken, mit Milchpulver und Salz (Instant-Kartoffelstock)",Instant-Kartoffelstock,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,365,5.3,3.1,65.5,10.3,4.7,11.3,3.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1599,"Kartoffelgratin dauphinois, zubereitet",,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,128,7.8,4.6,11.3,2.4,1.3,2.5,0.3,generic,False,Gerichte
+1600,"Kartoffelgratin Savoyer Art, zubereitet",,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,75,2.3,1.3,10.6,0.5,1.4,2.1,0.4,generic,False,Gerichte
+1517,Kartoffelsalat mit Essig-Öl-Sauce,,Gerichte/Salate,,pro 100g essbarer Anteil,96,3.8,0.3,12.8,0.6,1.7,1.7,0.1,generic,False,Gerichte
+1516,Kartoffelsalat mit Mayonnaise-Joghurt-Sauce,,Gerichte/Salate,,pro 100g essbarer Anteil,80,2.2,0.4,12.4,0.7,1.6,1.8,0.2,generic,False,Gerichte
+497,Kartoffelstärke,,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke;Verschiedenes/Gelier- und Bindemittel",,pro 100g essbarer Anteil,336,0.1,0.0,83.1,0.0,0.1,0.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1519,"Kartoffelstock, zubereitet (mit Rahm und Butter)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,139,8.4,5.0,12.9,1.1,1.6,2.0,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1518,"Kartoffelstock, zubereitet (mit teilentrahmter Milch und Butter)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,88,2.6,1.5,13.2,1.4,1.6,2.2,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+863,"Kartoffelstock, zubereitet (mit Vollmilch und Butter)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,90,2.8,1.7,13.2,1.4,1.6,2.2,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+539,Käse in Salzlake (Kuhmilch),,Milch und Milchprodukte/Frischkäse und Quark;Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,256,20.7,12.4,1.4,1.4,0.0,16.0,3.7,generic,False,Milch und Milchprodukte
+549,Käse in Salzlake (Schaf- und Ziegenmilch),Feta,Milch und Milchprodukte/Frischkäse und Quark;Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,242,18.8,12.1,1.5,0.0,0.0,16.7,3.3,generic,False,Milch und Milchprodukte
+1544,"Käsekuchen, gebacken (mit Blätterteig)",Käsewähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,300,21.9,12.4,11.7,1.2,0.5,13.8,0.9,generic,False,Gerichte
+1543,"Käsekuchen, gebacken (mit Kuchenteig)",Käsewähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,303,20.8,11.8,14.5,1.2,0.6,14.3,0.9,generic,False,Gerichte
+60,Käsereibutter,,Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter,0.9,pro 100g essbarer Anteil,747,82.5,49.5,0.6,0.5,0.0,0.4,0.0,generic,False,Fette und Öle
+1601,"Käseschnitte, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,272,12.1,6.8,26.0,1.0,2.3,13.8,1.4,generic,False,Gerichte
+1572,Kebab im Fladenbrot,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,123,3.6,0.8,14.5,2.2,1.2,7.6,0.6,generic,False,Gerichte
+1012,"Kefe, gedämpft (ohne Zugabe von Salz)",Kiefelerbse;Zuckerschote,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,73,0.2,0.0,10.8,5.4,5.3,4.3,0.0,generic,False,Gemüse
+438,"Kefe, roh",Kiefelerbse;Zuckerschote,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,68,0.2,0.0,10.0,5.0,5.0,4.0,0.0,generic,False,Gemüse
+635,Ketchup,,Verschiedenes/Saucen,1.14,pro 100g essbarer Anteil,117,0.4,0.1,26.0,24.8,0.9,2.0,2.8,generic,False,Verschiedenes
+1059,"Kichererbse, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,127,2.0,0.3,16.8,0.9,6.2,7.3,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+439,"Kichererbse, getrocknet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,327,4.9,0.6,44.3,2.4,15.5,18.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+644,Kirsch,Kirschbranntwein;Kirschwasser;Kirschschnaps;Kirschenbrand,Alkoholhaltige Getränke/Spirituosen,0.95,pro 100 ml,233,0.0,0.0,0.0,0.0,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+1052,"Kirsche, gedünstet, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,58,0.5,0.1,12.0,9.2,1.5,0.9,0.0,generic,False,Früchte
+394,"Kirsche, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,62,0.4,0.1,13.0,10.0,1.6,0.8,0.0,generic,False,Früchte
+1545,"Kirschenkuchen, hausgemacht, gebacken (mit Blätterteig)",Kirschenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,151,6.9,3.0,18.8,8.4,1.4,2.8,0.3,generic,False,Süssigkeiten
+1546,"Kirschenkuchen, hausgemacht, gebacken (mit Kuchenteig)",Kirschenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,153,6.7,3.0,19.5,8.4,1.5,3.0,0.2,generic,False,Süssigkeiten
+395,"Kiwi, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,58,0.6,0.1,11.0,8.9,2.4,0.9,0.0,generic,False,Früchte
+918,"Knäckebrot, Vollkorn",,"Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln",,pro 100g essbarer Anteil,332,1.7,0.3,61.1,3.3,12.4,12.0,1.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+920,"Knäckebrot, Vollkorn mit Leinsamen",,"Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln",,pro 100g essbarer Anteil,352,5.7,0.7,55.2,3.1,13.8,12.9,1.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+919,"Knäckebrot, Vollkorn mit Sesam",,"Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln",,pro 100g essbarer Anteil,360,6.9,1.0,55.3,3.1,12.4,13.1,1.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+356,"Knoblauch, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,137,0.5,0.1,24.5,2.4,3.0,7.0,0.0,generic,False,Gemüse
+1013,"Knollensellerie, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,32,0.3,0.1,4.0,1.6,3.8,1.4,0.1,generic,False,Gemüse
+357,"Knollensellerie, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,32,0.3,0.1,4.0,1.6,3.8,1.4,0.1,generic,False,Gemüse
+1399,Knöpflimehl,Spätzlimehl,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,351,1.3,0.2,71.3,0.9,3.3,11.9,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+945,"Knuspermüeslimischung,  mit Früchten, gezuckert",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,424,15.0,3.5,59.8,18.8,7.6,8.7,0.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+14123,"Knuspermüeslimischung, angereichert mit Vitaminen und Mineralien",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,420,11.9,2.9,63.4,17.0,9.1,10.3,0.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+14104,"Knuspermüeslimischung, gezuckert (Durchschnitt) ",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,430,15.9,3.9,58.6,18.1,7.7,9.4,0.4,generic,False,"Brote, Flocken und Frühstückscerealien"
+944,"Knuspermüeslimischung, mit Nüssen and Samen, gezuckert",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,431,16.1,3.2,56.1,15.1,8.2,11.3,0.3,generic,False,"Brote, Flocken und Frühstückscerealien"
+948,"Knuspermüeslimischung, mit Schokolade",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,442,17.4,5.2,58.8,19.8,7.2,9.0,0.4,generic,False,"Brote, Flocken und Frühstückscerealien"
+51,Kochbutter,,Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter,0.9,pro 100g essbarer Anteil,745,82.2,49.3,0.7,0.6,0.0,0.5,0.0,generic,False,Fette und Öle
+1118,Kochpökelware (Durchschnitt),,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,223,15.6,6.0,0.7,0.7,0.0,19.8,2.8,generic,False,Fleisch- und Wurstwaren
+762,Kochsalz mit Jod,,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,0,0.0,0.0,0.0,0.0,0.0,0.0,98.0,generic,False,Verschiedenes
+10457,Kochsalz mit Jod und Fluor,Speisesalz,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,0,0.0,0.0,0.0,0.0,0.0,0.0,100.0,generic,False,Verschiedenes
+634,Kochsalz ohne Jod und Fluor,Speisesalz,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,0,0.0,0.0,0.0,0.0,0.0,0.0,100.0,generic,False,Verschiedenes
+704,Kochspeck,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,322,27.6,10.6,0.6,0.6,0.0,17.8,2.8,generic,False,Fleisch- und Wurstwaren
+1116,Kochwürste (Durchschnitt),,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,278,23.5,8.6,1.1,1.0,0.1,15.4,2.6,generic,False,Fleisch- und Wurstwaren
+10582,"Kohlgemüse (Durchschnitt), gekocht (ohne Zugabe von Salz und Fett)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,29,0.4,0.1,3.1,2.6,2.4,2.2,0.0,generic,False,Gemüse
+1167,"Kohlgemüse (Durchschnitt), roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,30,0.4,0.1,3.2,2.8,2.5,2.3,0.0,generic,False,Gemüse
+1014,"Kohlrabi, gedämpft (ohne Zugabe von Salz)",Rübkohl,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,28,0.2,0.0,3.9,3.8,1.5,2.0,0.0,generic,False,Gemüse
+449,"Kohlrabi, roh",Rübkohl,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,27,0.2,0.0,3.7,3.6,1.4,1.9,0.0,generic,False,Gemüse
+601,Kokosfett,,Fette und Öle/Fette,0.9,pro 100g essbarer Anteil,894,99.0,83.7,0.0,0.0,0.0,0.8,0.0,generic,False,Fette und Öle
+888,Kokosmakronen,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,549,38.9,33.8,35.1,35.1,15.7,6.9,0.2,generic,False,Süssigkeiten
+284,Kokosnuss,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,384,36.5,32.1,4.8,4.8,9.0,4.6,0.1,generic,False,"Nüsse, Samen und Ölfrüchte"
+742,"Kokosnuss, getrocknet (Kokosrapseln, Kokosflocken)",,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,653,61.3,53.3,5.3,5.3,24.7,7.6,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+14124,"Kokosnussgetränk, nature",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,22,1.0,0.8,2.8,1.9,0.1,0.4,0.1,generic,True,Milch und Milchprodukte
+14132,"Kokosnussgetränk, nature, mit Calcium und Vitaminen angereichert",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,22,1.0,0.8,2.8,1.9,0.1,0.4,0.1,generic,True,Milch und Milchprodukte
+13458,Kokosnussmilch,Kokosmilch,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,214,21.3,18.9,3.1,1.7,0.1,2.4,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+526,"Kondensmilch, gezuckert",,Milch und Milchprodukte/Milch,1.1,pro 100g essbarer Anteil,339,10.0,6.0,54.3,54.3,0.0,8.0,0.3,generic,False,Milch und Milchprodukte
+527,"Kondensmilch, ungezuckert",,Milch und Milchprodukte/Milch,1.1,pro 100g essbarer Anteil,131,7.6,4.6,9.3,9.3,0.0,6.4,0.2,generic,False,Milch und Milchprodukte
+696,Konfitüre,Marmelade,Süssigkeiten/Konfitüren und süsse Brotaufstriche,1.4,pro 100g essbarer Anteil,246,0.5,,58.7,58.7,2.2,0.5,0.0,generic,False,Süssigkeiten
+697,"Konfitüre, energievermindert, mit Süssstoffen",Marmelade,Süssigkeiten/Konfitüren und süsse Brotaufstriche,1.4,pro 100g essbarer Anteil,136,0.5,,31.9,31.9,0.8,0.5,0.1,generic,False,Süssigkeiten
+448,"Kopfsalat, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,14,0.2,0.0,1.1,1.0,1.6,1.3,0.0,generic,False,Gemüse
+13322,"Kotelett (Durchschnitt aus Kalb, Schwein, Lamm), gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien,,pro 100g essbarer Anteil,223,12.0,4.6,0.0,0.0,0.0,28.8,0.1,generic,False,Fleisch und Innereien
+1107,"Kotelett (Durchschnitt aus Kalb, Schwein, Lamm), roh",,"Fleisch und Innereien/Schwein;Fleisch und Innereien/Kalb;Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,177,10.2,3.9,0.0,0.0,0.0,21.3,0.1,generic,False,Fleisch und Innereien
+1099,"Krustentiere (Durchschnitt), roh",,"Fisch/Meeresfrüchte, Krusten- und Schalentiere",,pro 100g essbarer Anteil,75,1.0,0.1,1.0,0.0,0.0,15.5,0.7,generic,False,Fisch
+1176,"Kuchenteig (mit Butter), ungebacken",Wähenteig,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,375,21.2,12.4,38.5,0.3,1.8,6.7,0.8,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+906,"Kuchenteig (mit pflanzlichem Fett), ungebacken",Wähenteig,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,394,23.5,10.8,38.1,0.2,1.8,6.6,0.8,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13417,"Kuchenteig, Vollkorn (mit Butter), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,372,21.5,12.4,33.8,0.7,6.1,7.6,0.8,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13416,"Kuchenteig, Vollkorn (mit pflanzichem Fett), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,359,20.2,6.1,33.7,0.6,6.1,7.6,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1662,"Kürbis-Piccata, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,140,8.5,2.3,9.4,3.7,2.2,5.5,0.2,generic,False,Gerichte
+1020,"Kürbis, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,29,0.1,0.0,4.7,4.0,2.2,1.1,0.0,generic,False,Gemüse
+480,"Kürbis, roh",Riesenkürbis,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,28,0.1,0.0,4.6,3.9,2.2,1.1,0.0,generic,False,Gemüse
+276,Kürbiskerne,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,615,49.1,8.7,4.7,1.4,6.0,35.6,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+13404,Kürbiskernöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,14.8,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+1656,"Kürbisscheiben, paniert, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,144,5.8,0.7,16.7,4.1,2.7,4.7,0.2,generic,False,Gerichte
+193,"Lachs, geräuchert",,Fisch/Meeresfische,,pro 100g essbarer Anteil,167,8.2,1.8,0.0,0.0,0.0,23.2,4.1,generic,False,Fisch
+210,"Lachs, Wildfang, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,182,11.5,1.8,0.0,0.0,0.0,19.7,0.2,generic,False,Fisch
+13354,"Lachs, Zucht, Filet, gedämpft (ohne Zusatz von Fett und Salz)",,Fisch/Meeresfische,,pro 100g essbarer Anteil,180,11.7,1.9,0.0,0.0,0.0,18.7,0.2,generic,False,Fisch
+194,"Lachs, Zucht, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,200,13.4,2.2,0.0,0.0,0.0,19.9,0.1,generic,False,Fisch
+13273,"Lamm, Filet, ""medium"" gebraten (ohne Zusatz von Fett und Salz)",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,136,3.6,1.4,0.0,0.0,0.0,25.8,0.2,generic,False,Fleisch und Innereien
+675,"Lamm, Filet, roh",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,112,3.4,1.3,0.0,0.0,0.0,20.4,0.2,generic,False,Fleisch und Innereien
+13304,"Lamm, Gigot, gebraten (ohne Zusatz von Fett und Salz)",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,203,9.8,5.2,0.0,0.0,0.0,28.6,0.2,generic,False,Fleisch und Innereien
+4,"Lamm, Gigot, roh (Schweiz, Neuseeland)",Keule,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,155,8.2,4.4,0.0,0.0,0.0,20.2,0.2,generic,False,Fleisch und Innereien
+5,"Lamm, Kotelett, roh (Schweiz)",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,179,10.9,5.2,0.0,0.0,0.0,20.2,0.2,generic,False,Fleisch und Innereien
+17,"Lamm, Nierstück, roh (Australien, Neuseeland)",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,117,3.3,1.9,0.0,0.0,0.0,21.8,0.1,generic,False,Fleisch und Innereien
+18,"Lamm, Racks, roh (Australien, Neuseeland)",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,156,8.3,4.3,0.0,0.0,0.0,20.3,0.2,generic,False,Fleisch und Innereien
+19,"Lamm, Voressen, roh (Schweiz)",Ragout,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,154,8.4,4.3,0.0,0.0,0.0,19.6,0.2,generic,False,Fleisch und Innereien
+1110,"Lamm/Schaf (Durchschnitt exkl. Innereien, Kotelett), roh",,"Fleisch und Innereien/Lamm, Schaf",,pro 100g essbarer Anteil,134,5.8,3.0,0.0,0.0,0.0,20.5,0.1,generic,False,Fleisch und Innereien
+1673,"Lammragout mit Sauce, zubereitet",Voressen,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,113,6.1,2.2,3.0,1.2,0.6,11.1,0.8,generic,False,Gerichte
+1090,Landjäger,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,491,42.7,16.9,,,0.0,26.6,3.5,generic,False,Fleisch- und Wurstwaren
+1184,"Latte macchiato, ungezuckert",,Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee,0.88,pro 100 ml,47,2.8,1.7,3.2,3.2,0.0,2.2,0.1,generic,True,Milch und Milchprodukte
+441,"Lattich, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,16,0.3,0.0,1.3,1.3,1.5,1.2,0.0,generic,False,Gemüse
+1015,"Lauch, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,31,0.3,0.0,3.9,3.7,3.0,1.7,0.0,generic,False,Gemüse
+358,"Lauch, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,30,0.3,,3.7,3.5,2.8,1.6,0.0,generic,False,Gemüse
+832,Laugenbrötli (mit jodiertem Kochsalz),Silserli,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,282,4.9,0.9,48.9,2.2,2.3,9.3,1.5,generic,False,"Brote, Flocken und Frühstückscerealien"
+947,"Laugengebäck trocken (Bretzel, Sticks)",,Salzige Snacks/Salzsticks und Bretzel,,pro 100g essbarer Anteil,361,4.1,1.0,72.1,0.4,0.7,8.6,4.3,generic,False,Salzige Snacks
+835,Laugengipfeli (mit jodiertem Kochsalz),Silsergipfeli,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,423,25.0,14.7,39.4,1.3,1.9,9.1,4.1,generic,False,"Brote, Flocken und Frühstückscerealien"
+13320,"Leber (Durchschnitt aus Rind, Kalb, Schwein), gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien,,pro 100g essbarer Anteil,157,5.0,1.7,4.4,0.0,0.0,23.5,0.2,generic,False,Fleisch und Innereien
+10377,"Leber (Durchschnitt aus Rind, Kalb, Schwein), roh",,Fleisch und Innereien/Geflügel;Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,134,4.3,1.5,3.6,0.0,0.0,20.3,0.2,generic,False,Fleisch und Innereien
+776,Leberwurst,,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,253,19.1,7.2,0.5,0.3,0.2,19.8,2.2,generic,False,Fleisch- und Wurstwaren
+880,Lebkuchen,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,404,13.8,1.4,61.6,41.2,4.2,6.5,0.3,generic,False,Süssigkeiten
+993,Lebkuchen mit Schokoladeüberzug,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,444,18.9,6.8,60.2,45.4,3.5,6.5,0.4,generic,False,Süssigkeiten
+13405,"Leinöl, kaltgepresst",,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,8.6,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+277,Leinsamen,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,533,42.2,4.6,3.6,1.4,26.9,21.3,0.1,generic,False,"Nüsse, Samen und Ölfrüchte"
+10534,Lemon Curd,Zitronencrème,Süssigkeiten/Cremen und Pudding,,pro 100g essbarer Anteil,317,16.0,8.0,36.8,36.7,0.1,6.4,0.2,generic,False,Süssigkeiten
+531,Limburger (Münster),,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,273,21.4,12.8,0.0,0.0,0.0,20.0,1.9,generic,False,Milch und Milchprodukte
+595,"Limonade, mit Aroma, gezuckert",,Alkoholfreie Getränke/Süssgetränke,1.0,pro 100 ml,38,0.0,0.0,9.5,9.5,0.0,0.0,0.0,generic,True,Alkoholfreie Getränke
+1060,"Linse, ganz, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,115,0.5,0.1,15.6,0.4,6.2,8.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+370,"Linse, ganz, getrocknet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,324,1.5,0.2,44.8,1.1,17.0,24.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13386,"Linse, geschält, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,134,0.6,0.1,19.0,0.9,4.3,11.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13385,"Linse, geschält, getrocknet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,334,1.5,0.3,48.0,2.2,10.4,27.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+900,Linzertorte,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,424,23.6,9.2,43.7,25.9,3.7,7.5,0.2,generic,False,Süssigkeiten
+852,Löffelbiscuit,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,413,8.3,2.4,71.8,34.9,1.4,12.2,0.8,generic,False,Süssigkeiten
+786,Luganighe,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,298,22.9,8.5,0.5,0.5,0.0,22.1,2.5,generic,False,Fleisch- und Wurstwaren
+1083,Lyoner,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,244,21.8,8.2,0.5,0.5,0.0,11.5,2.1,generic,False,Fleisch- und Wurstwaren
+878,Madeleine (mit Butter),,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,460,24.8,13.9,51.3,27.8,1.1,7.3,0.6,generic,False,Süssigkeiten
+14117,Madeleine (mit Pflanzenöl),,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,434,20.0,2.5,55.1,27.8,1.2,7.9,0.6,generic,False,Süssigkeiten
+64,"Magermilch, UHT",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,33,0.1,0.1,4.7,4.7,0.0,3.3,0.1,generic,True,Milch und Milchprodukte
+578,Magermilchpulver,,Milch und Milchprodukte/Milch,,pro 100g essbarer Anteil,348,1.0,0.6,50.5,50.5,0.0,34.3,1.4,generic,False,Milch und Milchprodukte
+879,Mailänderli,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,431,20.8,11.6,53.2,22.5,1.4,7.1,0.1,generic,False,Süssigkeiten
+932,Mais-Chips (Apérogebäck),,Salzige Snacks/Chips,,pro 100g essbarer Anteil,509,27.2,6.6,56.0,2.4,4.4,7.8,2.4,generic,False,Salzige Snacks
+1032,"Mais, gedämpft (ohne Zugabe von Salz)",Zuckermais;Gemüsemais,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,100,1.3,0.2,16.9,3.7,3.0,3.5,0.0,generic,False,Gemüse
+432,"Mais, roh",Zuckermais;Gemüsemais,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,93,1.2,0.2,15.7,3.4,2.8,3.3,0.0,generic,False,Gemüse
+1619,"Maisgriess, gekocht",Polenta,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mais",,pro 100g essbarer Anteil,79,0.2,0.0,16.7,0.3,1.1,2.0,0.6,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+425,"Maisgriess, trocken",Polenta,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mais",,pro 100g essbarer Anteil,350,1.1,0.1,73.8,1.5,5.0,8.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+412,Maiskeimöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,11.0,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+633,"Maiskölbchen, in Essig eingelegt",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,119,1.4,0.2,21.0,2.0,4.2,3.4,0.0,generic,False,Gemüse
+426,Maisstärke,,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke;Verschiedenes/Gelier- und Bindemittel",,pro 100g essbarer Anteil,354,,,88.0,,0.6,0.3,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13434,"Malzgetränk mit Kakao, mit Vitaminen und Mineralien angereichert, Pulver",,Alkoholfreie Getränke/Malzextrakthaltige Getränke,,pro 100g essbarer Anteil,382,3.6,2.4,76.2,52.1,4.4,8.9,0.5,generic,False,Alkoholfreie Getränke
+14050,"Malzgetränk mit Kakao, mit Vitaminen und Mineralien angereichert, zubereitet (mit Milch)",,Alkoholfreie Getränke/Malzextrakthaltige Getränke;Milch und Milchprodukte/Milch- und Joghurtgetränke,1.0,pro 100g essbarer Anteil,81,3.0,1.8,9.8,8.1,0.3,3.6,0.1,generic,False,Alkoholfreie Getränke
+397,"Mandarine, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,47,0.2,,9.2,8.6,1.7,0.8,0.0,generic,False,Früchte
+273,Mandel,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,624,52.1,4.1,7.8,6.6,10.6,25.6,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+269,"Mandel, geröstet, gesalzen",,"Salzige Snacks/Gesalzene Nüsse, Samen, Kerne",,pro 100g essbarer Anteil,649,55.2,4.2,7.2,4.6,10.5,25.6,0.8,generic,False,Salzige Snacks
+278,"Mandel, ohne Fett geröstet, gesalzen",,"Salzige Snacks/Gesalzene Nüsse, Samen, Kerne",,pro 100g essbarer Anteil,637,52.5,4.1,10.1,4.9,10.9,25.4,0.6,generic,False,Salzige Snacks
+14113,"Mandelgetränk, nature",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,33,2.6,0.2,1.3,1.3,0.3,1.1,0.1,generic,True,Milch und Milchprodukte
+14131,"Mandelgetränk, nature, mit Calcium und Vitaminen angereichert",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,33,2.6,0.2,1.3,1.3,0.3,1.1,0.1,generic,True,Milch und Milchprodukte
+13884,"Mango, getrocknet",,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,293,2.2,0.5,61.1,59.9,8.4,2.9,0.1,generic,False,Früchte
+396,"Mango, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,68,0.6,0.1,14.3,12.9,1.6,0.6,0.0,generic,False,Früchte
+1016,"Mangold, gedämpft (ohne Zugabe von Salz)",Krautstiel,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,29,0.3,0.0,3.4,0.6,1.2,2.6,0.5,generic,False,Gemüse
+450,"Mangold, roh",Krautstiel,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,23,0.2,,2.7,0.5,1.0,2.1,0.4,generic,False,Gemüse
+14054,"Maniok, Wurzelknolle, gekocht (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,131,0.2,0.1,29.8,0.4,2.8,1.0,0.0,generic,False,Gemüse
+13918,"Maniok, Wurzelknolle, roh",Cassava;Kassave;Yuca,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,140,0.2,0.1,32.1,0.5,2.9,1.0,0.0,generic,False,Gemüse
+209,"Margarine, 35 - 40 % Fett",,Fette und Öle/Fette;Fette und Öle/Fette,,pro 100g essbarer Anteil,357,39.0,11.0,1.1,0.4,0.0,0.3,0.3,generic,False,Fette und Öle
+208,"Margarine, ohne Butter, 70 - 80 % Fett",,Fette und Öle/Fette,0.9,pro 100g essbarer Anteil,696,77.0,23.8,0.2,0.1,0.0,0.5,0.2,generic,False,Fette und Öle
+898,Marmorkuchen,Marmorcake,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,356,17.1,9.5,42.6,19.7,1.3,7.4,0.2,generic,False,Süssigkeiten
+496,Marzipan,,Süssigkeiten/Sonstige Süssigkeiten,,pro 100g essbarer Anteil,474,17.6,1.5,68.6,68.6,4.9,8.0,0.0,generic,False,Süssigkeiten
+485,Mascarpone,,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,435,44.5,29.5,4.1,4.1,0.0,4.5,0.2,generic,False,Milch und Milchprodukte
+771,Mayonnaise,,Fette und Öle/Mayonnaisen,0.9,pro 100g essbarer Anteil,742,81.7,12.1,0.5,0.5,0.0,1.1,1.0,generic,False,Fette und Öle
+772,"Mayonnaise, kalorienvermindert",,Fette und Öle/Mayonnaisen,1.0,pro 100g essbarer Anteil,327,34.5,4.6,3.3,,0.0,0.9,0.7,generic,False,Fette und Öle
+1682,"Mayonnaise, mit Rapsöl, hausgemacht",,Fette und Öle/Mayonnaisen,,pro 100g essbarer Anteil,792,86.9,7.0,0.1,0.1,0.0,2.4,0.4,generic,False,Fette und Öle
+1135,Mehl (Durchschnitt),,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,343,1.4,0.3,67.8,0.4,4.7,12.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1136,"Mehl, hell (Durchschnitt)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,344,1.3,0.3,68.9,0.4,3.8,12.2,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1524,"Mehlomeletten mit Champignonfüllung, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,125,6.2,3.1,10.8,1.2,1.5,5.7,0.6,generic,False,Gerichte
+1525,"Mehlomeletten mit Gemüsefüllung, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,137,5.1,1.8,16.3,2.6,1.4,5.8,0.6,generic,False,Gerichte
+1523,"Mehlomeletten mit Käse, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,194,8.9,4.4,18.2,1.3,0.8,10.0,0.9,generic,False,Gerichte
+1695,"Mehlomeletten mit Nutella, zubereitet",,Gerichte/Sonstige süsse Gerichte,,pro 100g essbarer Anteil,259,12.3,4.9,29.1,14.4,1.4,7.2,0.6,generic,False,Gerichte
+1526,"Mehlomeletten mit Schinken, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,155,5.1,2.1,17.3,1.3,0.8,9.7,1.0,generic,False,Gerichte
+1527,"Mehlomeletten mit Speck, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,188,8.9,3.5,17.3,1.3,0.8,9.3,1.1,generic,False,Gerichte
+1694,"Mehlomeletten mit Zimt und Zucker, zubereitet",,Gerichte/Sonstige süsse Gerichte,,pro 100g essbarer Anteil,177,5.3,2.2,24.5,6.5,0.8,7.2,0.8,generic,False,Gerichte
+1522,"Mehlomeletten, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,165,5.6,2.3,20.4,1.4,0.9,7.6,0.8,generic,False,Gerichte
+732,"Melasse, Melassesirup",,Süssigkeiten/Konfitüren und süsse Brotaufstriche,1.4,pro 100g essbarer Anteil,274,0.0,0.0,67.2,67.2,0.0,1.2,0.2,generic,False,Süssigkeiten
+854,Meringue,,Süssigkeiten/Sonstige Süssigkeiten,,pro 100g essbarer Anteil,401,0.5,0.0,94.0,94.0,0.0,5.0,0.3,generic,False,Süssigkeiten
+761,"Miesmuschel, roh",,"Fisch/Meeresfrüchte, Krusten- und Schalentiere",,pro 100g essbarer Anteil,85,2.7,0.5,3.4,,0.0,11.7,0.7,generic,False,Fisch
+1194,Milch (Durchschnitt),,Milch und Milchprodukte/Milch,1.0,pro 100 ml,59,2.9,1.7,4.8,4.8,0.0,3.2,0.1,generic,True,Milch und Milchprodukte
+1185,"Milchkaffee dunkel, ungezuckert",Schale,Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee,1.0,pro 100 ml,16,0.9,0.5,1.2,1.0,0.1,0.7,0.0,generic,True,Milch und Milchprodukte
+1186,"Milchkaffee hell, ungezuckert",Schale,Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee,1.0,pro 100 ml,22,1.2,0.8,1.6,1.4,0.1,1.0,0.0,generic,True,Milch und Milchprodukte
+1187,"Milchkaffee, ungezuckert",Schale,Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee,1.0,pro 100 ml,19,1.1,0.7,1.4,1.3,0.1,0.9,0.0,generic,True,Milch und Milchprodukte
+1513,"Milchreis, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)",,Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,129,3.5,2.1,19.0,5.6,0.2,5.3,0.2,generic,False,Süssigkeiten
+1514,"Milchreis, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)",,Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei,,pro 100g essbarer Anteil,143,5.1,3.1,19.0,5.6,0.2,5.1,0.2,generic,False,Süssigkeiten
+195,Milchschokolade,,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,537,31.1,19.3,56.9,55.2,1.9,6.5,0.5,generic,False,Süssigkeiten
+654,Milchschokolade mit Alkoholfüllung,,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,488,23.1,13.3,59.0,58.3,2.9,5.6,0.1,generic,False,Süssigkeiten
+655,"Milchschokolade mit Crèmefüllung (Gianduja, Nougat)",,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,573,38.3,18.2,47.6,46.4,3.4,7.9,0.1,generic,False,Süssigkeiten
+643,Milchschokolade mit Mandel-Honig-Nougat,,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,536,31.5,17.8,54.8,54.3,1.8,7.3,0.2,generic,False,Süssigkeiten
+612,Milchschokolade mit Nüssen,,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,570,38.2,16.4,46.1,44.4,3.2,8.8,0.2,generic,False,Süssigkeiten
+641,"Milchschokolade mit Weinbeeren, Nüssen und Mandeln",,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,513,28.9,14.2,52.6,51.0,4.5,8.4,0.2,generic,False,Süssigkeiten
+671,Minestrone,,Gerichte/Eintöpfe und Suppen,1.1,pro 100g essbarer Anteil,53,1.8,0.7,7.0,2.6,0.4,2.0,1.0,generic,False,Gerichte
+1087,Minipic Würstchen,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,460,39.1,15.4,0.8,0.8,0.0,26.1,4.5,generic,False,Fleisch- und Wurstwaren
+1053,"Mirabelle, gedünstet, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,70,0.2,0.0,16.6,12.2,2.0,0.7,0.0,generic,False,Früchte
+403,"Mirabelle, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,76,0.2,,18.0,13.3,2.2,0.6,0.0,generic,False,Früchte
+602,"Molke, süss",Süssmolke,Milch und Milchprodukte/Milch- und Joghurtgetränke,1.0,pro 100 ml,24,0.2,0.1,4.7,4.7,0.0,0.8,0.1,generic,True,Milch und Milchprodukte
+1039,"Morchel, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Pilze,,pro 100g essbarer Anteil,34,0.4,0.1,0.6,0.1,8.5,2.8,0.0,generic,False,Gemüse
+457,"Morchel, roh",,Gemüse/Pilze,,pro 100g essbarer Anteil,29,0.3,0.1,0.5,0.1,7.0,2.5,0.0,generic,False,Gemüse
+819,Mortadella,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,314,27.3,10.2,0.8,0.8,0.0,16.1,2.1,generic,False,Fleisch- und Wurstwaren
+717,Mostbröckli,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,150,1.9,0.9,0.5,0.5,0.0,32.6,4.7,generic,False,Fleisch- und Wurstwaren
+82,Mozzarella,,Milch und Milchprodukte/Weichkäse;Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,256,19.5,11.4,0.7,0.7,0.0,19.5,0.4,generic,False,Milch und Milchprodukte
+942,"Müeslimischung, Getreideflocken mit Früchten und Nüssen, gezuckert ",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,365,5.6,0.7,62.2,10.6,10.1,11.4,0.1,generic,False,"Brote, Flocken und Frühstückscerealien"
+943,"Müeslimischung, Getreideflocken mit Früchten und Nüssen, ungesüsst",,"Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien",,pro 100g essbarer Anteil,372,8.4,1.5,57.4,11.6,10.8,11.3,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+14044,"Mürbeteig (mit Butter), süss, gebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,530,28.6,16.3,57.3,13.2,2.0,9.8,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+14043,"Mürbeteig (mit Butter), süss, ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,424,22.9,13.1,45.8,10.5,1.6,7.8,0.7,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+14045,"Mürbeteig (mit pflanzlichem Fett), süss, gebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,494,24.9,11.2,58.4,17.8,1.9,8.0,0.3,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+909,"Mürbeteig (mit pflanzlichem Fett), süss, ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,395,19.9,9.0,46.7,14.2,1.5,6.4,0.3,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+844,Mütschli,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,255,0.8,0.2,51.8,0.7,2.5,8.7,1.7,generic,False,"Brote, Flocken und Frühstückscerealien"
+1579,"Nasi Goreng, zubereitet",,Gerichte/Asiatische Gerichte,,pro 100g essbarer Anteil,125,1.8,0.3,16.1,0.6,0.5,10.8,1.3,generic,False,Gerichte
+404,"Nektarine, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,55,0.3,0.0,11.3,8.8,1.3,1.0,0.0,generic,False,Früchte
+913,Nussgipfel aus Blätterteig,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,419,26.9,9.9,36.2,15.8,2.7,6.8,0.5,generic,False,Süssigkeiten
+914,Nussgipfel aus Hefeteig,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,318,12.6,3.3,41.9,18.4,2.7,7.7,0.7,generic,False,Süssigkeiten
+372,"Nüsslisalat, roh",Feldsalat;Rapunzelsalat,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,23,0.4,0.1,2.0,2.0,1.7,2.0,0.0,generic,False,Gemüse
+915,Nussschnecke aus Hefeteig,Hefeschnecke,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,445,18.7,5.7,54.9,12.9,3.8,12.2,1.2,generic,False,Süssigkeiten
+818,"Ofen-Frites, tiefgekühlt",Ofen-Pommes,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,127,5.0,0.4,18.1,0.9,1.4,1.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+10545,"Olive, gefüllt mit Hackfleisch, frittiert",,Salzige Snacks/Sonstige salzige Snacks,,pro 100g essbarer Anteil,329,15.1,3.2,32.8,2.0,3.2,13.1,1.5,generic,False,Salzige Snacks
+492,"Olive, grün, in Salzlake, abgetropft",,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,154,15.7,2.3,,,3.6,1.3,3.2,generic,False,"Nüsse, Samen und Ölfrüchte"
+493,"Olive, schwarz",,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,176,17.2,2.1,0.8,0.8,6.2,1.4,1.8,generic,False,"Nüsse, Samen und Ölfrüchte"
+591,Olivenöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,10.7,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+405,"Orange, roh",Apfelsine,Früchte/Früchte frisch,,pro 100g essbarer Anteil,45,0.2,,8.0,7.6,2.7,0.8,0.0,generic,False,Früchte
+855,Orangeat,,Süssigkeiten/Sonstige Süssigkeiten,,pro 100g essbarer Anteil,306,0.3,0.1,74.3,74.3,2.3,0.4,0.0,generic,False,Süssigkeiten
+572,Orangennektar,,Alkoholfreie Getränke/Süssgetränke;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.0,pro 100 ml,44,0.0,,10.5,10.5,0.1,0.4,0.0,generic,True,Alkoholfreie Getränke
+576,Orangensaft,,Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.04,pro 100 ml,44,0.1,0.1,10.0,10.0,0.3,0.6,0.0,generic,True,Früchte
+708,Palmöl - Palmfett,,Fette und Öle/Öle;Fette und Öle/Fette,0.9,pro 100 ml,809,89.9,43.9,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+716,Pancetta,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,467,43.0,14.4,0.4,,0.0,19.5,4.6,generic,False,Fleisch- und Wurstwaren
+202,Panettone,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,354,10.7,5.6,56.5,22.9,2.8,6.4,0.1,generic,False,Süssigkeiten
+750,Paniermehl,Semmelmehl,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,373,2.1,0.5,73.5,4.4,4.5,12.7,1.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+779,Pantli,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,553,51.4,20.1,0.9,0.9,0.0,21.7,4.0,generic,False,Fleisch- und Wurstwaren
+13440,"Papaya, reif, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,44,0.1,0.0,9.5,9.5,1.8,0.5,0.0,generic,False,Früchte
+663,Paprika (Gewürz),,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,358,13.0,2.1,34.9,33.2,20.9,14.8,0.1,generic,False,Verschiedenes
+279,Paranuss,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,698,66.5,16.1,4.2,2.3,7.5,17.0,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+845,Pariserbrot,Baguette;Parisette,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,255,0.9,0.2,51.2,0.5,2.9,9.0,1.6,generic,False,"Brote, Flocken und Frühstückscerealien"
+482,Parmesan,Parmiggiano,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,401,31.0,20.6,,,0.0,30.5,1.6,generic,False,Milch und Milchprodukte
+986,"Passionsfrucht, roh",Maracuja,Früchte/Früchte frisch,,pro 100g essbarer Anteil,102,3.0,0.5,10.9,8.5,6.8,2.1,0.0,generic,False,Früchte
+13443,"Pastinake, gekocht (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,58,0.4,0.1,11.4,2.9,2.1,1.2,0.0,generic,False,Gemüse
+13439,"Pastinake, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,62,0.4,0.1,12.1,3.1,2.1,1.3,0.0,generic,False,Gemüse
+1017,"Peperoni, grün, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,25,0.4,0.1,3.2,3.1,2.5,1.0,0.0,generic,False,Gemüse
+359,"Peperoni, grün, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,20,0.3,0.1,2.6,2.5,2.0,0.8,0.0,generic,False,Gemüse
+1018,"Peperoni, rot, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,39,0.4,0.1,6.4,6.2,2.5,1.1,0.0,generic,False,Gemüse
+360,"Peperoni, rot, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,32,0.4,0.1,5.2,5.1,2.0,0.9,0.0,generic,False,Gemüse
+13459,"Pestosauce, grün",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,430,42.5,6.5,6.6,3.2,2.5,3.9,2.7,generic,False,Verschiedenes
+13447,"Pestosauce, rot",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,398,35.8,5.0,10.8,7.1,5.0,5.7,2.1,generic,False,Verschiedenes
+373,"Petersilie, roh",Peterli,Gemüse/Kräuter,,pro 100g essbarer Anteil,58,0.5,0.1,7.4,4.8,4.3,3.9,0.1,generic,False,Gemüse
+14074,Petit Beurre,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,431,12.4,7.1,70.2,20.6,2.3,8.7,0.5,generic,False,Süssigkeiten
+884,Petit Beurre mit Schokolade,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,482,21.3,12.9,63.8,37.2,2.1,7.7,0.5,generic,False,Süssigkeiten
+14067,"Petit Beurre, Vollkorn",,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,426,12.7,7.1,65.3,17.3,6.0,9.6,0.6,generic,False,Süssigkeiten
+463,"Pfefferminze, roh",,Gemüse/Kräuter,,pro 100g essbarer Anteil,49,0.7,0.1,5.3,5.2,3.0,3.8,0.0,generic,False,Gemüse
+13328,"Pferd, Filet, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,129,2.0,0.9,0.0,0.0,0.0,27.8,0.1,generic,False,Fleisch und Innereien
+685,"Pferd, Filet, roh",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,102,1.9,0.9,0.0,0.0,0.0,21.4,0.1,generic,False,Fleisch und Innereien
+1670,"Pferderagout mit Sauce, zubereitet",Voressen,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,89,3.1,0.6,3.0,1.2,0.6,11.8,0.8,generic,False,Gerichte
+401,"Pfirsich, gelb, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,43,0.1,0.0,8.9,8.0,1.9,0.8,0.0,generic,False,Früchte
+624,"Pfirsich, in Sirup, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,82,0.1,0.0,18.6,17.9,1.6,0.7,0.0,generic,False,Früchte
+625,"Pfirsich, mit Süssungsmittel, Konserve, abgetropft",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,40,0.1,0.0,8.1,7.3,1.7,0.8,0.0,generic,False,Früchte
+1054,"Pflaume, gedünstet, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,48,0.2,0.0,10.1,8.6,1.6,0.7,0.0,generic,False,Früchte
+475,"Pflaume, getrocknet",Dörrpflaume;Backpflaume,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,227,0.4,0.2,55.4,38.1,5.1,1.6,0.0,generic,False,Früchte
+474,"Pflaume, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,48,0.2,0.0,10.2,8.8,1.6,0.6,0.0,generic,False,Früchte
+1528,"Pflaumenkuchen, hausgemacht, gebacken (mit Blätterteig)",Pflaumenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,142,6.8,3.0,16.9,7.6,1.4,2.6,0.3,generic,False,Süssigkeiten
+1530,"Pflaumenkuchen, hausgemacht, gebacken (mit Kuchenteig)",,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,144,6.6,2.9,17.6,7.6,1.5,2.9,0.2,generic,False,Süssigkeiten
+1129,"Pilz (Durchschnitt), gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Pilze,,pro 100g essbarer Anteil,34,0.4,0.1,0.7,0.2,6.0,3.9,0.0,generic,False,Gemüse
+1128,"Pilz (Durchschnitt), roh",,Gemüse/Pilze,,pro 100g essbarer Anteil,29,0.4,0.1,0.6,0.2,4.9,3.5,0.0,generic,False,Gemüse
+1585,"Pilzrisotto, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,128,3.9,1.9,18.5,0.5,1.5,4.0,0.5,generic,False,Gerichte
+683,"Pilzsauce, gebunden",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,132,8.9,5.4,8.5,4.0,0.7,3.9,0.6,generic,False,Verschiedenes
+688,Pilzsuppe,,Gerichte/Eintöpfe und Suppen,1.0,pro 100g essbarer Anteil,38,1.2,0.5,5.5,2.0,0.5,1.1,0.9,generic,False,Gerichte
+283,Pinienkerne,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,688,61.9,4.3,13.0,4.9,6.3,16.5,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+274,Pistazie,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,594,45.4,5.6,17.6,7.7,10.0,23.8,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+1532,"Pizza al tonno, gebacken",Pizza mit Thon,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,226,7.6,3.0,26.5,1.3,1.5,12.0,0.8,generic,False,Gerichte
+1533,"Pizza Calzone, gebacken",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,224,7.7,3.0,26.5,1.4,1.5,11.4,0.9,generic,False,Gerichte
+1534,"Pizza Hawaii, gebacken",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,195,6.3,2.5,24.2,3.5,1.5,9.5,0.7,generic,False,Gerichte
+1535,"Pizza Margherita, gebacken",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,238,8.4,3.3,29.9,1.5,1.7,9.9,0.7,generic,False,Gerichte
+1540,"Pizza mit Gemüse, gebacken",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,125,3.2,1.2,17.5,1.6,2.0,5.7,0.4,generic,False,Gerichte
+1536,"Pizza mit Mascarpone und Rucola, gebacken",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,239,9.8,4.4,27.6,1.7,1.6,9.4,0.7,generic,False,Gerichte
+1537,"Pizza Prosciutto e Funghi, gebacken",Pizza mit Schinken und Pilzen,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,204,6.9,2.7,23.9,1.3,1.6,10.7,0.8,generic,False,Gerichte
+1538,"Pizza Prosciutto, gebacken",Pizza mit Schinken,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,218,6.4,2.2,28.7,1.4,1.6,10.6,0.9,generic,False,Gerichte
+1539,"Pizza Quattro Formaggi, gebacken",,Gerichte/Italienische Gerichte,,pro 100g essbarer Anteil,297,10.6,5.0,37.2,0.2,1.8,12.3,1.1,generic,False,Gerichte
+907,"Pizzateig (mit Olivenöl), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,229,3.6,0.5,41.2,0.2,2.0,7.0,0.7,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13319,"Plätzli (Durchschnitt aus Geflügel, Kalb, Rind, Schwein), gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien,,pro 100g essbarer Anteil,145,3.1,1.1,0.1,0.0,0.0,29.2,0.2,generic,False,Fleisch und Innereien
+14052,"Plätzli (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), paniert, gebraten","Fleisch paniert;Schnitzel, paniert",Fleisch und Innereien/Geflügel;Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,233,10.8,1.7,10.1,0.5,0.6,23.5,0.8,generic,False,Fleisch und Innereien
+1101,"Plätzli (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), roh ",,Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein;Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,113,2.7,0.9,0.1,0.0,0.0,22.2,0.1,generic,False,Fleisch und Innereien
+10546,"Polenta nera (aus Maisgriess und Buchweizenmehl), gekocht",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mais",,pro 100g essbarer Anteil,111,4.7,2.7,12.6,0.2,0.8,4.1,1.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+12982,Pommes Chips,,Salzige Snacks/Chips,,pro 100g essbarer Anteil,538,34.8,3.5,49.3,2.5,3.8,4.9,1.2,generic,False,Salzige Snacks
+12983,Pommes Chips fettreduziert,,Salzige Snacks/Chips,,pro 100g essbarer Anteil,468,22.1,2.5,59.2,3.0,4.5,5.9,1.2,generic,False,Salzige Snacks
+10450,"Pommes Frites (im Ofen gebacken), ungesalzen",Ofen-Pommes,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,232,9.1,0.7,33.0,1.6,2.5,3.3,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+10449,"Pommes Frites (in HO Sonnenblumenöl frittiert), ungesalzen",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,286,15.4,1.6,32.4,1.6,2.5,3.2,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+424,Popcorn,Puffmais,Salzige Snacks/Sonstige salzige Snacks,,pro 100g essbarer Anteil,367,4.2,0.6,62.9,1.2,15.0,12.0,0.0,generic,False,Salzige Snacks
+516,"Portwein, 18.5 vol%",Porto,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,152,0.0,0.0,12.0,12.0,0.0,0.2,0.0,generic,True,Alkoholhaltige Getränke
+20,"Poulet, Brust, mit Haut, roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,152,6.5,2.1,0.0,0.0,0.0,23.3,0.1,generic,False,Fleisch und Innereien
+22,"Poulet, Brust, ohne Haut, roh",Pouletschnitzel,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,107,1.0,0.3,0.0,0.0,0.0,24.6,0.1,generic,False,Fleisch und Innereien
+13276,"Poulet, Brust, Schnitzel oder Geschnetzeltes, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,128,0.8,0.2,0.0,0.0,0.0,30.1,0.1,generic,False,Fleisch und Innereien
+13309,"Poulet, ganz, mit Haut, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,193,10.3,2.8,0.0,0.0,0.0,25.1,0.2,generic,False,Fleisch und Innereien
+711,"Poulet, ganz, mit Haut, roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,168,10.3,2.8,0.0,0.0,0.0,18.8,0.2,generic,False,Fleisch und Innereien
+13310,"Poulet, Schenkel, mit Haut, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,187,10.2,3.2,0.0,0.0,0.0,23.9,0.2,generic,False,Fleisch und Innereien
+24,"Poulet, Schenkel, mit Haut, roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,163,10.2,3.2,0.0,0.0,0.0,17.9,0.2,generic,False,Fleisch und Innereien
+26,"Poulet, Schenkel, ohne Haut, roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,135,6.2,1.9,0.0,0.0,0.0,19.7,0.2,generic,False,Fleisch und Innereien
+987,"Preiselbeere, roh",Moosbeere,Früchte/Früchte frisch,,pro 100g essbarer Anteil,36,0.5,0.0,6.2,6.1,2.9,0.3,0.0,generic,False,Früchte
+874,Prussien,Palmiers,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,438,22.4,13.2,53.8,27.4,1.2,4.7,0.8,generic,False,Süssigkeiten
+806,"Pudding, Caramel",Flan,Süssigkeiten/Cremen und Pudding,,pro 100g essbarer Anteil,125,2.1,1.4,23.0,20.1,0.1,3.4,0.2,generic,False,Süssigkeiten
+810,"Pudding, Schokolade",Flan,Süssigkeiten/Cremen und Pudding,,pro 100g essbarer Anteil,121,2.6,0.5,21.0,12.1,1.0,3.0,0.3,generic,False,Süssigkeiten
+809,"Pudding, Vanille",Flan,Süssigkeiten/Cremen und Pudding,,pro 100g essbarer Anteil,102,2.1,0.3,18.0,10.4,0.1,2.8,0.3,generic,False,Süssigkeiten
+13501,"Quark, mit Früchten, gezuckert",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,112,2.4,1.4,14.1,13.4,0.1,8.4,0.1,generic,False,Milch und Milchprodukte
+571,"Quark, nature, halbfett",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,99,5.0,3.0,4.1,3.4,0.0,9.4,0.1,generic,False,Milch und Milchprodukte
+71,"Quark, nature, mager",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,61,0.2,0.1,4.2,3.5,0.0,10.6,0.1,generic,False,Milch und Milchprodukte
+70,"Quark, nature, Rahm",,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,183,15.6,9.4,3.7,3.2,0.0,6.9,0.1,generic,False,Milch und Milchprodukte
+1182,"Quarkblätterteig (mit Butter), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,401,28.3,16.8,29.0,1.3,1.3,7.1,0.8,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1181,"Quarkblätterteig (mit pflanzlichem Fett), ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,388,26.9,9.7,28.8,1.2,1.3,7.1,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1542,"Quiche Lorraine, gebacken (mit Blätterteig)",,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,291,23.4,12.5,11.5,1.6,0.5,8.5,1.2,generic,False,Gerichte
+1541,"Quiche Lorraine, gebacken (mit Kuchenteig)",,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,295,22.2,11.7,14.5,1.6,0.6,9.0,1.2,generic,False,Gerichte
+13396,"Quinoa, gekocht (ohne Zugabe von Salz und Fett)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,120,1.6,0.2,20.5,0.6,2.2,4.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13394,"Quinoa, roh",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,368,5.0,0.5,62.4,1.8,6.6,14.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1055,"Quitte, gekocht, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,49,0.6,0.0,7.3,7.3,5.9,0.5,0.0,generic,False,Früchte
+476,"Quitte, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,47,0.5,0.0,7.3,7.3,5.9,0.4,0.0,generic,False,Früchte
+532,Raclettekäse,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,357,27.9,16.7,0.0,0.0,0.0,25.9,1.8,generic,False,Milch und Milchprodukte
+456,"Radieschen, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,17,0.1,0.0,2.1,2.1,1.6,1.1,0.1,generic,False,Gemüse
+1195,Rahm (Durchschnitt),,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,,pro 100g essbarer Anteil,252,25.4,15.3,3.4,3.4,0.0,2.3,0.1,generic,False,Fette und Öle
+694,"Rahmglace, Frucht",Rahmeis,Süssigkeiten/Glacen auf Milchbasis,0.6,pro 100g essbarer Anteil,185,8.0,5.0,24.7,23.7,0.0,3.5,0.2,generic,False,Süssigkeiten
+953,Rahmkaramellen,Rahmbonbons,"Süssigkeiten/Bonbons, Frucht- und Kaugummi",,pro 100g essbarer Anteil,351,3.6,2.2,79.3,79.3,0.0,0.4,0.3,generic,False,Süssigkeiten
+1019,"Rande, gedämpft (ohne Zugabe von Salz)",Rote Beete,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,54,0.1,0.0,10.0,10.0,3.0,1.8,0.1,generic,False,Gemüse
+451,"Rande, roh",Rote Beete,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,46,0.1,0.0,8.4,8.4,2.5,1.5,0.1,generic,False,Gemüse
+600,Rapsöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,6.2,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+1069,"Rapsöl HOLL (high oleic, low linolenic)",,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,6.3,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+1665,"Ratatouille, zubereitet",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,45,2.2,0.3,4.0,3.6,2.1,1.4,0.5,generic,False,Gemüse
+533,Reblochon,,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,307,25.2,15.1,0.0,0.0,0.0,19.9,2.0,generic,False,Milch und Milchprodukte
+488,"Reh (Durchschnitt), roh",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,122,3.6,1.6,0.0,0.0,0.0,22.4,0.2,generic,False,Fleisch und Innereien
+28,"Reh, Ragout, roh",Rehpfeffer,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,105,1.9,0.5,0.0,0.0,0.0,22.0,0.1,generic,False,Fleisch und Innereien
+29,"Reh, Schnitzel, roh",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,105,1.7,0.7,0.0,0.0,0.0,22.5,0.1,generic,False,Fleisch und Innereien
+1196,Reibkäse,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,406,32.1,20.3,0.0,0.0,0.0,29.3,1.7,generic,False,Milch und Milchprodukte
+1065,"Reis parboiled, gekocht in Salzwasser (unjodiert)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,120,0.3,0.1,26.7,0.1,0.4,2.4,1.4,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+419,"Reis parboiled, trocken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,356,1.0,0.2,78.6,0.4,1.3,7.5,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1066,"Reis poliert, gekocht in Salzwasser (unjodiert)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,116,0.3,0.1,25.8,0.1,0.3,2.3,1.3,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+427,"Reis poliert, trocken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,352,0.9,0.2,78.0,0.2,1.0,7.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1067,"Reis unpoliert, gekocht in Salzwasser (unjodiert)",Vollkornreis,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,126,1.0,0.2,25.7,0.2,1.8,2.7,1.5,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+428,"Reis unpoliert, trocken",Vollkornreis,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,350,2.8,0.6,71.4,0.6,5.0,7.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13450,"Reisgetränk, nature",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,54,1.3,0.1,10.3,2.8,0.1,0.2,0.0,generic,True,Milch und Milchprodukte
+14133,"Reisgetränk, nature, mit Calcium angereichert",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,54,1.3,0.1,10.3,2.8,0.1,0.2,0.0,generic,True,Milch und Milchprodukte
+361,"Rettich, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,18,0.3,,2.6,2.6,1.2,0.6,0.0,generic,False,Gemüse
+362,"Rhabarber, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,22,0.2,0.1,1.5,1.5,2.5,0.8,0.0,generic,False,Früchte
+13477,"Rhabarberkompott, gezuckert",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,88,0.2,0.0,18.8,18.8,2.1,0.7,0.0,generic,False,Früchte
+1547,"Rhabarberkuchen, gebacken (mit Blätterteig)",Rhabarberwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,121,6.8,3.0,11.1,2.8,2.0,2.8,0.3,generic,False,Süssigkeiten
+1548,"Rhabarberkuchen, hausgemacht, gebacken (mit Kuchenteig)",Rhabarberwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,123,6.6,3.0,11.8,2.8,2.1,3.0,0.2,generic,False,Süssigkeiten
+1072,"Rind, Brust, gekocht (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,254,15.6,6.7,0.0,0.0,0.0,28.3,0.1,generic,False,Fleisch und Innereien
+719,"Rind, Brust, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,188,12.5,5.4,0.0,0.0,0.0,18.9,0.1,generic,False,Fleisch und Innereien
+640,"Rind, Eckstück, roh",Plätzli,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,111,2.3,1.1,0.0,0.0,0.0,22.6,0.1,generic,False,Fleisch und Innereien
+13258,"Rind, Entrecôte, ""medium"" gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,162,4.6,2.2,0.0,0.0,0.0,30.2,0.1,generic,False,Fleisch und Innereien
+30,"Rind, Entrecôte, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,133,4.5,2.2,0.0,0.0,0.0,23.2,0.1,generic,False,Fleisch und Innereien
+13262,"Rind, Filet, ""medium"" gebraten (ohne Zustatz von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,128,2.0,0.9,0.0,0.0,0.0,27.7,0.1,generic,False,Fleisch und Innereien
+639,"Rind, Filet, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,105,2.0,0.9,0.0,0.0,0.0,21.9,0.1,generic,False,Fleisch und Innereien
+13297,"Rind, Gehacktes, gebraten (ohne Zusatz von Fett und Salz)",Hackfleisch,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,211,8.9,3.8,0.0,0.0,0.0,32.6,0.2,generic,False,Fleisch und Innereien
+6,"Rind, Gehacktes, roh",Hackfleisch,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,154,7.5,3.2,0.0,0.0,0.0,21.6,0.2,generic,False,Fleisch und Innereien
+37,"Rind, Geschnetzeltes, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,102,1.5,0.6,0.0,0.0,0.0,22.2,0.1,generic,False,Fleisch und Innereien
+648,"Rind, Hals, roh",Voressen;Gulasch,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,150,8.1,4.0,0.0,0.0,0.0,19.3,0.1,generic,False,Fleisch und Innereien
+32,"Rind, Hohrücken, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,165,9.0,4.0,0.0,0.0,0.0,21.1,0.1,generic,False,Fleisch und Innereien
+657,"Rind, Leber, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,138,3.9,1.4,5.3,0.0,0.0,20.5,0.3,generic,False,Fleisch und Innereien
+34,"Rind, Runder Mocken, roh",Saftplätzli,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,106,1.8,0.8,0.0,0.0,0.0,22.4,0.1,generic,False,Fleisch und Innereien
+1075,"Rind, Schulter, Braten ""medium"", im Ofen gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,146,3.6,1.3,0.0,0.0,0.0,28.5,0.1,generic,False,Fleisch und Innereien
+1074,"Rind, Schulter, Braten ""rare"", im Ofen gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,135,3.3,1.2,0.0,0.0,0.0,26.3,0.1,generic,False,Fleisch und Innereien
+1076,"Rind, Schulter, Braten ""well done"", im Ofen gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,170,4.2,1.5,0.0,0.0,0.0,33.1,0.2,generic,False,Fleisch und Innereien
+638,"Rind, Schulter, Braten, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,117,3.5,1.2,0.0,0.0,0.0,21.6,0.1,generic,False,Fleisch und Innereien
+35,"Rind, Siedfleisch, durchzogen,  roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,227,16.6,7.0,0.0,0.0,0.0,19.5,0.2,generic,False,Fleisch und Innereien
+13291,"Rind, Siedfleisch, durchzogen, gekocht (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,276,18.9,7.9,0.0,0.0,0.0,26.6,0.1,generic,False,Fleisch und Innereien
+13292,"Rind, Siedfleisch, mager, gekocht (ohne Zusatz von Fett and Salz)",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,190,7.1,3.3,0.0,0.0,0.0,31.7,0.1,generic,False,Fleisch und Innereien
+36,"Rind, Siedfleisch, mager, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,132,5.5,2.5,0.0,0.0,0.0,20.7,0.1,generic,False,Fleisch und Innereien
+38,"Rind, Voressen, roh",Ragout,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,97,1.3,0.6,0.0,0.0,0.0,21.2,0.1,generic,False,Fleisch und Innereien
+656,"Rind, Zunge, roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,196,13.0,4.7,3.7,0.0,0.0,16.0,0.2,generic,False,Fleisch und Innereien
+1103,"Rindfleisch (Durchschnitt exkl. Innereien, Rippensteak), roh",,Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,134,5.4,2.4,0.0,0.0,0.0,21.4,0.1,generic,False,Fleisch und Innereien
+1672,"Rindsragout mit Sauce, zubereitet",Voressen,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,85,2.8,0.5,3.0,1.2,0.6,11.6,0.8,generic,False,Gerichte
+701,"Rippli (Nierstück), roh",,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,155,7.3,2.6,0.5,0.0,0.0,21.7,6.2,generic,False,Fleisch- und Wurstwaren
+1584,"Risotto ohne Käse, zubereitet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis",,pro 100g essbarer Anteil,124,1.6,0.2,24.9,0.5,0.5,2.3,0.6,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1189,"Ristretto crème, ungezuckert",,Alkoholfreie Getränke/Kaffee,1.0,pro 100g essbarer Anteil,47,4.3,2.6,1.3,1.1,0.1,0.8,0.1,generic,False,Alkoholfreie Getränke
+1677,"Riz Casimir mit Kalbfleisch, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,123,3.4,0.8,16.0,3.2,1.1,6.6,0.8,generic,False,Gerichte
+1675,"Riz Casimir mit Poulet, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,124,3.3,0.7,16.0,3.2,1.1,7.2,0.7,generic,False,Gerichte
+830,Roggenbrot mit Sauerteig,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,215,0.9,0.1,41.5,3.8,7.7,6.5,1.3,generic,False,"Brote, Flocken und Frühstückscerealien"
+748,"Roggenmehl, halbweiss, Typ 815",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,334,1.0,0.1,71.0,6.5,6.5,6.9,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+752,"Roggenmehl, Ruch, Typ 1050",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,336,1.3,0.2,67.8,6.2,8.6,9.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+749,"Roggenmehl, Vollkorn, Schrot, Typ 1800",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,337,1.5,0.2,63.1,5.8,14.1,10.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+846,Roggenschrotbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,235,1.0,0.2,44.1,3.8,9.4,7.7,1.4,generic,False,"Brote, Flocken und Frühstückscerealien"
+707,Rohessspeck,"Bauernspeck;Bauernspeck, roh, geräuchert",Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,400,34.3,13.1,0.6,0.6,0.0,22.1,3.8,generic,False,Fleisch- und Wurstwaren
+1117,Rohpökelwaren (Durchschnitt),,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,274,17.2,6.3,0.4,0.3,0.0,29.4,4.6,generic,False,Fleisch- und Wurstwaren
+693,Rohschinken,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,229,11.5,4.3,0.3,0.3,0.0,31.0,4.4,generic,False,Fleisch- und Wurstwaren
+1115,Rohwürste mit abgebrochener Reifung (Durchschnitt),,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,314,26.6,9.9,0.7,0.7,0.2,17.7,2.2,generic,False,Fleisch- und Wurstwaren
+1114,Rohwürste/Dauerwürste (Durchschnitt),,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,445,39.4,15.2,0.2,0.2,0.0,22.2,3.7,generic,False,Fleisch- und Wurstwaren
+429,Rollgerste,Gerstengraupen,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,347,1.4,0.3,71.0,2.2,4.6,10.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+805,Rollmops,"Hering, sauer",Fisch/Fischerzeugnisse,,pro 100g essbarer Anteil,270,15.9,3.7,19.6,18.0,0.0,12.0,3.0,generic,False,Fisch
+718,Rollschinken,,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,181,10.6,4.1,1.2,1.2,0.0,20.3,2.9,generic,False,Fleisch- und Wurstwaren
+13333,"Rollschinken, gekocht (ohne Zusatz von Fett und Salz)",,Fleisch- und Wurstwaren/Sonstige Fleisch- und Wurstwaren,,pro 100g essbarer Anteil,188,9.9,3.8,1.4,1.4,0.0,23.3,2.2,generic,False,Fleisch- und Wurstwaren
+484,Roquefort,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,363,31.7,19.0,0.2,0.0,0.0,19.2,4.0,generic,False,Milch und Milchprodukte
+1021,"Rosenkohl, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,37,0.4,0.1,3.0,2.5,3.6,3.6,0.0,generic,False,Gemüse
+363,"Rosenkohl, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,41,0.4,0.1,3.3,2.8,4.0,4.0,0.0,generic,False,Gemüse
+477,"Rosine, getrocknet",Weinbeere;Sultanine,Früchte/Früchte getrocknet,,pro 100g essbarer Anteil,321,0.9,0.3,73.2,70.3,4.2,3.0,0.1,generic,False,Früchte
+462,"Rosmarin, roh",,Gemüse/Kräuter,,pro 100g essbarer Anteil,62,2.5,0.5,7.7,7.6,2.9,0.8,0.0,generic,False,Gemüse
+858,"Rösti (Fertig-Rösti), ungebraten",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,150,5.7,0.4,20.7,0.9,2.7,2.6,1.3,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1022,"Rotkohl, gedünstet (ohne Zugabe von Fett und Salz)",Rotkraut;Blaukraut,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,25,0.2,0.0,3.7,3.4,2.3,1.0,0.0,generic,False,Gemüse
+364,"Rotkohl, roh",Rotkraut;Blaukraut,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,29,0.2,0.0,4.3,3.9,2.6,1.1,0.0,generic,False,Gemüse
+829,Ruchbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,234,1.2,0.2,44.3,0.5,4.1,9.5,1.6,generic,False,"Brote, Flocken und Frühstückscerealien"
+14077,Ruchbrot (mit jodiertem Kochsalz),,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,234,1.2,0.2,44.3,0.5,4.1,9.5,1.6,generic,False,"Brote, Flocken und Frühstückscerealien"
+468,"Rucola, roh",Rauke,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,28,0.7,0.1,2.1,2.1,1.6,2.6,0.1,generic,False,Gemüse
+916,Rüeblitorte,Rüeblicake;Rüeblikuchen,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,303,16.4,1.8,25.8,19.6,3.9,11.1,0.2,generic,False,Süssigkeiten
+1604,"Rührei mit Champignons, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,127,9.0,3.1,1.5,1.3,0.4,9.8,0.7,generic,False,Gerichte
+1605,"Rührei mit Käse, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,157,11.6,4.3,1.3,1.3,0.0,11.8,0.9,generic,False,Gerichte
+1603,"Rührei mit Kräutern, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,141,10.0,3.5,1.9,1.6,0.4,10.6,0.8,generic,False,Gerichte
+1606,"Rührei mit Schinken, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,143,9.7,3.4,1.3,1.3,0.0,12.8,1.0,generic,False,Gerichte
+1602,"Rührei, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,147,10.8,3.8,1.3,1.3,0.0,11.2,0.8,generic,False,Gerichte
+901,"Rührteigcake ""Gleichschwer""",,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,430,24.7,13.7,44.7,26.6,0.8,6.9,0.2,generic,False,Süssigkeiten
+1607,"Russischer Salat, zubereitet",,Gerichte/Salate,,pro 100g essbarer Anteil,197,15.9,2.1,9.8,1.9,2.2,2.4,0.3,generic,False,Gerichte
+875,"Sablé, Butter",,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,474,26.2,15.5,53.1,17.8,1.6,5.9,0.1,generic,False,Süssigkeiten
+783,Salametti,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,343,31.4,11.8,0.3,0.3,0.0,14.8,2.8,generic,False,Fleisch- und Wurstwaren
+1091,Salami,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,367,30.1,11.3,,,0.0,24.1,3.9,generic,False,Fleisch- und Wurstwaren
+1094,Salami (Billiglinie),,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,422,37.1,13.6,,,0.0,22.0,3.8,generic,False,Fleisch- und Wurstwaren
+1201,"Salatsauce französisch, hausgemacht (mit Rapsöl)",,Fette und Öle/Salatsaucen,1.1,pro 100 ml,430,46.9,5.3,0.8,0.5,0.4,0.9,1.3,generic,True,Fette und Öle
+1200,"Salatsauce italienisch, hausgemacht (mit Olivenöl)",,Fette und Öle/Salatsaucen,1.1,pro 100 ml,464,50.7,6.0,1.4,0.3,0.1,0.4,0.7,generic,True,Fette und Öle
+13503,"Salatsauce, französisch",,Fette und Öle/Salatsaucen,1.1,pro 100g essbarer Anteil,360,37.4,4.2,4.5,4.3,0.3,1.4,2.0,generic,False,Fette und Öle
+13502,"Salatsauce, italienisch",,Fette und Öle/Salatsaucen,1.1,pro 100g essbarer Anteil,309,32.1,3.2,4.9,4.1,0.1,0.1,2.0,generic,False,Fette und Öle
+461,"Salbei, roh",,Gemüse/Kräuter,,pro 100g essbarer Anteil,59,2.1,1.1,6.9,6.8,2.9,1.7,0.0,generic,False,Gemüse
+1089,Salsiz,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,415,34.9,13.6,,,0.0,25.2,3.9,generic,False,Fleisch- und Wurstwaren
+1687,"Saltimbocca, gebraten in HOLL-Rapsöl",,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,216,11.2,1.8,0.1,0.1,0.0,28.8,1.7,generic,False,Fleisch und Innereien
+14088,"Salz, Himalayasalz",,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,0,0.0,0.0,0.0,0.0,0.0,0.0,95.0,generic,False,Verschiedenes
+14087,"Salz, Meersalz, Fleur de sel",,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,0,0.0,0.0,0.0,0.0,0.0,0.0,95.0,generic,False,Verschiedenes
+14086,"Salz, Meersalz, Standard, weiss, ohne zugesetztes Jod und Fluor ",,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,0,0.0,0.0,0.0,0.0,0.0,0.0,99.0,generic,False,Verschiedenes
+1170,"Samen, Kerne, Nüsse (Durchschnitt), ungesalzen",,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,614,52.8,8.9,9.1,3.7,9.7,20.9,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+10562,"Samosa, frittiert",,Gerichte/Asiatische Gerichte,,pro 100g essbarer Anteil,382,25.3,7.9,30.8,2.2,3.3,6.2,0.8,generic,False,Gerichte
+10561,"Samosa, gebacken",,Gerichte/Asiatische Gerichte,,pro 100g essbarer Anteil,353,21.0,8.0,32.7,2.3,3.5,6.6,0.9,generic,False,Gerichte
+1551,Sandwich (Baguette) mit Aufschnitt,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,157,7.0,1.9,17.3,1.8,1.5,5.3,0.8,generic,False,Gerichte
+1505,Sandwich (Baguette) mit Fleischkäse,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,220,9.3,2.2,25.1,1.1,1.6,8.0,1.2,generic,False,Gerichte
+1559,Sandwich (Baguette) mit Halbhartkäse,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,179,7.6,2.8,20.1,1.4,1.6,6.7,1.1,generic,False,Gerichte
+1561,Sandwich (Baguette) mit Mozzarella,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,163,6.2,1.9,20.1,1.4,1.6,6.0,1.0,generic,False,Gerichte
+1549,Sandwich (Baguette) mit Rohschinken,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,165,5.7,1.3,18.7,1.3,1.5,8.8,1.4,generic,False,Gerichte
+1555,Sandwich (Baguette) mit Salami,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,158,6.5,1.7,18.3,1.8,1.7,5.8,1.2,generic,False,Gerichte
+1557,Sandwich (Baguette) mit Schinken,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,131,3.7,0.7,17.3,1.8,1.6,6.3,1.2,generic,False,Gerichte
+1553,Sandwich (Baguette) mit Trockenfleisch,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,141,3.9,0.7,18.3,1.8,1.7,7.2,1.2,generic,False,Gerichte
+1521,Sandwich (Baguette) mit Weichkäse,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,183,7.6,2.6,21.4,1.2,1.7,6.3,1.3,generic,False,Gerichte
+1552,Sandwich (Ruchbrot) mit Aufschnitt,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,151,7.1,1.9,15.2,1.8,1.9,5.5,0.8,generic,False,Gerichte
+1506,Sandwich (Ruchbrot) mit Fleischkäse,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,210,9.5,2.3,21.9,1.1,2.2,8.2,1.1,generic,False,Gerichte
+1560,Sandwich (Ruchbrot) mit Halbhartkäse,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,171,7.7,2.8,17.5,1.4,2.1,6.9,1.1,generic,False,Gerichte
+1562,Sandwich (Ruchbrot) mit Mozzarella,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,156,6.3,1.9,17.6,1.4,2.1,6.1,1.0,generic,False,Gerichte
+1550,Sandwich (Ruchbrot) mit Rohschinken,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,158,5.8,1.3,16.4,1.3,1.9,9.0,1.3,generic,False,Gerichte
+1556,Sandwich (Ruchbrot) mit Salami,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,151,6.6,1.7,16.1,1.8,2.0,5.9,1.2,generic,False,Gerichte
+1558,Sandwich (Ruchbrot) mit Schinken,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,125,3.8,0.7,15.2,1.8,1.9,6.4,1.1,generic,False,Gerichte
+1554,Sandwich (Ruchbrot) mit Trockenfleisch,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,134,4.0,0.7,16.1,1.8,2.0,7.4,1.2,generic,False,Gerichte
+1520,Sandwich (Ruchbrot) mit Weichkäse,,Gerichte/Sandwiches,,pro 100g essbarer Anteil,175,7.7,2.6,18.7,1.2,2.1,6.5,1.3,generic,False,Gerichte
+414,"Sardelle im Öl, abgetropft",,Fisch/Meeresfische,,pro 100g essbarer Anteil,182,8.5,2.9,0.2,0.1,0.0,26.4,12.0,generic,False,Fisch
+10532,Sardellenpaste,,Verschiedenes/Aufstriche,,pro 100g essbarer Anteil,272,21.3,4.0,0.2,0.1,0.0,19.8,19.0,generic,False,Verschiedenes
+413,"Sardine im Öl, abgetropft",,Fisch/Meeresfische,,pro 100g essbarer Anteil,215,13.7,2.8,0.0,0.0,0.0,23.0,1.2,generic,False,Fisch
+757,"Sardine, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,163,9.0,2.6,0.0,0.0,0.0,20.4,0.3,generic,False,Fisch
+781,Saucisse aux choux,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,363,32.4,11.8,1.6,1.5,0.8,15.9,2.5,generic,False,Fleisch- und Wurstwaren
+780,Saucisson,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,403,36.4,13.2,0.5,0.5,0.0,18.2,2.5,generic,False,Fleisch- und Wurstwaren
+1088,Saucisson vaudois,,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,358,32.3,12.0,0.2,0.2,0.0,16.5,2.1,generic,False,Fleisch- und Wurstwaren
+13341,"Saucisson, gekocht (ohne Zusatz von Fett und Salz)",,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,442,39.4,14.3,0.6,0.6,0.0,21.1,2.6,generic,False,Fleisch- und Wurstwaren
+647,"Sauerkraut, in Essig eingelegt",Sauerkohl,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,19,0.3,0.1,1.7,,2.2,1.3,1.4,generic,False,Gemüse
+574,Sauerrahm,Crème fraîche,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,336,35.0,21.0,2.8,2.8,0.0,2.4,0.1,generic,False,Fette und Öle
+575,Saurer Halbrahm,,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,173,16.6,10.8,3.2,3.2,0.0,2.7,0.1,generic,False,Fette und Öle
+552,Sbrinz,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,415,33.2,19.9,0.0,0.0,0.0,28.0,1.8,generic,False,Milch und Milchprodukte
+767,"Scampi (Kaisergranat), roh",,"Fisch/Meeresfrüchte, Krusten- und Schalentiere",,pro 100g essbarer Anteil,93,1.3,0.2,0.8,0.0,0.0,19.6,0.9,generic,False,Fisch
+13384,Schafmilch,,Milch und Milchprodukte/Milch,1.0,pro 100 ml,105,7.1,4.1,4.7,4.7,0.0,5.5,0.1,generic,True,Milch und Milchprodukte
+551,Schaumwein,Sekt;Prosecco;Champagner,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,71,0.0,0.0,1.5,1.5,0.0,0.2,0.0,generic,True,Alkoholhaltige Getränke
+13446,Schinkengipfeli,,Salzige Snacks/Blätterteiggebäcke;Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,340,20.9,9.5,26.0,0.7,1.4,11.1,1.4,generic,False,Salzige Snacks
+563,"Schmelzkäse, Scheibe, Rahm",,Milch und Milchprodukte/Käseerzeugnisse,,pro 100g essbarer Anteil,327,30.0,18.0,0.0,0.0,0.0,14.3,3.0,generic,False,Milch und Milchprodukte
+558,"Schmelzkäse, Scheibe, viertelfett",,Milch und Milchprodukte/Käseerzeugnisse,,pro 100g essbarer Anteil,155,8.6,5.2,0.0,0.0,0.0,19.4,3.0,generic,False,Milch und Milchprodukte
+559,"Schmelzkäse, Scheibe, vollfett",,Milch und Milchprodukte/Käseerzeugnisse,,pro 100g essbarer Anteil,316,25.0,15.0,0.0,0.0,0.0,22.8,3.0,generic,False,Milch und Milchprodukte
+565,"Schmelzkäse, streichfähig, Rahm",,Milch und Milchprodukte/Käseerzeugnisse,,pro 100g essbarer Anteil,316,29.4,17.6,0.0,0.0,0.0,12.9,2.8,generic,False,Milch und Milchprodukte
+560,"Schmelzkäse, streichfähig, viertelfett",,Milch und Milchprodukte/Käseerzeugnisse,,pro 100g essbarer Anteil,150,9.3,5.6,0.0,0.0,0.0,16.4,3.0,generic,False,Milch und Milchprodukte
+561,"Schmelzkäse, streichfähig, vollfett",,Milch und Milchprodukte/Käseerzeugnisse,,pro 100g essbarer Anteil,247,21.2,12.7,0.0,0.0,0.0,14.1,3.0,generic,False,Milch und Milchprodukte
+374,"Schnittlauch, roh",,Gemüse/Kräuter,,pro 100g essbarer Anteil,30,0.6,0.1,1.9,1.9,2.3,3.0,0.0,generic,False,Gemüse
+1685,Schnitzelbrot mit Cocktailsauce,Plätzlibrot,Gerichte/Sandwiches,,pro 100g essbarer Anteil,262,11.2,1.1,25.1,0.5,1.3,14.6,1.3,generic,False,Gerichte
+1686,Schnitzelbrot mit Tartarsauce,Plätzlibrot,Gerichte/Sandwiches,,pro 100g essbarer Anteil,242,10.1,1.0,23.2,0.4,1.3,13.9,1.2,generic,False,Gerichte
+14038,Schoggibrötli,,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,366,14.3,8.5,49.7,16.3,2.2,8.6,1.3,generic,False,Süssigkeiten
+196,"Schokolade, dunkel (bitter)",,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,537,31.8,19.7,53.4,50.0,7.0,5.7,0.0,generic,False,Süssigkeiten
+197,"Schokolade, weiss",,Süssigkeiten/Schokolade und Kakaoerzeugnisse,,pro 100g essbarer Anteil,567,35.2,21.9,55.8,55.3,0.2,6.7,0.3,generic,False,Süssigkeiten
+807,Schokoladencrème,,Süssigkeiten/Cremen und Pudding,,pro 100g essbarer Anteil,122,3.0,1.5,20.0,18.7,0.5,3.6,0.2,generic,False,Süssigkeiten
+889,Schokoladengugelhopf,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,380,18.4,10.4,46.3,22.9,1.9,6.4,0.1,generic,False,Süssigkeiten
+960,Schokoladenpulver,,Süssigkeiten/Schokolade und Kakaoerzeugnisse;Alkoholfreie Getränke/Kakaogetränke,,pro 100g essbarer Anteil,398,7.8,4.6,71.3,70.6,10.5,5.3,0.0,generic,False,Süssigkeiten
+415,"Scholle, roh",Goldbutt,Fisch/Meeresfische,,pro 100g essbarer Anteil,86,1.9,0.3,0.0,0.0,0.0,17.1,0.3,generic,False,Fisch
+14035,Schümliguetzli,Schümli; Schaumgebäck; Schaumkeks,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,444,9.9,6.2,83.5,82.4,2.2,4.2,0.1,generic,False,Süssigkeiten
+14039,Schümliguetzli mit Schokolade,Choco-Schümli,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,486,19.4,12.1,71.5,70.2,2.0,5.2,0.3,generic,False,Süssigkeiten
+791,Schützenwurst,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,244,23.0,8.5,0.2,0.2,0.0,9.2,2.1,generic,False,Fleisch- und Wurstwaren
+883,Schwarzwälder Kirschtorte,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,248,16.1,9.3,21.4,12.0,0.9,3.9,0.1,generic,False,Süssigkeiten
+1023,"Schwarzwurzel, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,57,0.5,0.1,2.2,2.1,19.1,1.5,0.0,generic,False,Gemüse
+452,"Schwarzwurzel, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,55,0.4,0.1,2.1,2.0,18.3,1.4,0.0,generic,False,Gemüse
+39,"Schwein, Brustspitz, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,239,18.6,7.2,0.0,0.0,0.0,17.9,0.1,generic,False,Fleisch und Innereien
+13270,"Schwein, Eckstück, Plätzli, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,162,3.3,0.9,0.0,0.0,0.0,33.0,0.2,generic,False,Fleisch und Innereien
+679,"Schwein, Eckstück, roh",Plätzli,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,115,2.7,0.7,0.0,0.0,0.0,22.6,0.2,generic,False,Fleisch und Innereien
+13269,"Schwein, Filet, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,153,4.0,1.6,0.0,0.0,0.0,29.3,0.4,generic,False,Fleisch und Innereien
+677,"Schwein, Filet, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,121,3.6,1.4,0.0,0.0,0.0,22.2,0.3,generic,False,Fleisch und Innereien
+7,"Schwein, Gehacktes, roh",Hackfleisch,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,159,8.5,3.1,0.0,0.0,0.0,20.5,0.1,generic,False,Fleisch und Innereien
+13285,"Schwein, Geschnetzeltes, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,176,6.4,1.9,0.0,0.0,0.0,29.8,0.2,generic,False,Fleisch und Innereien
+40,"Schwein, Geschnetzeltes, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,134,5.4,1.6,0.0,0.0,0.0,21.3,0.1,generic,False,Fleisch und Innereien
+13284,"Schwein, Hals, Steak, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,255,16.6,6.4,0.0,0.0,0.0,26.4,0.1,generic,False,Fleisch und Innereien
+41,"Schwein, Hals, Steak, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,203,14.1,5.5,0.0,0.0,0.0,18.9,0.1,generic,False,Fleisch und Innereien
+13289,"Schwein, Haxe, geschmort (ohne zusatz von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,239,9.9,3.5,0.9,0.0,0.0,36.6,0.1,generic,False,Fleisch und Innereien
+678,"Schwein, Haxe, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,173,7.6,2.7,0.7,0.0,0.0,25.6,0.2,generic,False,Fleisch und Innereien
+13283,"Schwein, Kotelett, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,240,12.8,4.8,0.0,0.0,0.0,31.3,0.1,generic,False,Fleisch und Innereien
+8,"Schwein, Kotelett, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,179,10.4,3.9,0.0,0.0,0.0,21.4,0.1,generic,False,Fleisch und Innereien
+689,"Schwein, Leber, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,131,4.9,1.7,0.9,0.0,0.0,20.7,0.2,generic,False,Fleisch und Innereien
+42,"Schwein, Nierstück, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,138,5.1,2.0,0.0,0.0,0.0,22.9,0.1,generic,False,Fleisch und Innereien
+43,"Schwein, Runder Mocken, roh",Plätzli,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,127,4.9,1.7,0.0,0.0,0.0,20.6,0.1,generic,False,Fleisch und Innereien
+1077,"Schwein, Schulter, Braten ""medium"", im Ofen gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,202,9.3,1.9,0.0,0.0,0.0,29.6,0.2,generic,False,Fleisch und Innereien
+1079,"Schwein, Schulter, Braten ""well done"", im Ofen gebraten (ohne Zugabe von Fett und Salz)",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,221,10.2,2.1,0.0,0.0,0.0,32.5,0.2,generic,False,Fleisch und Innereien
+676,"Schwein, Schulter, Braten, roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,181,9.2,1.9,0.0,0.0,0.0,24.6,0.2,generic,False,Fleisch und Innereien
+9,"Schwein, Voressen, roh",Ragout,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,135,5.7,2.1,0.0,0.0,0.0,20.9,0.1,generic,False,Fleisch und Innereien
+1102,"Schweinefleisch (Durchschnitt exkl. Innereien, Kotelett, Haxe), roh",,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,160,8.3,2.9,0.0,0.0,0.0,21.4,0.2,generic,False,Fleisch und Innereien
+594,Schweineschmalz,,Fette und Öle/Fette,0.9,pro 100g essbarer Anteil,900,100.0,38.4,0.0,0.0,0.0,0.0,0.0,generic,False,Fette und Öle
+1085,Schweinsbratwurst,Bauernbratwurst,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,236,18.8,7.4,0.5,0.5,0.0,16.2,1.9,generic,False,Fleisch- und Wurstwaren
+14089,"Schweinsbratwurst, gebraten (ohne Zusatz von Fett und Salz)",,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,283,22.3,8.7,0.6,0.6,0.0,19.8,2.1,generic,False,Fleisch- und Wurstwaren
+1668,"Schweinspiccata, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,226,12.4,3.2,5.5,0.1,0.3,22.9,0.9,generic,False,Gerichte
+1671,"Schweinsragout mit Sauce, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,105,5.1,1.2,3.0,1.2,0.6,11.5,0.8,generic,False,Gerichte
+1086,Schweinswurst,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,268,22.4,9.0,0.5,0.5,0.0,16.2,2.3,generic,False,Fleisch- und Wurstwaren
+760,"Seehecht, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,71,0.3,0.1,0.0,0.0,0.0,17.0,0.2,generic,False,Fisch
+754,"Seelachs, roh",Kohlfisch;Köhler;Pollack,Fisch/Meeresfische,,pro 100g essbarer Anteil,80,0.3,0.1,0.0,0.0,0.0,19.3,0.1,generic,False,Fisch
+755,"Seezunge, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,85,1.1,0.2,0.0,0.0,0.0,18.7,0.3,generic,False,Fisch
+14118,Seitan,,Fleischersatzprodukte,,pro 100g essbarer Anteil,193,7.2,0.6,3.0,0.7,2.3,28.0,1.6,generic,False,Fleischersatzprodukte
+1660,"Sellerie-Piccata, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,136,8.2,2.2,8.4,1.5,3.5,5.4,0.3,generic,False,Gerichte
+1655,"Selleriescheiben, paniert, zubereitet",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,139,5.7,0.7,15.4,1.9,4.0,4.7,0.3,generic,False,Gemüse
+1463,Semmeli,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,245,0.9,0.2,48.5,0.4,3.0,9.2,1.6,generic,False,"Brote, Flocken und Frühstückscerealien"
+13464,Senf,,Verschiedenes/Saucen,,pro 100g essbarer Anteil,124,7.7,0.5,3.8,2.6,5.3,7.1,4.1,generic,False,Verschiedenes
+14107,Sesamöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,13.4,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+280,Sesamsamen ungeschält,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,619,53.8,7.4,4.0,1.2,13.3,23.1,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+408,"Sesamsamen, geschält",,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,660,57.4,8.6,4.6,1.6,8.8,26.8,0.1,generic,False,"Nüsse, Samen und Ölfrüchte"
+515,"Sherry, 18.5 vol%",Jerez,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,118,0.0,0.0,3.6,3.6,0.0,0.1,0.0,generic,True,Alkoholhaltige Getränke
+1697,"Siedfleischsalat, zubereitet",,Gerichte/Salate,,pro 100g essbarer Anteil,201,14.9,3.5,1.5,1.2,0.5,15.0,0.8,generic,False,Gerichte
+494,"Silberzwiebel, in Essig eingelegt",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,28,0.2,0.0,4.9,3.5,1.3,0.9,1.1,generic,False,Gemüse
+569,Sirup unverdünnt,,Alkoholfreie Getränke/Sirup,1.3,pro 100 ml,371,0.2,0.0,91.8,91.4,0.9,0.1,0.0,generic,True,Alkoholfreie Getränke
+1132,Sirup zubereitet (verdünnt im Verhältnis 1:5.5),,Alkoholfreie Getränke/Sirup;Alkoholfreie Getränke/Süssgetränke,1.0,pro 100 ml,55,0.0,0.0,13.5,13.4,0.1,0.0,0.0,generic,True,Alkoholfreie Getränke
+1061,"Sojabohne, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,157,7.3,1.0,3.3,2.6,8.8,15.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+442,"Sojabohne, getrocknet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte",,pro 100g essbarer Anteil,399,18.3,2.4,8.7,6.8,22.0,38.2,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+72,"Sojagetränk, nature",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,43,2.1,0.3,1.5,1.4,0.6,4.2,0.1,generic,True,Milch und Milchprodukte
+14129,"Sojagetränk, nature, mit Calicum and Vitaminen angereichert",,Milch und Milchprodukte/Milchersatzprodukte,1.0,pro 100 ml,43,2.1,0.3,1.5,1.4,0.6,4.2,0.1,generic,True,Milch und Milchprodukte
+996,"Sojamehl, entfettet",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,296,1.2,0.2,7.5,7.4,24.5,51.5,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+995,"Sojamehl, vollfett",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,398,20.6,2.7,3.1,3.1,18.5,40.8,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+603,Sojaöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,13.2,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+13456,Sojasauce,,Verschiedenes/Saucen,1.12,pro 100g essbarer Anteil,56,0.6,0.1,4.1,0.4,0.8,8.1,14.0,generic,False,Verschiedenes
+466,"Sojasprossen, roh",Sojakeime,Gemüse/Sprossen und Keimlinge,,pro 100g essbarer Anteil,55,1.0,0.1,4.7,4.6,2.4,5.5,0.1,generic,False,Gemüse
+281,Sonnenblumenkerne,,"Nüsse, Samen und Ölfrüchte",,pro 100g essbarer Anteil,621,54.5,5.4,3.6,3.4,8.0,25.1,0.0,generic,False,"Nüsse, Samen und Ölfrüchte"
+598,Sonnenblumenöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,10.0,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+1068,"Sonnenblumenöl HO (high oleic), raffiniert",,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,8.9,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+892,"Sorbet, Frucht",,Süssigkeiten/Glacen auf Wasserbasis,0.7,pro 100g essbarer Anteil,137,0.0,0.0,32.1,32.1,0.4,0.2,0.0,generic,False,Süssigkeiten
+1024,"Spargel, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,26,0.2,0.0,3.1,3.0,1.6,2.1,0.0,generic,False,Gemüse
+443,"Spargel, roh (weiss und grün)",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,27,0.2,,3.3,3.2,1.7,2.2,0.0,generic,False,Gemüse
+1025,"Spinat, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,31,0.8,0.1,1.6,0.1,2.3,3.3,0.2,generic,False,Gemüse
+365,"Spinat, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,25,0.6,0.1,1.3,0.1,1.9,2.6,0.2,generic,False,Gemüse
+1567,"Spinatkuchen, gebacken (mit Blätterteig)",Spinatwähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,171,11.6,6.2,10.4,1.0,1.6,5.5,1.1,generic,False,Gerichte
+1566,"Spinatkuchen, gebacken (mit Kuchenteig)",Spinatwähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,174,10.8,5.7,12.5,1.0,1.7,5.8,1.1,generic,False,Gerichte
+646,"Spirituosen 40 vol% (z.B. Vodka, Gin)",,Alkoholhaltige Getränke/Spirituosen,0.95,pro 100 ml,222,0.0,0.0,0.0,0.0,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+917,Spitzbube (Mürbeteiggebäck mit Konfitüre),,Süssigkeiten/Sonstige süsse Backwaren,,pro 100g essbarer Anteil,499,25.6,15.1,60.3,30.9,1.9,5.8,0.1,generic,False,Süssigkeiten
+843,St. Galler Bürli (halbweiss),,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,231,1.0,0.1,44.6,0.3,3.5,9.1,2.1,generic,False,"Brote, Flocken und Frühstückscerealien"
+792,St. Galler Schüblig,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,237,20.7,7.6,0.2,0.2,0.0,12.6,2.1,generic,False,Fleisch- und Wurstwaren
+570,St. Paulin,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,294,23.0,13.8,0.0,0.0,0.0,21.8,2.0,generic,False,Milch und Milchprodukte
+400,"Stachelbeere, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,39,0.2,0.0,7.1,7.1,3.0,0.8,0.0,generic,False,Früchte
+1026,"Stangensellerie, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,20,0.4,0.0,2.4,1.3,2.2,0.6,0.2,generic,False,Gemüse
+366,"Stangensellerie, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,20,0.4,,2.4,1.3,2.2,0.6,0.2,generic,False,Gemüse
+1040,"Steinpilz, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Pilze,,pro 100g essbarer Anteil,46,0.5,0.1,0.6,0.1,7.3,6.1,0.0,generic,False,Gemüse
+455,"Steinpilz, roh",,Gemüse/Pilze,,pro 100g essbarer Anteil,39,0.4,0.1,0.5,0.1,6.0,5.4,0.0,generic,False,Gemüse
+13418,"Strudelteig, ungebacken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige",,pro 100g essbarer Anteil,234,2.5,0.3,44.3,0.2,2.0,7.6,1.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+770,Surimi,,Fisch/Fischerzeugnisse,,pro 100g essbarer Anteil,125,4.9,0.5,11.8,2.1,0.3,8.3,1.6,generic,False,Fisch
+13407,"Süsskartoffel, gedämpft (ohne Zugabe von Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,81,0.1,0.0,17.1,4.2,3.0,1.6,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13406,"Süsskartoffel, roh",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln",,pro 100g essbarer Anteil,81,0.1,0.0,17.1,4.2,3.0,1.6,0.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1609,"Taboulé, zubereitet (mit Bulgur)",,Gerichte/Salate,,pro 100g essbarer Anteil,111,5.5,0.7,11.5,1.1,2.8,2.3,0.4,generic,False,Gerichte
+1610,"Taboulé, zubereitet (mit Couscous)",,Gerichte/Salate,,pro 100g essbarer Anteil,130,6.1,0.7,15.3,1.3,1.2,2.8,0.4,generic,False,Gerichte
+1684,"Tartarsauce, mit Rapsöl-Mayonnaise, hausgemacht",,Verschiedenes/Saucen,,pro 100g essbarer Anteil,384,40.1,3.6,1.8,1.5,0.6,3.7,0.4,generic,False,Verschiedenes
+803,"Tee, ungezuckert",,Alkoholfreie Getränke/Tee,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,generic,True,Alkoholfreie Getränke
+1062,"Teigwaren mit Ei, gekocht im Salzwasser (unjodiert)",Eierteigwaren,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,132,1.1,0.2,25.0,1.3,1.3,5.0,0.9,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+799,"Teigwaren mit Ei, trocken",Eierteigwaren,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,365,2.8,0.5,69.9,3.7,3.4,13.3,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1063,"Teigwaren ohne Ei, gekocht im Salzwasser (unjodiert)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,158,0.6,0.1,31.2,0.2,2.4,5.9,1.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+800,"Teigwaren ohne Ei, trocken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,353,1.2,0.2,70.5,0.4,5.1,12.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1064,"Teigwaren ohne Ei, Vollkorn, gekocht im Salzwasser (unjodiert)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,152,1.2,0.2,26.8,0.3,5.4,5.9,1.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+801,"Teigwaren ohne Ei, Vollkorn, trocken",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,338,2.5,0.4,60.6,0.7,11.5,12.6,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13462,"Teigwaren, frisch, gefüllt mit Fleisch, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,174,4.7,1.7,25.1,1.0,2.2,6.9,0.7,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13498,"Teigwaren, frisch, gefüllt mit Spinat und Ricotta, gekocht (ohne Zugabe von Fett und Salz)",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,179,4.9,1.7,25.9,0.6,1.5,7.1,0.5,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+13489,"Teigwaren, frisch, gefüllt mit Spinat und Ricotta, roh",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren",,pro 100g essbarer Anteil,214,5.7,2.0,31.6,0.7,1.7,8.3,1.1,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1611,"Teigwarenauflauf mit Schinken, zubereitet",,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,163,6.9,3.5,14.4,1.4,1.0,10.2,1.2,generic,False,Gerichte
+1598,Teigwarensalat mit französischer Sauce,,Gerichte/Salate,,pro 100g essbarer Anteil,128,5.8,0.9,12.6,1.0,1.3,5.6,0.8,generic,False,Gerichte
+1597,Teigwarensalat mit italienischer Sauce,,Gerichte/Salate,,pro 100g essbarer Anteil,130,6.1,0.9,12.7,1.0,1.3,5.5,0.7,generic,False,Gerichte
+59,"Teilentrahmte Milch, pasteurisiert",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,56,2.8,1.7,4.7,4.7,0.0,3.1,0.1,generic,True,Milch und Milchprodukte
+61,"Teilentrahmte Milch, UHT",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,57,2.8,1.7,4.6,4.6,0.0,3.3,0.1,generic,True,Milch und Milchprodukte
+774,Terrine de Campagne,Pâté de campagne,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,298,26.5,9.7,0.9,0.7,0.1,13.6,2.2,generic,False,Fleisch- und Wurstwaren
+828,Tessinerbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,323,5.2,0.7,57.1,0.6,2.9,10.3,1.7,generic,False,"Brote, Flocken und Frühstückscerealien"
+495,Tête de Moine,,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,417,35.5,21.3,0.0,0.0,0.0,24.2,2.3,generic,False,Milch und Milchprodukte
+418,"Thon im Öl, abgetropft",,Fisch/Meeresfische,,pro 100g essbarer Anteil,186,8.4,1.5,0.0,0.0,0.0,27.6,0.9,generic,False,Fisch
+417,"Thon im Wasser, abgetropft",,Fisch/Meeresfische,,pro 100g essbarer Anteil,117,1.6,0.5,0.0,0.0,0.0,25.6,1.0,generic,False,Fisch
+1613,Thonsalat an Essig-Öl-Sauce (aus Thon im Wasser),,Gerichte/Salate,,pro 100g essbarer Anteil,109,4.9,0.7,6.8,3.1,1.1,9.0,0.8,generic,False,Gerichte
+756,"Thunfisch, roh",,Fisch/Meeresfische,,pro 100g essbarer Anteil,149,6.2,1.8,0.0,0.0,0.0,23.4,0.1,generic,False,Fisch
+460,"Thymian, roh",,Gemüse/Kräuter,,pro 100g essbarer Anteil,52,1.2,0.6,7.3,7.2,3.0,1.5,0.0,generic,False,Gemüse
+556,"Tilsiter, pasteurisiert, vollfett",,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,351,28.0,16.8,0.0,0.0,0.0,24.1,1.4,generic,False,Milch und Milchprodukte
+557,"Tilsiter, Rohmilch, vollfett",,Milch und Milchprodukte/Hartkäse,,pro 100g essbarer Anteil,376,30.2,18.1,0.0,0.0,0.0,25.6,1.7,generic,False,Milch und Milchprodukte
+887,Tirolercake,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,412,23.1,10.3,41.4,20.4,2.5,8.3,0.1,generic,False,Süssigkeiten
+827,Toastbrot mit Butter,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,316,10.4,6.0,45.7,2.7,2.2,8.9,1.4,generic,False,"Brote, Flocken und Frühstückscerealien"
+826,Toastbrot mit Pflanzenölen,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,267,3.3,0.3,49.2,4.4,2.9,8.7,1.3,generic,False,"Brote, Flocken und Frühstückscerealien"
+825,"Toastbrot, Vollkorn",,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,271,4.9,0.5,43.7,4.2,7.4,9.3,1.3,generic,False,"Brote, Flocken und Frühstückscerealien"
+14109,"Toastbrot,dunkel oder Mehrkorn",,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,272,4.7,0.5,45.6,4.0,5.2,9.1,1.3,generic,False,"Brote, Flocken und Frühstückscerealien"
+13437,"Tofu, fest, nature (Durchschnitt)",,Fleischersatzprodukte,,pro 100g essbarer Anteil,148,8.5,1.4,2.9,0.6,,14.7,0.1,generic,False,Fleischersatzprodukte
+14120,"Tofu, fest, nature (hergestellt mit Calciumsalz)",,Fleischersatzprodukte,,pro 100g essbarer Anteil,148,8.5,1.4,2.9,0.6,,14.7,0.0,generic,False,Fleischersatzprodukte
+14119,"Tofu, fest, nature (hergestellt mit Nigari)",,Fleischersatzprodukte,,pro 100g essbarer Anteil,148,8.5,1.4,2.9,0.6,,14.7,0.1,generic,False,Fleischersatzprodukte
+14090,"Tofu, geräuchert (Durchschnitt)",,Fleischersatzprodukte,,pro 100g essbarer Anteil,164,9.5,1.5,2.9,0.9,0.5,16.4,1.0,generic,False,Fleischersatzprodukte
+14122,"Tofu, geräuchert (hergestellt mit Calciumsalz)",,Fleischersatzprodukte,,pro 100g essbarer Anteil,164,9.5,1.5,2.9,0.9,0.5,16.4,1.4,generic,False,Fleischersatzprodukte
+14121,"Tofu, geräuchert (hergestellt mit Nigari)",,Fleischersatzprodukte,,pro 100g essbarer Anteil,164,9.5,1.5,2.9,0.9,0.5,16.4,0.7,generic,False,Fleischersatzprodukte
+13438,"Tofu, seidig (weich), nature","Seidentofu, nature",Fleischersatzprodukte,,pro 100g essbarer Anteil,53,2.9,0.5,1.5,1.1,0.6,5.0,0.0,generic,False,Fleischersatzprodukte
+1027,"Tomate, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,26,0.3,0.1,4.0,3.9,1.5,1.1,0.0,generic,False,Gemüse
+637,"Tomate, geschält (Konserve)",Pelati,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,20,0.2,0.0,3.0,2.9,1.0,0.9,0.3,generic,False,Gemüse
+13463,"Tomate, getrocknet",,Gemüse/Gemüse getrocknet,,pro 100g essbarer Anteil,210,0.5,0.1,29.2,13.7,21.7,11.3,5.3,generic,False,Gemüse
+348,"Tomate, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,21,0.3,0.1,3.3,3.2,1.2,0.9,0.0,generic,False,Gemüse
+1617,"Tomatenkuchen, gebacken (mit Blätterteig)",Tomatenwähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,155,11.0,6.2,10.0,2.5,1.0,3.5,0.4,generic,False,Gerichte
+1618,"Tomatenkuchen, gebacken (mit Kuchenteig)",Tomatenwähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,158,10.1,5.6,12.3,2.5,1.1,3.9,0.4,generic,False,Gerichte
+636,Tomatenpüree,Tomatenmark,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,77,0.2,0.0,12.9,12.4,2.8,4.5,0.6,generic,False,Gemüse
+564,Tomatensaft,,Alkoholfreie Getränke/Frucht- und Gemüsesäfte;Gemüse/Gemüsesäfte,1.1,pro 100 ml,16,0.1,0.1,3.0,2.1,0.1,0.8,0.5,generic,True,Alkoholfreie Getränke
+667,Tomatensauce,,Verschiedenes/Saucen,,pro 100g essbarer Anteil,69,2.1,0.5,9.7,4.1,1.9,1.8,1.4,generic,False,Verschiedenes
+670,Tomatensuppe,,Gerichte/Eintöpfe und Suppen,1.0,pro 100g essbarer Anteil,42,1.1,0.5,6.6,3.5,0.7,1.0,1.0,generic,False,Gerichte
+615,Tomme,,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,284,22.5,13.5,0.0,0.0,0.0,20.3,1.8,generic,False,Milch und Milchprodukte
+13442,"Topinambur, gekocht (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,52,0.4,0.1,3.8,3.8,11.8,2.3,0.0,generic,False,Gemüse
+13441,"Topinambur, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,54,0.4,0.1,4.0,4.0,12.1,2.4,0.0,generic,False,Gemüse
+478,"Traube, weiss, roh",Weintraube,Früchte/Früchte frisch,,pro 100g essbarer Anteil,69,0.3,0.1,15.2,14.6,1.5,0.7,0.0,generic,False,Früchte
+592,Traubenkernöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,10.1,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+573,Traubensaft,,Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.06,pro 100 ml,71,0.1,0.0,17.3,17.0,0.1,0.3,0.0,generic,True,Früchte
+768,Traubenzucker,Glukose;Dextrose,Süssigkeiten/Zucker und Süssstoffe,,pro 100g essbarer Anteil,399,0.0,0.0,99.8,99.8,0.0,0.0,0.0,generic,False,Süssigkeiten
+47,Trinkwasser (Mittelwert Schweiz),,Alkoholfreie Getränke/Trinkwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,generic,True,Alkoholfreie Getränke
+709,Trockenfleisch,Hobelfleisch;Bündnerfleisch,Fleisch- und Wurstwaren/Rohwurstware,,pro 100g essbarer Anteil,190,3.5,1.6,0.4,0.4,0.0,39.3,4.1,generic,False,Fleisch- und Wurstwaren
+13275,"Truthahn, Brust, Schnitzel oder Geschnetzeltes, grebraten (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,139,1.3,0.3,0.0,0.0,0.0,31.8,0.2,generic,False,Fleisch und Innereien
+713,"Truthahn, Brust, Schnitzel oder Geschnetzeltes, roh",,Fleisch und Innereien/Geflügel,,pro 100g essbarer Anteil,108,1.3,0.3,0.0,0.0,0.0,24.0,0.2,generic,False,Fleisch und Innereien
+534,Vacherin Mont d'Or,,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,279,23.2,13.9,0.0,0.0,0.0,17.2,1.7,generic,False,Milch und Milchprodukte
+13413,"Vanillecrème, hausgemacht, gekocht",,Süssigkeiten/Cremen und Pudding,,pro 100g essbarer Anteil,109,4.6,2.3,12.7,11.6,0.0,4.3,0.1,generic,False,Süssigkeiten
+14112,"Vegetarisches Gehacktes/Geschnetzeltes, aus Mykoprotein, roh",,Fleischersatzprodukte,,pro 100g essbarer Anteil,92,2.3,0.3,1.6,0.0,6.0,13.4,0.3,generic,False,Fleischersatzprodukte
+1202,Vinaigrette (mit Rapsöl),,Fette und Öle/Salatsaucen,1.1,pro 100 ml,255,25.2,2.4,2.1,1.5,0.6,4.6,0.3,generic,True,Fette und Öle
+1680,Vitello tonnato mit Garnitur,,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,173,10.9,2.5,0.7,0.6,0.2,17.9,0.6,generic,False,Fleisch und Innereien
+1679,Vitello tonnato ohne Garnitur,,Fleisch und Innereien/Kalb,,pro 100g essbarer Anteil,198,12.4,2.9,0.3,0.3,0.0,21.4,0.7,generic,False,Fleisch und Innereien
+802,Vollkornreiswaffel,,"Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln",,pro 100g essbarer Anteil,390,2.8,0.6,81.5,1.5,4.2,7.7,0.8,generic,False,"Brote, Flocken und Frühstückscerealien"
+62,"Vollmilch, pasteurisiert",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,68,4.0,2.4,4.7,4.7,0.0,3.2,0.1,generic,True,Milch und Milchprodukte
+14126,"Vollmilch, standardisiert, 3.5% Fett, UHT",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,65,3.5,2.0,5.0,5.0,0.0,3.2,0.1,generic,True,Milch und Milchprodukte
+63,"Vollmilch, UHT",,Milch und Milchprodukte/Milch,1.0,pro 100 ml,68,4.1,2.5,4.6,4.6,0.0,3.2,0.1,generic,True,Milch und Milchprodukte
+585,Vollmilchpulver,,Milch und Milchprodukte/Milch,,pro 100g essbarer Anteil,480,26.2,15.7,35.1,35.1,0.0,24.7,0.9,generic,False,Milch und Milchprodukte
+65,"Vollrahm, pasteurisiert",,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,334,34.8,20.9,3.1,3.1,0.0,2.0,0.1,generic,False,Fette und Öle
+66,"Vollrahm, UHT",,Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter,1.0,pro 100g essbarer Anteil,335,34.9,20.9,3.1,3.1,0.0,2.0,0.1,generic,False,Fette und Öle
+692,Vorderschinken,,Fleisch- und Wurstwaren/Kochwurstware,,pro 100g essbarer Anteil,106,3.3,1.3,0.4,0.4,0.0,18.6,2.2,generic,False,Fleisch- und Wurstwaren
+49,Vorzugsbutter,,Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter,0.9,pro 100g essbarer Anteil,746,82.3,49.4,0.7,0.6,0.0,0.7,0.0,generic,False,Fette und Öle
+824,Walliser Roggenbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,227,1.0,0.1,42.6,3.4,8.8,7.6,1.4,generic,False,"Brote, Flocken und Frühstückscerealien"
+10542,Wasabi Paste,,Verschiedenes/Saucen,,pro 100g essbarer Anteil,308,10.6,,49.6,,1.3,2.9,5.8,generic,False,Verschiedenes
+893,Wassereis,Wasserglacé,Süssigkeiten/Glacen auf Wasserbasis,1.0,pro 100g essbarer Anteil,88,0.0,0.0,22.0,22.0,0.0,0.0,0.0,generic,False,Süssigkeiten
+402,"Wassermelone, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,37,,,8.3,7.9,0.5,0.7,0.0,generic,False,Früchte
+954,"Weichkaramellen, Bonbons",,"Süssigkeiten/Bonbons, Frucht- und Kaugummi",,pro 100g essbarer Anteil,448,17.2,10.1,71.1,71.1,0.0,2.1,0.8,generic,False,Süssigkeiten
+1197,Weichkäse (Durchschnitt ohne fettreduzierte Varianten),,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,325,27.4,16.5,0.0,0.0,0.0,19.4,2.2,generic,False,Milch und Milchprodukte
+631,"Weichkäse, Doppelrahm",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,376,37.5,25.1,0.0,0.0,0.0,9.7,1.8,generic,False,Milch und Milchprodukte
+13392,"Weichkäse, Rahm",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,347,30.9,18.5,0.0,0.0,0.0,17.4,1.3,generic,False,Milch und Milchprodukte
+13391,"Weichkäse, vollfett",,Milch und Milchprodukte/Weichkäse,,pro 100g essbarer Anteil,296,23.7,14.2,0.0,0.0,0.0,20.6,1.8,generic,False,Milch und Milchprodukte
+509,"Wein rot, 12 vol%",Rotwein,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,69,0.0,0.0,0.3,0.3,0.0,0.2,0.0,generic,True,Alkoholhaltige Getränke
+10477,"Wein rot, 13.5 vol%",Rotwein,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,76,0.0,0.0,0.2,0.2,0.0,0.0,0.0,generic,True,Alkoholhaltige Getränke
+508,"Wein rot, 9 vol%",Rotwein,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,54,0.0,0.0,0.2,0.2,0.0,0.2,0.0,generic,True,Alkoholhaltige Getränke
+510,"Wein weiss, 11 vol%",Weisswein,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,70,0.0,0.0,2.0,2.0,0.0,0.1,0.0,generic,True,Alkoholhaltige Getränke
+511,"Wein weiss, 12.5 vol%",Weisswein,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,71,0.0,0.0,0.1,0.1,0.0,0.2,0.0,generic,True,Alkoholhaltige Getränke
+10478,"Wein weiss, gespritzt, sauer",,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,36,0.0,0.0,0.1,0.1,0.0,0.1,0.0,generic,True,Alkoholhaltige Getränke
+10479,"Wein weiss, gespritzt, süss",,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,55,0.0,0.0,4.8,4.8,0.0,0.1,0.0,generic,True,Alkoholhaltige Getränke
+823,Weissbrot,,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,242,0.8,0.2,48.9,0.2,2.5,8.5,1.7,generic,False,"Brote, Flocken und Frühstückscerealien"
+1028,"Weisskohl, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,35,0.6,0.3,4.4,4.0,3.3,1.3,0.0,generic,False,Gemüse
+1029,"Weisskohl, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,37,0.6,0.3,4.6,4.2,3.5,1.4,0.0,generic,False,Gemüse
+453,"Weisskohl, roh",Weisskabis,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,36,0.6,0.3,4.6,4.2,3.5,1.4,0.0,generic,False,Gemüse
+1273,Weisswurst,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,220,18.9,7.3,0.6,0.6,0.0,11.8,2.0,generic,False,Fleisch- und Wurstwaren
+734,"Weizen (Weichweizen), ganzes Korn",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte",,pro 100g essbarer Anteil,327,1.8,0.3,59.6,0.7,13.3,11.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+939,"Weizenflocken, Vollkorn",,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,335,1.8,0.3,59.6,0.7,13.3,13.5,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+430,Weizenkeime,,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime;Speziallebensmittel/Supplemente",,pro 100g essbarer Anteil,375,9.5,1.8,35.1,10.0,16.3,29.2,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+593,Weizenkeimöl,,Fette und Öle/Öle,0.9,pro 100 ml,810,90.0,15.7,0.0,0.0,0.0,0.0,0.0,generic,True,Fette und Öle
+431,Weizenkleie,Speisekleie,"Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime",,pro 100g essbarer Anteil,264,4.7,0.8,17.7,1.9,45.1,15.2,0.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+204,"Weizenmehl (Backmehl), Typ 550",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,344,1.3,0.3,69.5,0.3,3.2,12.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+207,"Weizenmehl, halbweiss, Typ 720",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,340,1.5,0.2,66.2,0.5,5.0,13.0,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+203,"Weizenmehl, Ruch, Typ 1100",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,339,1.7,0.3,64.6,0.6,5.7,13.5,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+206,"Weizenmehl, Vollkorn, Typ 1700",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,338,2.0,0.3,61.0,1.0,11.0,13.5,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+205,"Weizenmehl, weiss, Typ 400",,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke",,pro 100g essbarer Anteil,346,1.1,0.3,71.0,0.3,3.2,11.5,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+1588,"Weizenotto, gekocht",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,163,3.0,0.4,26.1,1.1,5.9,5.0,1.1,generic,False,Gerichte
+897,Weizenstärke,,"Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke;Verschiedenes/Gelier- und Bindemittel",,pro 100g essbarer Anteil,348,0.1,0.0,85.8,0.0,1.2,0.4,0.0,generic,False,"Getreideprodukte, Hülsenfrüchte und Kartoffeln"
+821,Weizenvollkornbrot,Grahambrot,"Brote, Flocken und Frühstückscerealien/Brote und Brotwaren",,pro 100g essbarer Anteil,213,1.3,0.2,38.3,0.7,6.9,8.6,1.4,generic,False,"Brote, Flocken und Frühstückscerealien"
+514,"Wermut, 15 vol%",Wermutwein;Wermuth;Vermouth,Alkoholhaltige Getränke/Wein,1.0,pro 100 ml,139,0.0,0.0,13.5,13.5,0.0,0.1,0.1,generic,True,Alkoholhaltige Getränke
+1082,Wienerli,,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,242,20.4,7.8,0.6,0.6,0.0,13.9,2.2,generic,False,Fleisch- und Wurstwaren
+1589,"Wienerli, gekocht",,Fleisch- und Wurstwaren/Brühwurstware,,pro 100g essbarer Anteil,220,18.4,7.0,0.6,0.6,0.0,13.0,1.8,generic,False,Fleisch- und Wurstwaren
+13281,"Wildfleisch (Durchschnitt), gekocht (ohne Zusatz von Fett und Salz)",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,157,4.6,2.0,0.0,0.0,0.0,29.0,0.2,generic,False,Fleisch und Innereien
+1125,"Wildfleisch (Durchschnitt), roh",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,115,3.4,1.5,0.0,0.0,0.0,21.1,0.2,generic,False,Fleisch und Innereien
+796,Wildfleischterrine,,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,242,18.7,7.4,1.6,1.4,0.1,16.4,2.2,generic,False,Fleisch und Innereien
+489,"Wildschwein (Durchschnitt), roh",,Fleisch und Innereien/Wild,,pro 100g essbarer Anteil,108,3.4,1.5,0.0,0.0,0.0,19.5,0.2,generic,False,Fleisch und Innereien
+1030,"Wirz, gedämpft (ohne Zugabe von Salz)",Wirsingkohl,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,30,0.3,0.0,2.8,2.7,2.4,2.7,0.0,generic,False,Gemüse
+454,"Wirz, roh",Wirsingkohl,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,31,0.3,0.0,2.9,2.8,2.6,2.8,0.0,generic,False,Gemüse
+1569,"Wurst-Käse-Salat, zubereitet",,Gerichte/Salate,,pro 100g essbarer Anteil,262,22.6,9.4,0.7,0.6,0.3,13.8,1.4,generic,False,Gerichte
+1568,"Wurstsalat, zubereitet",,Gerichte/Salate,,pro 100g essbarer Anteil,224,21.1,5.4,1.3,1.1,0.4,7.1,1.6,generic,False,Gerichte
+1162,"Wurzel- und Knollengemüse (Durchschnitt), gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,42,0.4,0.1,7.2,5.7,2.8,0.9,0.1,generic,False,Gemüse
+1163,"Wurzel- und Knollengemüse (Durchschnitt), gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,36,0.3,0.1,6.3,4.9,2.5,0.8,0.1,generic,False,Gemüse
+1161,"Wurzel- und Knollengemüse (Durchschnitt), gekocht (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,38,0.3,0.1,6.5,5.1,2.6,0.8,0.0,generic,False,Gemüse
+1267,"Wurzel- und Knollengemüse (Durchschnitt), roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,39,0.3,0.1,6.9,5.4,2.7,0.9,0.1,generic,False,Gemüse
+759,Zampone,Gefüllter Schweinsfuss,Fleisch und Innereien/Schwein,,pro 100g essbarer Anteil,361,31.6,10.4,0.0,0.0,0.0,19.1,3.4,generic,False,Fleisch und Innereien
+687,"Ziege (Durchschnitt), roh",,Fleisch und Innereien/Sonstige Tierarten,,pro 100g essbarer Anteil,149,7.9,3.6,0.0,0.0,0.0,19.5,0.1,generic,False,Fleisch und Innereien
+528,Ziegenmilch,,Milch und Milchprodukte/Milch,1.0,pro 100 ml,57,3.2,2.0,4.2,4.2,0.0,2.8,0.1,generic,True,Milch und Milchprodukte
+506,Ziger weiss,,Milch und Milchprodukte/Frischkäse und Quark,,pro 100g essbarer Anteil,122,7.2,4.3,3.3,3.3,0.0,10.9,0.1,generic,False,Milch und Milchprodukte
+911,Zimt,,"Verschiedenes/Salz, Gewürze und Aromen",,pro 100g essbarer Anteil,317,3.2,0.9,56.0,55.4,24.4,3.9,0.1,generic,False,Verschiedenes
+876,Zimtstern,,Süssigkeiten/Guetzli,,pro 100g essbarer Anteil,505,25.9,2.0,50.9,50.3,5.6,14.2,0.1,generic,False,Süssigkeiten
+856,Zitronat,,Süssigkeiten/Sonstige Süssigkeiten,,pro 100g essbarer Anteil,289,0.4,0.1,70.0,70.0,2.0,0.4,0.0,generic,False,Süssigkeiten
+398,"Zitrone, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,23,0.5,0.1,2.9,2.5,2.0,0.8,0.0,generic,False,Früchte
+605,Zitronensaft,,Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte,1.0,pro 100 ml,28,0.2,0.0,2.5,2.5,0.3,0.4,0.0,generic,True,Früchte
+1126,"Zitrusfrüchte (Durchschnitt), roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,41,0.3,0.0,8.0,7.4,2.1,0.8,0.0,generic,False,Früchte
+1661,"Zucchetti-Piccata, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,124,8.0,2.2,6.6,1.8,1.1,5.7,0.2,generic,False,Gerichte
+1654,"Zucchetti, gedämpft (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,20,0.2,0.0,2.2,2.1,1.1,1.9,0.0,generic,False,Gemüse
+1031,"Zucchetti, gedünstet (ohne Zugabe von Fett und Salz)",Zucchini,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,23,0.2,0.0,2.4,2.3,1.2,2.2,0.0,generic,False,Gemüse
+367,"Zucchetti, roh",Zucchini,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,19,0.2,0.0,2.0,1.9,1.0,1.8,0.0,generic,False,Gemüse
+1657,"Zucchettischeiben, paniert, zubereitet",,Gerichte/Sonstige salzige/rezente Gerichte,,pro 100g essbarer Anteil,127,5.5,0.7,13.5,2.1,1.5,5.0,0.2,generic,False,Gerichte
+471,"Zucker, braun",,Süssigkeiten/Zucker und Süssstoffe,,pro 100g essbarer Anteil,390,0.0,0.0,97.6,97.6,0.0,0.0,0.1,generic,False,Süssigkeiten
+470,"Zucker, weiss",Saccharose;Kristallzucker,Süssigkeiten/Zucker und Süssstoffe,,pro 100g essbarer Anteil,400,0.0,0.0,100.0,100.0,0.0,0.0,0.0,generic,False,Süssigkeiten
+465,"Zuckerhutsalat, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,16,0.2,0.0,1.5,1.5,1.6,1.2,0.0,generic,False,Gemüse
+632,Zuckermais (Konserve),,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,100,1.2,0.2,18.2,6.9,2.3,3.0,0.8,generic,False,Gemüse
+1033,"Zuckermais (Konserve), aufgewärmt (ohne Zugabe von Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,103,1.2,0.2,18.6,7.0,2.3,3.1,0.7,generic,False,Gemüse
+399,"Zuckermelone, roh",Honigmelone,Früchte/Früchte frisch,,pro 100g essbarer Anteil,62,0.1,0.0,14.8,10.6,1.3,1.1,0.1,generic,False,Früchte
+882,Zuger Kirschtorte,,"Süssigkeiten/Kuchen, Torten und Cake",,pro 100g essbarer Anteil,335,18.7,8.5,34.6,27.0,1.5,4.8,0.2,generic,False,Süssigkeiten
+10378,"Zunge (Durchschnitt aus Kalb und Rind), roh",,Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind,,pro 100g essbarer Anteil,188,12.3,4.4,2.8,0.0,0.0,16.6,0.2,generic,False,Fleisch und Innereien
+1056,"Zwetschge, gedünstet, abgetropft (ohne Zugabe von Zucker)",,Früchte/Früchte gekocht (inkl. Konserven),,pro 100g essbarer Anteil,43,0.1,0.0,8.7,8.7,2.3,0.7,0.0,generic,False,Früchte
+479,"Zwetschge, roh",,Früchte/Früchte frisch,,pro 100g essbarer Anteil,43,0.1,0.0,8.8,8.8,2.3,0.6,0.0,generic,False,Früchte
+1529,"Zwetschgenkuchen, hausgemacht, gebacken (mit Blätterteig)",Zwetschgenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,139,6.7,3.0,16.0,7.6,1.9,2.6,0.3,generic,False,Süssigkeiten
+1531,"Zwetschgenkuchen, hausgemacht, gebacken (mit Kuchenteig)",Zwetschgenwähe,"Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins",,pro 100g essbarer Anteil,141,6.5,2.9,16.7,7.6,1.9,2.9,0.2,generic,False,Süssigkeiten
+930,Zwieback,,"Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln",,pro 100g essbarer Anteil,421,7.8,1.0,74.6,14.2,2.9,11.6,1.3,generic,False,"Brote, Flocken und Frühstückscerealien"
+929,"Zwieback, Vollkorn",,"Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln",,pro 100g essbarer Anteil,413,9.1,4.3,61.2,13.8,8.3,17.5,2.0,generic,False,"Brote, Flocken und Frühstückscerealien"
+1035,"Zwiebel, gedünstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,43,0.7,0.2,7.0,5.4,2.2,1.2,0.0,generic,False,Gemüse
+1036,"Zwiebel, geröstet (ohne Zugabe von Fett und Salz)",,Gemüse/Gemüse gekocht (inkl. Konserven),,pro 100g essbarer Anteil,92,1.5,0.5,14.9,11.4,4.5,2.6,0.0,generic,False,Gemüse
+368,"Zwiebel, roh",,Gemüse/Gemüse frisch,,pro 100g essbarer Anteil,39,0.6,0.2,6.3,4.8,1.9,1.1,0.0,generic,False,Gemüse
+1615,"Zwiebelkuchen, gebacken (mit Blätterteig)",Zwiebelwähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,169,10.9,5.9,12.6,3.6,1.5,4.3,1.0,generic,False,Gerichte
+1616,"Zwiebelkuchen, gebacken (mit Kuchenteig)",Zwiebelwähe,Gerichte/Kuchen und Gratins,,pro 100g essbarer Anteil,171,10.1,5.4,14.6,3.6,1.6,4.7,0.9,generic,False,Gerichte
+1253,Amaro Ramazzotti (30 vol%),,Alkoholhaltige Getränke/Sonstige alkoholische Getränke,1.1,pro 100 ml,242,0.0,,19.0,19.0,0.0,0.0,,brand,True,Alkoholhaltige Getränke
+1147,"Eichhof Hubertus (Spezialbier dunkel, 6 vol%)",,Alkoholhaltige Getränke/Bier,1.0,pro 100 ml,45,0.1,0.1,2.3,0.1,0.2,0.5,,brand,True,Alkoholhaltige Getränke
+13436,"Energy Drink, mit Süssstoffen (Durchschnitt von Markenprodukten)",,Alkoholfreie Getränke/Süssgetränke energievermindert,1.0,pro 100 ml,1,0.0,0.0,0.2,0.0,0.0,0.0,0.2,brand,True,Alkoholfreie Getränke
+1151,"Ittinger (Spezialbier Amber, 5.6 vol%)",,Alkoholhaltige Getränke/Bier,1.0,pro 100 ml,47,0.1,0.1,3.2,0.0,0.2,0.6,,brand,True,Alkoholhaltige Getränke
+13425,"Joghurt, nach griechischer Art, mit Rahm, nature (Durchschnitt von Markenprodukten)",,Milch und Milchprodukte/Joghurt und Sauermilch,,pro 100g essbarer Anteil,117,9.4,6.0,3.9,3.9,0.0,4.2,0.1,brand,False,Milch und Milchprodukte
+1262,Malibu Coconut (21 vol%),,Alkoholhaltige Getränke/Sonstige alkoholische Getränke,1.052,pro 100 ml,197,0.0,,20.3,20.3,0.0,0.0,,brand,True,Alkoholhaltige Getränke
+1045,Mineralwasser Acqua Panna,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+538,Mineralwasser Adelbodner,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1171,Mineralwasser Adello,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+540,Mineralwasser Allegra (Malix),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1096,Mineralwasser Appenzell (Gontenbad),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+73,Mineralwasser Aproz (Aproz),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+104,Mineralwasser Aquella (Bouillets),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+541,Mineralwasser Arkina,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1178,Mineralwasser Badoit (St Galmier),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+501,Mineralwasser Contrex,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1172,Mineralwasser Cristallo (Lostorf),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1044,Mineralwasser Elmer,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+48,Mineralwasser Eptinger,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+521,Mineralwasser Evian (Cachat),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+522,Mineralwasser Henniez,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1173,Mineralwasser Knutwiler,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+523,Mineralwasser Passugger (Theophilquelle),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+524,Mineralwasser Perrier,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+537,Mineralwasser Rhäzünser,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+525,Mineralwasser San Pellegrino,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1095,Mineralwasser Valais (Montis),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+45,Mineralwasser Valser Classic/Naturelle (St. Petersquelle),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1047,Mineralwasser Valser Silence (St. Paulsquelle),,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+535,Mineralwasser Vittel,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+550,Mineralwasser Volvic,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+548,Mineralwasser Zurzacher,,Alkoholfreie Getränke/Mineralwasser,1.0,pro 100 ml,0,0.0,0.0,0.0,0.0,0.0,0.0,,brand,True,Alkoholfreie Getränke
+1263,Pastis 51 de Marseille (45 vol%),,Alkoholhaltige Getränke/Sonstige alkoholische Getränke,0.947,pro 100 ml,257,0.0,,2.0,2.0,0.0,0.0,,brand,True,Alkoholhaltige Getränke
+1265,Suze (20 vol%),,Alkoholhaltige Getränke/Sonstige alkoholische Getränke,1.036,pro 100 ml,175,0.0,,16.0,16.0,0.0,0.0,,brand,True,Alkoholhaltige Getränke
+13421,Vanille Zucker (Durchschnitt von Markenprodukten),,Süssigkeiten/Zucker und Süssstoffe,,pro 100g essbarer Anteil,391,0.2,0.0,96.7,96.7,1.3,0.2,0.0,brand,False,Süssigkeiten
+13424,Worcester Sauce (Durchschnitt von Markenprodukten),,Verschiedenes/Saucen,1.0,pro 100 ml,96,0.8,0.4,21.5,19.0,,0.8,2.9,brand,True,Verschiedenes
