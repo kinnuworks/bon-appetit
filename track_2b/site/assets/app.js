@@ -110,7 +110,7 @@
   const SHORT = Object.fromEntries(GROUPS.map((g) => [g[0], g[1]]));
   const CHIP = { vegetables_fruit: 'Veg and fruit', grains_potatoes: 'Grains', dairy: 'Dairy', protein: 'Protein', fats_nuts: 'Fats and nuts', sweets_snacks_drinks: 'Sweets and drinks' };
   const LANGNAME = { de: 'Deutsch', fr: 'Français', it: 'Italiano', en: 'English' };
-  const SRC = { fsvo: 'FSVO', off: 'Open Food Facts' };
+  const SRC = { fsvo: 'Food table', off: 'Open Food Facts' };
   const SALT_GUIDE = 5, FV_GUIDE = 5;
 
   const ctlReceipt = $('#ctlReceipt'), ctlSize = $('#ctlSize'), sizeOut = $('#sizeOut'), ctlLang = $('#ctlLang'), ctlReview = $('#ctlReview');
@@ -171,7 +171,7 @@
     const s = (state.data.summary || {})[r.id];
     const sum = $('.wk__sum', preview);
     const head = `<div class="app__head"><div><div class="app__title">${esc(r.label || r.id)}</div><div class="app__sub">${esc(r.shop || '')}${r.shop ? ' · ' : ''}${r.live ? '' : esc(r.days || 7) + ' days · '}${(r.lines || []).length} lines</div></div></div>`;
-    if (!s) { sum.innerHTML = head + (r.live ? quiet(r.busy ? 'Apertus is reading your receipt.' : 'Nothing read yet.', r.busy ? 'On a laptop this takes about 10 seconds per line. The week appears here when every line is done.' : 'Paste a few lines and press Read it with Apertus.') : quiet('Results are being computed.', 'This week’s summary appears here when it is ready.')); return; }
+    if (!s) { sum.innerHTML = head + (r.live ? quiet(r.busy ? 'Apertus is reading your receipt.' : 'Nothing read yet.', r.busy ? 'On a laptop this takes about 30 to 50 seconds per line. The week appears here when every line is done.' : 'Paste a few lines and press Read it with Apertus.') : quiet('Results are being computed.', 'This week’s summary appears here when it is ready.')); return; }
     const vals = GROUPS.map((g) => (s.pyramid || {})[g[0]]).filter(isNum);
     const recs = GROUPS.map((g) => (s.recommended || {})[g[0]]).filter(isNum);
     const max = Math.min(1, Math.max(0.01, ...vals, ...recs) * 1.12);
@@ -415,12 +415,20 @@
     embeddings: ['Embeddings only', 'nearest food'],
     apertus: ['Apertus alone', 'guesses nutrients'],
     apertus_only: ['Apertus alone', 'guesses numbers, no source'],
-    retrieval: ['Search only', 'no Apertus pick (ablation)'],
+    retrieval: ['Search only', 'no Apertus'],
     llm: ['Apertus alone', 'guesses nutrients'],
-    hybrid: ['Full hybrid', 'search, Apertus, food layer'],
-    oracle: ['Ceiling', 'best FSVO food, chosen by looking at the label'],
+    hybrid: ['Apertus pick only', 'no cross-check'],
+    checked: ['Bon·Appétit', 'pick plus Apertus cross-check'],
+    oracle: ['Best possible', 'perfect link to a generic food'],
   };
-  const DEFAULT_METHODS = ['fuzzy', 'embed', 'retrieval', 'apertus_only', 'hybrid', 'oracle'].map((id) => ({ id, label: METHOD_INFO[id][0] }));
+  const NO_BEST = ['oracle', 'apertus_only', 'apertus', 'llm'];
+  function bestId(methods, key) {
+    if (methods.some((m) => m.id === 'checked' && isNum(m[key]))) return 'checked';
+    const sc = methods.filter((m) => !NO_BEST.includes(m.id) && isNum(m[key]));
+    return sc.length ? sc.reduce((a, b) => (b[key] < a[key] ? b : a)).id : null;
+  }
+  const mlabel = (m) => (METHOD_INFO[m.id] || [])[0] || m.label || m.id;
+  const DEFAULT_METHODS = ['fuzzy', 'embed', 'retrieval', 'apertus_only', 'hybrid', 'checked', 'oracle'].map((id) => ({ id, label: METHOD_INFO[id][0] }));
   const pct = (v) => isNum(v) ? Math.round(v <= 1 ? v * 100 : v) + '%' : 'n/a';
   const fx = (v, d) => isNum(v) ? v.toFixed(d) : 'n/a';
   const computing = '<span class="computing">computing</span>';
@@ -429,19 +437,31 @@
   function renderTable(res) {
     const done = res && res.status === 'done' && Array.isArray(res.methods) && res.methods.length;
     const methods = done ? res.methods : DEFAULT_METHODS;
-    const scored = methods.filter((m) => !['oracle', 'apertus_only', 'apertus', 'llm'].includes(m.id) && isNum(m.kcal_mae));
-    const best = scored.length ? scored.reduce((a, b) => (b.kcal_mae < a.kcal_mae ? b : a)).id : null;
+    const best = bestId(methods, 'kcal_mae');
     const body = methods.map((m) => {
       const info = METHOD_INFO[m.id] || [];
-      const name = `${esc(m.label || info[0] || m.id)}${info[1] ? `<small>${esc(info[1])}</small>` : ''}`;
+      const name = `${esc(mlabel(m))}${info[1] ? `<small>${esc(info[1])}</small>` : ''}`;
       const cells = done
-        ? [fx(m.kcal_mae, 1), fx(m.sugar_mae, 1) + (isNum(m.sugar_mae) ? ' g' : ''), fx(m.salt_mae, 2) + (isNum(m.salt_mae) ? ' g' : ''), pct(m.within20_kcal), pct(m.group_acc), pct(m.abstain), isNum(m.n) ? m.n.toLocaleString('en-US') : 'n/a']
-        : Array(7).fill(computing);
+        ? [fx(m.kcal_mae, 1), pct(m.over100_kcal), fx(m.sugar_mae, 1) + (isNum(m.sugar_mae) ? ' g' : ''), fx(m.salt_mae, 2) + (isNum(m.salt_mae) ? ' g' : ''), pct(m.within20_kcal), pct(m.group_acc), pct(m.abstain), isNum(m.n) ? m.n.toLocaleString('en-US') : 'n/a']
+        : Array(8).fill(computing);
       const cls = [m.id === best ? 'is-best' : '', m.id === 'oracle' ? 'is-oracle' : ''].join(' ').trim();
       return `<tr${cls ? ` class="${cls}"` : ''}><td>${name}</td>${cells.map((c) => `<td>${c}</td>`).join('')}</tr>`;
     }).join('');
     $('#resultsTable tbody').innerHTML = body;
     $('#nProducts').textContent = done && isNum(res.n_products) ? `${res.n_products.toLocaleString('en-US')} products` : 'Results are being computed';
+    const by = (id) => (done ? res.methods : []).find((m) => m.id === id);
+    const fz = by('fuzzy'), ck = by('checked'), lead = $('#evLead');
+    if (lead && fz && ck && isNum(fz.over100_kcal) && isNum(ck.over100_kcal)) {
+      const n = isNum(res.n_products) ? res.n_products : ck.n;
+      const left = isNum(ck.abstain) ? `, and leaves ${pct(ck.abstain)} of lines for you to confirm instead of guessing` : '';
+      lead.textContent = `On ${n} real Swiss products, plain text matching is off by more than 100 kcal per 100 g on ${pct(fz.over100_kcal)} of them. Bon·Appétit brings that to ${pct(ck.over100_kcal)}${left}. Each product's printed label is hidden, the product is linked from its name or a receipt-style truncation of it, and the estimate is compared with what the pack says.`;
+    }
+    const ho = $('#heldout'), H = done && Array.isArray(res.heldout) ? res.heldout : [];
+    const hv = ['checked', 'apertus_only', 'hybrid'].map((id) => H.find((m) => m.id === id)).filter((m) => m && isNum(m.kcal_mae));
+    if (ho && hv.length === 3) {
+      ho.innerHTML = `<b>Held-out check.</b> On the half of the products not used to set the cross-check, the typical error is ${hv.map((m) => Math.round(m.kcal_mae)).join(' vs ')} kcal per 100 g for ${hv.map((m) => esc(mlabel(m))).join(', ').replace(/, ([^,]*)$/, ' and $1')}.`;
+      ho.hidden = false;
+    }
   }
 
   function niceStep(max) {
@@ -451,35 +471,36 @@
 
   function renderChart(res) {
     const host = $('#chart'); if (!host) return;
-    const done = res && res.status === 'done' && Array.isArray(res.methods) && res.methods.some((m) => isNum(m.kcal_mae));
-    const methods = done ? res.methods.filter((m) => isNum(m.kcal_mae)) : DEFAULT_METHODS;
+    const KEY = 'over100_kcal';
+    const done = res && res.status === 'done' && Array.isArray(res.methods) && res.methods.some((m) => isNum(m[KEY]));
+    const methods = done ? res.methods.filter((m) => isNum(m[KEY])) : DEFAULT_METHODS;
     const W = Math.max(280, Math.round(host.clientWidth || 480));
-    const labelW = W < 400 ? 118 : 132, valW = 64, rowH = 40, top = 6, barH = 16;
+    const labelW = W < 400 ? 124 : 140, valW = 64, rowH = 40, top = 6, barH = 16;
     const plotW = W - labelW - valW;
     const H = top + methods.length * rowH + 26;
-    const vals = methods.map((m) => m.kcal_mae).filter(isNum);
+    const vals = methods.map((m) => m[KEY] * 100).filter(isNum);
     const step = done ? niceStep(Math.max(...vals)) : 25;
     const max = done ? Math.ceil((Math.max(...vals) * 1.02) / step) * step : 100;
     const x = (v) => labelW + (v / max) * plotW;
-    const scored = methods.filter((m) => !['oracle', 'apertus_only', 'apertus', 'llm'].includes(m.id) && isNum(m.kcal_mae));
-    const best = scored.length ? scored.reduce((a, b) => (b.kcal_mae < a.kcal_mae ? b : a)).id : null;
-    let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${done ? 'Bar chart of mean energy error by method' : 'Chart placeholder, results are being computed'}">
+    const best = bestId(methods, KEY);
+    let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${done ? 'Bar chart: share of products off by more than 100 kcal per 100 g, by method' : 'Chart placeholder, results are being computed'}">
       <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" style="fill:var(--surface)"/><line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--ink-4);stroke-width:2"/></pattern></defs>`;
     for (let t = 0; done && t <= max + 1e-9; t += step) {
       const gx = x(t);
       svg += `<line class="grid" x1="${gx}" x2="${gx}" y1="${top}" y2="${H - 20}"/>`;
-      if (done) svg += `<text class="tick" x="${gx}" y="${H - 4}" text-anchor="middle">${+t.toFixed(2)}</text>`;
+      if (done) svg += `<text class="tick" x="${gx}" y="${H - 4}" text-anchor="middle">${+t.toFixed(2)}%</text>`;
     }
     methods.forEach((m, i) => {
       const y = top + i * rowH + (rowH - barH) / 2;
       const info = METHOD_INFO[m.id] || [];
-      const label = m.label || info[0] || m.id;
+      const label = mlabel(m);
       svg += `<text class="lbl" x="0" y="${y + barH / 2 + 4.5}">${esc(label)}</text>`;
       if (done) {
         const cls = m.id === 'oracle' ? 'b b--oracle' : m.id === best ? 'b b--best' : 'b';
-        const w = Math.max(2, x(m.kcal_mae) - labelW);
-        svg += `<rect class="${cls}" x="${labelW}" y="${y}" width="${w}" height="${barH}" rx="4"><title>${esc(label)}: ${m.kcal_mae.toFixed(1)} kcal</title></rect>`;
-        svg += `<text class="val" x="${labelW + w + 8}" y="${y + barH / 2 + 4}">${m.kcal_mae.toFixed(1)}</text>`;
+        const v = m[KEY] * 100;
+        const w = Math.max(3, x(v) - labelW);
+        svg += `<rect class="${cls}" x="${labelW}" y="${y}" width="${w}" height="${barH}" rx="4"><title>${esc(label)}: ${Math.round(v)}%</title></rect>`;
+        svg += `<text class="val" x="${labelW + w + 8}" y="${y + barH / 2 + 4}">${Math.round(v)}%</text>`;
       } else {
         svg += `<rect class="b b--ghost" x="${labelW}" y="${y}" width="${plotW}" height="${barH}" rx="4"/>`;
         svg += `<text class="tick" x="${labelW + 10}" y="${y + barH / 2 + 4}">computing</text>`;
@@ -488,13 +509,13 @@
     svg += '</svg>';
     host.innerHTML = svg;
     $('#chartCap').textContent = done
-      ? 'Mean absolute error in kcal per 100 g. The hatched bar is the ceiling: the closest any FSVO food could get, chosen by looking at the label. Apertus alone is shown for comparison but is never highlighted, because its numbers come with no source.'
-      : 'Results are being computed. Each bar will show the mean energy error in kcal per 100 g; the oracle row marks the best any FSVO match could do.';
+      ? 'Share of products whose estimate is off by more than 100 kcal per 100 g. The hatched bar is the best possible: a perfect link to a generic food. Apertus alone is shown for comparison but never highlighted, because its numbers come with no source.'
+      : 'Results are being computed. Each bar will show the share of products off by more than 100 kcal per 100 g.';
   }
 
   function renderCost(res) {
     const c = res && res.status === 'done' && res.cost;
-    $('#costSec').innerHTML = c && isNum(c.sec_per_line) ? c.sec_per_line.toFixed(2) : computing;
+    $('#costSec').innerHTML = c && isNum(c.sec_per_line) ? c.sec_per_line.toFixed(c.sec_per_line >= 10 ? 0 : 2) : computing;
     $('#costChf').innerHTML = c && isNum(c.chf_per_1000_receipts) ? c.chf_per_1000_receipts.toFixed(2) : computing;
   }
 
@@ -504,8 +525,8 @@
     if (!rows.length) { host.hidden = true; return; }
     const keys = Object.keys(rows[0]);
     const isPct = (k) => /within|acc|abstain|share|rate/i.test(k);
-    const fmt = (k, v) => !isNum(v) ? esc(v) : isPct(k) ? pct(v) : Number.isInteger(v) ? v.toLocaleString('en-US') : v.toFixed(2);
-    host.innerHTML = `<div class="table-card"><div class="table-card__head"><h3 class="t-title">By receipt language</h3></div><div class="table-scroll" tabindex="0" role="region" aria-label="Results by language"><table class="rt" style="min-width:${Math.max(420, keys.length * 110)}px"><thead><tr>${keys.map((k) => `<th scope="col">${esc(k.replace(/_/g, ' '))}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${keys.map((k) => `<td>${fmt(k, r[k])}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
+    const fmt = (k, v) => k === 'id' ? esc(mlabel({ id: v })) : v == null ? 'n/a' : !isNum(v) ? esc(v) : isPct(k) ? pct(v) : Number.isInteger(v) ? v.toLocaleString('en-US') : v.toFixed(2);
+    host.innerHTML = `<div class="table-card"><div class="table-card__head"><h3 class="t-title">By receipt language</h3></div><div class="table-scroll" tabindex="0" role="region" aria-label="Results by language"><table class="rt" style="min-width:${Math.max(420, keys.length * 110)}px"><thead><tr>${keys.map((k) => `<th scope="col">${esc(({ id: 'method', kcal_mae: 'typical kcal error', group_acc: 'food group right', lang: 'language' })[k] || k.replace(/_/g, ' '))}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${keys.map((k) => `<td>${fmt(k, r[k])}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
     host.hidden = false;
   }
 

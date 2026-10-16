@@ -463,3 +463,8 @@ html{overflow-x:clip}
 
 /* Light cards on the gray bands */
 .section--alt .card--flat,.section--alt .versus .card--flat{background:var(--surface);box-shadow:var(--ring)}
+
+.heldout{margin-top:12px;padding:12px 14px;border-radius:var(--r-md);background:var(--accent-wash);font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.heldout b{color:var(--ink);font-weight:650}
+.section--lessons{padding-top:0}
+.rt th{line-height:1.3}

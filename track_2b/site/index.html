@@ -9,11 +9,11 @@
 <meta property="og:description" content="Swiss supermarket receipts, read by Apertus on your own computer and placed on the Swiss food pyramid.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FFFFFF">
-<link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
+<link rel="icon" href="favicon.svg?v=5" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/foundation.css?v=4">
-<link rel="stylesheet" href="assets/site.css?v=4">
+<link rel="stylesheet" href="assets/foundation.css?v=5">
+<link rel="stylesheet" href="assets/site.css?v=5">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -56,7 +56,7 @@
 <header class="nav">
   <nav class="nav__bar" aria-label="Main">
     <a class="nav__brand" href="#top" aria-label="Bon·Appétit, back to top">
-      <img class="app-icon" src="assets/icon.svg?v=4" alt="" width="28" height="28">
+      <img class="app-icon" src="assets/icon.svg?v=5" alt="" width="28" height="28">
       <span>Bon·Appétit</span>
     </a>
     <div class="nav__links">
@@ -205,7 +205,7 @@
           <div class="dec-row"><div><div class="dec-row__raw">NATURAPLAN BIO RUEBLI</div><div class="dec-row__name">Coop Naturaplan organic carrots</div><div class="dec-row__meta"><span class="gchip g-vegetables_fruit">Veg and fruit</span><span>FSVO</span></div></div></div>
           <div class="dec-row"><div><div class="dec-row__raw">PRIX GAR. SPAGHETTI 500G</div><div class="dec-row__name">Coop Prix Garantie spaghetti, 500 g</div><div class="dec-row__meta"><span class="gchip g-grains_potatoes">Grains</span><span>FSVO</span></div></div></div>
         </div>
-        <p class="t-small">Each line becomes a food from the federal Swiss Food Composition Database. When no entry fits, the line waits for you instead of being guessed.</p>
+        <p class="t-small">Each line becomes a food from the federal Swiss Food Composition Database (FSVO). When no entry fits, the line waits for you instead of being guessed.</p>
       </div>
     </div>
   </div>
@@ -216,8 +216,8 @@
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>How it works</div>
-      <h2>Search finds candidates. <span class="t-muted">Apertus picks one.</span></h2>
-      <p class="lead">Search proposes foods from the FSVO database. Apertus reads the line, then picks one candidate by its number or answers 0, and a symbolic food layer checks the pick. Code does every number; Apertus never writes one.</p>
+      <h2>Search finds candidates. <span class="t-muted">Apertus picks and checks.</span></h2>
+      <p class="lead">Search proposes foods from the Swiss food table. Apertus then works on each line in three steps: it reads the line, picks one candidate by its number or answers 0, and cross-checks the pick. The cross-check cut the typical error from 123 to 102 kcal per 100 g. Every number you see comes from the federal record.</p>
     </div>
 
     <div class="stack">
@@ -226,10 +226,10 @@
         <div class="feature-copy reveal">
           <div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Reading</div>
           <h3>Apertus reads the shorthand.</h3>
-          <p class="lead">Apertus 8B is called twice per line. First it writes the line out in plain English, names the language, says whether it is food and gives a generic name in the style of the German food table. Then it sees a short list of candidates and answers with the number of the one that fits, or 0.</p>
-          <p class="t-small">The candidates come from all 1,145 FSVO foods, found by lexical token matching plus Swiss multilingual embeddings derived from Apertus by Andreas Martin. A line that gets 0 waits for you.</p>
+          <p class="lead">Apertus 8B works on each line three times. First it writes the line out in plain English, names the language, says whether it is food and gives a generic name in the style of the German food table. Then it sees a short list of candidates and answers with the number of the one that fits, or 0. Last, it estimates the product per 100 g. That estimate is never shown: it only decides which of the top eight candidates from the federal food table fits best, with a head start for its own pick.</p>
+          <p class="t-small">The candidates come from all 1,145 foods in the federal food table, found by lexical token matching plus Swiss multilingual embeddings derived from Apertus by Andreas Martin. A line that gets 0 waits for you.</p>
           <div class="chips">
-            <span class="chip chip--soft">1,145 FSVO foods</span>
+            <span class="chip chip--soft">1,145 Swiss foods</span><span class="chip chip--soft">Cross-check per 100 g</span>
             <span class="chip chip--soft">Lexical and embedding search</span>
             <span class="chip chip--soft">Answers 0 when nothing fits</span>
           </div>
@@ -343,15 +343,9 @@
       <h2>The parts that make it usable.</h2>
     </div>
     <div class="grid grid-3">
-      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><h3 class="t-title">Migros CSV and Coop PDF</h3><p>Import the Cumulus CSV export from Migros, or the text of a Coop PDF receipt.</p></div></div>
-      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg></span><div><h3 class="t-title">Pasted text</h3><p>Paste lines from any Swiss receipt and they go through the same reader.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-languages"/></svg></span><div><h3 class="t-title">Four languages</h3><p>Receipts in German, French and Italian. The weekly suggestion in those three and English.</p></div></div>
-      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-list-checks"/></svg></span><div><h3 class="t-title">A Swiss food glossary</h3><p>Rüebli, Nüsslisalat, Peperoni and common French and Italian food words, added to search and to the pick prompt.</p></div></div>
-      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-pyramid"/></svg></span><div><h3 class="t-title">The weekly pyramid</h3><p>Shares of the Swiss food pyramid per adult-equivalent, with sugar, salt, saturated fat and fruit and vegetable portions.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-swap"/></svg></span><div><h3 class="t-title">One suggestion a week</h3><p>Apertus writes the sentence and code fills in the numbers through placeholders. In German, code also turns ß into ss, the Swiss spelling.</p></div></div>
-      <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-wifi-off"/></svg></span><div><h3 class="t-title">An air gap you can test</h3><p><span class="t-mono">make airgap</span> refuses to start if any of four outside hosts answers.</p></div></div>
-      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg></span><div><h3 class="t-title">A linker you can reuse</h3><p>The linker is one small Python module, <span class="t-mono">src/bonappetit/linker.py</span>, usable on its own.</p></div></div>
-      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></span><div><h3 class="t-title">Fixes for open data</h3><p>An Atwater check flags 3,035 of 86,517 Swiss products on Open Food Facts (3.5%) whose printed calories contradict their macronutrients; 433 look like kJ typed as kcal. The list is in <span class="t-mono">eval/off_energy_flags.csv</span>.</p></div></div>
+      <div class="tile reveal" style="--i:0"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><h3 class="t-title">Migros CSV and Coop PDF</h3><p>Import the Cumulus CSV export from Migros, or the text of a Coop PDF receipt.</p></div></div>
+      <div class="tile reveal" style="--i:1"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-languages"/></svg></span><div><h3 class="t-title">Four languages</h3><p>Receipts in German, French and Italian. The weekly suggestion in those three and in English.</p></div></div>
+      <div class="tile reveal" style="--i:2"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></span><div><h3 class="t-title">Fixes for open data</h3><p>A simple calorie sanity check (4 kcal per gram of protein and carbohydrate, 9 per gram of fat) flags 3,035 of 86,517 Swiss products on Open Food Facts (3.5%) whose printed calories contradict their macronutrients; 433 look like kJ typed as kcal. The list is in <span class="t-mono">eval/off_energy_flags.csv</span>.</p></div></div>
     </div>
   </div>
 </section>
@@ -383,7 +377,7 @@
             <select class="select" id="liveShop"><option>Migros</option><option>Coop</option><option>Other</option></select>
           </div>
           <button class="btn btn-candy" type="button" id="liveGo"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg><span>Read it with Apertus</span></button>
-          <p class="field__hint">Apertus on a laptop takes about 10 seconds per line. The household slider below sets how many adults share the shopping.</p>
+          <p class="field__hint">Apertus on a laptop takes about 30 to 50 seconds per line. The household slider below sets how many adults share the shopping.</p>
         </div>
         <div>
           <label class="field__label" for="ctlSize">People in the household <output id="sizeOut" for="ctlSize">4</output></label>
@@ -416,32 +410,36 @@
   </div>
 </section>
 
+<!-- ========== Lessons ========== -->
+<section class="section section--lessons" id="lessons">
+  <div class="container">
+    <div class="lessons reveal">
+      <h3 class="lessons__title">What Apertus taught us.</h3>
+      <ol class="lessons__list">
+        <li><h4>Apertus read RUEBLI as kale.</h4><p>The 8B model read RUEBLI, Swiss German for carrot, as kale and once as flatbread. A short glossary of Swiss food words now goes into the search and the prompt.</p></li>
+        <li><h4>Spelling instructions slip.</h4><p>Asked for Swiss spelling, it still wrote ß in German suggestions. Code converts it to ss.</p></li>
+        <li><h4>A strict grammar made it worse.</h4><p>A full JSON schema grammar made each call about four times slower and made the model answer "no match" for almost every line. Plain JSON mode, with the schema checked in code, fixed both.</p></li>
+        <li><h4>It rarely says it is sure.</h4><p>So the app does not ask it for a confidence score. It chooses a list number, or 0.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <!-- ========== Evidence ========== -->
 <section class="section" id="evidence">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>Evidence</div>
       <h2>Tested against printed labels.</h2>
-      <p class="lead">Thousands of Swiss products on Open Food Facts carry the nutrition values printed on their packs. We hide the label, link the product from its name or from a receipt-style truncation of it, and compare the estimate with what the pack says.</p>
-    </div>
-    <div class="evidence-grid">
-      <div class="table-card reveal">
-        <div class="table-card__head"><h3 class="t-title">Error against the printed label</h3><span class="t-micro" id="nProducts">Results are being computed</span></div>
-        <div class="table-scroll" tabindex="0" role="region" aria-label="Results table, scrolls sideways">
-          <table class="rt" id="resultsTable">
-            <caption class="sr-only">Mean absolute error per method for energy, sugar and salt, share of products within 20 percent on energy, food group accuracy, abstention rate and number of products.</caption>
-            <thead><tr><th scope="col">Method</th><th scope="col">kcal MAE</th><th scope="col">Sugar MAE</th><th scope="col">Salt MAE</th><th scope="col">kcal ±20%</th><th scope="col">Group</th><th scope="col">Abstains</th><th scope="col">n</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
+      <p class="lead" id="evLead">Thousands of Swiss products on Open Food Facts carry the nutrition values printed on their packs. We hide the label, link the product from its name or from a receipt-style truncation of it, and compare the estimate with what the pack says.</p>
     </div>
     <div class="evidence-row">
       <div class="chart-card reveal">
-        <div class="chart-card__head"><h3 class="t-title">Energy error by method</h3><span class="t-micro">Lower is better</span></div>
+        <div class="chart-card__head"><h3 class="t-title">Off by more than 100 kcal per 100 g</h3><span class="t-micro">Share of products, lower is better</span></div>
         <div class="chart-card__body">
           <div class="chart" id="chart"></div>
-          <p class="chart__cap" id="chartCap">Mean absolute error in kcal per 100 g. The hatched bar is the oracle: the closest any FSVO food could get.</p>
+          <p class="chart__cap" id="chartCap">Share of products whose estimate is off by more than 100 kcal per 100 g.</p>
+          <p class="heldout" id="heldout" hidden></p>
         </div>
       </div>
       <div class="cost">
@@ -449,10 +447,22 @@
         <div class="card"><span class="cost__v" id="costChf"><span class="computing">computing</span></span><span class="cost__k">CHF per 1,000 receipts</span></div>
       </div>
     </div>
+    <div class="evidence-grid">
+      <div class="table-card reveal">
+        <div class="table-card__head"><h3 class="t-title">Error against the printed label</h3><span class="t-micro" id="nProducts">Results are being computed</span></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Results table, scrolls sideways">
+          <table class="rt" id="resultsTable">
+            <caption class="sr-only">Per method: typical energy error per 100 g, share of products off by more than 100 kcal, typical sugar and salt error, share within 20 percent on energy, food group accuracy, share of lines left for you, and number of products.</caption>
+            <thead><tr><th scope="col">Method</th><th scope="col">Typical kcal error<br>per 100 g</th><th scope="col">Off by over<br>100 kcal</th><th scope="col">Sugar error</th><th scope="col">Salt error</th><th scope="col">kcal within 20%</th><th scope="col">Food group right</th><th scope="col">Left for you</th><th scope="col">n</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     <div class="bylang" id="byLang" hidden></div>
     <div class="notes">
-      <div class="card card--flat reveal"><h3>Baselines.</h3><p>Fuzzy string matching, the way a 2018 hackathon app did it. Embeddings alone. Apertus alone, asked to guess the nutrients with no database. Then the full hybrid.</p><p>The oracle row is the best score any FSVO match could reach. FSVO holds generic foods and the packs are specific brands, so even a perfect link has some error.</p></div>
-      <div class="card card--flat reveal" style="--i:1"><h3>Limits.</h3><p>Purchases are not intake. Food gets shared, thrown away or eaten outside the house, and a receipt shows none of that.</p><p>The rules that turn product names into receipt-style truncations are synthetic, and the report documents them. FSVO values are generic, so a brand's recipe can differ.</p></div>
+      <div class="card card--flat reveal"><h3>Baselines.</h3><p>Fuzzy string matching, the way a 2018 hackathon app did it. Embeddings alone. Apertus alone, asked to guess the nutrients with no database. Then Apertus pick only, and Bon·Appétit with the cross-check.</p><p>The best possible row is the score a perfect link to a generic food could reach. The federal food table holds generic foods and the packs are specific brands, so even a perfect link has some error.</p></div>
+      <div class="card card--flat reveal" style="--i:1"><h3>Limits.</h3><p>Purchases are not intake. Food gets shared, thrown away or eaten outside the house, and a receipt shows none of that.</p><p>The rules that turn product names into receipt-style truncations are synthetic, and the report documents them. Federal food table values are generic, so a brand's recipe can differ.</p></div>
       <div class="card card--flat reveal" style="--i:2"><h3>Prior work.</h3><p>TooSweet, from the Open Food Hackdays in 2018, ranked Cumulus purchases by sugar. ETH Zurich's FoodCoach and Receipt2Nutrition research studied nutrition from shopping data before us.</p><p>Bon·Appétit adds a local model that can abstain, and a check layer behind it.</p></div>
     </div>
     <div class="finding reveal">
@@ -463,15 +473,6 @@
         <a class="btn btn-outline btn-sm" href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/eval/off_energy_flags.csv"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>The list, for Open Food Facts volunteers</a>
       </div>
     </div>
-    <div class="lessons reveal">
-      <h3 class="lessons__title">What Apertus taught us.</h3>
-      <ol class="lessons__list">
-        <li><h4>Swiss German needs help.</h4><p>The 8B model read RUEBLI, Swiss German for carrot, as kale and once as flatbread. A short glossary of Swiss food words now goes into the search and the prompt.</p></li>
-        <li><h4>Spelling instructions slip.</h4><p>Asked for Swiss spelling, it still wrote ß in German suggestions. Code converts it to ss.</p></li>
-        <li><h4>A strict grammar made it worse.</h4><p>A full JSON schema grammar made each call about four times slower and made the model answer "no match" for almost every line. Plain JSON mode, with the schema checked in code, fixed both.</p></li>
-        <li><h4>It rarely says it is sure.</h4><p>So the app does not ask it for a confidence score. It chooses a list number, or 0.</p></li>
-      </ol>
-    </div>
   </div>
 </section>
 
@@ -481,6 +482,7 @@
     <div class="section-head reveal">
       <div class="eyebrow"><span class="dot"></span>Who it is for</div>
       <h2>Households first, then the people who help them.</h2>
+      <p class="lead">You already hold the purchase data. Bon·Appétit turns it into a nutrition picture without sending it to a third party and without a per-request fee.</p>
     </div>
     <div class="grid grid-3">
       <div class="tile reveal"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><div><h3 class="t-title">Households</h3><p>See what a week of shopping adds up to, privately, with swaps you can make in the same shop.</p></div></div>
@@ -541,10 +543,10 @@
       <details><summary>Does anything leave my computer?</summary><p>Not with <span class="t-mono">make airgap</span>. The app and the model server sit on a Docker network marked internal, with no route out, and the app refuses to start if any of four outside hosts answers. There is no account and no telemetry. If you set <span class="t-mono">LLM_BASE_URL</span>, the receipt lines go to that endpoint, so choose one you trust.</p></details>
       <details><summary>Why not just use barcodes?</summary><p>The Migros Cumulus export has no barcodes, and a paper receipt does not print them. The shortened product name is all there is to work with.</p></details>
       <details><summary>What about Coop?</summary><p>Coop PDF receipts are read as text. Lines with Coop house brands such as Naturaplan, Qualité &amp; Prix and Prix Garantie go through the same reader as Migros lines.</p></details>
-      <details><summary>What if it gets an item wrong?</summary><p>Every line shows the FSVO food it was linked to, so a wrong link is easy to spot. The demo on this page keeps the real mistakes, such as iced tea linked to lemon juice. When no candidate fits, Apertus answers 0 and the line waits for you, and the food layer rejects links whose unit or pack size makes no sense.</p></details>
-      <details><summary>Which model runs it?</summary><p>Apertus v1.5 8B, running locally; the air-gapped setup serves it with llama.cpp. It is called twice per line, once to read the line and once to pick a candidate by its number. It never produces a nutrient value: code computes every quantity from the FSVO database.</p></details>
+      <details><summary>What if it gets an item wrong?</summary><p>Every line shows the food from the federal food table it was linked to, so a wrong link is easy to spot. The demo on this page keeps the real mistakes, such as iced tea linked to lemon juice. When no candidate fits, Apertus answers 0 and the line waits for you, and the food layer rejects links whose unit or pack size makes no sense.</p></details>
+      <details><summary>Which model runs it?</summary><p>Apertus v1.5 8B, running locally; the air-gapped setup serves it with llama.cpp. It works on each line in three steps: it reads the line, picks a candidate by its number, and cross-checks the pick against its own estimate per 100 g, which is never shown. It never produces a nutrient value: code computes every quantity from the FSVO database.</p></details>
       <details><summary>Can I use it in French or Italian?</summary><p>Yes. It reads receipts in German, French and Italian, and writes the weekly suggestion in German, French, Italian or English.</p></details>
-      <details><summary>How accurate is it?</summary><p>See the evidence section. Estimates are measured against the nutrition labels printed on Swiss products on Open Food Facts, next to simpler baselines and an oracle that shows the best any FSVO match could do. What a household buys is still not exactly what it eats.</p></details>
+      <details><summary>How accurate is it?</summary><p>See the evidence section. Estimates are measured against the nutrition labels printed on Swiss products on Open Food Facts, next to simpler baselines and a best possible row that shows how close a perfect link to a generic food could get. What a household buys is still not exactly what it eats.</p></details>
     </div>
   </div>
 </section>
@@ -552,7 +554,7 @@
 <!-- ========== Final CTA ========== -->
 <section class="section final">
   <div class="container">
-    <img class="final__icon" src="assets/icon.svg?v=4" alt="Bon·Appétit app icon: a receipt with a leaf growing from its top edge" width="88" height="88">
+    <img class="final__icon" src="assets/icon.svg?v=5" alt="Bon·Appétit app icon: a receipt with a leaf growing from its top edge" width="88" height="88">
     <h2>Read last week's shopping. <span class="t-muted">On your own computer.</span></h2>
     <p class="lead">Open source, in four languages, with no account to make.</p>
     <div class="cta-row">
@@ -566,7 +568,7 @@
 
 <footer class="footer">
   <div class="container">
-    <span class="footer__brand"><img class="app-icon" src="assets/icon.svg?v=4" alt="" width="24" height="24">Bon·Appétit</span>
+    <span class="footer__brand"><img class="app-icon" src="assets/icon.svg?v=5" alt="" width="24" height="24">Bon·Appétit</span>
     <nav class="footer__links" aria-label="Footer">
       <a href="https://github.com/kinnuworks/bon-appetit">GitHub</a>
       <a href="https://github.com/kinnuworks/bon-appetit/blob/main/track_2b/technical_report.md">Report</a>
@@ -576,6 +578,6 @@
   </div>
 </footer>
 
-<script src="assets/app.js?v=4" defer></script>
+<script src="assets/app.js?v=5" defer></script>
 </body>
 </html>

@@ -31,9 +31,9 @@
      "status": "linked",
      "match": {
       "source": "fsvo",
-      "id": 355,
-      "name": "Karotte, roh",
-      "group": "vegetables_fruit"
+      "id": 916,
+      "name": "Rüeblitorte",
+      "group": "sweets_snacks_drinks"
      },
      "grams": 1000
     },
@@ -199,9 +199,9 @@
      "status": "linked",
      "match": {
       "source": "fsvo",
-      "id": 1152,
-      "name": "Gemüse (Durchschnitt), roh",
-      "group": "vegetables_fruit"
+      "id": 1540,
+      "name": "Pizza mit Gemüse, gebacken",
+      "group": "mixed"
      },
      "grams": 0
     },
@@ -253,9 +253,9 @@
      "status": "linked",
      "match": {
       "source": "fsvo",
-      "id": 530,
-      "name": "Greyerzer, vollfett",
-      "group": "dairy"
+      "id": 429,
+      "name": "Rollgerste",
+      "group": "grains_potatoes"
      },
      "grams": 200
     },
@@ -407,9 +407,9 @@
      "status": "linked",
      "match": {
       "source": "fsvo",
-      "id": 14074,
-      "name": "Petit Beurre",
-      "group": "sweets_snacks_drinks"
+      "id": 827,
+      "name": "Toastbrot mit Butter",
+      "group": "grains_potatoes"
      },
      "grams": 0
     },
@@ -556,14 +556,8 @@
      "qty": 1,
      "price": 7.9,
      "decoded": "Extra virgin olive oil",
-     "status": "linked",
-     "match": {
-      "source": "fsvo",
-      "id": 591,
-      "name": "Olivenöl",
-      "group": "fats_nuts"
-     },
-     "grams": 500
+     "status": "nonfood",
+     "reason": "Not a food or drink"
     },
     {
      "raw": "AMARETTI 200G",
@@ -587,9 +581,9 @@
      "status": "linked",
      "match": {
       "source": "fsvo",
-      "id": 482,
-      "name": "Parmesan",
-      "group": "dairy"
+      "id": 14024,
+      "name": "Cheeseburger",
+      "group": "mixed"
      },
      "grams": 0
     },
@@ -607,12 +601,12 @@
  "summary": {
   "migros-family": {
    "pyramid": {
-    "vegetables_fruit": 0.476,
-    "grains_potatoes": 0.219,
-    "dairy": 0.246,
+    "vegetables_fruit": 0.405,
+    "grains_potatoes": 0.224,
+    "dairy": 0.253,
     "protein": 0.017,
     "fats_nuts": 0.014,
-    "sweets_snacks_drinks": 0.029
+    "sweets_snacks_drinks": 0.086
    },
    "recommended": {
     "vegetables_fruit": 0.376,
@@ -623,19 +617,19 @@
     "sweets_snacks_drinks": 0.031
    },
    "grams_per_adult_day": {
-    "vegetables_fruit": 311,
+    "vegetables_fruit": 258,
     "grains_potatoes": 143,
     "dairy": 161,
     "protein": 11,
     "fats_nuts": 9,
-    "sweets_snacks_drinks": 19,
+    "sweets_snacks_drinks": 55,
     "drinks_unsweetened": 0,
-    "mixed": 0
+    "mixed": 14
    },
-   "sugar_g_per_day": 33.5,
-   "salt_g_per_day": 1.0,
-   "satfat_g_per_day": 10.5,
-   "fruit_veg_portions_per_day": 2.6,
+   "sugar_g_per_day": 38.0,
+   "salt_g_per_day": 1.1,
+   "satfat_g_per_day": 11.2,
+   "fruit_veg_portions_per_day": 2.1,
    "lines": {
     "lines_total": 16,
     "lines_linked": 14,
@@ -645,30 +639,30 @@
    "nudges": [
     {
      "lang": "de",
-     "text": "Sie kaufen zu wenig Milchprodukte (36% des Leitfadens). Probieren Sie, mehr Käse oder Joghurt zu kaufen."
+     "text": "Kaufen Sie weniger Süsses, Snacks und Süssgetränke und mehr Milchprodukte. Tauschen Sie eine Schachtel Süssigkeiten gegen eine Packung Joghurt oder Käse ein."
     },
     {
      "lang": "fr",
-     "text": "Vous devriez augmenter votre achat de produits laitiers pour atteindre le pourcentage recommandé (36%). Essayez d'ajouter un paquet de fromage frais à votre liste de courses."
+     "text": "Pour équilibrer votre alimentation, remplacez les sucreries, snacks et boissons sucrées par des produits laitiers comme du yaourt nature ou du fromage."
     },
     {
      "lang": "it",
-     "text": "Acquistate più latticini per raggiungere la percentuale consigliata. Provate a sostituire i prodotti freschi con formaggi stagionati."
+     "text": "Potrebbero sostituire i dolci, snack e bibite zuccherate con latticini per rispettare meglio le indicazioni nutrizionali."
     },
     {
      "lang": "en",
-     "text": "You're not buying enough dairy—add a gallon of milk to your next trip to the supermarket."
+     "text": "Swap a bag of sweets or a sugary drink for a dairy product like cheese or yogurt to better meet the guide's recommendations."
     }
    ]
   },
   "coop-couple": {
    "pyramid": {
-    "vegetables_fruit": 0.099,
-    "grains_potatoes": 0.318,
-    "dairy": 0.215,
+    "vegetables_fruit": 0.097,
+    "grains_potatoes": 0.366,
+    "dairy": 0.195,
     "protein": 0.023,
-    "fats_nuts": 0.071,
-    "sweets_snacks_drinks": 0.274
+    "fats_nuts": 0.07,
+    "sweets_snacks_drinks": 0.249
    },
    "recommended": {
     "vegetables_fruit": 0.376,
@@ -680,17 +674,17 @@
    },
    "grams_per_adult_day": {
     "vegetables_fruit": 89,
-    "grains_potatoes": 286,
-    "dairy": 193,
+    "grains_potatoes": 336,
+    "dairy": 179,
     "protein": 21,
     "fats_nuts": 64,
-    "sweets_snacks_drinks": 246,
+    "sweets_snacks_drinks": 229,
     "drinks_unsweetened": 0,
     "mixed": 0
    },
-   "sugar_g_per_day": 50.3,
-   "salt_g_per_day": 1.3,
-   "satfat_g_per_day": 16.8,
+   "sugar_g_per_day": 47.9,
+   "salt_g_per_day": 1.5,
+   "satfat_g_per_day": 15.0,
    "fruit_veg_portions_per_day": 0.7,
    "lines": {
     "lines_total": 15,
@@ -719,12 +713,12 @@
   },
   "ticino-single": {
    "pyramid": {
-    "vegetables_fruit": 0.357,
-    "grains_potatoes": 0.168,
-    "dairy": 0.365,
-    "protein": 0.014,
-    "fats_nuts": 0.066,
-    "sweets_snacks_drinks": 0.03
+    "vegetables_fruit": 0.414,
+    "grains_potatoes": 0.195,
+    "dairy": 0.34,
+    "protein": 0.017,
+    "fats_nuts": 0.0,
+    "sweets_snacks_drinks": 0.034
    },
    "recommended": {
     "vegetables_fruit": 0.376,
@@ -737,39 +731,39 @@
    "grams_per_adult_day": {
     "vegetables_fruit": 349,
     "grains_potatoes": 164,
-    "dairy": 357,
+    "dairy": 286,
     "protein": 14,
-    "fats_nuts": 64,
+    "fats_nuts": 0,
     "sweets_snacks_drinks": 29,
     "drinks_unsweetened": 0,
-    "mixed": 0
+    "mixed": 57
    },
-   "sugar_g_per_day": 45.8,
-   "salt_g_per_day": 3.6,
-   "satfat_g_per_day": 31.4,
+   "sugar_g_per_day": 47.7,
+   "salt_g_per_day": 3.4,
+   "satfat_g_per_day": 14.1,
    "fruit_veg_portions_per_day": 2.9,
    "lines": {
     "lines_total": 12,
-    "lines_linked": 11,
+    "lines_linked": 10,
     "lines_review": 0,
-    "lines_nonfood": 1
+    "lines_nonfood": 2
    },
    "nudges": [
     {
      "lang": "de",
-     "text": "Kaufen Sie weniger Öle, Fette und Nüsse und mehr Getreide und Kartoffeln. Tauschen Sie eine Packung Nüsse gegen eine Packung Vollkornbrot ein."
+     "text": "Kaufen Sie bitte mehr Getreide und Kartoffeln, da Sie nur 50% des empfohlenen Betrags einkaufen. Tauschen Sie die aktuelle Milch gegen Hafermilch ein, um die Ernährung zu verbessern."
     },
     {
      "lang": "fr",
-     "text": "Pour équilibrer votre alimentation, remplacez une huile, une graisse ou une noix par une portion supplémentaire de céréales ou de pommes de terre au supermarché."
+     "text": "Vous devriez augmenter votre achat de céréales et pommes de terre pour atteindre le pourcentage recommandé. Essayez d'ajouter des légumineuses à votre liste de courses au supermarché."
     },
     {
      "lang": "it",
-     "text": "Potrebbero acquistare più cereali e patate e meno oli, grassi e noci. Un cambio concreto potrebbe essere sostituire l'olio d'oliva con cereali integrali."
+     "text": "Acquistate più cereali e patate secondo le indicazioni del piano alimentare. Proviate a sostituire i prodotti freschi con quelli in scatola per aumentare le scorte."
     },
     {
      "lang": "en",
-     "text": "Swap some of the oils, fats, and nuts for extra grains and potatoes to better match the guide's recommendations."
+     "text": "You should add more grains and potatoes to your shopping list to meet the guide's recommendations. Try swapping a processed snack for a whole grain option like brown rice or sweet potatoes."
     }
    ]
   }

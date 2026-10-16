@@ -117,7 +117,7 @@ Running the same energy check over all 86,517 Swiss products on Open Food Facts 
 
 ## 6. Value and cost
 
-Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for both calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). A server GPU or a Swiss cloud endpoint serving the 8B model is many times faster; that is the path for a retailer-scale service.
+Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for both calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). The laptop run is a demonstration of the sovereign setup, not of speed. Throughput on a server GPU or a Swiss cloud endpoint was not measured here; that is the path for a retailer-scale service and the first thing a pilot would measure.
 
 The users are households first, then dietitians, home-care services and prevention programmes working with a client's consent, and retailers who want a nutrition view inside a loyalty app without sending purchase data to a foreign model. A first pilot needs 20 consenting households, four weeks of receipts, a dietitian's review of the reference amounts, and one outcome read from the receipts themselves: the change in the vegetables-and-fruit share. The FoodCoach trial (NCT05597969) is the reference design. No effect is claimed yet.
 
@@ -129,7 +129,8 @@ The users are households first, then dietitians, home-care services and preventi
 - One run, one seed, one quantisation. 70B was not evaluated because hackathon inference keys were exhausted.
 - Photo receipts are not supported yet; Apertus image input was not used, because the community GGUF builds are text-only.
 - Reference amounts per food group are derived by hand from SGE portions and are illustrative until a dietitian reviews them. Lines without a pack size get a default amount per group, counted as estimated.
-- The evaluation ran before two small changes to the linker (non-food words now always win, and the energy check is applied to the chosen FSVO food). Neither applies to the evaluation products, which are all foods with consistent FSVO records.
+- The cross-check row is computed by `eval/score.py` from the stored model answers: the "Apertus alone" estimate in the evaluation uses the same prompt as the live cross-check call, so the scored decision is the one the app makes. Two other linker changes came after the run (non-food words always win; the energy check on the chosen FSVO food); neither applies to the evaluation products, which are all foods with consistent FSVO records.
+- The cross-check's two settings were chosen by trying 12 combinations on the odd-numbered products. The held-out table scores the even-numbered ones only; the full-set row includes the half the settings were chosen on.
 
 ## 8. Lessons on building with Apertus 1.5
 
