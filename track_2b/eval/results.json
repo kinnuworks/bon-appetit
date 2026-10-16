@@ -29,6 +29,13 @@
       "n": 80
     },
     {
+      "group_acc": 0.59,
+      "id": "checked",
+      "kcal_mae": 95.2,
+      "lang": "de",
+      "n": 80
+    },
+    {
       "group_acc": 0.261,
       "id": "fuzzy",
       "kcal_mae": 183.4,
@@ -53,6 +60,13 @@
       "group_acc": 0.478,
       "id": "hybrid",
       "kcal_mae": 105.7,
+      "lang": "fr",
+      "n": 50
+    },
+    {
+      "group_acc": 0.522,
+      "id": "checked",
+      "kcal_mae": 91.9,
       "lang": "fr",
       "n": 50
     },
@@ -83,6 +97,13 @@
       "kcal_mae": 157.0,
       "lang": "it",
       "n": 30
+    },
+    {
+      "group_acc": 0.25,
+      "id": "checked",
+      "kcal_mae": 139.6,
+      "lang": "it",
+      "n": 30
     }
   ],
   "cost": {
@@ -94,6 +115,68 @@
     "tokens_in": 92883,
     "tokens_out": 17086
   },
+  "heldout": [
+    {
+      "id": "fuzzy",
+      "kcal_ci": [
+        130.8,
+        193.6
+      ],
+      "kcal_mae": 162.1,
+      "label": "Fuzzy text match",
+      "n": 80
+    },
+    {
+      "id": "retrieval",
+      "kcal_ci": [
+        114.7,
+        175.7
+      ],
+      "kcal_mae": 143.9,
+      "label": "Search only, no Apertus pick (ablation)",
+      "n": 76
+    },
+    {
+      "id": "apertus_only",
+      "kcal_ci": [
+        100.4,
+        157.3
+      ],
+      "kcal_mae": 128.1,
+      "label": "Apertus alone, guessing (no source)",
+      "n": 74
+    },
+    {
+      "id": "hybrid",
+      "kcal_ci": [
+        92.2,
+        152.4
+      ],
+      "kcal_mae": 120.1,
+      "label": "Hybrid, Apertus pick only",
+      "n": 73
+    },
+    {
+      "id": "checked",
+      "kcal_ci": [
+        71.3,
+        124.2
+      ],
+      "kcal_mae": 94.3,
+      "label": "Bon·Appétit: pick plus Apertus cross-check",
+      "n": 73
+    },
+    {
+      "id": "oracle",
+      "kcal_ci": [
+        8.9,
+        14.0
+      ],
+      "kcal_mae": 11.3,
+      "label": "Label-informed ceiling (best FSVO food)",
+      "n": 80
+    }
+  ],
   "household": [
     {
       "baskets": 200,
@@ -116,8 +199,14 @@
     {
       "baskets": 200,
       "id": "hybrid",
-      "label": "Bon·Appétit hybrid",
+      "label": "Hybrid, Apertus pick only",
       "share_error_pp": 8.4
+    },
+    {
+      "baskets": 200,
+      "id": "checked",
+      "label": "Bon·Appétit: pick plus Apertus cross-check",
+      "share_error_pp": 7.3
     }
   ],
   "labels_failing_energy_check": 3,
@@ -173,9 +262,20 @@
         145.1
       ],
       "kcal_mae": 123.4,
-      "label": "Bon·Appétit hybrid",
+      "label": "Hybrid, Apertus pick only",
       "n": 148,
       "over100_kcal": 0.392
+    },
+    {
+      "id": "checked",
+      "kcal_ci": [
+        83.8,
+        118.3
+      ],
+      "kcal_mae": 101.6,
+      "label": "Bon·Appétit: pick plus Apertus cross-check",
+      "n": 148,
+      "over100_kcal": 0.338
     },
     {
       "id": "oracle",
@@ -273,13 +373,32 @@
         145.1
       ],
       "kcal_mae": 123.4,
-      "label": "Bon·Appétit hybrid",
+      "label": "Hybrid, Apertus pick only",
       "n": 160,
       "over100_kcal": 0.392,
       "review_share": 0.0,
       "salt_mae": 0.69,
       "sugar_mae": 10.68,
       "within20_kcal": 0.375
+    },
+    {
+      "abstain": 0.075,
+      "answered": 148,
+      "fat_mae": 7.76,
+      "group_acc": 0.5,
+      "id": "checked",
+      "kcal_ci": [
+        83.8,
+        118.3
+      ],
+      "kcal_mae": 101.6,
+      "label": "Bon·Appétit: pick plus Apertus cross-check",
+      "n": 160,
+      "over100_kcal": 0.338,
+      "review_share": 0.0,
+      "salt_mae": 0.68,
+      "sugar_mae": 8.99,
+      "within20_kcal": 0.419
     },
     {
       "abstain": 0.0,
@@ -322,6 +441,11 @@
     {
       "id": "hybrid",
       "kcal_mae": 124.3,
+      "n": 146
+    },
+    {
+      "id": "checked",
+      "kcal_mae": 101.7,
       "n": 146
     },
     {

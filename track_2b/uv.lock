@@ -68,6 +68,7 @@ dev = [
 embed = [
     { name = "sentence-transformers" },
     { name = "torch" },
+    { name = "transformers" },
 ]
 ocr = [
     { name = "pytesseract" },
@@ -85,8 +86,9 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8" },
     { name = "python-multipart", specifier = ">=0.0.9" },
     { name = "rapidfuzz", specifier = ">=3.9" },
-    { name = "sentence-transformers", marker = "extra == 'embed'", specifier = ">=3.0" },
-    { name = "torch", marker = "extra == 'embed'", specifier = ">=2.3" },
+    { name = "sentence-transformers", marker = "extra == 'embed'", specifier = ">=6.1" },
+    { name = "torch", marker = "extra == 'embed'", specifier = ">=2.5" },
+    { name = "transformers", marker = "extra == 'embed'", specifier = ">=5.19" },
     { name = "uvicorn", specifier = ">=0.30" },
 ]
 provides-extras = ["embed", "ocr", "dev"]

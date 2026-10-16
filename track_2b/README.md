@@ -1,8 +1,12 @@
 # Bon·Appétit
 
+**Your Bon knows what you eat.** Drop in a Swiss till receipt. Apertus reads the shorthand, the federal Swiss food database supplies the numbers, and it all runs on your own computer.
+
+![Bon·Appétit reading a Migros receipt: the till receipt on the left, decoded foods on the right](docs/hero.png)
+
 Bon·Appétit reads Swiss supermarket receipts and shows a household what it actually eats, measured against the Swiss food pyramid. It runs on the household's own computer. Apertus v1.5 reads the receipt shorthand, a federal food database supplies the numbers, and nothing leaves the machine.
 
-**Hack Apertus 2026 · Track 2B (own project) · Online** · Website and live demo: https://kinnuworks.github.io/bon-appetit/ · Technical report: [technical_report.md](technical_report.md) ([PDF](DhirajKavuri_Report.pdf)) · Demo video: [video link]
+Website and live demo: https://kinnuworks.github.io/bon-appetit/ · Technical report: [technical_report.md](technical_report.md) ([PDF](DhirajKavuri_Report.pdf)) · Demo video: {{VIDEO}}
 
 ## The problem
 
@@ -16,13 +20,16 @@ Purchase histories also reveal health conditions, religion and money. Under the 
 2. **Writes out each line with Apertus.** One call per line returns a plain description, the language, whether it is food, and a generic German food-table name.
 3. **Finds candidates.** Lexical search plus Swiss multilingual embeddings derived from Apertus ([andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir](https://huggingface.co/andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir)) search the 1,145 foods of the [FSVO Swiss Food Composition Database](https://naehrwertdaten.ch). French and Italian lines reach German food names this way.
 4. **Picks or abstains with Apertus.** A second call chooses one candidate by its list number, or none. A line with no good match goes to a review queue with a question.
-5. **Checks the pick in code.** The food layer rejects picks that break physical rules: a line sold in litres cannot be a solid cheese, energy must agree with macronutrients (Atwater), and pack sizes must be household sizes. A small glossary of Swiss food words (Rüebli, Nüsslisalat, Peperoni) covers words the model misreads.
-6. **Adds it up.** Code computes grams per adult per day for each group of the Swiss food pyramid, plus sugar, salt and saturated fat, and compares them with reference amounts derived from the Swiss Society for Nutrition portions.
-7. **Suggests one swap**, in German, French, Italian or English. Apertus writes the sentence; numbers enter only through placeholders that code fills, so the model cannot change them.
+5. **Cross-checks the pick against Apertus's own estimate.** A third call asks Apertus what the product contains per 100 g. That estimate is never shown or used as a number: it only decides which of the top candidates fits best. The model's own pick gets a head start and stays unless its federal record is clearly further from what the model expects. This step cuts the energy error from 123 to 102 kcal per 100 g.
+6. **Checks the pick in code.** The food layer rejects picks that break physical rules: a line sold in litres cannot be a solid cheese, energy must agree with macronutrients (Atwater), and pack sizes must be household sizes. A small glossary of Swiss food words (Rüebli, Nüsslisalat, Peperoni) covers words the model misreads.
+7. **Adds it up.** Code computes grams per adult per day for each group of the Swiss food pyramid, plus sugar, salt and saturated fat, and compares them with reference amounts derived from the Swiss Society for Nutrition portions.
+8. **Suggests one swap**, in German, French, Italian or English. Apertus writes the sentence; numbers enter only through placeholders that code fills, so the model cannot change them.
 
-Apertus never writes a nutrient value.
+Apertus never writes a nutrient value that you see. Every number comes from the FSVO record of the chosen food.
 
 ## Results
+
+**At a glance.** 160 real Swiss products, label hidden, receipt-style line in. Bon·Appétit is off by more than 100 kcal per 100 g on 34% of them; plain text matching on 54%. Its typical error is 102 kcal per 100 g, against 122 for Apertus guessing with no source and 171 for text matching. It leaves 8% of lines for you to confirm instead of guessing. The receipt lines are produced from real product names by rules we wrote (docs/receipt_rules.md), so real tills may differ.
 
 160 real Swiss products from Open Food Facts, label hidden, receipt-style line in, compared with the printed label (Errors are per 100 g against printed Open Food Facts labels. Within-20% uses max(20% of label, 20 kcal).).
 
@@ -32,8 +39,20 @@ Apertus never writes a nutrient value.
 | Swiss embeddings only | 194 (171 to 219) | 62% | 17.9 | 0.85 | 27% | 0% |
 | Search only, no Apertus pick (ablation) | 153 (129 to 177) | 49% | 12.3 | 0.92 | 38% | 5% |
 | Apertus alone, guessing (no source) | 122 (104 to 144) | 44% | 10.3 | 0.69 | n/a | 6% |
-| Bon·Appétit hybrid | 123 (102 to 145) | 39% | 10.7 | 0.69 | 49% | 8% |
+| Hybrid, Apertus pick only | 123 (102 to 145) | 39% | 10.7 | 0.69 | 49% | 8% |
+| Bon·Appétit: pick plus Apertus cross-check | 102 (84 to 118) | 34% | 9.0 | 0.68 | 50% | 8% |
 | Label-informed ceiling (best FSVO food) | 12 (10 to 15) | 0% | 1.2 | 0.66 | 61% | 0% |
+
+**Held-out check.** The cross-check has two settings (how many candidates it looks at, and how strongly it favours the model's own pick). They were chosen on the odd-numbered products only; this table scores every method on the even-numbered products, which played no part in that choice.
+
+| Method, held-out half only | n | kcal error (95% CI) |
+|---|---|---|
+| Fuzzy text match | 80 | 162 (131 to 194) |
+| Search only, no Apertus pick (ablation) | 76 | 144 (115 to 176) |
+| Apertus alone, guessing (no source) | 74 | 128 (100 to 157) |
+| Hybrid, Apertus pick only | 73 | 120 (92 to 152) |
+| Bon·Appétit: pick plus Apertus cross-check | 73 | 94 (71 to 124) |
+| Label-informed ceiling (best FSVO food) | 80 | 11 (9 to 14) |
 
 | Method, on the products the hybrid answered | n | kcal error (95% CI) | Off by >100 kcal |
 |---|---|---|---|
@@ -41,14 +60,15 @@ Apertus never writes a nutrient value.
 | Swiss embeddings only | 148 | 196 (170 to 221) | 62% |
 | Search only, no Apertus pick (ablation) | 148 | 153 (129 to 176) | 50% |
 | Apertus alone, guessing (no source) | 140 | 116 (98 to 137) | 41% |
-| Bon·Appétit hybrid | 148 | 123 (102 to 145) | 39% |
+| Hybrid, Apertus pick only | 148 | 123 (102 to 145) | 39% |
+| Bon·Appétit: pick plus Apertus cross-check | 148 | 102 (84 to 118) | 34% |
 | Label-informed ceiling (best FSVO food) | 148 | 12 (10 to 15) | 0% |
 
 Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`.
 
-**Household view.** Over 200 simulated weekly baskets of 20 products, the food-pyramid shares the hybrid reports are off by 8.4 percentage points per group on average, against 8.5 for fuzzy matching and 8.9 for search alone. Errors on single products partly cancel out over a week, which is what a household sees.
+**Household view.** Over 200 simulated weekly baskets of 20 products, the food-pyramid shares are off by 7.3 percentage points per group on average, against 8.5 for text matching. Errors on single products partly cancel over a week, so the gap is smaller here than per product.
 
-The oracle row is the best any link to a generic FSVO food can do; the gap between it and the hybrid is linking error, which is where the next work goes.
+The ceiling row is the best any link to a generic FSVO food can do; the gap between it and the hybrid is linking error, which is where the next work goes.
 
 ## Value and cost
 

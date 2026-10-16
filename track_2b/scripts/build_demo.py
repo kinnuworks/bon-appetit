@@ -8,7 +8,9 @@ from bonappetit.linker import Linker
 from bonappetit.llm import Apertus
 from bonappetit.receipt import make_line
 
-SRC = "site/data/demo.json"
+import os
+SRC = os.environ.get("DEMO_IN", "site/data/demo.json")
+OUT = "site/data/demo.json"
 sample = json.load(open(SRC))
 cat, llm = Catalog(use_embeddings=True), Apertus()
 linker = Linker(cat, llm)
@@ -54,4 +56,4 @@ for rc in sample["receipts"]:
         "nudges": [{"lang": lg, "text": nudge(s, llm, lg)} for lg in ("de", "fr", "it", "en")],
     }
     print(rc["id"], s["lines_linked"], "linked,", s["lines_review"], "review", flush=True)
-json.dump(out, open(SRC, "w"), ensure_ascii=False, indent=1)
+json.dump(out, open(OUT, "w"), ensure_ascii=False, indent=1)

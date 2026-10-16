@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-embed = ["sentence-transformers>=3.0", "torch>=2.3"]
+embed = ["sentence-transformers>=6.1", "transformers>=5.19", "torch>=2.5"]
 ocr = ["pytesseract>=0.3"]
 dev = ["pytest>=8"]
 

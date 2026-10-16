@@ -55,6 +55,35 @@ PICK_SYSTEM = (
 )
 
 
+ESTIMATE_SCHEMA = {
+    "type": "object",
+    "properties": {k: {"type": "number"} for k in ["energy_kcal", "sugars", "salt", "fat", "proteins", "carbohydrates"]},
+    "required": ["energy_kcal", "sugars", "salt", "fat", "proteins", "carbohydrates"],
+    "additionalProperties": False,
+}
+# Cross-check settings, chosen on one half of the evaluation set and tested on the other (eval/score.py).
+CHECK_K, CHECK_STAY = 8, 2.0
+CHECK_WEIGHTS = [("energy_kcal", 100), ("fat", 10), ("sugars", 10), ("proteins", 10), ("carbohydrates", 20)]
+
+
+def cross_check(pick_id, candidates: list[int], estimate: dict, nutrients) -> int:
+    """Among the top candidates, keep the food whose FSVO record is closest to Apertus's own estimate.
+
+    The estimate only steers the choice. Every number the household sees still comes from the FSVO
+    record of the chosen food. The model's pick gets a head start (CHECK_STAY) so it wins unless its
+    record is clearly further from what the model itself expects.
+    """
+    if not candidates or not estimate or estimate.get("energy_kcal") is None:
+        return pick_id
+
+    def score(i):
+        n = nutrients(i)
+        d = sum(abs((n.get(k) or 0) - (estimate.get(k) or 0)) / s for k, s in CHECK_WEIGHTS)
+        return d + (0 if i == pick_id else CHECK_STAY)
+
+    return min(candidates[:CHECK_K], key=score)
+
+
 @dataclass
 class Link:
     line: dict
@@ -62,6 +91,8 @@ class Link:
     candidates: list[dict] = field(default_factory=list)
     choice: dict | None = None
     status: str = "linked"  # linked | review | nonfood | vetoed
+    estimate: dict | None = None  # Apertus's own per-100 g guess, used only to cross-check the pick
+    cross_checked: bool = False  # True when the cross-check moved the pick to another FSVO food
     confidence: str | None = None
     question: str | None = None
     veto: dict | None = None
@@ -71,8 +102,8 @@ class Link:
 
 
 class Linker:
-    def __init__(self, catalog: Catalog, llm: Apertus, k: int = 8):
-        self.catalog, self.llm, self.k = catalog, llm, k
+    def __init__(self, catalog: Catalog, llm: Apertus, k: int = 8, cross_check: bool = True):
+        self.catalog, self.llm, self.k, self.cross_check = catalog, llm, k, cross_check
 
     def read(self, line: Line) -> dict:
         shop = f" (shop: {line.shop})" if line.shop else ""
@@ -88,6 +119,11 @@ class Linker:
         note = f"\nSwiss word note: {'; '.join(hints)}." if hints else ""
         msg = f"Receipt line: {line.text} ({read.get('english', '')}){note}\n{listing}"
         return self.llm.json([{"role": "system", "content": PICK_SYSTEM}, {"role": "user", "content": msg}], PICK_SCHEMA)
+
+    def estimate(self, line: Line) -> dict:
+        return self.llm.json([{"role": "user", "content":
+            f"Swiss supermarket receipt line: {line.text}. Estimate the nutrition values per 100 g "
+            "(energy_kcal, sugars, salt, fat, proteins, carbohydrates in grams). Reply in JSON."}], ESTIMATE_SCHEMA, max_tokens=80)
 
     def link(self, line: Line) -> Link:
         out = Link(line=line.to_dict())
@@ -111,6 +147,13 @@ class Linker:
             out.question = f"What is '{line.text}'? It reads like {read.get('english') or 'an unknown product'}."
             return out
         c = cands[idx - 1]
+        if self.cross_check:
+            est = self.estimate(line)
+            out.estimate = est
+            best = cross_check(c.fsvo_id, [x.fsvo_id for x in cands], est, self.catalog.nutrients)
+            if best != c.fsvo_id:
+                c = next(x for x in cands if x.fsvo_id == best)
+                out.cross_checked = True
         for verdict in (check_unit(line.pack_is_volume, c.liquid, c.group), check_pack(line.pack_grams, c.group)):
             if not verdict.ok:
                 out.status = "vetoed"

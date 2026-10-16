@@ -13,6 +13,7 @@ from pathlib import Path
 
 from bonappetit.catalog import Catalog
 from bonappetit.foodlayer import group_for
+from bonappetit.linker import cross_check
 
 ROOT = Path(__file__).resolve().parents[1]
 GOLD, PRED = ROOT / "eval/gold.jsonl", ROOT / "eval/predictions.jsonl"
@@ -25,7 +26,7 @@ OFF_GROUP = {
 }
 LABELS = {"fuzzy": "Fuzzy text match", "embed": "Swiss embeddings only",
           "retrieval": "Search only, no Apertus pick (ablation)", "apertus_only": "Apertus alone, guessing (no source)",
-          "hybrid": "Bon·Appétit hybrid", "oracle": "Label-informed ceiling (best FSVO food)"}
+          "hybrid": "Hybrid, Apertus pick only", "checked": "Bon·Appétit: pick plus Apertus cross-check", "oracle": "Label-informed ceiling (best FSVO food)"}
 
 
 def off_group(tags):
@@ -75,7 +76,9 @@ def main(check: bool = True) -> int:
         g = gold[p["barcode"]]
         lab, lang, gg = g["label"], g["lang"], off_group(g["food_groups"])
         cands = p["hybrid"].get("candidates") or []
-        picks = {"fuzzy": p["fuzzy"], "embed": p["embed"], "oracle": oracle(lab),
+        hid = p["hybrid"]["fsvo_id"]
+        checked = cross_check(hid, cands, p.get("apertus_only") or {}, lambda i: nut[i]) if hid else None
+        picks = {"fuzzy": p["fuzzy"], "embed": p["embed"], "oracle": oracle(lab), "checked": checked,
                  "retrieval": cands[0] if cands else None,
                  "hybrid": p["hybrid"]["fsvo_id"] if p["hybrid"]["status"] in ("linked", "vetoed", "review") and p["hybrid"]["fsvo_id"] else None}
         for m, fid in picks.items():
@@ -85,7 +88,7 @@ def main(check: bool = True) -> int:
             e = err(nut[fid], lab)
             grp = group_for(cat.row(fid)["category"])
             rows[m].append({"lang": lang, "barcode": p["barcode"], "abstain": False, "e": e, "group_ok": None if gg is None else grp == gg,
-                            "review": m == "hybrid" and p["hybrid"]["status"] == "review"})
+                            "review": m == "hybrid" and p["hybrid"]["status"] == "review", "idx": len(rows[m])})
         guess = p.get("apertus_only") or {}
         if guess.get("energy_kcal") is None:
             rows["apertus_only"].append({"lang": lang, "abstain": True})
@@ -115,27 +118,36 @@ def main(check: bool = True) -> int:
         answered = [r for r in rs if not r["abstain"] and "energy_kcal" in r["e"]]
         s["over100_kcal"] = rnd(mean([1.0 if r["e"]["energy_kcal"] > 100 else 0.0 for r in answered]), 3)
         s.update({"id": m, "label": LABELS[m]})
-        if m == "hybrid":
+        if m in ("hybrid", "checked"):
             s["review_share"] = rnd(mean([1.0 if r.get("review") else 0.0 for r in rs]), 3)
         methods.append(s)
     # Matched subset: every method scored on exactly the products the hybrid answered.
     hyb_ok = {r["barcode"] for r in rows["hybrid"] if not r["abstain"]}
     matched = []
-    for m in ["fuzzy", "embed", "retrieval", "apertus_only", "hybrid", "oracle"]:
+    for m in ["fuzzy", "embed", "retrieval", "apertus_only", "hybrid", "checked", "oracle"]:
         sub = [r for r in rows[m] if not r["abstain"] and r.get("barcode") in hyb_ok and "energy_kcal" in r["e"]]
         kc = [r["e"]["energy_kcal"] for r in sub]
         matched.append({"id": m, "label": LABELS[m], "n": len(sub), "kcal_mae": rnd(mean(kc), 1), "kcal_ci": boot_ci(kc),
                         "over100_kcal": rnd(mean([1.0 if k > 100 else 0.0 for k in kc]), 3)})
+    # Held-out check for the cross-check: its two settings were chosen on the odd-numbered products
+    # (in prediction order); this scores every method on the even-numbered ones only.
+    even = {p["barcode"] for p in preds[0::2]}
+    heldout = []
+    for m in ["fuzzy", "retrieval", "apertus_only", "hybrid", "checked", "oracle"]:
+        kc = [r["e"]["energy_kcal"] for r in rows[m] if not r["abstain"] and r.get("barcode") in even and "energy_kcal" in r["e"]]
+        heldout.append({"id": m, "label": LABELS[m], "n": len(kc), "kcal_mae": rnd(mean(kc), 1), "kcal_ci": boot_ci(kc)})
+
     # Household view: 200 random baskets of 20 products. Compare the food-pyramid shares the method reports
     # (grams by the linked food's group, 100 g per product) with the shares from the products' own Open Food Facts
     # groups. This is the number a household actually sees.
     rng = random.Random(11)
     truth_group = {p["barcode"]: off_group(gold[p["barcode"]]["food_groups"]) for p in preds}
-    link_group = {m: {} for m in ["fuzzy", "embed", "retrieval", "hybrid"]}
+    link_group = {m: {} for m in ["fuzzy", "embed", "retrieval", "hybrid", "checked"]}
     for p in preds:
         cands = p["hybrid"].get("candidates") or []
-        ids = {"fuzzy": p["fuzzy"], "embed": p["embed"], "retrieval": cands[0] if cands else None,
-               "hybrid": p["hybrid"]["fsvo_id"] if p["hybrid"]["fsvo_id"] else None}
+        hid = p["hybrid"]["fsvo_id"] if p["hybrid"]["fsvo_id"] else None
+        ids = {"fuzzy": p["fuzzy"], "embed": p["embed"], "retrieval": cands[0] if cands else None, "hybrid": hid,
+               "checked": cross_check(hid, cands, p.get("apertus_only") or {}, lambda i: nut[i]) if hid else None}
         for m, fid in ids.items():
             link_group[m][p["barcode"]] = None if fid is None else group_for(cat.row(fid)["category"])
     pool = [b for b, g in truth_group.items() if g]
@@ -158,12 +170,12 @@ def main(check: bool = True) -> int:
         return abs(lab["energy_kcal"] - comp) <= max(25, 0.25 * max(lab["energy_kcal"], comp))
     clean = {p["barcode"] for p in preds if label_ok(gold[p["barcode"]]["label"])}
     sensitivity = []
-    for m in ["fuzzy", "retrieval", "apertus_only", "hybrid", "oracle"]:
+    for m in ["fuzzy", "retrieval", "apertus_only", "hybrid", "checked", "oracle"]:
         kc = [r["e"]["energy_kcal"] for r in rows[m] if not r["abstain"] and r.get("barcode") in clean and "energy_kcal" in r["e"]]
         sensitivity.append({"id": m, "n": len(kc), "kcal_mae": rnd(mean(kc), 1)})
     by_lang = []
     for lang in ["de", "fr", "it"]:
-        for m in ["fuzzy", "embed", "apertus_only", "hybrid"]:
+        for m in ["fuzzy", "embed", "apertus_only", "hybrid", "checked"]:
             rs = [r for r in rows[m] if r["lang"] == lang]
             if rs:
                 s = summarise(rs)
@@ -174,7 +186,7 @@ def main(check: bool = True) -> int:
     # assumption), 20 food lines per weekly receipt, CHF 0.30 per kWh (Swiss household average, assumption).
     spl = mean(secs) if secs else None
     chf_1000 = None if spl is None else round(spl * 20 * 1000 * 30 / 3.6e6 * 0.30, 2)
-    res = {"status": "done", "n_products": len(preds), "n_planned": len(gold), "methods": methods, "matched": matched, "household": household, "sensitivity": sensitivity,
+    res = {"status": "done", "n_products": len(preds), "n_planned": len(gold), "methods": methods, "heldout": heldout, "matched": matched, "household": household, "sensitivity": sensitivity,
            "labels_failing_energy_check": len(preds) - len(clean), "by_lang": by_lang,
            "cost": {"sec_per_line": rnd(spl, 1), "chf_per_1000_receipts": chf_1000,
                     "cost_assumptions": "laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests", "hardware": "Apple M5, 16 GB, Ollama, Q4_K_M",
@@ -186,6 +198,7 @@ def main(check: bool = True) -> int:
     (ROOT / "site/data/results.json").write_text(blob)
     digest = hashlib.sha256(blob.encode()).hexdigest()
     print(f"{'method':28s} {'n':>4s} {'kcal MAE':>9s} {'95% CI':>14s} {'sugar':>6s} {'salt':>6s} {'≤20%':>6s} {'group':>6s} {'abstain':>7s}")
+    print("held-out half:", [(x["id"], x["n"], x["kcal_mae"]) for x in heldout])
     print("household share error (pp):", [(x["id"], x["share_error_pp"]) for x in household])
     print("sensitivity:", [(x["id"], x["n"], x["kcal_mae"]) for x in sensitivity])
     print("matched subset:", [(x["id"], x["n"], x["kcal_mae"], x["over100_kcal"]) for x in matched])

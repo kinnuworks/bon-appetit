@@ -1,6 +1,6 @@
 # Technical report: Bon·Appétit
 
-Swiss supermarket receipts are unreadable to software: lines are truncated, multilingual and coded, and the Migros export has no barcodes. Bon·Appétit uses Apertus v1.5 8B, running on the household's own laptop, to read each line and link it to the federal Swiss Food Composition Database, with a symbolic food layer that checks every pick and code that does every number. On 160 real Swiss products it cuts the energy error of text matching by 28%, nearly doubles the share of products put in the right food group, and every number it reports traces to a federal food record.
+Swiss supermarket receipts are unreadable to software: lines are truncated, multilingual and coded, and the Migros export has no barcodes. Bon·Appétit uses Apertus v1.5 8B, running on the household's own laptop, to read each line and link it to the federal Swiss Food Composition Database, with a symbolic food layer that checks every pick and code that does every number. On 160 real Swiss products it is more accurate than both text matching (41% less energy error) and Apertus guessing alone (26% less on a held-out half), and every number it reports traces to a federal food record.
 
 - **Track:** Track 2B: Bon·Appétit
 - **Event:** Online
@@ -10,13 +10,13 @@ Swiss supermarket receipts are unreadable to software: lines are truncated, mult
 
 ## 1. Summary
 
-Households, dietitians and prevention programmes already hold a detailed record of what people eat: their supermarket receipts. They cannot use it, because a line such as `QP GRUY.RAPE 200G` means nothing to a lookup table, and the purchase history is too sensitive to send to a foreign cloud model. Bon·Appétit reads receipts with Apertus on the household's own computer, links each line to the FSVO database, abstains when unsure, and turns a week of shopping into grams per adult per day for each group of the Swiss food pyramid. On 160 real Swiss products with printed nutrition labels, the hybrid's energy estimate is off by 123 kcal per 100 g on average, 28% less than fuzzy text matching (171), and it names the right food group for 49% of products against 27%. Apertus's pick is what does it: search alone, without the pick, is off by 153, so the pick cuts the error by 19%. Apertus guessing the numbers itself lands close (122) but gives no source that anyone could check or correct.
+Households, dietitians and prevention programmes already hold a detailed record of what people eat: their supermarket receipts. They cannot use it, because a line such as `QP GRUY.RAPE 200G` means nothing to a lookup table, and the purchase history is too sensitive to send to a foreign cloud model. Bon·Appétit reads receipts with Apertus on the household's own computer, links each line to the FSVO database, abstains when unsure, and turns a week of shopping into grams per adult per day for each group of the Swiss food pyramid. On 160 real Swiss products with printed nutrition labels, Bon·Appétit's energy estimate is off by 102 kcal per 100 g on average, 41% less than fuzzy text matching (171) and less than Apertus guessing the numbers itself (122), which gives no source. On the held-out half, where nothing was tuned, the gap to Apertus guessing is 26%. Only 34% of products are off by more than 100 kcal, against 54% for text matching. Both Apertus steps matter: the pick alone cuts search error by 19% (153 to 123), and the cross-check against the model's own estimate takes it to 102, while every reported number still comes from a federal food record.
 
 ## 2. Architecture
 
 ```
-receipt (CSV, PDF, text, photo) ─► parser (rules) ─► Apertus: read line ─► search (lexical + Swiss embeddings)
-   ─► Apertus: pick or abstain ─► food layer (unit, energy, pack, Swiss words) ─► ledger (code) ─► Apertus: one nudge (slots)
+receipt (CSV, PDF, text) ─► parser (rules) ─► Apertus: read line ─► search (lexical + Swiss embeddings)
+   ─► Apertus: pick or abstain ─► Apertus: own estimate, cross-check among top candidates ─► food layer (unit, energy, pack, Swiss words) ─► ledger (code) ─► Apertus: one nudge (slots)
 ```
 
 | Component | What it does | Where it runs |
@@ -25,6 +25,7 @@ receipt (CSV, PDF, text, photo) ─► parser (rules) ─► Apertus: read line 
 | Read | One Apertus call: English description, language, food or not, generic German food name | Apertus v1.5 8B |
 | Search | Reciprocal-rank fusion of token-set matching and an Apertus-derived Swiss embedding model over 1,145 FSVO foods | CPU or Apple GPU |
 | Pick | One Apertus call: list number of the best candidate, or 0 | Apertus v1.5 8B |
+| Cross-check | One Apertus call: the model's own per-100 g estimate; code keeps the top-8 candidate whose FSVO record is closest, with a head start for the model's pick. The estimate is never shown | Apertus v1.5 8B + code |
 | Food layer | Vetoes physically impossible links; Swiss food-word glossary; SGE food groups | Python, rules |
 | Ledger | Grams per adult per day, sugar, salt, saturated fat, against SGE-derived references | Python |
 | Nudge | One sentence in DE/FR/IT/EN; numbers enter only as placeholders filled by code | Apertus v1.5 8B |
@@ -36,7 +37,7 @@ receipt (CSV, PDF, text, photo) ─► parser (rules) ─► Apertus: read line 
 ## 3. Use of Apertus
 
 - **Model:** `swiss-ai/Apertus-v1.5-8B`, as the community text-only Q4_K_M GGUF `Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF`. The text-only conversion follows the FHNW conversion that organisers accepted on Discord for Track 2B.
-- **How it is used:** inference, two calls per receipt line plus one per nudge; thinking off; temperature 0; seed 0; JSON output.
+- **How it is used:** inference, three calls per receipt line (read, pick, estimate for the cross-check) plus one per nudge; thinking off; temperature 0; seed 0; JSON output.
 - **Where it runs:** local weights through Ollama 0.40 (Apple M5, 16 GB) for development and evaluation; llama.cpp server in Docker for `make local` and `make airgap`.
 - **Other open models:** `andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir` (Apache-2.0), an embedding model derived from Apertus, for candidate search. No closed model is used at runtime or in evaluation.
 
@@ -63,8 +64,9 @@ No personal data is used. No real receipts were available under a licence, so re
 2. Swiss embeddings only: nearest FSVO food by embedding.
 3. Search only (ablation): the top candidate of the hybrid's own search, with no Apertus pick. The difference to the hybrid is what the pick step adds.
 4. Apertus alone: the model estimates the nutrients directly from the line, with no database and no source.
-5. Bon·Appétit hybrid.
-6. Label-informed ceiling: the FSVO food closest to the printed label, chosen by looking at the label. No real system can do this; it shows how close any link to generic FSVO foods could get.
+5. Hybrid, Apertus pick only.
+6. Bon·Appétit: pick plus the cross-check against Apertus's own estimate. The two cross-check settings were chosen on half of the products and are reported separately on the other half.
+7. Label-informed ceiling: the FSVO food closest to the printed label, chosen by looking at the label. No real system can do this; it shows how close any link to generic FSVO foods could get.
 
 The hybrid abstains on a few lines; the second table compares every method on exactly the products the hybrid answered.
 
@@ -74,8 +76,20 @@ The hybrid abstains on a few lines; the second table compares every method on ex
 | Swiss embeddings only | 194 (171 to 219) | 62% | 17.9 | 0.85 | 27% | 0% |
 | Search only, no Apertus pick (ablation) | 153 (129 to 177) | 49% | 12.3 | 0.92 | 38% | 5% |
 | Apertus alone, guessing (no source) | 122 (104 to 144) | 44% | 10.3 | 0.69 | n/a | 6% |
-| Bon·Appétit hybrid | 123 (102 to 145) | 39% | 10.7 | 0.69 | 49% | 8% |
+| Hybrid, Apertus pick only | 123 (102 to 145) | 39% | 10.7 | 0.69 | 49% | 8% |
+| Bon·Appétit: pick plus Apertus cross-check | 102 (84 to 118) | 34% | 9.0 | 0.68 | 50% | 8% |
 | Label-informed ceiling (best FSVO food) | 12 (10 to 15) | 0% | 1.2 | 0.66 | 61% | 0% |
+
+**Held-out check.** The cross-check has two settings (how many candidates it looks at, and how strongly it favours the model's own pick). They were chosen on the odd-numbered products only; this table scores every method on the even-numbered products, which played no part in that choice.
+
+| Method, held-out half only | n | kcal error (95% CI) |
+|---|---|---|
+| Fuzzy text match | 80 | 162 (131 to 194) |
+| Search only, no Apertus pick (ablation) | 76 | 144 (115 to 176) |
+| Apertus alone, guessing (no source) | 74 | 128 (100 to 157) |
+| Hybrid, Apertus pick only | 73 | 120 (92 to 152) |
+| Bon·Appétit: pick plus Apertus cross-check | 73 | 94 (71 to 124) |
+| Label-informed ceiling (best FSVO food) | 80 | 11 (9 to 14) |
 
 | Method, on the products the hybrid answered | n | kcal error (95% CI) | Off by >100 kcal |
 |---|---|---|---|
@@ -83,20 +97,21 @@ The hybrid abstains on a few lines; the second table compares every method on ex
 | Swiss embeddings only | 148 | 196 (170 to 221) | 62% |
 | Search only, no Apertus pick (ablation) | 148 | 153 (129 to 176) | 50% |
 | Apertus alone, guessing (no source) | 140 | 116 (98 to 137) | 41% |
-| Bon·Appétit hybrid | 148 | 123 (102 to 145) | 39% |
+| Hybrid, Apertus pick only | 148 | 123 (102 to 145) | 39% |
+| Bon·Appétit: pick plus Apertus cross-check | 148 | 102 (84 to 118) | 34% |
 | Label-informed ceiling (best FSVO food) | 148 | 12 (10 to 15) | 0% |
 
 Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`.
 
-**Household view.** Over 200 simulated weekly baskets of 20 products, the food-pyramid shares the hybrid reports are off by 8.4 percentage points per group on average, against 8.5 for fuzzy matching and 8.9 for search alone. Errors on single products partly cancel out over a week, which is what a household sees.
+**Household view.** Over 200 simulated weekly baskets of 20 products, pyramid shares are off by 7.3 percentage points per group (text matching 8.5).
 
-**By language.** The Italian sample is small, so its numbers carry wide uncertainty.
+**By language** (Bon·Appétit = pick plus cross-check). German and French gain clearly. Italian does not: with 30 products it is no better than Apertus guessing, and only a quarter land in the right food group. The Italian sample is small, and Italian shop shorthand is the next thing to work on.
 
 | Language | n | Fuzzy kcal error | Embeddings kcal error | Apertus alone kcal error | Hybrid kcal error | Hybrid food group right |
 |---|---|---|---|---|---|---|
-| DE | 80 | 164 | 216 | 123 | 124 | 56% |
-| FR | 50 | 183 | 179 | 112 | 106 | 48% |
-| IT | 30 | 170 | 161 | 137 | 157 | 31% |
+| DE | 80 | 164 | 216 | 123 | 95 | 59% |
+| FR | 50 | 183 | 179 | 112 | 92 | 52% |
+| IT | 30 | 170 | 161 | 137 | 140 | 25% |
 
 **Reproduce.** `make eval` re-scores the stored predictions without a model and checks the SHA-256 of the results against `eval/results.sha256`. `python -m eval.run` regenerates the predictions with any Apertus endpoint; every model answer is also stored in `data/llm_cache.jsonl`.
 
@@ -123,7 +138,7 @@ The users are households first, then dietitians, home-care services and preventi
 - Without the target language's food-group names in the prompt, it mixed English group names into German and French text, and once called a household "doing great with sweets" at five times the guide. Giving it the direction ("too little", "too much") and the names in the target language fixed both.
 - Constrained decoding with a full schema hurt accuracy as well as speed on llama.cpp.
 - The model is cautious when it chooses from a list and almost never says it is sure. Selection by list number plus external checks worked better than asking for confidence.
-- Apertus alone produced plausible numbers for every product (122 kcal mean error) but cannot say where they came from. In the hybrid it never writes a number, so every value in the household report can be checked.
+- Apertus alone produced plausible numbers (122 kcal mean error) with no source. Used as a cross-check on its own pick instead of as the answer, the same estimate made the linked results better than either alone (102).
 
 ## 9. Next steps
 

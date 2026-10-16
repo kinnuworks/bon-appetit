@@ -6,8 +6,8 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 BONAPPETIT_EMBED=1 HF_HOME=/app/hf HF_HUB_OFFLINE=0 \
     BONAPPETIT_DATA=/app/data BONAPPETIT_SITE=/app/site BONAPPETIT_CACHE=/app/data/llm_cache.jsonl
 WORKDIR /app
-RUN pip install --no-cache-dir torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
-RUN pip install --no-cache-dir "sentence-transformers>=3.0,<4" pytest
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir "sentence-transformers==6.1.0" "transformers==5.20.0" pytest httpx
 RUN python -c "from sentence_transformers import SentenceTransformer as S; S('andreasmartin/apertus-v1.1-swiss-embed-0.4b-bidir')"
 ENV HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 COPY pyproject.toml README.md ./

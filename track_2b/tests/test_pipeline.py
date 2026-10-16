@@ -19,6 +19,8 @@ class StubModel:
             return {"english": "whole milk", "german_food_name": "Vollmilch, UHT", "language": "de", "is_food": self.food}
         if "choice" in keys:
             return {"choice": self.choice, "sure": True}
+        if "energy_kcal" in keys:
+            return {}
         return {"text": "Zu wenig {LOW_PCT} Gemüse."}
 
 
@@ -52,3 +54,25 @@ def test_server_health_and_analyze(monkeypatch):
     body = r.json()
     assert r.status_code == 200 and len(body["links"]) == 2
     assert body["summary"]["lines_nonfood"] == 1
+
+
+def test_cross_check_keeps_pick_unless_clearly_worse():
+    from bonappetit.linker import cross_check
+    recs = {1: {"energy_kcal": 400, "fat": 30}, 2: {"energy_kcal": 60, "fat": 3}}
+    nut = recs.__getitem__
+    # the estimate looks like milk: the cross-check moves from the 400 kcal pick to the 60 kcal candidate
+    assert cross_check(1, [1, 2], {"energy_kcal": 65, "fat": 3.5}, nut) == 2
+    # the estimate is close to the pick: it stays
+    assert cross_check(1, [1, 2], {"energy_kcal": 380, "fat": 28}, nut) == 1
+    # no estimate: the pick stays
+    assert cross_check(1, [1, 2], {}, nut) == 1
+
+
+def test_upload_csv_route(monkeypatch):
+    from bonappetit import server
+    monkeypatch.setattr(server, "_llm", StubModel())
+    monkeypatch.setattr(server, "default_catalog", lambda: CAT)
+    client = TestClient(server.app)
+    csv = "Artikel;Menge;Umsatz\nM-BUDG VOLLMILCH UHT 1L;2;2.70\n"
+    r = client.post("/api/analyze", files={"file": ("bons.csv", csv, "text/csv")}, data={"adults": "2"})
+    assert r.status_code == 200 and r.json()["links"][0]["line"]["qty"] == 2
