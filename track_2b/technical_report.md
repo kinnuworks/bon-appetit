@@ -101,7 +101,7 @@ The hybrid abstains on a few lines; the second table compares every method on ex
 | Bon·Appétit: pick plus Apertus cross-check | 148 | 102 (84 to 118) | 34% |
 | Label-informed ceiling (best FSVO food) | 148 | 12 (10 to 15) | 0% |
 
-Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`.
+Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`. The same rule flags none of the 1,046 non-alcoholic foods in the federal FSVO database, so it is not firing at random: the inconsistencies are in crowd-sourced entries, where a volunteer typed the label.
 
 **Paired comparison on the same products** (Bon·Appétit minus the other method; negative means Bon·Appétit is closer to the label). Against text matching: -71 kcal (95% CI -98 to -44, n=148). Against the Apertus pick without the cross-check: -22 kcal (95% CI -40 to -4, n=148), so the cross-check helps. Against Apertus guessing alone, on the held-out half: -26 kcal (95% CI -54 to -1, n=68); on the full set the difference is -13 kcal (95% CI -31 to +4, n=140) and not statistically clear. The firm claims are therefore the gains over text matching and over the plain pick, plus the held-out gain over guessing; the full-set gap over guessing is a trend.
 
