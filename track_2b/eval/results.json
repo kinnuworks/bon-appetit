@@ -422,6 +422,52 @@
   "n_planned": 160,
   "n_products": 160,
   "notes": "Errors are per 100 g against printed Open Food Facts labels. Within-20% uses max(20% of label, 20 kcal).",
+  "paired": [
+    {
+      "a": "checked",
+      "a_better_share": 0.571,
+      "b": "apertus_only",
+      "ci95": [
+        -31.2,
+        3.8
+      ],
+      "mean_diff": -13.4,
+      "n": 140
+    },
+    {
+      "a": "checked",
+      "a_better_share": 0.574,
+      "b": "apertus_only",
+      "ci95": [
+        -53.5,
+        -0.8
+      ],
+      "mean_diff": -25.9,
+      "n": 68
+    },
+    {
+      "a": "checked",
+      "a_better_share": 0.601,
+      "b": "fuzzy",
+      "ci95": [
+        -97.6,
+        -44.5
+      ],
+      "mean_diff": -70.6,
+      "n": 148
+    },
+    {
+      "a": "checked",
+      "a_better_share": 0.25,
+      "b": "hybrid",
+      "ci95": [
+        -40.0,
+        -3.6
+      ],
+      "mean_diff": -21.8,
+      "n": 148
+    }
+  ],
   "sensitivity": [
     {
       "id": "fuzzy",

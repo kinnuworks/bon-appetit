@@ -66,13 +66,17 @@ Apertus never writes a nutrient value that you see. Every number comes from the 
 
 Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`.
 
+**Paired comparison on the same products** (Bon·Appétit minus the other method; negative means Bon·Appétit is closer to the label). Against text matching: -71 kcal (95% CI -98 to -44, n=148). Against the Apertus pick without the cross-check: -22 kcal (95% CI -40 to -4, n=148), so the cross-check helps. Against Apertus guessing alone, on the held-out half: -26 kcal (95% CI -54 to -1, n=68); on the full set the difference is -13 kcal (95% CI -31 to +4, n=140) and not statistically clear. The firm claims are therefore the gains over text matching and over the plain pick, plus the held-out gain over guessing; the full-set gap over guessing is a trend.
+
 **Household view.** Over 200 simulated weekly baskets of 20 products, the food-pyramid shares are off by 7.3 percentage points per group on average, against 8.5 for text matching. Errors on single products partly cancel over a week, so the gap is smaller here than per product.
 
 The ceiling row is the best any link to a generic FSVO food can do; the gap between it and the hybrid is linking error, which is where the next work goes.
 
 ## Value and cost
 
-Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for both calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). The laptop run is a demonstration of the sovereign setup, not of speed. Throughput on a server GPU or a Swiss cloud endpoint was not measured here; that is the path for a retailer-scale service and the first thing a pilot would measure.
+Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for all three Apertus calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). The laptop run is a demonstration of the sovereign setup, not of speed. Throughput on a server GPU or a Swiss cloud endpoint was not measured here; that is the path for a retailer-scale service and the first thing a pilot would measure.
+
+Per receipt line the run used about 581 input and 107 output tokens over three Apertus calls. At the measured laptop rate that is about 76 lines per hour per laptop with four requests in parallel. Server throughput was not measured.
 
 ## Who uses it, and how it gets adopted
 

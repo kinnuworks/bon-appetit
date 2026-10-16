@@ -1,9 +1,11 @@
 """Link one receipt line to one food, or abstain.
 
-Two Apertus calls per line, both constrained to a JSON schema and with thinking off:
+Three Apertus calls per line, all in JSON mode with thinking off:
 1. Read: write out the shorthand, name the language, say whether it is food, and give a
    generic German food name of the kind used in the FSVO table.
-2. Pick: choose one of the retrieved candidates by its list number, or none, and say how sure.
+2. Pick: choose one of the retrieved candidates by its list number, or none.
+3. Estimate: the model's own per-100 g guess, used only to cross-check the pick among the
+   top candidates (see cross_check). It is never shown.
 The food layer can then veto the pick. Apertus never writes a nutrient value.
 """
 from __future__ import annotations

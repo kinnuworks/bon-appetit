@@ -1,6 +1,6 @@
 # Technical report: Bon·Appétit
 
-Swiss supermarket receipts are unreadable to software: lines are truncated, multilingual and coded, and the Migros export has no barcodes. Bon·Appétit uses Apertus v1.5 8B, running on the household's own laptop, to read each line and link it to the federal Swiss Food Composition Database, with a symbolic food layer that checks every pick and code that does every number. On 160 real Swiss products it is more accurate than both text matching (41% less energy error) and Apertus guessing alone (26% less on a held-out half), and every number it reports traces to a federal food record.
+Swiss supermarket receipts are unreadable to software: lines are truncated, multilingual and coded, and the Migros export has no barcodes. Bon·Appétit uses Apertus v1.5 8B, running on the household's own laptop, to read each line and link it to the federal Swiss Food Composition Database, with a symbolic food layer that checks every pick and code that does every number. On 160 real Swiss products it has 41% less energy error than text matching and, on a held-out half, 26% less than Apertus guessing alone (paired 95% CI excludes zero), and every number it reports traces to a federal food record.
 
 - **Track:** Track 2B: Bon·Appétit
 - **Event:** Online
@@ -103,11 +103,13 @@ The hybrid abstains on a few lines; the second table compares every method on ex
 
 Running the same energy check over all 86,517 Swiss products on Open Food Facts flagged 3,035 (4%) whose printed calories contradict their own macronutrients; 433 look like kilojoules typed as kilocalories. The list is in `eval/off_energy_flags.csv`.
 
+**Paired comparison on the same products** (Bon·Appétit minus the other method; negative means Bon·Appétit is closer to the label). Against text matching: -71 kcal (95% CI -98 to -44, n=148). Against the Apertus pick without the cross-check: -22 kcal (95% CI -40 to -4, n=148), so the cross-check helps. Against Apertus guessing alone, on the held-out half: -26 kcal (95% CI -54 to -1, n=68); on the full set the difference is -13 kcal (95% CI -31 to +4, n=140) and not statistically clear. The firm claims are therefore the gains over text matching and over the plain pick, plus the held-out gain over guessing; the full-set gap over guessing is a trend.
+
 **Household view.** Over 200 simulated weekly baskets of 20 products, pyramid shares are off by 7.3 percentage points per group (text matching 8.5).
 
 **By language** (Bon·Appétit = pick plus cross-check). German and French gain clearly. Italian does not: with 30 products it is no better than Apertus guessing, and only a quarter land in the right food group. The Italian sample is small, and Italian shop shorthand is the next thing to work on.
 
-| Language | n | Fuzzy kcal error | Embeddings kcal error | Apertus alone kcal error | Hybrid kcal error | Hybrid food group right |
+| Language | n | Fuzzy kcal error | Embeddings kcal error | Apertus alone kcal error | Bon·Appétit kcal error (pick + cross-check) | Bon·Appétit food group right |
 |---|---|---|---|---|---|---|
 | DE | 80 | 164 | 216 | 123 | 95 | 59% |
 | FR | 50 | 183 | 179 | 112 | 92 | 52% |
@@ -117,7 +119,9 @@ Running the same energy check over all 86,517 Swiss products on Open Food Facts 
 
 ## 6. Value and cost
 
-Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for both calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). The laptop run is a demonstration of the sovereign setup, not of speed. Throughput on a server GPU or a Swiss cloud endpoint was not measured here; that is the path for a retailer-scale service and the first thing a pilot would measure.
+Measured on an Apple M5 laptop with 16 GB, Apertus v1.5 8B Q4_K_M through Ollama, four requests in parallel: 47.1 seconds per receipt line for all three Apertus calls together, including queueing. A weekly receipt of 20 food lines therefore takes about 15.7 minutes on one laptop, with no subscription and no per-request fee. Electricity for 1,000 such receipts is about CHF 2.36 (laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests). The laptop run is a demonstration of the sovereign setup, not of speed. Throughput on a server GPU or a Swiss cloud endpoint was not measured here; that is the path for a retailer-scale service and the first thing a pilot would measure.
+
+Per receipt line the run used about 581 input and 107 output tokens over three Apertus calls. At the measured laptop rate that is about 76 lines per hour per laptop with four requests in parallel. Server throughput was not measured.
 
 The users are households first, then dietitians, home-care services and prevention programmes working with a client's consent, and retailers who want a nutrition view inside a loyalty app without sending purchase data to a foreign model. A first pilot needs 20 consenting households, four weeks of receipts, a dietitian's review of the reference amounts, and one outcome read from the receipts themselves: the change in the vegetables-and-fruit share. The FoodCoach trial (NCT05597969) is the reference design. No effect is claimed yet.
 

@@ -137,6 +137,17 @@ def main(check: bool = True) -> int:
         kc = [r["e"]["energy_kcal"] for r in rows[m] if not r["abstain"] and r.get("barcode") in even and "energy_kcal" in r["e"]]
         heldout.append({"id": m, "label": LABELS[m], "n": len(kc), "kcal_mae": rnd(mean(kc), 1), "kcal_ci": boot_ci(kc)})
 
+    # Paired comparison on the same products: Bon·Appétit minus Apertus guessing alone (negative = Bon·Appétit better).
+    def paired(a_id, b_id, keep=None):
+        ea = {r["barcode"]: r["e"]["energy_kcal"] for r in rows[a_id] if not r["abstain"] and "energy_kcal" in r["e"]}
+        eb = {r["barcode"]: r["e"]["energy_kcal"] for r in rows[b_id] if not r["abstain"] and "energy_kcal" in r["e"]}
+        common = [b for b in ea if b in eb and (keep is None or b in keep)]
+        diffs = [ea[b] - eb[b] for b in common]
+        return {"a": a_id, "b": b_id, "n": len(diffs), "mean_diff": rnd(mean(diffs), 1), "ci95": boot_ci(diffs, n=2000),
+                "a_better_share": rnd(mean([1.0 if d < 0 else 0.0 for d in diffs]), 3)}
+    pairs = [paired("checked", "apertus_only"), paired("checked", "apertus_only", even), paired("checked", "fuzzy"),
+             paired("checked", "hybrid")]
+
     # Household view: 200 random baskets of 20 products. Compare the food-pyramid shares the method reports
     # (grams by the linked food's group, 100 g per product) with the shares from the products' own Open Food Facts
     # groups. This is the number a household actually sees.
@@ -186,7 +197,7 @@ def main(check: bool = True) -> int:
     # assumption), 20 food lines per weekly receipt, CHF 0.30 per kWh (Swiss household average, assumption).
     spl = mean(secs) if secs else None
     chf_1000 = None if spl is None else round(spl * 20 * 1000 * 30 / 3.6e6 * 0.30, 2)
-    res = {"status": "done", "n_products": len(preds), "n_planned": len(gold), "methods": methods, "heldout": heldout, "matched": matched, "household": household, "sensitivity": sensitivity,
+    res = {"status": "done", "n_products": len(preds), "n_planned": len(gold), "methods": methods, "heldout": heldout, "paired": pairs, "matched": matched, "household": household, "sensitivity": sensitivity,
            "labels_failing_energy_check": len(preds) - len(clean), "by_lang": by_lang,
            "cost": {"sec_per_line": rnd(spl, 1), "chf_per_1000_receipts": chf_1000,
                     "cost_assumptions": "laptop at 30 W, 20 food lines per receipt, CHF 0.30 per kWh, measured seconds per line with 4 parallel requests", "hardware": "Apple M5, 16 GB, Ollama, Q4_K_M",
@@ -198,6 +209,7 @@ def main(check: bool = True) -> int:
     (ROOT / "site/data/results.json").write_text(blob)
     digest = hashlib.sha256(blob.encode()).hexdigest()
     print(f"{'method':28s} {'n':>4s} {'kcal MAE':>9s} {'95% CI':>14s} {'sugar':>6s} {'salt':>6s} {'≤20%':>6s} {'group':>6s} {'abstain':>7s}")
+    print("paired:", [(x["a"], x["b"], x["n"], x["mean_diff"], x["ci95"]) for x in pairs])
     print("held-out half:", [(x["id"], x["n"], x["kcal_mae"]) for x in heldout])
     print("household share error (pp):", [(x["id"], x["share_error_pp"]) for x in household])
     print("sensitivity:", [(x["id"], x["n"], x["kcal_mae"]) for x in sensitivity])
